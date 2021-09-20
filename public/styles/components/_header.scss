@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+
+  a {
+    padding: 0 8px;
+  }
+}

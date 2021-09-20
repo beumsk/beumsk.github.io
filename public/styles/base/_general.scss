@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover, &:focus {
+    color: var(--primary);
+  }
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
