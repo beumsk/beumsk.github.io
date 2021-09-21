@@ -6,11 +6,9 @@ export default function Blog(props) {
     <DefaultLayout title={props.title} description={props.description}>
       <h1>PROJECTS</h1>
 
-      <Link href="/projects/memory">memory</Link>
-
       <h2>Personal projects</h2>
       <ul>
-        <li><a href="https://beumsk.github.io/Memory/" target="_blank">Memory</a></li>
+        <li><Link href="/projects/memory">memory</Link></li>
         <li><a href="https://beumsk.github.io/Snake/" target="_blank">Snake</a></li>
         <li><a href="https://beumsk.github.io/Minesweeper/" target="_blank">Minesweeper</a></li>
         <li><a href="https://beumsk.github.io/Whack-a-Donkey-Kong/" target="_blank">Whack a Donkey Kong</a></li>

@@ -1,19 +1,13 @@
 import Head from 'next/head'
-import Header from '@includes/header'
-import Footer from '@includes/footer'
-import MobileNav from '@includes/mobileNav'
+import DefaultLayout from '@layouts/default'
 
 export default function ProjectLayout(props) {
   return (
-    <main className="light">
+    <DefaultLayout>
       <Head>
         <title>{props.title}</title>
-        <meta name='description' content={props.description} />
       </Head>
-      <Header />
       {props.children}
-      <Footer />
-      <MobileNav />
-    </main>
+    </DefaultLayout>
   )
 }

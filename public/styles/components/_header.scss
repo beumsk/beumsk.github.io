@@ -1,10 +1,12 @@
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   background: white;
-
+  > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   a {
-    padding: 0 8px;
+    padding: 12px 8px;
+    text-decoration: none;
   }
 }

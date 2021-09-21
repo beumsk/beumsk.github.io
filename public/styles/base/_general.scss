@@ -4,19 +4,38 @@
 
 body {
   font-family: system-ui;
+  font-size: 1.6rem;
   background-color: var(--bg);
   color: var(--text);
+}
+
+#__next main {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 h1 {
   color: var(--primary);
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.8rem;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--primary);
   }
 }
@@ -25,7 +44,25 @@ p {
   margin: 0;
 }
 
+button {
+}
+
 main {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px;
+  }
 }

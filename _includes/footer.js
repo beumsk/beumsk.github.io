@@ -1,7 +1,9 @@
 export default function Footer() {
   return (
     <footer>
-      <p>&copy; {new Date().getFullYear()} | RB</p>
+      <div className="container">
+        <p>&copy; {new Date().getFullYear()} | RB</p>
+      </div>
     </footer>
   )
 }
