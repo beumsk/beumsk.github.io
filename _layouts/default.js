@@ -11,9 +11,7 @@ export default function DefaultLayout(props) {
         <meta name='description' content={props.description} />
       </Head>
       <Header />
-      <div className="container">
-        {props.children}
-      </div>
+      {props.children}
       <Footer />
       <MobileNav />
     </main>

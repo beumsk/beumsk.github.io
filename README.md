@@ -2,11 +2,11 @@
 
 Website built with React and Nextjs.
 
--   Home
--   About
--   Projects (work & personal)
--   Blog (V2)
--   Contact
+- Home
+- About
+- Projects (work & personal)
+- Blog (V2)
+- Contact
 
 ## How to install?
 
@@ -17,6 +17,10 @@ npm run dev
 
 ## TODO
 
--   improve codepen embeds
--   remove buymeacoffee
+- check nextjs image comp
+- add all projects
+- create long footer
+- add 404 content
+- add contact content
+- remove buymeacoffee
 -

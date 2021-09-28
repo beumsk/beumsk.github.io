@@ -7,7 +7,9 @@ export default function ProjectLayout(props) {
       <Head>
         <title>{props.title}</title>
       </Head>
-      {props.children}
+      <div className="container">
+        {props.children}
+      </div>
     </DefaultLayout>
   )
 }

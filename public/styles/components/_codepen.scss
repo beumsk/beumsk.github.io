@@ -1,15 +1,26 @@
-.codepen-container {
-  width: 600px;
-  max-width: 100%;
+.cp_embed_wrapper {
+  width: 100%;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 }
 
-.codepen {
-  height: 400px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid;
-  margin: 1em 0;
-  padding: 1em;
+figure {
+  width: 100%;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  overflow-y: auto;
+  img.scroll {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
 }
