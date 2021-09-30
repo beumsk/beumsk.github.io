@@ -18,6 +18,8 @@ npm run dev
 ## TODO
 
 - check nextjs image comp
+- add SEO info
+- test github page launch
 - add all projects
 - create long footer
 - add 404 content

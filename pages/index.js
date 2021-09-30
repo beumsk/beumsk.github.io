@@ -27,7 +27,7 @@ export default function Blog(props) {
         </ul>
 
         <h2>Contact</h2>
-        <p>Feel free stay connected with me via these different channels.</p>
+        <p>Feel free to stay connected with me via these different channels.</p>
         <ul>
           <li><a href="https://codepen.io/beumsk/" target="_blank">Codepen</a></li>
           <li><a href="https://github.com/beumsk" target="_blank">Github</a></li>
