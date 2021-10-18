@@ -2,7 +2,7 @@ import DefaultLayout from '@layouts/default'
 import Link from 'next/link'
 import { getConfig, getAllPosts } from '@api'
 
-export default function Blog(props) {
+export default function Home(props) {
   return (
     <DefaultLayout title={props.title} description={props.description}>
       <div className="container">

@@ -2,7 +2,7 @@ import DefaultLayout from '@layouts/default'
 import Grid from '@includes/grid'
 import Link from 'next/link'
 
-export default function Blog(props) {
+export default function Projects(props) {
   const personal = [
     {title: 'Memory', link: 'projects/memory', img: '/images/memory.jpg'},
     {title: 'Snake', link: 'projects/snake', img: '/images/snake.jpg'},

@@ -2,10 +2,10 @@ import ProjectLayout from '@layouts/project'
 import Codepen from '@includes/Codepen'
 import Link from 'next/link'
 
-export default function Blog(props) {
+export default function Memory(props) {
   return (
     <ProjectLayout title={props.title} description={props.description}>
-      <h1>MEMORY</h1>
+      <h1>Memory</h1>
       <p>Introduction text</p>
 
       <h2>Technologies</h2>

@@ -1,7 +1,7 @@
 import ProjectLayout from '@layouts/project'
 import Link from 'next/link'
 
-export default function Blog(props) {
+export default function KPMGCareers(props) {
   return (
     <ProjectLayout title={props.title} description={props.description}>
       <h1>KPMG Careers Site</h1>
