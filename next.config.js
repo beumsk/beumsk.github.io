@@ -1,3 +1,5 @@
+const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';
+
 module.exports = {
     target: 'serverless',
     webpack: function (config) {
@@ -5,4 +7,6 @@ module.exports = {
         config.module.rules.push({test: /\.yml$/, use: 'raw-loader'})
         return config
     },
+    basePath: ghPages? '/blog/' : '',
+    assetPrefix: ghPages ? '/blog/' : '',
   }

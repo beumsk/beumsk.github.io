@@ -1,0 +1,26 @@
+.cp_embed_wrapper {
+  width: 100%;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+figure {
+  width: 100%;
+  padding: 56.25% 0 0 0;
+  position: relative;
+  overflow-y: auto;
+  img.scroll {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
