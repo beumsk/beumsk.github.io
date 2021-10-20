@@ -26,3 +26,9 @@ npm run dev
 - add contact content
 - remove buymeacoffee
 -
+
+## DEPLOY
+
+Commit and push your changes to master.
+This will trigger Github action and deploy the changes to gh-pages.
+Check the result at https://beumsk.github.io/rb/
