@@ -1,4 +1,4 @@
-const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';
+// const ghPages = process.env.DEPLOY_TARGET === 'gh-pages';/
 
 module.exports = {
     target: 'serverless',
@@ -7,6 +7,6 @@ module.exports = {
         config.module.rules.push({test: /\.yml$/, use: 'raw-loader'})
         return config
     },
-    basePath: ghPages ? '/rb/' : '',
-    assetPrefix: ghPages ? '/rb/' : '',
+    basePath: '/rb',
+    assetPrefix: '/rb',
   }
