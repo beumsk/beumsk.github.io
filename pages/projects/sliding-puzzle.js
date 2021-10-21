@@ -1,5 +1,5 @@
 import ProjectLayout from '@layouts/project'
-import Codepen from '@includes/Codepen'
+import Codepen from '@includes/codepen'
 import Link from 'next/link'
 
 export default function SlidingPuzzle(props) {
