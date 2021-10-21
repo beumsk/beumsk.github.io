@@ -7,6 +7,6 @@ module.exports = {
         config.module.rules.push({test: /\.yml$/, use: 'raw-loader'})
         return config
     },
-    basePath: ghPages ? '/rb/' : '',
-    assetPrefix: ghPages ? '/rb/' : '',
+    basePath: ghPages ? '/beumsk.github.io/rb/' : '',
+    assetPrefix: ghPages ? '/beumsk.github.io/rb/' : '',
   }
