@@ -12,9 +12,9 @@ export default function Memory(props) {
       <h2>Challenges, key lessons</h2>
 
       <Codepen pen="xdoKjX" />
-      <a href="https://github.com/beumsk/Memory" target="_blank">Github repository</a>
+      <a href="https://github.com/beumsk/Memory" target="_blank" className="btn">Github repository</a>
       
-      <Link href="/projects">Back to projects</Link>
+      <Link href="/projects"><a className="btn">Back to projects</a></Link>
     </ProjectLayout>
   )
 }

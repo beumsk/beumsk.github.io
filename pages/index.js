@@ -34,6 +34,9 @@ export default function Home(props) {
           <li><a href="https://www.linkedin.com/in/remybeumier/" target="_blank">LinkedIn</a></li>
           <li><a href="https://twitter.com/beumsk" target="_blank">Twitter</a></li>
         </ul>
+
+        <button>button</button>
+        <a className="btn">a.btn</a>
       </div>
     </DefaultLayout>
   )

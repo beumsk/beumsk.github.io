@@ -33,6 +33,7 @@ h4 {
 }
 
 a {
+  line-height: 1.4;
   color: inherit;
   &:hover,
   &:focus {
@@ -47,6 +48,10 @@ p {
 
 ul {
   padding-left: 20px;
+  &.nodisc {
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 figure {
@@ -54,6 +59,12 @@ figure {
 }
 
 button {
+  line-height: 1.4;
+  color: inherit;
+  &:hover,
+  &:focus {
+    color: var(--primary);
+  }
 }
 
 main {
@@ -74,4 +85,14 @@ main {
   @media screen and (min-width: 1200px) {
     max-width: 1140px;
   }
+}
+
+.btn,
+button {
+  border: solid 1px;
+  text-decoration: none;
+  padding: 4px 8px;
+  margin: 8px 4px 8px 0;
+  display: inline-block;
+  cursor: pointer;
 }
