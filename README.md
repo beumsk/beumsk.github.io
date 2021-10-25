@@ -2,11 +2,10 @@
 
 Website built with React and Nextjs.
 
-- Home
-- About
-- Projects (work & personal)
-- Blog (V2)
-- Contact
+- Home: about (text & image), projects (carousel? random >< favorites), Blog #V2 (latest 3), Contact (socials)
+- Projects: work & personal (intro, Technologies, challenges, lessons learned, codepen, link to repo)
+- Blog #V2 (import Dev.to or link?)
+- Contact (dedicated page or home is enough?)
 
 ## How to install?
 
@@ -19,16 +18,14 @@ npm run dev
 
 - check nextjs image comp
 - add SEO info
-- test github page launch
 - add all projects
-- create long footer
 - add 404 content
 - add contact content
-- remove buymeacoffee
 -
 
 ## DEPLOY
 
-Commit and push your changes to master.
+Build and Deploy
+Commit and Push your changes to master.
 This will trigger Github action and deploy the changes to gh-pages.
-Check the result at https://beumsk.github.io/rb/
+Check the result at https://beumsk.github.io

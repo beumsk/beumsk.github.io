@@ -1,6 +1,7 @@
 .cp_embed_wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
+  min-height: 400px;
   position: relative;
   overflow: hidden;
   iframe {
@@ -9,6 +10,7 @@
     width: 100%;
     left: 0;
     top: 0;
+    border: none;
   }
 }
 

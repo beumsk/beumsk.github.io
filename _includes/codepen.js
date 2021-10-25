@@ -1,10 +1,12 @@
 export default function Codepen(props) {
   return (
     <>
-      <p className="codepen" data-default-tab="result" data-slug-hash={props.pen} data-user="beumsk">
-        <span><a href={"https://codepen.io/beumsk/pen/" + props.pen}>See the Pen</a> by <a href="https://codepen.io/beumsk">Rémy Beumier</a>.</span>
-      </p>
-      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+      <div class="cp_embed_wrapper">
+        <iframe height="300" scrolling="no" title="Memory" loading="lazy"
+          src={"https://codepen.io/beumsk/embed/"+ props.pen +"?default-tab=result"}>
+          <a href={"https://codepen.io/beumsk/pen/" + props.pen}>See the Pen</a> by <a href="https://codepen.io/beumsk">Rémy Beumier</a>.
+        </iframe>
+      </div>
     </>
   )
 }
