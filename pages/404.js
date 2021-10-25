@@ -1,4 +1,4 @@
-import DefaultLayout from '@layouts/default'
+import DefaultLayout from 'components/default'
 import Head from 'next/head'
 
 export default function Custom404() {

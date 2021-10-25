@@ -1,5 +1,5 @@
-import ProjectLayout from '@layouts/project'
-import Codepen from '@includes/codepen'
+import ProjectLayout from 'components/project'
+import Codepen from 'components/codepen'
 import Link from 'next/link'
 
 export default function Timer(props) {

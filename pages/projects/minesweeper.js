@@ -1,5 +1,5 @@
-import ProjectLayout from '@layouts/project'
-import Codepen from '@includes/codepen'
+import ProjectLayout from 'components/project'
+import Codepen from 'components/codepen'
 import Link from 'next/link'
 
 export default function Minesweeper(props) {
@@ -22,8 +22,8 @@ export default function Minesweeper(props) {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Minesweeper Project',
-      description: 'Minesweeper Projects from RB'
+      title: 'Minesweeper',
+      description: 'Minesweeper from RB'
     }
   }
 }

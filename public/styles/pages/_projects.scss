@@ -1,0 +1,13 @@
+.projects {
+  &__switch {
+    display: flex;
+    h2 {
+      cursor: pointer;
+      width: 50%;
+      color: var(--light-grey);
+      &.active {
+        color: var(--primary-dark);
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ npm run dev
 
 ## DEPLOY
 
-Build and Deploy
+npm run build & npm run export (npm run deploy)
 Commit and Push your changes to master.
-This will trigger Github action and deploy the changes to gh-pages.
+This will trigger Github Action and deploy the changes to gh-pages.
 Check the result at https://beumsk.github.io

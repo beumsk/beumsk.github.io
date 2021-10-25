@@ -1,4 +1,4 @@
-import ProjectLayout from '@layouts/project'
+import ProjectLayout from 'components/project'
 import Link from 'next/link'
 
 export default function KPMGCareers(props) {
