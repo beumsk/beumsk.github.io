@@ -12,6 +12,7 @@ export default function Home(props) {
         <p>My name is Rémy, I am a Web Lover in Brussels and I focus myself on Front-end Development.</p>
         <p>Since my first years, I always enjoyed building things. I started developing my appetite for creation with Lego, continued with Minecraft and finally discovered Web development. It was a relief to find out what I really wanted to do as a living. I took full advantage of the motivation I had to start a long, difficult but passionate journey of learning front-end technologies as a self-taught.</p>
         <p>I now code everyday for a living and a hobby in Brussels with the powerful trio HTML, CSS and JavaScript, as well as some additional frameworks and libraries such as Bootstrap, Sass and jQuery.</p>
+        <p>i started recently to code with both Angular and React and I discover their power and complexity.</p>
 
         <h2>Projects</h2>
         <p>I build projects as living and as a hobby. Here is a list of my favorites.</p>

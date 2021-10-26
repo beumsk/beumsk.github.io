@@ -5,7 +5,7 @@ export default function Grid(props) {
     return (
       <Link href={x.link} key={index}>
         <a>
-          <h2>{x.title}</h2>
+          <h2>{x.title.replace("-", " ").toUpperCase()}</h2>
           <img src={x.img} />
         </a>
       </Link>
