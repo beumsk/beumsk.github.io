@@ -30,8 +30,6 @@
     transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
     &:hover,
     &:focus {
-      // border-color: var(--primary-light);
-      // box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
       box-shadow: rgba(0, 150, 136, 0.3) 5px 5px,
         rgba(0, 150, 136, 0.2) 10px 10px;
     }
