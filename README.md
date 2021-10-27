@@ -16,12 +16,17 @@ npm run dev
 
 ## TODO
 
-- check nextjs image comp
+- build narrow container
+- homepage layout
+- hp projects layout (full-width scroll? carousel?)
+- hp posts layout (price/podium? tiles?)
+- add list of skills
 - add SEO info
-- add all projects
+- fill in all projects
 - add 404 content
-- add contact content
--
+- add night mode
+- add project filter and order
+- sitemap
 
 ## DEPLOY
 

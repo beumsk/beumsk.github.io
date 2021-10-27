@@ -1,9 +1,26 @@
-import Head from 'next/head'
 import DefaultLayout from 'components/default'
 import Codepen from 'components/codepen'
 import Link from 'next/link'
 import { projects } from '@data/projects'
 import { useRouter } from 'next/router'
+import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiAngular, SiReact, SiCsharp, SiUmbraco } from 'react-icons/si';
+
+const Tech = (props) => {
+  return (
+    <li className="tech">
+      {props.name === 'HTML' && <SiHtml5 color="#E44D26" />}
+      {props.name === 'CSS' && <SiCss3 color="#1572B6" />}
+      {props.name === 'JS' && <SiJavascript color="#F0DB4F" />}
+      {props.name === 'jQuery' && <SiJquery color="#0868AC" />}
+      {props.name === 'Bootstrap' && <SiBootstrap color="#5B4282" />}
+      {props.name === 'Angular' && <SiAngular color="#A6120D" />}
+      {props.name === 'React' && <SiReact color="#61DBFB" />}
+      {props.name === 'C#' && <SiCsharp color="#390092" />}
+      {props.name === 'Umbraco' && <SiUmbraco color="#3544b1" />}
+      <span>{props.name}</span>
+    </li>
+  )
+}
 
 export default function DynamicPage(props) {
   const personal = projects.filter(x => x.pen)
@@ -12,15 +29,10 @@ export default function DynamicPage(props) {
   const slug = router.query.slug
   const proj = projects[projects.findIndex(x => x.title === slug)]
   const isPro = !proj.pen;
-  const slugTitle = proj.title.replace("-", " ").toUpperCase();
+  const slugTitle = proj.title.replace(/-/g, " ").toUpperCase();
 
   return (
-    <DefaultLayout>
-      <Head>
-        <title>{slugTitle}</title>
-        <meta name='description' content={proj.intro} />
-      </Head>
-      
+    <DefaultLayout title={slugTitle} description={proj.intro}>      
       <div className="container">
         <h1>{slugTitle}</h1>
         <p>{proj.intro}</p>
@@ -28,8 +40,8 @@ export default function DynamicPage(props) {
         {proj.tech.length > 0 && (
           <>
             <h2>Technologies</h2>
-            <ul>
-              {proj.tech.map((x, i) => <li key={i}>{x}</li>)}
+            <ul style={{paddingLeft: 0}}>
+              {proj.tech.map((x, i) => <Tech key={i} name={x}/>)}
             </ul>
           </>
         )}

@@ -1,28 +1,30 @@
-.cp_embed_wrapper {
+.cp_embed_wrapper,
+figure.wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
+  margin: 32px 0;
   min-height: 400px;
   position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  border: solid 1px var(--light-grey);
+}
+
+.cp_embed_wrapper iframe,
+figure.wrapper img.scroll {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.cp_embed_wrapper {
   overflow: hidden;
   iframe {
-    position: absolute;
     height: 100% !important;
-    width: 100%;
-    left: 0;
-    top: 0;
     border: none;
   }
 }
 
 figure.wrapper {
-  width: 100%;
-  padding: 56.25% 0 0 0;
-  position: relative;
   overflow-y: auto;
-  img.scroll {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
 }

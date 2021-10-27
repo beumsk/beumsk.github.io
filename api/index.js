@@ -1,6 +1,5 @@
 import matter from 'gray-matter'
 import marked from 'marked'
-import yaml from 'js-yaml'
 
 export async function getAllPosts(){
     const context = require.context('../posts', false, /\.md$/)
@@ -25,9 +24,4 @@ export async function getPostBySlug(slug){
         title: meta.data.title, 
         content: content
     }
-}
-
-export async function getConfig(){
-    const config = await import(`../config.yml`)
-    return yaml.safeLoad( config.default )
 }

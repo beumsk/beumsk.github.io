@@ -13,6 +13,8 @@ export default function Projects(props) {
       <div className="container">
         <h1>PROJECTS</h1>
 
+        {/* TODO: add filters tech, pro/perso, etc. and order */}
+
         <div className="projects__switch">
           <h2 onClick={() => setPro(!pro)} className={!pro && 'active'}>Personal projects</h2>
           <h2 onClick={() => setPro(!pro)} className={pro && 'active'}>Professional projects</h2>

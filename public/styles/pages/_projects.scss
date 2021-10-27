@@ -11,3 +11,18 @@
     }
   }
 }
+
+li.tech {
+  list-style-type: none;
+  display: inline-flex;
+  border: solid 1px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  align-items: center;
+  svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+}

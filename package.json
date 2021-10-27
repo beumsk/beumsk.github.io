@@ -20,6 +20,7 @@
     "next": "^10.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-icons": "^4.3.1",
     "sass": "^1.37.5"
   },
   "devDependencies": {

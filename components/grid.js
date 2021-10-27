@@ -5,8 +5,10 @@ export default function Grid(props) {
     return (
       <Link href={x.link} key={index}>
         <a>
-          <h2>{x.title.replace("-", " ").toUpperCase()}</h2>
-          <img src={x.img} />
+          <div className="rel">
+            <h2>{x.title.replace(/-/g, " ").toUpperCase()}</h2>
+            <img src={x.img} alt={x.title.replace(/-/g, " ")} loading="lazy" />
+          </div>
         </a>
       </Link>
     )

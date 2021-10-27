@@ -2,7 +2,38 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
-  img {
-    width: 100%;
+  .rel {
+    position: relative;
+    padding: 56.25% 0 0 0;
+    background: rgba(0, 0, 0, 0.1);
+    h2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      font-weight: normal;
+      font-size: 2.1rem;
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+    }
+  }
+  a {
+    border: solid 1px transparent;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    &:hover,
+    &:focus {
+      // border-color: var(--primary-light);
+      // box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4);
+      box-shadow: rgba(0, 150, 136, 0.3) 5px 5px,
+        rgba(0, 150, 136, 0.2) 10px 10px;
+    }
   }
 }
