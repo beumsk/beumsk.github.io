@@ -1,12 +1,13 @@
-import DefaultLayout from 'components/default'
+import Layout from '@components/layout'
 import Link from 'next/link'
 import { getAllPosts } from '@api'
 import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Home(props) {
   return (
-    <DefaultLayout title={props.title} description={props.description}>
-      <div className="container">
+    <Layout title={props.title} description={props.description}>
+      <div className="container narrow">
+        {/* TODO: make it splash: big image, logo, animation */}
         <h1>WELCOME TO RB !</h1>
 
         <section>
@@ -15,9 +16,12 @@ export default function Home(props) {
           <p>Since my first years, I always enjoyed building things. I started developing my appetite for creation with Lego, continued with Minecraft and finally discovered Web development. It was a relief to find out what I really wanted to do as a living. I took full advantage of the motivation I had to start a long, difficult but passionate journey of learning front-end technologies as a self-taught.</p>
           <p>I now code everyday for a living and a hobby in Brussels with the powerful trio HTML, CSS and JavaScript, as well as some additional frameworks and libraries such as Bootstrap, Sass and jQuery.</p>
           <p>I recently started to code with both Angular and React and I discover their power and complexity.</p>
+          {/* TODO: add CV */}
           {/* TODO: full list of skills (+ soft ones?) */}
+          <img src="/images/developer-thinking.svg" alt="developer thinking" loading="lazy" />
         </section>
 
+        {/* TODO: make it sexy: full-width scroll? carousel? */}
         <section>
           <h2>Projects</h2>
           <p>I build projects as living and as a hobby. Here is a list of my favorites.</p>
@@ -28,6 +32,7 @@ export default function Home(props) {
           <Link href="/projects"><a className="btn">Check all projects</a></Link>
         </section>
 
+        {/* TODO: make it sexy: price/podium? tiles? */}
         <section>
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
@@ -61,7 +66,7 @@ export default function Home(props) {
           </ul>
         </section>
       </div>
-    </DefaultLayout>
+    </Layout>
   )
 }
 

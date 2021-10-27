@@ -1,4 +1,4 @@
-import DefaultLayout from 'components/default'
+import Layout from '@components/layout'
 import Codepen from 'components/codepen'
 import Link from 'next/link'
 import { projects } from '@data/projects'
@@ -32,7 +32,7 @@ export default function DynamicPage(props) {
   const slugTitle = proj.title.replace(/-/g, " ").toUpperCase();
 
   return (
-    <DefaultLayout title={slugTitle} description={proj.intro}>      
+    <Layout title={slugTitle} description={proj.intro}>      
       <div className="container">
         <h1>{slugTitle}</h1>
         <p>{proj.intro}</p>
@@ -86,7 +86,7 @@ export default function DynamicPage(props) {
         
         <Link href="/projects"><a className="btn">Back to projects</a></Link>
       </div>
-    </DefaultLayout>
+    </Layout>
   );
 }
 export async function getStaticProps(context) {

@@ -16,14 +16,16 @@ npm run dev
 
 ## TODO
 
-- build narrow container
 - homepage layout
 - hp projects layout (full-width scroll? carousel?)
 - hp posts layout (price/podium? tiles?)
 - add list of skills
 - add SEO info
+- animation on scroll
 - fill in all projects
+- create real blog posts (next js, )
 - add 404 content
+- rethink scss structure (BEM?)
 - add night mode
 - add project filter and order
 - sitemap

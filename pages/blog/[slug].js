@@ -1,8 +1,21 @@
-import PostLayout from 'components/post'
+import Layout from '@components/layout'
+import Link from 'next/link'
 import { getPostBySlug, getAllPosts } from "@api"
 
 export default function Post(props){
-    return <PostLayout title={props.title} content={props.content}/>
+    return (
+      <Layout title={props.title} img={props.img} content={props.content}>
+        <div className="container narrow">
+          <article>
+            <h1>{props.title}</h1>
+            <img src={props.img} alt={props.title} className="post__img" />
+            <div dangerouslySetInnerHTML={{__html:props.content}}/>
+            {/* TODO: add next/previous post link */}
+            <div><Link href='/blog'><a className="btn">Back to blog listing</a></Link></div> 
+          </article>
+        </div>
+      </Layout>
+    )
 }
 
 export async function getStaticProps(context){

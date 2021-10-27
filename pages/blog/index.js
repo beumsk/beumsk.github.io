@@ -1,10 +1,10 @@
-import DefaultLayout from 'components/default'
+import Layout from '@components/layout'
 import Link from 'next/link'
 import { getAllPosts } from '@api'
 
 export default function Blog(props) {
   return (
-    <DefaultLayout title={props.title} description={props.description}>
+    <Layout title={props.title} description={props.description}>
       <div className="container">
         <h1>BLOG</h1>
         <ul>
@@ -19,12 +19,13 @@ export default function Blog(props) {
           })}
         </ul>
       </div>
-    </DefaultLayout>
+    </Layout>
   )
 }
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts()
+  console.log(allPosts);
 
   return {
     props: {
