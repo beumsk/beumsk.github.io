@@ -26,6 +26,7 @@ npm run dev
 - create real blog posts (next js, )
 - add 404 content
 - rethink scss structure (BEM?)
+- add font
 - add night mode
 - add project filter and order
 - sitemap

@@ -140,7 +140,7 @@ export const projects = [
     img: '/images/projects/sliding-puzzle.jpg', 
     pen: 'RjzGBO', 
     intro: 'Try to solve this sliding puzzle!', 
-    tech: ['HTML', 'CSS', 'JS',], 
+    tech: ['HTML', 'CSS', 'JS', 'Sass',], 
     chall: []
   },
   {
@@ -212,21 +212,21 @@ export const projects = [
     current: 'https://careers.kpmg.be/', 
     past: 'https://web.archive.org/web/20200803122755/https://careers.kpmg.be/', 
     img: '', 
-    screen: '/images/projects/careers-kpmg-be.png', 
-    intro: 'Intro for KPMG Careers...', 
-    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS'], 
-    chall: []
+    screen: '/images/projects/careers-kpmg-be-screen.png', 
+    intro: 'KPMG Belgium recruitment website built with Umbraco CMS.', 
+    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'], 
+    chall: ['Google map custom', 'JSON events', 'Slick responsive carousel']
   },
   {
     title: 'kpmg-law', 
     link: 'projects/kpmg-law', 
     current: 'https://www.kpmglaw.be/', 
-    past: '', 
+    past: 'https://web.archive.org/web/20200812114928/https://www.klaw.be/', 
     img: '', 
-    screen: '', 
-    intro: '', 
-    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS'], 
-    chall: []
+    screen: '/images/projects/klaw-be-screen.png', 
+    intro: 'KPMG Law (previously Klaw) website built with Umbraco CMS.', 
+    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'], 
+    chall: ['Discovering Umbraco', 'Use Uskinned theme', 'SEO']
   },
   {
     title: 'bee-paris', 
@@ -234,10 +234,10 @@ export const projects = [
     current: 'https://www.bee-paris.com/', 
     past: '', 
     img: '', 
-    screen: '', 
-    intro: '', 
-    tech: ['Angular', 'HTML', 'CSS', 'JS'], 
-    chall: []
+    screen: '/images/projects/beeparis-com-screen.png', 
+    intro: 'Bee Paris jewelry store website built with Angular, Node and Strapi', 
+    tech: ['Angular', 'HTML', 'CSS', 'JS', 'Sass'], 
+    chall: ['CSS grid', 'Multi-column layout', 'PrimeNG']
   },
   {
     title: 'onomo', 
@@ -245,9 +245,9 @@ export const projects = [
     current: 'https://www.onomohotels.com/', 
     past: '', 
     img: '', 
-    screen: '', 
-    intro: '', 
+    screen: '/images/projects/onomohotels-com-screen.png', 
+    intro: 'Onomo hotels booking website built with React', 
     tech: ['React', 'HTML', 'CSS', 'JS'], 
-    chall: []
+    chall: ['React', 'Styled system', 'Emotion']
   },
 ];

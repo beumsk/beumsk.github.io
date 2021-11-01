@@ -16,3 +16,20 @@
     margin-right: 4px;
   }
 }
+
+section {
+  // min-height: calc(100vh - 50px);
+  padding: 20px 0;
+  @media screen and (min-width: 768px) {
+    padding: 60px 0;
+  }
+  &:nth-of-type(even) {
+    background: white;
+  }
+}
+
+#about {
+  img {
+    margin: 20px auto;
+  }
+}

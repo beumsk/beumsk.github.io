@@ -6,34 +6,48 @@ import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 export default function Home(props) {
   return (
     <Layout title={props.title} description={props.description}>
-      <div className="container narrow">
-        {/* TODO: make it splash: big image, logo, animation */}
-        <h1>WELCOME TO RB !</h1>
+      <section id="splash">
+        <div className="container">
+          {/* TODO: make it splash: big image, logo, animation */}
+          <h1>RB, Front-end Dev</h1>
+        </div>
+      </section>
 
-        <section>
-          <h2>About</h2>
-          <p>My name is Rémy, I am a Web Lover in Brussels and I focus myself on Front-end Development.</p>
-          <p>Since my first years, I always enjoyed building things. I started developing my appetite for creation with Lego, continued with Minecraft and finally discovered Web development. It was a relief to find out what I really wanted to do as a living. I took full advantage of the motivation I had to start a long, difficult but passionate journey of learning front-end technologies as a self-taught.</p>
-          <p>I now code everyday for a living and a hobby in Brussels with the powerful trio HTML, CSS and JavaScript, as well as some additional frameworks and libraries such as Bootstrap, Sass and jQuery.</p>
-          <p>I recently started to code with both Angular and React and I discover their power and complexity.</p>
-          {/* TODO: add CV */}
-          {/* TODO: full list of skills (+ soft ones?) */}
-          <img src="/images/developer-thinking.svg" alt="developer thinking" loading="lazy" />
-        </section>
+      <section id="about">
+        <div className="container">
+          <div className="cols cols-lg">
+            <div className="col">
+              <h2>I'm Rémy, I am a Web Lover in Brussels and I focus on Front-end Development.</h2>
+              <p>Since my first years, I have always enjoyed building things. I started developing my appetite for <strong>creation</strong> with Lego, continued with Minecraft and ultimately discovered <strong>Web development</strong>.</p>
+              <p>It was a relief to find out what I really wanted to do as a living. I took full advantage of that motivation to start a long, difficult but passionate journey of learning <strong>front-end</strong> technologies as a self-taught.</p>
+              <p>I now code everyday for a living and a hobby in Brussels with the powerful trio <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>, as well as some additional frameworks and libraries such as <strong>Bootstrap</strong>, <strong>Sass</strong> and <strong>jQuery</strong>.</p>
+              <p>I recently started to code with both <strong>Angular</strong> and <strong>React</strong> and I discover their power and complexity.</p>
+            </div>
+            {/* TODO: add CV */}
+            {/* TODO: full list of skills (+ soft ones?) */}
+            <div className="col centered">
+              <img src="/images/developer-thinking.svg" alt="developer thinking" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        {/* TODO: make it sexy: full-width scroll? carousel? */}
-        <section>
+      {/* TODO: make it sexy: full-width scroll? carousel? */}
+      <section id="projects">
+        <div className="container">
           <h2>Projects</h2>
-          <p>I build projects as living and as a hobby. Here is a list of my favorites.</p>
+          <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
           <ul>
             <li><Link href="/projects/memory">Memory</Link></li>
             <li><Link href="/projects/kpmg-careers">KPMG Careers</Link></li>
           </ul>
           <Link href="/projects"><a className="btn">Check all projects</a></Link>
-        </section>
+        </div>
+      </section>
 
-        {/* TODO: make it sexy: price/podium? tiles? */}
-        <section>
+      {/* TODO: make it sexy: price/podium? tiles? */}
+      <section id="blog">
+        <div className="container">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
           <ul>
@@ -48,9 +62,11 @@ export default function Home(props) {
             })}
           </ul>
           <Link href="/blog"><a className="btn">Check all posts</a></Link>
-        </section>
+        </div>
+      </section>
 
-        <section>
+      <section id="contact">
+        <div className="container">
           <h2>Contact</h2>
           <p>Feel free to get in touch and stay connected with me via these different channels.</p>
           <ul className="nodisc">
@@ -64,8 +80,8 @@ export default function Home(props) {
               <a href="https://www.linkedin.com/in/remybeumier/" target="_blank"><FaLinkedin /><span>LinkedIn</span></a>
             </li>
           </ul>
-        </section>
-      </div>
+          </div>
+      </section>
     </Layout>
   )
 }

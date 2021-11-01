@@ -3,7 +3,7 @@ import Codepen from 'components/codepen'
 import Link from 'next/link'
 import { projects } from '@data/projects'
 import { useRouter } from 'next/router'
-import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiAngular, SiReact, SiCsharp, SiUmbraco } from 'react-icons/si';
+import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiSass, SiAngular, SiReact, SiCsharp, SiUmbraco } from 'react-icons/si';
 
 const Tech = (props) => {
   return (
@@ -13,6 +13,7 @@ const Tech = (props) => {
       {props.name === 'JS' && <SiJavascript color="#F0DB4F" />}
       {props.name === 'jQuery' && <SiJquery color="#0868AC" />}
       {props.name === 'Bootstrap' && <SiBootstrap color="#5B4282" />}
+      {props.name === 'Sass' && <SiSass color="#CF649A" />}
       {props.name === 'Angular' && <SiAngular color="#A6120D" />}
       {props.name === 'React' && <SiReact color="#61DBFB" />}
       {props.name === 'C#' && <SiCsharp color="#390092" />}
