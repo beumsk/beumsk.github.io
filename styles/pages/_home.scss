@@ -24,7 +24,30 @@ section {
     padding: 60px 0;
   }
   &:nth-of-type(even) {
-    background: white;
+    background: var(--bg2);
+  }
+}
+
+#splash {
+  background: url(/images/road.jpg) center;
+  .title {
+    text-align: center;
+  }
+  h1 {
+    display: block;
+    font-size: 6rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    text-shadow: rgb(0 150 136 / 30%) 3px 3px, rgb(0 150 136 / 20%) 6px 6px;
+    color: #009688;
+    background-image: -webkit-linear-gradient(135deg, #004d40, #26a69a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    font-size: 3rem;
+    color: var(--dark);
   }
 }
 

@@ -1,14 +1,43 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Share+Tech+Mono&display=swap');
+
+main {
   --primary: #009688;
   --primary-dark: #004d40;
   --primary-light: #26a69a;
   --secondary: ;
   --action: ;
+  --text2: #000000;
   --text: #333333;
   --dark: #333333;
   --dark-grey: #454545;
-  --grey: #666;
-  --light-grey: #999;
+  --grey: #666666;
+  --light-grey: #999999;
   --light: #eeeeee;
-  --bg: #eeeeee;
+  --bg2: #eeeeee;
+  --bg: #ffffff;
+  --font-title: 'Share Tech Mono', monospace;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+main.dark {
+  --text: #eeeeee;
+  --text2: #ffffff;
+  --bg: #000000;
+  --bg2: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    --text: #eeeeee;
+    --text2: #ffffff;
+    --bg: #000000;
+    --bg2: #333333;
+  }
+
+  main.light {
+    --text: #333333;
+    --text2: #000000;
+    --bg: #ffffff;
+    --bg2: #eeeeee;
+  }
 }

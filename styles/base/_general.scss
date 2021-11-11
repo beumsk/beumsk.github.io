@@ -5,8 +5,6 @@
 body {
   font-family: system-ui;
   font-size: 1.6rem;
-  background-color: var(--bg);
-  color: var(--text);
 }
 
 #__next main {
@@ -15,11 +13,18 @@ body {
   min-height: 100vh;
 }
 
+main {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+}
+
 h1 {
   color: var(--primary);
+  font-family: var(--font-title);
   font-size: 3rem;
   font-weight: normal;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
   margin: 20px 0 30px 0;
@@ -28,6 +33,7 @@ h1 {
 }
 
 h2 {
+  font-family: var(--font-title);
   font-size: 2.4rem;
   font-weight: normal;
 }
