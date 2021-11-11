@@ -1,0 +1,29 @@
+#logo-gradient {
+  width: 100px;
+  fill: none;
+
+  path {
+    stroke: #009688;
+    stroke-width: 1px;
+    stroke-dasharray: 2861px;
+    stroke-dashoffset: -2861px;
+    animation: draw 4s ease-in-out, fill 2.9s steps(1);
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 2861;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fill {
+    100% {
+      fill: url(#linear-gradient) #009688;
+      stroke-width: 0;
+    }
+  }
+}

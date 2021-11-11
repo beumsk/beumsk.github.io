@@ -1,4 +1,5 @@
 import Layout from '@components/layout'
+import Logo from '@components/logo'
 import Link from 'next/link'
 import { getAllPosts } from '@api'
 import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -9,7 +10,11 @@ export default function Home(props) {
       <section id="splash">
         <div className="container">
           {/* TODO: make it splash: big image, logo, animation */}
-          <h1>RB, Front-end Dev</h1>
+          <div className="title">
+            <h1>Rémy Beumier</h1>
+            <p>Front-end Dev</p>
+            <Logo />
+          </div>
         </div>
       </section>
 

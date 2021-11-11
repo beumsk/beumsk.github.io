@@ -30,7 +30,8 @@ export default function DynamicPage(props) {
   const slug = router.query.slug
   const proj = projects[projects.findIndex(x => x.title === slug)]
   const isPro = !proj.pen;
-  const slugTitle = proj.title.replace(/-/g, " ").toUpperCase();
+  let slugTitle = proj.title.replace(/-/g, " ");
+  slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (
     <Layout title={slugTitle} description={proj.intro}>      

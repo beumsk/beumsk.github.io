@@ -1,10 +1,10 @@
 header {
-  background: white;
+  background: var(--bg);
   position: sticky;
   top: 0;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 50;
-  
+
   > div {
     display: flex;
     flex-direction: row;

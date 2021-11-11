@@ -1,6 +1,6 @@
 import Layout from '@components/layout'
 import Grid from 'components/grid'
-import {projects} from '@data/projects'
+import { projects } from '@data/projects'
 import { useState } from 'react'
 
 export default function Projects(props) {
@@ -11,13 +11,13 @@ export default function Projects(props) {
   return (
     <Layout title={props.title} description={props.description}>
       <div className="container">
-        <h1>PROJECTS</h1>
+        <h1>Projects</h1>
 
         {/* TODO: add filters tech, pro/perso, etc. and order */}
 
         <div className="projects__switch">
-          <h2 onClick={() => setPro(!pro)} className={!pro ? 'active' : ''}>Personal projects</h2>
-          <h2 onClick={() => setPro(!pro)} className={pro ? 'active' : ''}>Professional projects</h2>
+          <button onClick={() => setPro(!pro)} className={!pro ? 'active btn' : 'btn'}>Personal projects</button>
+          <button onClick={() => setPro(!pro)} className={pro ? 'active btn' : 'btn'}>Professional projects</button>
         </div>
 
         {!pro && <Grid data={personal} />}

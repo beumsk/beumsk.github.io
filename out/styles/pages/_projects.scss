@@ -1,8 +1,7 @@
 .projects {
   &__switch {
     display: flex;
-    h2 {
-      cursor: pointer;
+    button {
       width: 50%;
       color: var(--light-grey);
       &.active {

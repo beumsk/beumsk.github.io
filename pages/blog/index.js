@@ -6,7 +6,7 @@ export default function Blog(props) {
   return (
     <Layout title={props.title} description={props.description}>
       <div className="container">
-        <h1>BLOG</h1>
+        <h1>Blog</h1>
         <ul>
           {props.posts.map(function (post, idx) {
             return (
