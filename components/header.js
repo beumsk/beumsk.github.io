@@ -1,10 +1,7 @@
 
 import Link from 'next/link'
-import { useState } from 'react'
 
 export default function Header({onClick, theme}) {
-  // set theme to local storage
-
   return (
     <header>
       <div className="container">
@@ -12,7 +9,7 @@ export default function Header({onClick, theme}) {
         <Link href="/projects">Projects</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/contact">Contact</Link>
-        <button onClick={onClick} className="btn">{theme ? '🌙' : '🔆' }</button>
+        <button onClick={onClick} className="btn">{theme === 'dark' ? '🌙' : '🔆' }</button>
       </div>
     </header>
   )
