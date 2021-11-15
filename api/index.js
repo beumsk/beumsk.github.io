@@ -14,7 +14,8 @@ export async function getAllPosts(){
         posts.push({
             slug: post.replace('.md',''),
             title: meta.data.title,
-            img: meta.data.img ? meta.data.img : defaultImage
+            img: meta.data.img ? meta.data.img : defaultImage,
+            link: '/blog/' + post.replace('.md',''),
         })
     }
     return posts;

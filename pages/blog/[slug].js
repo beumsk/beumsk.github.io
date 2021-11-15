@@ -5,7 +5,7 @@ import { getPostBySlug, getAllPosts } from "@api"
 export default function Post(props){
     return (
       <Layout title={props.title} img={props.img} content={props.content}>
-        <div className="container narrow">
+        <div className="container narrow" data-aos="fade-left">
           <article>
             <h1>{props.title}</h1>
             <img src={props.img} alt={props.title} className="post__img" />

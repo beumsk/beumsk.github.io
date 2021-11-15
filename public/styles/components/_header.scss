@@ -2,7 +2,7 @@ header {
   background: var(--bg);
   position: sticky;
   top: 0;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px 0 var(--text40);
   z-index: 50;
 
   > div {

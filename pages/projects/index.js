@@ -20,8 +20,10 @@ export default function Projects(props) {
           <button onClick={() => setPro(!pro)} className={pro ? 'active btn' : 'btn'}>Professional projects</button>
         </div>
 
-        {!pro && <Grid data={personal} />}
-        {pro && <Grid data={professional} />}
+        <div data-aos="fade-up">
+          {!pro && <Grid data={personal} />}
+          {pro && <Grid data={professional} />}
+        </div>
         
       </div>
     </Layout>

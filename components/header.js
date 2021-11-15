@@ -8,7 +8,7 @@ export default function Header({onClick, theme}) {
         <Link href="/">RB</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/error">Error</Link>
         <button onClick={onClick} className="btn">{theme === 'dark' ? '🌙' : '🔆' }</button>
       </div>
     </header>

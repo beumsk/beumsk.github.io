@@ -35,7 +35,7 @@ export default function DynamicPage(props) {
 
   return (
     <Layout title={slugTitle} description={proj.intro}>      
-      <div className="container">
+      <div className="container" data-aos="fade-left">
         <h1>{slugTitle}</h1>
         <p>{proj.intro}</p>
 

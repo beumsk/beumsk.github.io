@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Grid(props) {
   const items = props.data.map((x, index) => {
     return (
-      <Link href={x.link} key={index}>
+      <Link href={x.link || ''} key={index}>
         <a>
           <div className="rel">
             <h2>{x.title.replace(/-/g, " ").charAt(0).toUpperCase() + x.title.replace(/-/g, " ").slice(1)}</h2>

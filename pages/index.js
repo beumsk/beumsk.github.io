@@ -1,14 +1,16 @@
 import Layout from '@components/layout'
 import Logo from '@components/logo'
+import Grid from '@components/grid';
 import Link from 'next/link'
 import { getAllPosts } from '@api'
+import { projects } from '@data/projects'
 import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Home(props) {
   return (
     <Layout title={props.title} description={props.description}>
       <section id="splash">
-        <div className="container">
+        <div className="container" data-aos="fade-up">
           {/* TODO: make it splash: big image, logo, animation */}
           <div className="title">
             <h1>Rémy Beumier</h1>
@@ -19,7 +21,7 @@ export default function Home(props) {
       </section>
 
       <section id="about">
-        <div className="container">
+        <div className="container" data-aos="fade-right" data-aos-delay="400">
           <div className="cols cols-lg">
             <div className="col">
               <h2>I'm Rémy, I am a Web Lover in Brussels and I focus on Front-end Development.</h2>
@@ -39,39 +41,26 @@ export default function Home(props) {
 
       {/* TODO: make it sexy: full-width scroll? carousel? */}
       <section id="projects">
-        <div className="container">
+        <div className="container" data-aos="fade-left">
           <h2>Projects</h2>
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
-          <ul>
-            <li><Link href="/projects/memory">Memory</Link></li>
-            <li><Link href="/projects/kpmg-careers">KPMG Careers</Link></li>
-          </ul>
+          <Grid data={projects.slice(0, 3)} />
           <Link href="/projects"><a className="btn">Check all projects</a></Link>
         </div>
       </section>
 
       {/* TODO: make it sexy: price/podium? tiles? */}
       <section id="blog">
-        <div className="container">
+        <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
-          <ul>
-            {props.posts.filter((post, i) => i < 3).map(function (post, i) {
-              return (
-                <li key={i}>
-                  <Link href={'/blog/' + post.slug}>
-                    <a>{post.title}</a>
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
+          <Grid data={props.posts.slice(0, 3)} />
           <Link href="/blog"><a className="btn">Check all posts</a></Link>
         </div>
       </section>
 
       <section id="contact">
-        <div className="container">
+        <div className="container" data-aos="fade-left">
           <h2>Contact</h2>
           <p>Feel free to get in touch and stay connected with me via these different channels.</p>
           <ul className="nodisc">

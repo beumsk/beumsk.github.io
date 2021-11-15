@@ -5,7 +5,7 @@ figure.wrapper {
   margin: 32px 0;
   min-height: 400px;
   position: relative;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--text10);
   border: solid 1px var(--light-grey);
   box-shadow: rgba(0, 150, 136, 0.3) 5px 5px, rgba(0, 150, 136, 0.2) 10px 10px;
 }

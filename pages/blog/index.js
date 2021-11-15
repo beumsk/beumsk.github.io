@@ -1,23 +1,17 @@
 import Layout from '@components/layout'
+import Grid from 'components/grid'
 import Link from 'next/link'
 import { getAllPosts } from '@api'
 
 export default function Blog(props) {
+  console.log(props.posts);
   return (
     <Layout title={props.title} description={props.description}>
       <div className="container">
         <h1>Blog</h1>
-        <ul>
-          {props.posts.map(function (post, idx) {
-            return (
-              <li key={idx}>
-                <Link href={'/blog/' + post.slug}>
-                  <a>{post.title}</a>
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+        <div data-aos="fade-up">
+          <Grid data={props.posts} />
+        </div>
       </div>
     </Layout>
   )
