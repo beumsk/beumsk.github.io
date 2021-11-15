@@ -15,6 +15,12 @@ main {
   --light: #eeeeee;
   --bg2: #eeeeee;
   --bg: #ffffff;
+  --bg10: rgba(256, 256, 256, 0.1);
+  --bg40: rgba(256, 256, 256, 0.4);
+  --bg80: rgba(256, 256, 256, 0.8);
+  --text10: rgba(0, 0, 0, 0.1);
+  --text40: rgba(0, 0, 0, 0.4);
+  --text80: rgba(0, 0, 0, 0.8);
   --font-title: 'Share Tech Mono', monospace;
   --font-body: 'Open Sans', sans-serif;
 }
@@ -24,6 +30,12 @@ main.dark {
   --text2: #ffffff;
   --bg: #000000;
   --bg2: #333333;
+  --bg10: rgba(0, 0, 0, 0.1);
+  --bg40: rgba(0, 0, 0, 0.4);
+  --bg80: rgba(0, 0, 0, 0.8);
+  --text10: rgba(256, 256, 256, 0.1);
+  --text40: rgba(256, 256, 256, 0.4);
+  --text80: rgba(256, 256, 256, 0.8);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +44,12 @@ main.dark {
     --text2: #ffffff;
     --bg: #000000;
     --bg2: #333333;
+    --bg10: rgba(0, 0, 0, 0.1);
+    --bg40: rgba(0, 0, 0, 0.4);
+    --bg80: rgba(0, 0, 0, 0.8);
+    --text10: rgba(256, 256, 256, 0.1);
+    --text40: rgba(256, 256, 256, 0.4);
+    --text80: rgba(256, 256, 256, 0.8);
   }
 
   main.light {
@@ -39,5 +57,11 @@ main.dark {
     --text2: #000000;
     --bg: #ffffff;
     --bg2: #eeeeee;
+    --bg10: rgba(256, 256, 256, 0.1);
+    --bg40: rgba(256, 256, 256, 0.4);
+    --bg80: rgba(256, 256, 256, 0.8);
+    --text10: rgba(0, 0, 0, 0.1);
+    --text40: rgba(0, 0, 0, 0.4);
+    --text80: rgba(0, 0, 0, 0.8);
   }
 }

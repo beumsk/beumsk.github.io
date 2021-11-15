@@ -5,7 +5,7 @@
   .rel {
     position: relative;
     padding: 56.25% 0 0 0;
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--text10);
     h2 {
       position: absolute;
       bottom: 0;
@@ -13,7 +13,7 @@
       right: 0;
       margin: 0;
       padding: 10px;
-      background: rgba(255, 255, 255, 0.8);
+      background: var(--bg80);
       font-weight: normal;
       font-size: 2.1rem;
       z-index: 1;
@@ -23,6 +23,8 @@
       display: block;
       position: absolute;
       top: 0;
+      aspect-ratio: 684 / 384;
+      object-fit: cover;
     }
   }
   a {
