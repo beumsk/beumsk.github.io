@@ -20,7 +20,7 @@ npm run dev
 - hp projects layout (full-width scroll? carousel?)
 - hp posts layout (price/podium? tiles?)
 - add list of skills
-- add SEO info
+- add SEO info (title, desc, images)
 - animation on scroll
 - fill in all projects
 - create real blog posts (next js, )

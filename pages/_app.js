@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useEffect } from "react";
 import AOS from "aos";
 
@@ -13,5 +14,14 @@ export default function MyApp({ Component, pageProps }) {
     });
   }, []);
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content="https://beumsk.github.io/images/rb.png" />
+        <meta property="og:image:secure_url" content="https://beumsk.github.io/images/rb.png" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
