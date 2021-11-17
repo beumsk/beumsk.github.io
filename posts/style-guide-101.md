@@ -1,5 +1,6 @@
 ---
 title: Style Guide 101
+intro: Introduction text for Style Guide 101
 img: https://via.placeholder.com/400x200
 ---
 

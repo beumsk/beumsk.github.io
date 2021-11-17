@@ -20,6 +20,8 @@ export default function Layout(props) {
       <Head>
         <title>{props.title}</title>
         <meta name='description' content={props.description} />
+        <meta property="og:image" content={props.img || "https://beumsk.github.io/images/rb.png"} />
+        <meta property="og:image:secure_url" content={props.img || "https://beumsk.github.io/images/rb.png"} />
       </Head>
       <Header onClick={switchTheme} theme={theme} />
       {props.children}

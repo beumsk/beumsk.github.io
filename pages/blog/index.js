@@ -24,8 +24,8 @@ export async function getStaticProps() {
   return {
     props: {
       posts: allPosts,
-      title: 'Blog',
-      description: 'Blog posts'
+      title: 'Blog | Rémy Beumier',
+      description: 'My blog posts covering the web in general, especially the front-end development.'
     }
   }
 }

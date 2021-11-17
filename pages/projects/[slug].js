@@ -34,7 +34,7 @@ export default function DynamicPage(props) {
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (
-    <Layout title={slugTitle} description={proj.intro}>      
+    <Layout title={slugTitle + ' | Rémy Beumier'} description={proj.intro} img={proj.img}>      
       <div className="container" data-aos="fade-left">
         <h1>{slugTitle}</h1>
         <p>{proj.intro}</p>

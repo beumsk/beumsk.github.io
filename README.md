@@ -19,16 +19,17 @@ npm run dev
 - homepage layout
 - hp projects layout (full-width scroll? carousel?)
 - hp posts layout (price/podium? tiles?)
+- add cv
 - add list of skills
 - add SEO info (title, desc, images)
-- animation on scroll
 - fill in all projects
+- low res images
+- sitemap
 - create real blog posts (next js, )
 - add 404 content
 - rethink scss structure (BEM?)
 - add dark mode (into localStorage)
 - add project filter and order
-- sitemap
 
 ## DEPLOY
 

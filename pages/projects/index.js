@@ -33,8 +33,8 @@ export default function Projects(props) {
 export async function getStaticProps() {
   return {
     props: {
-      title: 'Projects',
-      description: 'Projects from RB'
+      title: 'Projects | Rémy Beumier',
+      description: 'My personal and professional projects developed with HTML, CSS, JS, React, Angular and many more.'
     }
   }
 }

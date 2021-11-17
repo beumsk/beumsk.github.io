@@ -86,8 +86,8 @@ export async function getStaticProps() {
   return {
     props: {
       posts: allPosts,
-      title: 'RB site',
-      description: 'This site is about RB'
+      title: 'Rémy Beumier | Front-end Developer',
+      description: 'Rémy Beumier\'s portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.'
     }
   }
 }
