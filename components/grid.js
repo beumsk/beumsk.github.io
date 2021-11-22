@@ -15,7 +15,7 @@ export default function Grid(props) {
   });
 
   return (
-    <div className="grid">
+    <div className={"grid " + props.className}>
       {items}
     </div>
   )

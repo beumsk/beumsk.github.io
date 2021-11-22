@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       once: true,
-      offset: 200,
+      offset: 100
     });
   }, []);
 

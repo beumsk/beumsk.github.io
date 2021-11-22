@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
+  @media screen and (min-width: 768px) {
+    grid-gap: 20px;
+  }
   .rel {
     position: relative;
     padding: 56.25% 0 0 0;
@@ -28,8 +31,8 @@
     }
   }
   a {
-    border: solid 1px transparent;
-    transition: color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow);
+    transition: color 0.2s, box-shadow 0.2s;
     &:hover,
     &:focus {
       box-shadow: rgba(0, 150, 136, 0.3) 5px 5px,

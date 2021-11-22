@@ -61,10 +61,10 @@ export default function DynamicPage(props) {
           <>
             <Codepen pen={proj.pen} />
 
-            <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn">Github repository</a>
+            <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn mb-2 mr-2">Github repository</a>
 
             <Link href={'/' + (personal[personal.indexOf(proj) + 1]?.link || personal[0].link)}>
-              <a className="btn">Next project</a>
+              <a className="btn mb-2 mr-2">Next project</a>
             </Link>
           </>
         )}
@@ -77,11 +77,11 @@ export default function DynamicPage(props) {
               </figure>
             )}
 
-            {proj.current && <a href={proj.current} target="_blank" className="btn">Live website</a>}
-            {proj.past && <a href={proj.past} target="_blank" className="btn">Site as I left it</a>}
+            {proj.current && <a href={proj.current} target="_blank" className="btn mb-2 mr-2">Live website</a>}
+            {proj.past && <a href={proj.past} target="_blank" className="btn mb-2 mr-2">Site as I left it</a>}
             
             <Link href={'/' + (professional[professional.indexOf(proj) + 1]?.link || professional[0].link)}>
-              <a className="btn">Next project</a>
+              <a className="btn mb-2 mr-2">Next project</a>
             </Link>
           </>
         )}

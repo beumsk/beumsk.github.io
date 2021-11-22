@@ -9,7 +9,7 @@ export default function Header({onClick, theme}) {
         <Link href="/projects">Projects</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/error">Error</Link>
-        <button onClick={onClick} className="btn">{theme === 'dark' ? '🌙' : '🔆' }</button>
+        <button onClick={onClick} className="btn m-2">{theme === 'dark' ? '🌙' : '🔆' }</button>
       </div>
     </header>
   )

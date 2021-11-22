@@ -21,8 +21,8 @@ export default function Projects(props) {
         </div>
 
         <div data-aos="fade-up">
-          {!pro && <Grid data={personal} />}
-          {pro && <Grid data={professional} />}
+          {!pro && <Grid data={personal} className="mt-5 mb-5" />}
+          {pro && <Grid data={professional} className="mt-5 mb-5" />}
         </div>
         
       </div>

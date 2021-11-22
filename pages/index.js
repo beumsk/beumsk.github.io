@@ -33,7 +33,7 @@ export default function Home(props) {
             {/* TODO: add CV */}
             {/* TODO: full list of skills (+ soft ones?) */}
             <div className="col centered">
-              <img src="/images/developer-thinking.svg" alt="developer thinking" loading="lazy" />
+              <img src="/images/developer-thinking.svg" alt="developer thinking" loading="lazy" className="mt-5 mb-5" />
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function Home(props) {
         <div className="container" data-aos="fade-left">
           <h2>Projects</h2>
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
-          <Grid data={projects.slice(0, 3)} />
+          <Grid data={projects.slice(0, 3)} className="mt-5 mb-5" />
           <Link href="/projects"><a className="btn">Check all projects</a></Link>
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function Home(props) {
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
-          <Grid data={props.posts.slice(0, 3)} />
+          <Grid data={props.posts.slice(0, 3)} className="mt-5 mb-5" />
           <Link href="/blog"><a className="btn">Check all posts</a></Link>
         </div>
       </section>
@@ -62,19 +62,19 @@ export default function Home(props) {
       <section id="contact">
         <div className="container" data-aos="fade-left">
           <h2>Contact</h2>
-          <p>Feel free to get in touch and stay connected with me via these different channels.</p>
-          <ul className="nodisc">
-            <li className="list__link">
-              <a href="https://codepen.io/beumsk/" target="_blank"><FaCodepen /><span>Codepen</span></a>
-            </li>
-            <li className="list__link">
-              <a href="https://github.com/beumsk" target="_blank"><FaGithub /><span>Github</span></a>
-            </li>
-            <li className="list__link">
-              <a href="https://www.linkedin.com/in/remybeumier/" target="_blank"><FaLinkedin /><span>LinkedIn</span></a>
-            </li>
-          </ul>
+          <p className="pb-5">Feel free to get in touch and stay connected with me via these different channels.</p>
+          <div>
+            <a href="https://codepen.io/beumsk/" target="_blank" className="btn mb-2 mr-2">
+              <FaCodepen /><span className="ml-1">Codepen</span>
+            </a>
+            <a href="https://github.com/beumsk" target="_blank" className="btn mb-2 mr-2">
+              <FaGithub /><span className="ml-1">Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/remybeumier/" target="_blank" className="btn">
+              <FaLinkedin /><span className="ml-1">LinkedIn</span>
+            </a>
           </div>
+        </div>
       </section>
     </Layout>
   )

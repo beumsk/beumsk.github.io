@@ -1,0 +1,18 @@
+@mixin generate($prefix, $property) {
+  $sizes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  $spacing: 4px;
+  @for $i from 1 through length($sizes) {
+    $size: nth($sizes, $i);
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $spacing * $size + !important;
+    }
+  }
+}
+
+$rules: [ [ml, margin-left], [mt, margin-top], [mb, margin-bottom], [mr,
+  margin-right], [m, margin], [pl, padding-left], [pt, padding-top], [pb,
+  padding-bottom], [pr, padding-right], [p, padding], ];
+
+@each $item in $rules {
+  @include generate(nth($item, 1), nth($item, 2));
+}

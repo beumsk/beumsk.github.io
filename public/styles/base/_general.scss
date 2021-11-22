@@ -111,7 +111,7 @@ strong {
 main {
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  // overflow: hidden;
 }
 
 .container {
@@ -198,8 +198,8 @@ button {
   border: solid 1px;
   text-decoration: none;
   padding: 4px 8px;
-  margin: 8px 8px 8px 0;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
 }
 

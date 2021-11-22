@@ -1,22 +1,3 @@
-.list__link {
-  list-style-type: none;
-  display: inline-flex;
-  a {
-    display: inline-flex;
-    border: solid 1px;
-    padding: 4px 8px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    align-items: center;
-    text-decoration: none;
-  }
-  svg {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px;
-  }
-}
-
 section {
   // min-height: calc(100vh - 50px);
   padding: 20px 0;
@@ -48,23 +29,5 @@ section {
   p {
     font-size: 3rem;
     color: var(--dark);
-  }
-}
-
-#about {
-  img {
-    margin: 20px auto;
-  }
-}
-
-#projects {
-  .grid {
-    margin: 20px 0;
-  }
-}
-
-#blog {
-  .grid {
-    margin: 20px 0;
   }
 }
