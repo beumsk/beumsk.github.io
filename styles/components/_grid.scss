@@ -32,11 +32,12 @@
   }
   a {
     box-shadow: var(--shadow);
-    transition: color 0.2s, box-shadow 0.2s;
+    transition: all 0.2s;
     &:hover,
     &:focus {
       box-shadow: rgba(0, 150, 136, 0.3) 5px 5px,
         rgba(0, 150, 136, 0.2) 10px 10px;
+      transform: scale(1.05);
     }
   }
 }
