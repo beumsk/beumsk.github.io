@@ -23,7 +23,8 @@ npm run dev
 - add list of skills
 - add SEO info (title, desc, images)
 - fill in all projects
-- low res images (next-optimized-images)
+- low res images (automate without next-optimized-images)
+- update nextjs and react
 - sitemap
 - create real blog posts (next js, )
 - add 404 content

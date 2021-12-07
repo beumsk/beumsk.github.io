@@ -215,3 +215,10 @@ button {
     top: 0;
   }
 }
+
+.skewed {
+  transform: skewY(2deg);
+  .unskewed {
+    transform: skewY(-2deg);
+  }
+}

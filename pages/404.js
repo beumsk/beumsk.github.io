@@ -7,7 +7,7 @@ export default function Custom404() {
       <div className="container">
         <h1>404 - Page Not Found</h1>
         <div>
-          <Link href="/" class="btn"><a>Go back Home</a></Link>
+          <Link href="/" className="btn"><a>Go back Home</a></Link>
         </div>
       </div>
     </Layout>
