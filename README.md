@@ -27,9 +27,8 @@ npm run dev
 - update nextjs and react
 - sitemap
 - create real blog posts (next js, )
-- add 404 content
+- add 404 content (random proj+post)
 - rethink scss structure (BEM?)
-- add dark mode (into localStorage)
 - add project filter and order
 
 ## DEPLOY

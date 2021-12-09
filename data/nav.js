@@ -9,7 +9,7 @@ export const nav = [
   },
   {
     text: 'Blog',
-    link: 'blog'
+    link: '/blog'
   },
   {
     text: 'Error',
