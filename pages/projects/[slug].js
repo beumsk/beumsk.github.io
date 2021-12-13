@@ -37,12 +37,12 @@ export default function DynamicPage(props) {
     <Layout title={slugTitle + ' | Rémy Beumier'} description={proj.intro} img={proj.img}>      
       <div className="container" data-aos="fade-left">
         <h1>{slugTitle}</h1>
-        <p>{proj.intro}</p>
+        <p className="mb-8">{proj.intro}</p>
 
         {proj.tech.length > 0 && (
           <>
             <h2>Technologies</h2>
-            <ul style={{paddingLeft: 0}}>
+            <ul className="pl-0 mb-6">
               {proj.tech.map((x, i) => <Tech key={i} name={x}/>)}
             </ul>
           </>
@@ -51,7 +51,7 @@ export default function DynamicPage(props) {
         {proj.chall.length > 0 && (
           <>
             <h2>Challenges, key lessons</h2>
-            <ul>
+            <ul className="mb-8">
               {proj.chall.map((x, i) => <li key={i}>{x}</li>)}
             </ul>
           </>
@@ -80,7 +80,7 @@ export default function DynamicPage(props) {
             {proj.current && <a href={proj.current} target="_blank" className="btn mb-2 mr-2">Live website</a>}
             {proj.past && <a href={proj.past} target="_blank" className="btn mb-2 mr-2">Site as I left it</a>}
             
-            <Link href={'/' + (professional[professional.indexOf(proj) + 1]?.link || professional[0].link)}>
+            <Link href={professional[professional.indexOf(proj) + 1]?.link || professional[0].link}>
               <a className="btn mb-2 mr-2">Next project</a>
             </Link>
           </>
