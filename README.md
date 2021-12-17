@@ -19,7 +19,8 @@ npm run dev
 - homepage layout
 - add cv
 - add list of skills
-- fill in all projects (+add more images of features/pages?)
+- create my own AOS (to avoid overflow issues)
+- fill in all projects data (+add more images of features/pages?)
 - add SEO info (title, desc, images)
 - save time machine when bee/eli paris goes live
 - low res images (automate without next-optimized-images)

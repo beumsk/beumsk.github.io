@@ -111,7 +111,6 @@ strong {
 main {
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 .container {
@@ -175,6 +174,10 @@ main {
   }
 }
 
+.over-x-h {
+  overflow-x: hidden;
+}
+
 .centered {
   display: flex;
   justify-content: center;
@@ -200,6 +203,7 @@ button {
   padding: 4px 8px;
   display: inline-flex;
   align-items: center;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -217,8 +221,18 @@ button {
 }
 
 .skewed {
-  transform: skewY(2deg);
-  .unskewed {
-    transform: skewY(-2deg);
+  position: relative;
+  &:nth-of-type(even)::before {
+    background: var(--bg2);
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(2deg);
+    z-index: 0;
   }
 }

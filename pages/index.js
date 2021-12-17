@@ -10,18 +10,20 @@ export default function Home(props) {
   return (
     <Layout title={props.title} description={props.description}>
       <section id="splash">
-        <div className="container" data-aos="fade-up">
-          {/* TODO: make it splash: big image, logo, animation */}
-          <div className="title">
-            <h1>Rémy Beumier</h1>
-            <p>Front-end Dev</p>
-            <Logo />
+        <div className="over-x-h">
+          <div className="container" data-aos="fade-up">
+            {/* TODO: make it splash: big image, logo, animation */}
+            <div className="title">
+              <h1>Rémy Beumier</h1>
+              <p>Front-end Dev</p>
+              <Logo />
+            </div>
           </div>
         </div>
       </section>
 
       <section id="about" className="skewed">
-        <div className="unskewed">
+        <div className="over-x-h">
           <div className="container" data-aos="fade-right" data-aos-delay="400">
             <div className="cols cols-lg">
               <div className="col">
@@ -43,7 +45,7 @@ export default function Home(props) {
 
       {/* TODO: make it sexy: full-width scroll? carousel? */}
       <section id="projects" className="skewed">
-        <div className="unskewed">
+        <div className="over-x-h">
           <div className="container" data-aos="fade-left">
             <h2>Projects</h2>
             <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
@@ -55,7 +57,7 @@ export default function Home(props) {
 
       {/* TODO: make it sexy: price/podium? tiles? */}
       <section id="blog" className="skewed">
-        <div className="unskewed">
+        <div className="over-x-h">
           <div className="container" data-aos="fade-right">
             <h2>Blog</h2>
             <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
@@ -66,19 +68,21 @@ export default function Home(props) {
       </section>
 
       <section id="contact">
-        <div className="container" data-aos="fade-left">
-          <h2>Contact</h2>
-          <p className="pb-5">Feel free to get in touch and stay connected with me via these different channels.</p>
-          <div>
-            <a href="https://codepen.io/beumsk/" target="_blank" className="btn mb-2 mr-2">
-              <FaCodepen /><span className="ml-1">Codepen</span>
-            </a>
-            <a href="https://github.com/beumsk" target="_blank" className="btn mb-2 mr-2">
-              <FaGithub /><span className="ml-1">Github</span>
-            </a>
-            <a href="https://www.linkedin.com/in/remybeumier/" target="_blank" className="btn">
-              <FaLinkedin /><span className="ml-1">LinkedIn</span>
-            </a>
+        <div className="over-x-h">
+          <div className="container" data-aos="fade-left">
+            <h2>Contact</h2>
+            <p className="pb-5">Feel free to get in touch and stay connected with me via these different channels.</p>
+            <div>
+              <a href="https://codepen.io/beumsk/" target="_blank" className="btn mb-2 mr-2">
+                <FaCodepen /><span className="ml-1">Codepen</span>
+              </a>
+              <a href="https://github.com/beumsk" target="_blank" className="btn mb-2 mr-2">
+                <FaGithub /><span className="ml-1">Github</span>
+              </a>
+              <a href="https://www.linkedin.com/in/remybeumier/" target="_blank" className="btn">
+                <FaLinkedin /><span className="ml-1">LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -34,59 +34,61 @@ export default function DynamicPage(props) {
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (
-    <Layout title={slugTitle + ' | Rémy Beumier'} description={proj.intro} img={proj.img}>      
-      <div className="container" data-aos="fade-left">
-        <h1>{slugTitle}</h1>
-        <p className="mb-8">{proj.intro}</p>
+    <Layout title={slugTitle + ' | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>      
+      <div className="container over-x-h">
+        <div data-aos="fade-left">
+          <h1>{slugTitle}</h1>
+          <p className="mb-8">{proj.intro}</p>
 
-        {proj.tech.length > 0 && (
-          <>
-            <h2>Technologies</h2>
-            <ul className="pl-0 mb-6">
-              {proj.tech.map((x, i) => <Tech key={i} name={x}/>)}
-            </ul>
-          </>
-        )}
+          {proj.tech.length > 0 && (
+            <>
+              <h2>Technologies</h2>
+              <ul className="pl-0 mb-6">
+                {proj.tech.map((x, i) => <Tech key={i} name={x}/>)}
+              </ul>
+            </>
+          )}
 
-        {proj.chall.length > 0 && (
-          <>
-            <h2>Challenges, key lessons</h2>
-            <ul className="mb-8">
-              {proj.chall.map((x, i) => <li key={i}>{x}</li>)}
-            </ul>
-          </>
-        )}
+          {proj.chall.length > 0 && (
+            <>
+              <h2>Challenges, key lessons</h2>
+              <ul className="mb-8">
+                {proj.chall.map((x, i) => <li key={i}>{x}</li>)}
+              </ul>
+            </>
+          )}
 
-        {!isPro && (
-          <>
-            <Codepen pen={proj.pen} />
+          {!isPro && (
+            <>
+              <Codepen pen={proj.pen} />
 
-            <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn mb-2 mr-2">Github repository</a>
+              <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn mb-2 mr-2">Github repository</a>
 
-            <Link href={'/' + (personal[personal.indexOf(proj) + 1]?.link || personal[0].link)}>
-              <a className="btn mb-2 mr-2">Next project</a>
-            </Link>
-          </>
-        )}
-        
-        {isPro && (
-          <>
-            {proj.screen && (
-              <figure className="wrapper">
-                <img src={proj.screen} alt={"Screenshot of " + proj.current} className="scroll" />
-              </figure>
-            )}
+              <Link href={personal[personal.indexOf(proj) + 1]?.link || personal[0].link}>
+                <a className="btn mb-2 mr-2">Next project</a>
+              </Link>
+            </>
+          )}
+          
+          {isPro && (
+            <>
+              {proj.screen && (
+                <figure className="wrapper">
+                  <img src={proj.screen} alt={"Screenshot of " + proj.current} className="scroll" />
+                </figure>
+              )}
 
-            {proj.current && <a href={proj.current} target="_blank" className="btn mb-2 mr-2">Live website</a>}
-            {proj.past && <a href={proj.past} target="_blank" className="btn mb-2 mr-2">Site as I left it</a>}
-            
-            <Link href={professional[professional.indexOf(proj) + 1]?.link || professional[0].link}>
-              <a className="btn mb-2 mr-2">Next project</a>
-            </Link>
-          </>
-        )}
-        
-        <Link href="/projects"><a className="btn">Back to projects</a></Link>
+              {proj.current && <a href={proj.current} target="_blank" className="btn mb-2 mr-2">Live website</a>}
+              {proj.past && <a href={proj.past} target="_blank" className="btn mb-2 mr-2">Site as I left it</a>}
+              
+              <Link href={professional[professional.indexOf(proj) + 1]?.link || professional[0].link}>
+                <a className="btn mb-2 mr-2">Next project</a>
+              </Link>
+            </>
+          )}
+          
+          <Link href="/projects"><a className="btn">Back to projects</a></Link>
+        </div>
       </div>
     </Layout>
   );

@@ -13,18 +13,20 @@ export default function Post(props){
 
   return (
     <Layout title={props.data.title + ' | Rémy Beumier'} img={props.data.img} description={props.data.intro}>
-      <div className="container narrow" data-aos="fade-left">
-        <article>
-          <h1>{props.data.title}</h1>
-          <img src={props.data.img} alt={props.data.title} className="post__img mb-5" />
-          <p className="post__date pb-5">{date}</p>
-          <div className="post__content mb-5" dangerouslySetInnerHTML={{__html:props.data.content}}/>
-          {/* TODO: add next/previous post link */}
-          <div>
-            <Link href={nextLink}><a className="btn mb-2 mr-2">Next blog post</a></Link>
-            <Link href='/blog'><a className="btn">Back to blog listing</a></Link>
-          </div>
-        </article>
+      <div className="container narrow over-x-h"> 
+        <div data-aos="fade-left">
+          <article>
+            <h1>{props.data.title}</h1>
+            <img src={props.data.img} alt={props.data.title} className="post__img mb-5" />
+            <p className="post__date pb-5">{date}</p>
+            <div className="post__content mb-5" dangerouslySetInnerHTML={{__html:props.data.content}}/>
+            {/* TODO: add next/previous post link */}
+            <div>
+              <Link href={nextLink}><a className="btn mb-2 mr-2">Next blog post</a></Link>
+              <Link href='/blog'><a className="btn">Back to blog listing</a></Link>
+            </div>
+          </article>
+        </div>
       </div>
     </Layout>
   )

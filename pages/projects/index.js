@@ -5,8 +5,6 @@ import { useState } from 'react'
 
 export default function Projects(props) {
   const [pro, setPro] = useState(false);
-  const personal = projects.filter(x => x.pen)
-  const professional = projects.filter(x => !x.pen)
 
   return (
     <Layout title={props.title} description={props.description}>
@@ -15,14 +13,14 @@ export default function Projects(props) {
 
         {/* TODO: add filters tech, pro/perso, etc. and order */}
 
-        <div className="projects__switch">
-          <button onClick={() => setPro(!pro)} className={!pro ? 'active btn' : 'btn'}>Personal projects</button>
-          <button onClick={() => setPro(!pro)} className={pro ? 'active btn' : 'btn'}>Professional projects</button>
+        <div>
+          <button onClick={() => setPro(!pro)} className="btn">
+            {pro ? 'Professional projects' : 'Personal projects'}
+          </button>
         </div>
 
         <div data-aos="fade-up">
-          {!pro && <Grid data={personal} className="mt-5 mb-5" />}
-          {pro && <Grid data={professional} className="mt-5 mb-5" />}
+          <Grid data={projects.filter(x => pro ? !x.pen : x.pen)} className="mt-5 mb-5" />
         </div>
         
       </div>

@@ -15,7 +15,7 @@ export const projects = [
     pen: 'PmPxEo', 
     intro: 'Get as long as possible in this version of Snake!', 
     tech: ['HTML', 'CSS', 'JS', 'jQuery',], 
-    chall: []
+    chall: ['keydown event', 'setInterval & clearInterval', 'array.shift', 'mobile swipe']
   },
   {
     title: 'minesweeper', 
@@ -24,7 +24,7 @@ export const projects = [
     pen: 'JJYqop', 
     intro: 'Play Minesweeper in this 9x9 grid!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['setInterval & clearInterval', 'parentNode', 'hasFocus']
   },
   {
     title: 'whack-a-donkey-kong', 
@@ -33,7 +33,7 @@ export const projects = [
     pen: 'YabyJJ', 
     intro: 'Crush these Donky Kongs in this whack a mole!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['setInterval & clearInterval', 'parentNode', 'classList']
   },
   {
     title: 'hangman', 
@@ -42,7 +42,7 @@ export const projects = [
     pen: 'ZEzvEdz', 
     intro: 'The Hangman game as in your childhood!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['array.concat', 'string.split']
   },
   {
     title: 'dad-jokes', 
@@ -51,7 +51,7 @@ export const projects = [
     pen: 'LKXvrq', 
     intro: 'Go and get a random dad joke!', 
     tech: ['HTML', 'CSS', 'JS', 'jQuery',], 
-    chall: []
+    chall: ['AJAX call', 'JSON']
   },
   {
     title: 'giphy-search', 
@@ -60,7 +60,7 @@ export const projects = [
     pen: 'EExyvQ', 
     intro: 'Find the gif you need with Giphy Search!', 
     tech: ['HTML', 'CSS', 'JS', 'jQuery',], 
-    chall: []
+    chall: ['AJAX call', 'JSON', 'setTimeout']
   },
   {
     title: 'tetris', 
@@ -69,7 +69,7 @@ export const projects = [
     pen: 'eYpxowj', 
     intro: 'Break lines and stay alive for as long as you can in this Tetris!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['Babel', 'array.forEach', 'array.some', 'setInterval & clearInterval', 'keyup event']
   },
   {
     title: 'simon-game', 
@@ -78,7 +78,7 @@ export const projects = [
     pen: 'LWqpGM', 
     intro: 'Train your brain with the famous Simon game!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['childNodes', 'Math.random', 'Audio', 'setInterval', 'setTimeout']
   },
   {
     title: 'drum-machine', 
@@ -87,7 +87,7 @@ export const projects = [
     pen: 'dwmoyE', 
     intro: 'Smash this Drum Machine!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['Audio', 'childNodes', 'keyup event']
   },
   {
     title: 'clock', 
@@ -96,7 +96,7 @@ export const projects = [
     pen: 'YQoBJK', 
     intro: 'Check the clock and get the time!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['Date', 'getHours', 'getMinutes', 'transform: rotate', 'tranform-origin']
   },
   {
     title: 'etch-a-sketch', 
@@ -105,7 +105,7 @@ export const projects = [
     pen: 'dVWPOW', 
     intro: 'Try to sketch something in this!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['input event', 'parseFloat', 'toString', 'offsetWidth']
   },
   {
     title: 'calculator', 
@@ -114,7 +114,7 @@ export const projects = [
     pen: 'dvdZjx', 
     intro: 'Fully functional Calculator!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['Math.round', 'eval', 'insertAdjacentHTML', 'box-shadow']
   },
   {
     title: 'higher-or-lower', 
@@ -123,7 +123,7 @@ export const projects = [
     pen: 'bGbLzzE', 
     intro: 'Guess if the next card will be Higher or Lower!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['array.indexOf', 'Math.random']
   },
   {
     title: 'tic-tac-toe', 
@@ -132,7 +132,7 @@ export const projects = [
     pen: 'ZevLbx', 
     intro: 'Play Tic Tac Toe or OXO against a dumb AI!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['classList', 'setTimeout', 'Math.random']
   },
   {
     title: 'sliding-puzzle', 
@@ -141,7 +141,7 @@ export const projects = [
     pen: 'RjzGBO', 
     intro: 'Try to solve this sliding puzzle!', 
     tech: ['HTML', 'CSS', 'JS', 'Sass',], 
-    chall: []
+    chall: ['setTimeout', 'Math.random', 'array.splice']
   },
   {
     title: 'pokemon', 
@@ -150,7 +150,7 @@ export const projects = [
     pen: 'rjBWWR', 
     intro: 'Find out what Pokemon you are!', 
     tech: ['HTML', 'CSS', 'JS', 'jQuery'], 
-    chall: []
+    chall: ['@keyframes', 'transform: rotate']
   },
   {
     title: 'color-game', 
@@ -159,7 +159,7 @@ export const projects = [
     pen: 'poyXqWZ', 
     intro: 'Sharpen your RGB knowledge by playing this little Color game!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['display: grid', 'setTimeout', 'array.push']
   },
   {
     title: 'brick-breaker', 
@@ -168,7 +168,7 @@ export const projects = [
     pen: 'GEgjEb', 
     intro: 'Break all the bricks in this first level!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['canvas', 'mousemove event']
   },
   {
     title: 'connect-4', 
@@ -177,7 +177,7 @@ export const projects = [
     pen: 'bqWqGV', 
     intro: 'Play Connect 4 with a friend and align 4 of yours!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: [':not()', ':nth-of-type()', 'array.slice']
   },
   {
     title: 'date-counter', 
@@ -186,7 +186,7 @@ export const projects = [
     pen: 'oWYVYj', 
     intro: 'Find out how many days passed since a certain date, or between two dates, or what date will ti be in x days.', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['input event', 'Date', 'getDate', 'getMonth', 'getFullYear']
   },
   {
     title: 'quotes', 
@@ -195,7 +195,7 @@ export const projects = [
     pen: 'xgGzdJ', 
     intro: 'Click and get a random quote from Forismatic!', 
     tech: ['HTML', 'CSS', 'JS', 'Bootstrap', 'jQuery',], 
-    chall: []
+    chall: ['AJAX call', 'JSON']
   },
   {
     title: 'timer', 
@@ -204,7 +204,7 @@ export const projects = [
     pen: 'WpKWgG', 
     intro: 'Set a timer for anything!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: []
+    chall: ['setInterval & clearInterval', 'setTimeout']
   },
   {
     title: 'kpmg-careers', 
@@ -248,7 +248,7 @@ export const projects = [
     screen: '/images/projects/onomohotels-com-screen.png', 
     intro: 'Onomo hotels booking website built with React', 
     tech: ['React', 'HTML', 'CSS', 'JS'], 
-    chall: ['React', 'Styled system', 'Emotion']
+    chall: ['React', 'Styled system', 'Emotion', 'datepicker']
   },
   {
     title: 'omega', 
@@ -259,6 +259,6 @@ export const projects = [
     screen: '/images/projects/parcomega-ca-screen.png', 
     intro: 'Onomo hotels booking website built with React', 
     tech: ['React', 'HTML', 'CSS', 'JS'], 
-    chall: ['React', 'Styled system', 'Emotion']
+    chall: ['React', 'Styled system', 'Emotion', 'clip-path']
   },
 ];
