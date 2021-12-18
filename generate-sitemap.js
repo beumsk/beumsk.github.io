@@ -7,7 +7,7 @@ sitemap({
   targetDirectory: path.resolve(__dirname, 'out/'),
   ignoredPaths: ['styles', 'images', '404', 'index'],
   extraPaths: ['/'],
-  ignoredExtensions: ['png', 'jpg', 'jpeg', 'svg', 'ico', 'xml'],
+  ignoredExtensions: ['png', 'jpg', 'jpeg', 'svg', 'ico', 'xml', 'pdf'],
   pagesConfig: {
     '/': {
       priority: '1'

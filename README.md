@@ -17,11 +17,11 @@ npm run dev
 ## TODO
 
 - homepage layout
-- add cv
-- add list of skills
+- improve cv (real icons, rethink projects section, rethink articles section)
+- create great card design + animation
 - create my own AOS (to avoid overflow issues)
-- fill in all projects data (+add more images of features/pages?)
-- add SEO info (title, desc, images)
+- improve projects data (+add more images of features/pages?)
+- improve SEO (desc, )
 - save time machine when bee/eli paris goes live
 - low res images (automate without next-optimized-images)
 - update nextjs and react

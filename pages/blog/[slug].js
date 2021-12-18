@@ -2,7 +2,7 @@ import Layout from '@components/layout'
 import Link from 'next/link'
 import { getPostBySlug, getAllPosts } from "@api"
 
-export default function Post(props){
+export default function DynamicBlogPost(props){
   const date = props.data.date === '' ? 'No date' 
     : new Date(props.data.date).getDate() + '.' 
     + (new Date(props.data.date).getMonth()+1) + '.' 
@@ -12,7 +12,7 @@ export default function Post(props){
     || props.posts[0].link;
 
   return (
-    <Layout title={props.data.title + ' | Rémy Beumier'} img={props.data.img} description={props.data.intro}>
+    <Layout title={props.data.title + ' | Blog | Rémy Beumier'} img={props.data.img} description={props.data.intro}>
       <div className="container narrow over-x-h"> 
         <div data-aos="fade-left">
           <article>

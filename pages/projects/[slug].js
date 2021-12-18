@@ -23,7 +23,7 @@ const Tech = (props) => {
   )
 }
 
-export default function DynamicPage(props) {
+export default function DynamicProject(props) {
   const personal = projects.filter(x => x.pen)
   const professional = projects.filter(x => !x.pen)
   const router = useRouter()
@@ -34,7 +34,7 @@ export default function DynamicPage(props) {
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (
-    <Layout title={slugTitle + ' | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>      
+    <Layout title={slugTitle + ' | Projects | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>      
       <div className="container over-x-h">
         <div data-aos="fade-left">
           <h1>{slugTitle}</h1>

@@ -1,0 +1,264 @@
+.resume {
+  min-width: 260px;
+  min-height: 100vh;
+  line-height: 1.3;
+  font-family: Open Sans, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+  background: #009688;
+  background-image: linear-gradient(135deg, #00796b 50%, #009688 50%);
+  background-image: linear-gradient(135deg, #26a69a, #004d40);
+  background-attachment: fixed;
+
+  @media (min-width: 480px) {
+    display: grid;
+    grid-template-columns: 2fr minmax(100px, 200px);
+    grid-template-rows: auto-fill 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'name photo'
+      'about about'
+      'experience experience'
+      'projects projects'
+      'articles articles'
+      'skills skills'
+      'languages languages'
+      'contact contact';
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 2fr minmax(100px, 260px);
+    grid-template-areas:
+      'name photo'
+      'about photo'
+      'experience contact'
+      'experience skills'
+      'projects languages'
+      'articles articles';
+  }
+
+  .name {
+    grid-area: name;
+    font-size: 1.2em;
+  }
+  @media (min-width: 480px) {
+    .name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: left;
+      font-size: 1.3em;
+    }
+  }
+
+  .photo {
+    grid-area: photo;
+    overflow-x: hidden;
+  }
+
+  .photo img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: auto;
+  }
+
+  .about {
+    grid-area: about;
+    font-size: 1.2em;
+  }
+
+  .experience {
+    grid-area: experience;
+  }
+
+  .projects {
+    grid-area: projects;
+  }
+
+  .articles {
+    grid-area: articles;
+    .list-no a {
+      display: block;
+    }
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  .skills {
+    grid-area: skills;
+  }
+
+  .languages {
+    grid-area: languages;
+  }
+
+  section {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  p,
+  li {
+    margin-bottom: 5px;
+  }
+
+  h1,
+  h2,
+  .subtitle {
+    font-family: Share Tech Mono, monospace;
+  }
+
+  h1 {
+    font-size: 2.4em;
+    letter-spacing: 0.1em;
+    box-shadow: none;
+  }
+
+  .subtitle {
+    font-size: 1.6em;
+    opacity: 0.8;
+  }
+
+  h2 {
+    padding: 5px 0;
+    border-bottom: solid 1px lightgrey;
+    border-top: solid 1px lightgrey;
+    font-size: 1.7em;
+  }
+
+  .emoji {
+    font-size: 0.8em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  a {
+    color: white;
+    transition: color 0.2s, background-color 0.2s;
+  }
+  a:hover {
+    color: lightgrey;
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: square;
+  }
+
+  .list-no {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .list-block {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  @media (min-width: 768px) {
+    .list-block {
+      margin-top: 15px;
+    }
+  }
+
+  .list-block li {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 5px;
+    border: solid 1px;
+  }
+
+  @media (min-width: 768px) {
+    .list-block li {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  .item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  .detail {
+    font-size: 90%;
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  @media print {
+    & {
+      color: #333;
+      background: white;
+    }
+
+    a {
+      color: #333;
+    }
+
+    .photo img {
+      margin: 0;
+    }
+
+    h1,
+    h2 {
+      color: #009688;
+    }
+
+    .subtitle,
+    .detail {
+      color: #666;
+      opacity: 1;
+    }
+
+    .print-url {
+      font-size: 90%;
+    }
+  }
+
+  @media not print {
+    .print-only {
+      display: none;
+    }
+
+    .cta {
+      margin: 0;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 5px 0;
+      padding: 5px;
+      border: solid 1px white;
+      text-decoration: none;
+      color: #333;
+      background: white;
+    }
+
+    .cta a:hover {
+      color: white;
+      background: transparent;
+    }
+  }
+}
