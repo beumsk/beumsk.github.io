@@ -3,65 +3,85 @@
 main {
   --primary: #009688;
   --primary-dark: #004d40;
-  --primary-light: #26a69a;
+  --primary-light: #4db6ac;
+  --primary-lightest: #b2dfdb;
   --secondary: ;
   --action: ;
-  --text2: #000000;
-  --text: #333333;
+  --text: #000000;
+  --text2: #333333;
+  --text3: #454545;
   --dark: #333333;
   --dark-grey: #454545;
   --grey: #666666;
   --light-grey: #999999;
   --light: #eeeeee;
+  --bg3: #dddddd;
   --bg2: #eeeeee;
   --bg: #ffffff;
   --bg10: rgba(256, 256, 256, 0.1);
+  --bg20: rgba(256, 256, 256, 0.2);
   --bg40: rgba(256, 256, 256, 0.4);
   --bg80: rgba(256, 256, 256, 0.8);
   --text10: rgba(0, 0, 0, 0.1);
+  --text20: rgba(0, 0, 0, 0.2);
   --text40: rgba(0, 0, 0, 0.4);
   --text80: rgba(0, 0, 0, 0.8);
   --font-title: 'Share Tech Mono', monospace;
   --font-body: 'Open Sans', sans-serif;
-  --shadow: 0 3px 6px rgba(0, 150, 136, 0.16), 0 3px 6px rgba(0, 150, 136, 0.23);
+  --shadow: 0 2px 6px var(--text20);
+  --shadows4: 4px 4px var(--primary-light), 8px 8px var(--primary-lightest);
+  --shadows6: 6px 6px var(--primary-light), 12px 12px var(--primary-lightest);
+  --card-ratio: 16/9;
 }
 
 main.dark {
-  --text: #eeeeee;
-  --text2: #ffffff;
+  --text: #ffffff;
+  --text2: #eeeeee;
+  --text3: #dddddd;
   --bg: #000000;
   --bg2: #333333;
+  --bg3: #454545;
   --bg10: rgba(0, 0, 0, 0.1);
+  --bg20: rgba(0, 0, 0, 0.2);
   --bg40: rgba(0, 0, 0, 0.4);
   --bg80: rgba(0, 0, 0, 0.8);
   --text10: rgba(256, 256, 256, 0.1);
+  --text20: rgba(256, 256, 256, 0.2);
   --text40: rgba(256, 256, 256, 0.4);
   --text80: rgba(256, 256, 256, 0.8);
 }
 
 @media (prefers-color-scheme: dark) {
   main {
-    --text: #eeeeee;
-    --text2: #ffffff;
+    --text: #ffffff;
+    --text2: #eeeeee;
+    --text3: #dddddd;
     --bg: #000000;
     --bg2: #333333;
+    --bg3: #454545;
     --bg10: rgba(0, 0, 0, 0.1);
+    --bg20: rgba(0, 0, 0, 0.2);
     --bg40: rgba(0, 0, 0, 0.4);
     --bg80: rgba(0, 0, 0, 0.8);
     --text10: rgba(256, 256, 256, 0.1);
+    --text20: rgba(256, 256, 256, 0.2);
     --text40: rgba(256, 256, 256, 0.4);
     --text80: rgba(256, 256, 256, 0.8);
   }
 
   main.light {
-    --text: #333333;
-    --text2: #000000;
+    --text: #000000;
+    --text2: #333333;
+    --text3: #454545;
     --bg: #ffffff;
     --bg2: #eeeeee;
+    --bg3: #dddddd;
     --bg10: rgba(256, 256, 256, 0.1);
+    --bg20: rgba(256, 256, 256, 0.2);
     --bg40: rgba(256, 256, 256, 0.4);
     --bg80: rgba(256, 256, 256, 0.8);
     --text10: rgba(0, 0, 0, 0.1);
+    --text20: rgba(0, 0, 0, 0.2);
     --text40: rgba(0, 0, 0, 0.4);
     --text80: rgba(0, 0, 0, 0.8);
   }
