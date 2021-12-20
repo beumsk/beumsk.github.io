@@ -8,7 +8,7 @@ export default function Blog(props) {
       <div className="container">
         <h1>Blog</h1>
         <div data-aos="fade-up">
-          <Grid data={props.posts} className="mt-5 mb-5" />
+          <Grid data={props.posts} className="mt-10 mb-10" />
         </div>
       </div>
     </Layout>

@@ -29,7 +29,9 @@ export default function Layout(props) {
         <meta property="og:image:secure_url" content={fullImageUrl || "https://beumsk.github.io/images/rb.png"} />
       </Head>
       <Header onClick={switchTheme} theme={theme} />
-      {props.children}
+      <div className="over-x-h">
+        {props.children}
+      </div>
       <Footer />
       <MobileNav />
     </main>

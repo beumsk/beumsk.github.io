@@ -1,8 +1,8 @@
 export const projects = [
   {
     title: 'memory', 
-    link: '/projects/memory', 
-    img: '/images/projects/memory.jpg', 
+    link: '/projects/memory',
+    img: '/images/projects/memory.jpg',
     pen: 'xdoKjX', 
     intro: 'Find pairs as fast as possible in this Memory!', 
     tech: ['HTML', 'CSS', 'JS',], 

@@ -13,7 +13,7 @@ export default function DynamicBlogPost(props){
 
   return (
     <Layout title={props.data.title + ' | Blog | Rémy Beumier'} img={props.data.img} description={props.data.intro}>
-      <div className="container narrow over-x-h"> 
+      <div className="container narrow"> 
         <div data-aos="fade-left">
           <article>
             <h1>{props.data.title}</h1>

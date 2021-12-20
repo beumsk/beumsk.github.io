@@ -16,20 +16,18 @@ body {
 main {
   font-family: var(--font-body);
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text2);
 }
 
 h1 {
   color: var(--primary);
   font-family: var(--font-title);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: normal;
-  // text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
-  margin: 20px 0 32px 0;
+  margin: 32px 0 32px 0;
   padding: 0 4px 4px 0;
-  box-shadow: rgba(0, 150, 136, 0.3) 5px 5px, rgba(0, 150, 136, 0.2) 10px 10px;
 }
 
 h2 {
@@ -139,7 +137,6 @@ main {
     margin-left: -0.75rem;
     margin-right: -0.75rem;
     .col {
-      // display: block;
       flex-basis: 0;
       flex-grow: 1;
       flex-shrink: 1;
@@ -203,8 +200,24 @@ button {
   padding: 4px 8px;
   display: inline-flex;
   align-items: center;
+  position: relative;
+  top: -2px;
+  left: -2px;
+  box-shadow: 4px 4px var(--primary-light);
+  @media screen and (min-width: 768px) {
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
   background: transparent;
   cursor: pointer;
+  transition: all 0.2s;
+  &:hover,
+  &:focus {
+    left: -2px;
+    top: -2px;
+    box-shadow: 4px 4px var(--primary-light);
+  }
 }
 
 .wrapper {
@@ -218,6 +231,13 @@ button {
     left: 0;
     top: 0;
   }
+}
+
+.t-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .skewed {

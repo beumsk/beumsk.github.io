@@ -16,9 +16,11 @@ npm run dev
 
 ## TODO
 
-- homepage layout
+- homepage layout (gradient from splash to 1st section? diagonals? bg patterns?)
+- add icons (about languages under image)
 - improve cv (real icons, rethink projects section, rethink articles section)
-- create great card design + animation
+- improve resume with react features (mapping)
+- create animations (loading, button, background shapes)
 - create my own AOS (to avoid overflow issues)
 - improve projects data (+add more images of features/pages?)
 - improve SEO (desc, )

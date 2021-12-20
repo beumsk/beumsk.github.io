@@ -35,7 +35,7 @@ export default function DynamicProject(props) {
 
   return (
     <Layout title={slugTitle + ' | Projects | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>      
-      <div className="container over-x-h">
+      <div className="container">
         <div data-aos="fade-left">
           <h1>{slugTitle}</h1>
           <p className="mb-8">{proj.intro}</p>
