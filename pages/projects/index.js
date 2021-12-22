@@ -8,7 +8,7 @@ export default function Projects(props) {
 
   return (
     <Layout title={props.title} description={props.description}>
-      <div className="container">
+      <div className="container projects-shape">
         <h1>Projects</h1>
 
         {/* TODO: add filters tech, pro/perso, etc. and order */}

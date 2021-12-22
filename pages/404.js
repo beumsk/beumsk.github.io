@@ -4,10 +4,11 @@ import Link from 'next/link'
 export default function Custom404() {
   return (
     <Layout title="404 - Page Not Found">
-      <div className="container">
+      <div className="container error-shape">
         <h1>404 - Page Not Found</h1>
+        {/* TODO: add random project / post ? */}
         <div>
-          <Link href="/" className="btn"><a>Go back Home</a></Link>
+          <Link href="/"><a className="btn">Go back Home</a></Link>
         </div>
       </div>
     </Layout>

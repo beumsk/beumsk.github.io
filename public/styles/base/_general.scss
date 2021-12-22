@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: system-ui;
   font-size: 1.6rem;
@@ -24,10 +28,57 @@ h1 {
   font-family: var(--font-title);
   font-size: 4rem;
   font-weight: normal;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   display: inline-block;
   margin: 32px 0 32px 0;
   padding: 0 4px 4px 0;
+  animation: title-shadow 0.4s ease-in-out forwards;
+}
+
+@keyframes title-shadow {
+  0% {
+    text-shadow: none;
+  }
+  12% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest);
+  }
+  25% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest);
+  }
+  37% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest);
+  }
+  50% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
+      4px 2px var(--primary-lightest);
+  }
+  62% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
+      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest);
+  }
+  75% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
+      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
+      6px 3px var(--primary-lightest);
+  }
+  87% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
+      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
+      6px 3px var(--primary-lightest), 7px 3px var(--primary-lightest);
+  }
+  100% {
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
+      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
+      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
+      6px 3px var(--primary-lightest), 7px 3px var(--primary-lightest),
+      8px 4px var(--primary-lightest);
+  }
 }
 
 h2 {
@@ -125,7 +176,7 @@ main {
     max-width: 1140px;
   }
   &.narrow {
-    @media screen and (min-width: 690px) {
+    @media screen and (min-width: 768px) {
       max-width: 80ch;
     }
   }
@@ -171,8 +222,8 @@ main {
   }
 }
 
-.over-x-h {
-  overflow-x: hidden;
+.over-h {
+  overflow: hidden;
 }
 
 .centered {
@@ -195,6 +246,8 @@ main {
 
 .btn,
 button {
+  color: var(--text2);
+  background-color: var(--bg);
   border: solid 1px;
   text-decoration: none;
   padding: 4px 8px;
@@ -209,7 +262,6 @@ button {
     left: 0;
     box-shadow: none;
   }
-  background: transparent;
   cursor: pointer;
   transition: all 0.2s;
   &:hover,

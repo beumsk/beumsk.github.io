@@ -34,8 +34,8 @@ export default function DynamicProject(props) {
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (
-    <Layout title={slugTitle + ' | Projects | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>      
-      <div className="container">
+    <Layout title={slugTitle + ' | Projects | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>
+      <div className="container project-shape">
         <div data-aos="fade-left">
           <h1>{slugTitle}</h1>
           <p className="mb-8">{proj.intro}</p>
@@ -62,11 +62,15 @@ export default function DynamicProject(props) {
             <>
               <Codepen pen={proj.pen} />
 
-              <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn mb-2 mr-2">Github repository</a>
+              <div className="mb-8">
+                <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn mb-4 mr-4">Github repository</a>
 
-              <Link href={personal[personal.indexOf(proj) + 1]?.link || personal[0].link}>
-                <a className="btn mb-2 mr-2">Next project</a>
-              </Link>
+                <Link href={personal[personal.indexOf(proj) + 1]?.link || personal[0].link}>
+                  <a className="btn mb-4 mr-4">Next project</a>
+                </Link>
+
+                <Link href="/projects"><a className="btn">Back to projects</a></Link>
+              </div>
             </>
           )}
           
@@ -78,16 +82,18 @@ export default function DynamicProject(props) {
                 </figure>
               )}
 
-              {proj.current && <a href={proj.current} target="_blank" className="btn mb-2 mr-2">Live website</a>}
-              {proj.past && <a href={proj.past} target="_blank" className="btn mb-2 mr-2">Site as I left it</a>}
-              
-              <Link href={professional[professional.indexOf(proj) + 1]?.link || professional[0].link}>
-                <a className="btn mb-2 mr-2">Next project</a>
-              </Link>
+              <div className="mb-8">
+                {proj.current && <a href={proj.current} target="_blank" className="btn mb-4 mr-4">Live website</a>}
+                {proj.past && <a href={proj.past} target="_blank" className="btn mb-4 mr-4">Site as I left it</a>}
+                
+                <Link href={professional[professional.indexOf(proj) + 1]?.link || professional[0].link}>
+                  <a className="btn mb-4 mr-4">Next project</a>
+                </Link>
+
+                <Link href="/projects"><a className="btn">Back to projects</a></Link>
+              </div>
             </>
           )}
-          
-          <Link href="/projects"><a className="btn">Back to projects</a></Link>
         </div>
       </div>
     </Layout>

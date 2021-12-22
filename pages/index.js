@@ -12,7 +12,6 @@ export default function Home(props) {
       <section id="splash">
         <div>
           <div className="container" data-aos="fade-up">
-            {/* TODO: make it splash: big image, logo, animation */}
             <div className="title">
               <h1>Rémy Beumier</h1>
               <p>Front-end Dev</p>
@@ -22,7 +21,8 @@ export default function Home(props) {
         </div>
       </section>
 
-      <section id="about" className="skewed">
+      <section id="about" className="svg-divider">
+        <div className="back-shapes"></div>
         <div className="container" data-aos="fade-right" data-aos-delay="400">
           <div className="cols cols-lg">
             <div className="col">
@@ -32,7 +32,7 @@ export default function Home(props) {
               <p>I now code everyday for a living and a hobby in Brussels with the powerful trio <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>, as well as some additional frameworks and libraries such as <strong>Bootstrap</strong>, <strong>Sass</strong> and <strong>jQuery</strong>.</p>
               <p className="mb-5">I recently started to code with both <strong>Angular</strong> and <strong>React</strong> and I discover their power and complexity.</p>
               <Link href="/resume-remy-beumier">
-                <a className="btn mr-4" target="_blank">Check out my resume</a>
+                <a className="btn mb-4 mr-4" target="_blank">Check out my resume</a>
               </Link>
               <a className="btn" href="remy-beumier-resume.pdf" target="_blank" download>Download my resume</a>
             </div>
@@ -44,8 +44,7 @@ export default function Home(props) {
         </div>
       </section>
 
-      {/* TODO: make it sexy: full-width scroll? carousel? */}
-      <section id="projects" className="skewed">
+      <section id="projects" className="pattern">
         <div className="container" data-aos="fade-left">
           <h2>Projects</h2>
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
@@ -54,8 +53,7 @@ export default function Home(props) {
         </div>
       </section>
 
-      {/* TODO: make it sexy: price/podium? tiles? */}
-      <section id="blog" className="skewed">
+      <section id="blog" className='svg-divider'>
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
@@ -69,10 +67,10 @@ export default function Home(props) {
           <h2>Contact</h2>
           <p className="pb-5">Feel free to get in touch and stay connected with me via these different channels.</p>
           <div>
-            <a href="https://codepen.io/beumsk/" target="_blank" className="btn mb-2 mr-4">
+            <a href="https://codepen.io/beumsk/" target="_blank" className="btn mb-4 mr-4">
               <FaCodepen /><span className="ml-1">Codepen</span>
             </a>
-            <a href="https://github.com/beumsk" target="_blank" className="btn mb-2 mr-4">
+            <a href="https://github.com/beumsk" target="_blank" className="btn mb-4 mr-4">
               <FaGithub /><span className="ml-1">Github</span>
             </a>
             <a href="https://www.linkedin.com/in/remybeumier/" target="_blank" className="btn">

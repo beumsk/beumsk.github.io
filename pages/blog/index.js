@@ -5,7 +5,7 @@ import { getAllPosts } from '@api'
 export default function Blog(props) {
   return (
     <Layout title={props.title} description={props.description}>
-      <div className="container">
+      <div className="container blog-shape">
         <h1>Blog</h1>
         <div data-aos="fade-up">
           <Grid data={props.posts} className="mt-10 mb-10" />

@@ -22,7 +22,6 @@ export default function Resume() {
         </section>
 
         <section className="about">
-          {/* quote it? */}
           <p>I'm a web lover focused on front-end technologies.</p>
           <p>I code everyday for a living and a hobby in Brussels always looking to improve myself by searching, experimenting and learning.</p>
         </section>

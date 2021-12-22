@@ -13,7 +13,7 @@ export default function DynamicBlogPost(props){
 
   return (
     <Layout title={props.data.title + ' | Blog | Rémy Beumier'} img={props.data.img} description={props.data.intro}>
-      <div className="container narrow"> 
+      <div className="container narrow posts-shape"> 
         <div data-aos="fade-left">
           <article>
             <h1>{props.data.title}</h1>
@@ -21,8 +21,8 @@ export default function DynamicBlogPost(props){
             <p className="post__date pb-5">{date}</p>
             <div className="post__content mb-5" dangerouslySetInnerHTML={{__html:props.data.content}}/>
             {/* TODO: add next/previous post link */}
-            <div>
-              <Link href={nextLink}><a className="btn mb-2 mr-2">Next blog post</a></Link>
+            <div className="mb-8">
+              <Link href={nextLink}><a className="btn mb-4 mr-4">Next blog post</a></Link>
               <Link href='/blog'><a className="btn">Back to blog listing</a></Link>
             </div>
           </article>

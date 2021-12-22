@@ -8,7 +8,7 @@ export default function Grid(props) {
       <div className="card" key={index}>
         <div className="card__behind">
           <Link href={item.link || ''}>
-            <a className="card__title" title="Read more">
+            <a className="card__title" title="Learn more">
               <h2 className="t-ellipsis">
                 {item.title.replace(/-/g, " ").charAt(0).toUpperCase() + item.title.replace(/-/g, " ").slice(1)}
               </h2>
@@ -28,7 +28,7 @@ export default function Grid(props) {
           )}
         </div>
         <Link href={item.link || ''}>
-          <a title="Read more">
+          <a title="Learn more">
             <div className="card__img">
               <img src={item.img} alt={item.title.replace(/-/g, " ")} loading="lazy" />
             </div>
