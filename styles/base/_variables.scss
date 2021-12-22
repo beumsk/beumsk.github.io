@@ -49,6 +49,9 @@ main.dark {
   --text20: rgba(256, 256, 256, 0.2);
   --text40: rgba(256, 256, 256, 0.4);
   --text80: rgba(256, 256, 256, 0.8);
+  .svg-divider::before {
+    filter: invert(1);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,6 +70,9 @@ main.dark {
     --text20: rgba(256, 256, 256, 0.2);
     --text40: rgba(256, 256, 256, 0.4);
     --text80: rgba(256, 256, 256, 0.8);
+    .svg-divider::before {
+      filter: invert(1);
+    }
   }
 
   main.light {

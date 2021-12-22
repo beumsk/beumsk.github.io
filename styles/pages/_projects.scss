@@ -1,3 +1,44 @@
+@media screen and (min-width: 992px) {
+  .project-shape,
+  .projects-shape {
+    &::before {
+      content: '';
+      position: absolute;
+      background: var(--primary);
+      box-shadow: 20px 20px var(--bg), 20px 20px 0 1px var(--text2);
+      transform: rotate(100deg);
+    }
+  }
+  .projects-shape {
+    &::before {
+      width: 30px;
+      height: 30px;
+      top: 80px;
+      right: 40px;
+      animation: shape-projects 53s infinite alternate linear;
+    }
+    @keyframes shape-projects {
+      100% {
+        transform: translate(-350px, 20px);
+      }
+    }
+  }
+  .project-shape {
+    &::before {
+      width: 50px;
+      height: 50px;
+      top: 120px;
+      right: 80px;
+      animation: shape-project 53s infinite alternate linear;
+    }
+    @keyframes shape-project {
+      100% {
+        transform: translate(-350px, 120px);
+      }
+    }
+  }
+}
+
 li.tech {
   list-style-type: none;
   display: inline-flex;

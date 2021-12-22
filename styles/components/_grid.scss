@@ -1,8 +1,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 60px;
-  padding: 0 20px;
+  grid-gap: 80px;
+  padding: 20px;
   @media screen and (min-width: 768px) {
     grid-gap: 40px;
     padding: 0;
@@ -23,7 +23,7 @@
       left: 0;
     }
     position: absolute;
-    background: var(--bg3);
+    background: var(--bg2);
     transition: all 0.2s, top 0.2s linear, left 0.2s linear;
     a:focus {
       z-index: 2;
