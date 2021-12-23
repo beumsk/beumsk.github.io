@@ -3,15 +3,28 @@
   $spacing: 4px;
   @for $i from 1 through length($sizes) {
     $size: nth($sizes, $i);
-    .#{$prefix}-#{$i - 1} {
-      #{$property}: $spacing * $size + !important;
+    @if ($prefix == 'mx' or $prefix == 'px') {
+      .#{$prefix}-#{$i - 1} {
+        #{$property}-left: $spacing * $size + !important;
+        #{$property}-right: $spacing * $size + !important;
+      }
+    } @else if ($prefix == 'my' or $prefix == 'py') {
+      .#{$prefix}-#{$i - 1} {
+        #{$property}-top: $spacing * $size + !important;
+        #{$property}-bottom: $spacing * $size + !important;
+      }
+    } @else {
+      .#{$prefix}-#{$i - 1} {
+        #{$property}: $spacing * $size + !important;
+      }
     }
   }
 }
 
-$rules: [ [ml, margin-left], [mt, margin-top], [mb, margin-bottom], [mr,
-  margin-right], [m, margin], [pl, padding-left], [pt, padding-top], [pb,
-  padding-bottom], [pr, padding-right], [p, padding], ];
+$rules: [ [ml, margin-left], [mr, margin-right], [mt, margin-top], [mb,
+  margin-bottom], [mx, margin], [my, margin], [m, margin], [pl, padding-left],
+  [pr, padding-right], [pt, padding-top], [pb, padding-bottom], [px, padding],
+  [py, padding], [p, padding] ];
 
 @each $item in $rules {
   @include generate(nth($item, 1), nth($item, 2));

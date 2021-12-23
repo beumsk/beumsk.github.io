@@ -4,7 +4,6 @@ header {
   top: 0;
   box-shadow: 0 1px 2px 0 var(--text40);
   z-index: 50;
-
   > div {
     display: flex;
     flex-direction: row;
@@ -13,5 +12,18 @@ header {
   a {
     padding: 12px 8px;
     text-decoration: none;
+    &.logo {
+      padding: 8px;
+      img {
+        height: 30px;
+        width: auto;
+        filter: grayscale(1);
+        transition: filter 0.2s;
+      }
+      &:hover img,
+      &:focus img {
+        filter: grayscale(0);
+      }
+    }
   }
 }
