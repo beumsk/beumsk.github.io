@@ -1,6 +1,6 @@
-import Layout from '@components/layout'
-import Link from 'next/link'
-import { getPostBySlug, getAllPosts } from "@api"
+import Link from 'next/link';
+import { getPostBySlug, getAllPosts } from "@api";
+import Layout from '@components/layout';
 
 export default function DynamicBlogPost(props){
   const date = props.data.date === '' ? 'No date' 
@@ -23,7 +23,7 @@ export default function DynamicBlogPost(props){
             {/* TODO: add next/previous post link */}
             <div className="mb-8">
               <Link href={nextLink}><a className="btn mb-4 mr-4">Next blog post</a></Link>
-              <Link href='/blog'><a className="btn">Back to blog listing</a></Link>
+              <Link href="/blog"><a className="btn">Back to blog listing</a></Link>
             </div>
           </article>
         </div>

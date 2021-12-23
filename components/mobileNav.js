@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { nav } from '@data/nav'
+import Link from 'next/link';
+import { nav } from '@data/nav';
 
 export default function MobileNav() {
   return (

@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Header from 'components/header'
-import Footer from 'components/footer'
-import MobileNav from 'components/mobileNav'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+import Header from 'components/header';
+import Footer from 'components/footer';
+// import MobileNav from 'components/mobileNav';
 
 export default function Layout(props) {
   const [theme, setTheme] = useState('');
@@ -24,7 +24,7 @@ export default function Layout(props) {
     <main className={theme}>
       <Head>
         <title>{props.title}</title>
-        <meta name='description' content={props.description} />
+        <meta name="description" content={props.description} />
         <meta property="og:image" content={fullImageUrl || "https://beumsk.github.io/images/rb.png"} />
         <meta property="og:image:secure_url" content={fullImageUrl || "https://beumsk.github.io/images/rb.png"} />
       </Head>
@@ -33,7 +33,7 @@ export default function Layout(props) {
         {props.children}
       </div>
       <Footer />
-      <MobileNav />
+      {/* <MobileNav /> */}
     </main>
   )
 }

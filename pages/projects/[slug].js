@@ -1,9 +1,9 @@
-import Layout from '@components/layout'
-import Codepen from 'components/codepen'
-import Link from 'next/link'
-import { projects } from '@data/projects'
-import { useRouter } from 'next/router'
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiSass, SiAngular, SiReact, SiCsharp, SiUmbraco } from 'react-icons/si';
+import { projects } from '@data/projects';
+import Layout from '@components/layout';
+import Codepen from 'components/codepen';
 
 const Tech = (props) => {
   return (
@@ -63,7 +63,7 @@ export default function DynamicProject(props) {
               <Codepen pen={proj.pen} />
 
               <div className="mb-8">
-                <a href={"https://github.com/beumsk/" + proj.title} target="_blank" className="btn mb-4 mr-4">Github repository</a>
+                <a href={"https://github.com/beumsk/" + proj.title} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">Github repository</a>
 
                 <Link href={personal[personal.indexOf(proj) + 1]?.link || personal[0].link}>
                   <a className="btn mb-4 mr-4">Next project</a>
@@ -83,8 +83,8 @@ export default function DynamicProject(props) {
               )}
 
               <div className="mb-8">
-                {proj.current && <a href={proj.current} target="_blank" className="btn mb-4 mr-4">Live website</a>}
-                {proj.past && <a href={proj.past} target="_blank" className="btn mb-4 mr-4">Site as I left it</a>}
+                {proj.current && <a href={proj.current} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">Live website</a>}
+                {proj.past && <a href={proj.past} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">Site as I left it</a>}
                 
                 <Link href={professional[professional.indexOf(proj) + 1]?.link || professional[0].link}>
                   <a className="btn mb-4 mr-4">Next project</a>

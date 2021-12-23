@@ -1,7 +1,7 @@
+import { useState } from 'react'
+import { projects } from '@data/projects'
 import Layout from '@components/layout'
 import Grid from 'components/grid'
-import { projects } from '@data/projects'
-import { useState } from 'react'
 
 export default function Projects(props) {
   const [pro, setPro] = useState(false);

@@ -159,7 +159,8 @@
     color: white;
     transition: color 0.2s, background-color 0.2s;
   }
-  a:hover {
+  a:hover,
+  a:focus {
     color: lightgrey;
   }
 
@@ -257,7 +258,8 @@
       background: white;
     }
 
-    .cta a:hover {
+    .cta a:hover,
+    .cta a:focus {
       color: white;
       background: transparent;
     }

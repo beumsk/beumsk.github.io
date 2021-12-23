@@ -6,7 +6,7 @@ export default function Resume() {
     <>
       <Head>
         <title>Resume | Rémy Beumier</title>
-        <meta name='description' content="Rémy Beumier's resume as a Front-end Developer" />
+        <meta name="description" content="Rémy Beumier's resume as a Front-end Developer" />
         <meta property="og:image" content="https://beumsk.github.io/images/rb.png" />
         <meta property="og:image:secure_url" content="https://beumsk.github.io/images/rb.png" />
       </Head>
@@ -66,7 +66,7 @@ export default function Resume() {
             <h3>Games</h3>
             <p className="detail">Collection of micro application games built with HTML, CSS and Javascript.</p>
             <p>
-              <a href="https://codepen.io/collection/nZpVKb" target="_blank">See games collection</a>
+              <a href="https://codepen.io/collection/nZpVKb" target="_blank" rel="noopener noreferrer">See games collection</a>
               <span className="print-only"> (https://codepen.io/collection/nZpVKb)</span>
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Resume() {
             <h3>API</h3>
             <p className="detail">Collection of micro applications based on API's.</p>
             <p>
-              <a href="https://codepen.io/collection/DZrGGj" target="_blank">See API collection</a>
+              <a href="https://codepen.io/collection/DZrGGj" target="_blank" rel="noopener noreferrer">See API collection</a>
               <span className="print-only"> (https://codepen.io/collection/DZrGGj)</span>
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function Resume() {
             <h3>Tools</h3>
             <p className="detail">Collection of micro application tools built with HTML, CSS and Javascript.</p>
             <p>
-              <a href="https://codepen.io/collection/AZKOYW" target="_blank">See tools collection</a>
+              <a href="https://codepen.io/collection/AZKOYW" target="_blank" rel="noopener noreferrer">See tools collection</a>
               <span className="print-only"> (https://codepen.io/collection/AZKOYW)</span>
             </p>
           </div>
@@ -94,23 +94,23 @@ export default function Resume() {
           <h2>Articles <span className="emoji"><MdOutlineArticle /></span></h2>
           <ul className="list-no">
             <li>
-              <a href="https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation" target="_blank">Create a Responsive and Hybrid Navigation in Umbraco 7</a>
+              <a href="https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation" target="_blank" rel="noopener noreferrer">Create a Responsive and Hybrid Navigation in Umbraco 7</a>
               <span className="print-only"> (https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation)</span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g" target="_blank">How to add Emoji's in your website, using HTML, CSS or JavaScript</a>
+              <a href="https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g" target="_blank" rel="noopener noreferrer">How to add Emoji's in your website, using HTML, CSS or JavaScript</a>
               <span className="print-only"> (https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g)</span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i" target="_blank">Google Maps: Show multiple markers and add your event on click</a>
+              <a href="https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i" target="_blank" rel="noopener noreferrer">Google Maps: Show multiple markers and add your event on click</a>
               <span className="print-only"> (https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i)</span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc" target="_blank">How to show code in a page; Prism code highlighter</a>
+              <a href="https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc" target="_blank" rel="noopener noreferrer">How to show code in a page; Prism code highlighter</a>
               <span className="print-only"> (https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc)</span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/add-animations-on-scroll-with-aos-3o3n" target="_blank">Add Animations On Scroll with AOS</a>
+              <a href="https://dev.to/beumsk/add-animations-on-scroll-with-aos-3o3n" target="_blank" rel="noopener noreferrer">Add Animations On Scroll with AOS</a>
               <span className="print-only"> (https://dev.to/beumsk/add-animations-on-scroll-with-aos-3o3n)</span>
             </li>
           </ul>

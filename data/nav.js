@@ -1,6 +1,6 @@
 export const nav = [
   {
-    text: 'RB',
+    text: 'Home',
     link: '/#'
   },
   {
@@ -13,6 +13,6 @@ export const nav = [
   },
   {
     text: 'Contact',
-    link: '/#contact'
+    link: '#contact'
   }
 ];

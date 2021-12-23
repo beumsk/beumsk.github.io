@@ -1,10 +1,10 @@
-import Layout from '@components/layout'
-import Logo from '@components/logo'
+import Link from 'next/link';
+import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiSass, SiAngular, SiReact } from 'react-icons/si';
+import { getAllPosts } from '@api';
+import { projects } from '@data/projects';
+import Layout from '@components/layout';
+import Logo from '@components/logo';
 import Grid from '@components/grid';
-import Link from 'next/link'
-import { getAllPosts } from '@api'
-import { projects } from '@data/projects'
-import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Home(props) {
   return (
@@ -38,7 +38,17 @@ export default function Home(props) {
             </div>
             {/* TODO: full list of skills (+ soft ones?) */}
             <div className="col centered">
-              <img src="/images/developer-thinking.svg" alt="developer thinking" loading="lazy" className="mt-5 mb-5" />
+              <div className="languages mx-2">
+                <SiHtml5 title="HTML5" />
+                <SiCss3 title="CSS3" />
+                <SiJavascript title="JavaScript" />
+                <SiJquery title="jQuery" />
+                <SiBootstrap title="Bootstrap" />
+                <SiSass title="Sass" />
+                <SiAngular title="Angular" />
+                <SiReact title="React" />
+              </div>
+              <img src="/images/developer-thinking.svg" alt="developer thinking next to a computer" loading="lazy" className="mt-5 mb-5" />
             </div>
           </div>
         </div>
@@ -53,30 +63,12 @@ export default function Home(props) {
         </div>
       </section>
 
-      <section id="blog" className='svg-divider'>
+      <section id="blog">
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
           <Grid data={props.posts.slice(0, 3)} className="mt-10 mb-10" />
           <Link href="/blog"><a className="btn">Check all posts</a></Link>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div className="container" data-aos="fade-left">
-          <h2>Contact</h2>
-          <p className="pb-5">Feel free to get in touch and stay connected with me via these different channels.</p>
-          <div>
-            <a href="https://codepen.io/beumsk/" target="_blank" className="btn mb-4 mr-4">
-              <FaCodepen /><span className="ml-1">Codepen</span>
-            </a>
-            <a href="https://github.com/beumsk" target="_blank" className="btn mb-4 mr-4">
-              <FaGithub /><span className="ml-1">Github</span>
-            </a>
-            <a href="https://www.linkedin.com/in/remybeumier/" target="_blank" className="btn">
-              <FaLinkedin /><span className="ml-1">LinkedIn</span>
-            </a>
-          </div>
         </div>
       </section>
     </Layout>

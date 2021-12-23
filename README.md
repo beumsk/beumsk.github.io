@@ -11,19 +11,17 @@ npm run dev
 
 ## TODO
 
-- footer top divider
-- add icons (about languages under image)
-- improve cv (rethink projects and articles sections)
-- improve resume with react features (mapping)
-- improve projects data (+add more images of features/pages?)
 - improve SEO (desc, lighthouse testing)
 - save time machine when bee/eli paris goes live
 - low res images (automate without next-optimized-images)
-- update nextjs and react
 - create real blog posts (next js, )
 - add 404 content (random proj+post)
-- rethink scss structure (BEM?)
+- add more images of features/pages?
 - add project filter and order
+- improve cv (rethink projects and articles sections)
+- improve resume with react features (mapping)
+- rethink scss structure (BEM?)
+- update nextjs and react
 
 ## DEPLOY
 
