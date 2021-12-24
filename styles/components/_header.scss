@@ -17,7 +17,9 @@ header {
       img {
         height: 30px;
         width: auto;
-        filter: grayscale(1);
+        @media screen and (min-width: 768px) {
+          filter: grayscale(1);
+        }
         transition: filter 0.2s;
       }
       &:hover img,
