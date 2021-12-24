@@ -1,6 +1,6 @@
-import { getAllPosts } from '@api'
-import Layout from '@components/layout'
-import Grid from 'components/grid'
+import { getAllPosts } from '@api';
+import Layout from '@components/layout';
+import Grid from 'components/grid';
 
 export default function Blog(props) {
   return (

@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { projects } from '@data/projects'
-import Layout from '@components/layout'
-import Grid from 'components/grid'
+import { useState } from 'react';
+import { projects } from '@data/projects';
+import Layout from '@components/layout';
+import Grid from 'components/grid';
 
 export default function Projects(props) {
-  const [pro, setPro] = useState(false);
+  const [pro, setPro] = useState(true);
 
   return (
     <Layout title={props.title} description={props.description}>

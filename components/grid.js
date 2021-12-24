@@ -30,7 +30,7 @@ export default function Grid(props) {
         <Link href={item.link || ''}>
           <a title="Learn more">
             <div className="card__img">
-              <img src={item.img} alt={item.title.replace(/-/g, " ")} loading="lazy" />
+              <img src={item.img} alt={item.title.replace(/-/g, " ")} width="260" height="146" loading="lazy" />
             </div>
           </a>
         </Link>

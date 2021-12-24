@@ -11,17 +11,17 @@ npm run dev
 
 ## TODO
 
-- improve SEO (desc, lighthouse testing)
+- create real blog posts (next js: ssg-lang-, markdown, dev.to)
 - save time machine when bee/eli paris goes live
-- low res images (automate without next-optimized-images)
-- create real blog posts (next js, )
-- add 404 content (random proj+post)
+- update nextjs and react
+- test safari, mobile
+- improve perf (caching)
 - add more images of features/pages?
 - add project filter and order
 - improve cv (rethink projects and articles sections)
+- low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)
 - rethink scss structure (BEM?)
-- update nextjs and react
 
 ## DEPLOY
 

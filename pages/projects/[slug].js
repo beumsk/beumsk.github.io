@@ -78,7 +78,7 @@ export default function DynamicProject(props) {
             <>
               {proj.screen && (
                 <figure className="wrapper">
-                  <img src={proj.screen} alt={"Screenshot of " + proj.current} className="scroll" />
+                  <img src={proj.screen} alt={"Screenshot of " + proj.current} width="300" height="400" className="scroll" />
                 </figure>
               )}
 

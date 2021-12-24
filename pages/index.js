@@ -48,7 +48,7 @@ export default function Home(props) {
                 <SiAngular title="Angular" />
                 <SiReact title="React" />
               </div>
-              <img src="/images/developer-thinking.svg" alt="developer thinking next to a computer" loading="lazy" className="mt-5 mb-5" />
+              <img src="/images/developer-thinking.svg" alt="developer thinking next to a computer" width="270" height="112" loading="lazy" className="mt-5 mb-5" />
             </div>
           </div>
         </div>

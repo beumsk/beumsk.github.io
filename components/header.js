@@ -7,7 +7,13 @@ export default function Header({onClick, theme}) {
     <header>
       <div className="container">
         {nav.map((n, i) => (
-          !i ? <Link href={n.link} key={n+i}><a className="logo"><img src="/images/logo.svg" alt="Rémy Beumier logo" title={n.text} /></a></Link>
+          !i ? (
+            <Link href={n.link} key={n+i}>
+              <a className="logo">
+                <img src="/images/logo.svg" alt="Rémy Beumier logo" title={n.text} width="30" height="30" />
+              </a>
+            </Link>
+          )
           : <Link href={n.link} key={n+i}>{n.text}</Link>
         ))}
         <button 

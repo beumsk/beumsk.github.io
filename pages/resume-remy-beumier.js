@@ -18,7 +18,7 @@ export default function Resume() {
         </section>
         
         <section className="photo">
-          <img src="https://remybeumier.be/img/profile.jpg" alt="profile image Rémy Beumier" />
+          <img src="https://remybeumier.be/img/profile.jpg" alt="profile image Rémy Beumier" width="220" height="220" />
         </section>
 
         <section className="about">

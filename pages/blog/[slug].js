@@ -17,7 +17,7 @@ export default function DynamicBlogPost(props){
         <div data-aos="fade-left">
           <article>
             <h1>{props.data.title}</h1>
-            <img src={props.data.img} alt={props.data.title} className="post__img mb-5" />
+            <img src={props.data.img} alt={props.data.title} width="300" height="150" className="post__img mb-5" />
             <p className="post__date pb-5">{date}</p>
             <div className="post__content mb-5" dangerouslySetInnerHTML={{__html:props.data.content}}/>
             {/* TODO: add next/previous post link */}
