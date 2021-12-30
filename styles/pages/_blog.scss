@@ -42,3 +42,28 @@
 .post__date {
   font-size: 1.4rem;
 }
+
+.post__content {
+  h1 {
+    animation: none;
+    color: inherit;
+    font-weight: normal;
+    letter-spacing: 0;
+    display: block;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+  }
+  pre {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--bg2);
+  }
+}
