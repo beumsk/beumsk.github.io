@@ -23,8 +23,8 @@ export default function Custom404(props) {
         <div>
           <Link href="/"><a className="btn">Go back Home</a></Link>
         </div>
-        {/* <div style={{position: 'relative', aspectRatio: '2722/13448'}}>
-          <Image src="/images/projects/parcomega-ca-screen.png" layout="fill" />
+        {/* <div style={{position: 'relative', aspectRatio: '1200/630'}}>
+          <Image src="/images/posts/set-nextjs-lang.jpg" layout="fill" />
         </div> */}
       </div>
     </Layout>

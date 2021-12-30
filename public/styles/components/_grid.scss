@@ -86,6 +86,7 @@
     img {
       display: block;
       object-fit: cover;
+      object-position: right bottom;
       aspect-ratio: var(--card-ratio);
       width: 100%;
       height: auto;

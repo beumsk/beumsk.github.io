@@ -11,10 +11,9 @@ npm run dev
 
 ## TODO
 
-- create real blog posts (next js: ssg-lang-, markdown, dev.to)
-- save time machine when bee/eli paris goes live
-- update nextjs and react
 - test safari, mobile
+- create real blog posts (next.js basics, dev.to)
+- save time machine when bee/eli paris goes live
 - improve perf (caching)
 - add more images of features/pages?
 - add project filter and order

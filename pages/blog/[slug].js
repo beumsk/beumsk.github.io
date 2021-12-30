@@ -19,7 +19,7 @@ export default function DynamicBlogPost(props){
             <h1>{props.data.title}</h1>
             <img src={props.data.img} alt={props.data.title} width="300" height="150" className="post__img mb-5" />
             <p className="post__date pb-5">{date}</p>
-            <div className="post__content mb-5" dangerouslySetInnerHTML={{__html:props.data.content}}/>
+            <div className="post__content mt-5 mb-10" dangerouslySetInnerHTML={{__html:props.data.content}}/>
             {/* TODO: add next/previous post link */}
             <div className="mb-8">
               <Link href={nextLink}><a className="btn mb-4 mr-4">Next blog post</a></Link>
