@@ -58,7 +58,7 @@ export default function Home(props) {
         <div className="container" data-aos="fade-left">
           <h2>Projects</h2>
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
-          <Grid data={projects.slice(0, 3)} className="mt-10 mb-10" />
+          <Grid data={projects.filter(x => x.homepage).slice(0, 3)} className="mt-10 mb-10" />
           <Link href="/projects"><a className="btn">Check all projects</a></Link>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function Home(props) {
       <section id="blog">
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
-          <p>I write some stuff about coding and the web in general. Here are the three latest posts.</p>
+          <p>I write some stuff about coding and the web in general. Here are the latest posts.</p>
           <Grid data={props.posts.slice(0, 3)} className="mt-10 mb-10" />
           <Link href="/blog"><a className="btn">Check all posts</a></Link>
         </div>

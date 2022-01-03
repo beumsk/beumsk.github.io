@@ -12,11 +12,13 @@ npm run dev
 ## TODO
 
 - test safari, mobile
-- create real blog posts (next.js basics, dev.to)
+- create real blog posts (next.js basics, darkmode, dev.to)
 - save time machine when bee/eli paris goes live
+- decide for analytics: https://www.goatcounter.com/ (doesn't need policy -> need a way to work in nextjs !!)
 - improve perf (caching)
 - add more images of features/pages?
 - add project filter and order
+- metrics animation? Number of projects/sites/hours/languages
 - improve cv (rethink projects and articles sections)
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)

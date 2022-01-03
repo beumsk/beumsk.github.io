@@ -6,7 +6,8 @@ export const projects = [
     pen: 'xdoKjX', 
     intro: 'Find pairs as fast as possible in this Memory!', 
     tech: ['HTML', 'CSS', 'JS',], 
-    chall: ['array.splice', 'setInterval & clearInterval', 'click event listener on parent', 'linear-gradient',]
+    chall: ['array.splice', 'setInterval & clearInterval', 'click event listener on parent', 'linear-gradient',],
+    homepage: true
   },
   {
     title: 'snake', 
@@ -15,7 +16,8 @@ export const projects = [
     pen: 'PmPxEo', 
     intro: 'Get as long as possible in this version of Snake!', 
     tech: ['HTML', 'CSS', 'JS', 'jQuery',], 
-    chall: ['keydown event', 'setInterval & clearInterval', 'array.shift', 'mobile swipe']
+    chall: ['keydown event', 'setInterval & clearInterval', 'array.shift', 'mobile swipe'],
+    homepage: true
   },
   {
     title: 'minesweeper', 
@@ -259,6 +261,7 @@ export const projects = [
     screen: '/images/projects/parcomega-ca-screen.png', 
     intro: 'Onomo hotels booking website built with React', 
     tech: ['React', 'HTML', 'CSS', 'JS'], 
-    chall: ['React', 'Styled system', 'Emotion', 'clip-path']
+    chall: ['React', 'Styled system', 'Emotion', 'clip-path'],
+    homepage: true
   },
 ];
