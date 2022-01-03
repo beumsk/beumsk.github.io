@@ -9,12 +9,19 @@ import 'public/styles/style.scss';
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  if (typeof window !== "undefined") {
-    window.goatcounter?.count({
+  // if (typeof window !== "undefined") {
+  //   window.goatcounter.count({
+  //     path: router.asPath
+  //   //   path: location.pathname + location.search + location.hash
+  //   })
+  // }
+  useEffect(() => {
+    console.log(router.asPath);
+    window.goatcounter.count({
       path: router.asPath
-    //   path: location.pathname + location.search + location.hash
+      //   path: location.pathname + location.search + location.hash
     })
-  }
+  }, [router]);
 
   useEffect(() => {
     AOS.init({
