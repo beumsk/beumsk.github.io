@@ -10,7 +10,7 @@ import 'public/styles/style.scss';
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   if (typeof window !== "undefined") {
-    window.goatcounter.count({
+    window.goatcounter?.count({
       path: router.asPath
     //   path: location.pathname + location.search + location.hash
     })

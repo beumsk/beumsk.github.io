@@ -23,7 +23,7 @@ export default function Home(props) {
 
       <section id="about" className="svg-divider">
         <div className="back-shapes"></div>
-        <div className="container" data-aos="fade-right" data-aos-delay="400">
+        <div className="container" data-aos="fade-right">
           <div className="cols cols-lg">
             <div className="col">
               <h2>I'm Rémy, I am a Web Lover in Brussels and I focus on Front-end Development.</h2>
