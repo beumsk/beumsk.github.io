@@ -24,11 +24,11 @@ const Tech = (props) => {
 }
 
 export default function DynamicProject(props) {
-  const personal = projects.filter(x => x.pen)
-  const professional = projects.filter(x => !x.pen)
-  const router = useRouter()
-  const slug = router.query.slug
-  const proj = projects[projects.findIndex(x => x.title === slug)]
+  const personal = projects.filter(x => x.pen);
+  const professional = projects.filter(x => !x.pen);
+  const router = useRouter();
+  const slug = router.query.slug;
+  const proj = projects[projects.findIndex(x => x.title === slug)];
   const isPro = !proj.pen;
   let slugTitle = proj.title.replace(/-/g, " ");
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
