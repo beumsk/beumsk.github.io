@@ -7,8 +7,8 @@ export default function Resume() {
       <Head>
         <title>Resume | Rémy Beumier</title>
         <meta name="description" content="Rémy Beumier's resume as a Front-end Developer" />
-        <meta property="og:image" content="https://beumsk.github.io/images/rb.png" />
-        <meta property="og:image:secure_url" content="https://beumsk.github.io/images/rb.png" />
+        <meta property="og:image" content="https://remybeumier.be/images/rb.png" />
+        <meta property="og:image:secure_url" content="https://remybeumier.be/images/rb.png" />
       </Head>
 
       <article className="resume">

@@ -2,7 +2,7 @@ const sitemap = require('nextjs-sitemap-generator');
 const path = require('path');
 
 sitemap({
-  baseUrl: 'https://beumsk.github.io',
+  baseUrl: 'https://remybeumier.be',
   pagesDirectory: path.resolve(__dirname, 'out/'),
   targetDirectory: path.resolve(__dirname, 'out/'),
   ignoredPaths: ['styles', 'images', '404', 'index'],

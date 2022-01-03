@@ -34,7 +34,7 @@ export default function DynamicProject(props) {
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (
-    <Layout title={slugTitle + ' | Projects | Rémy Beumier'} description={proj.intro} img={'https://beumsk.github.io' + proj.img}>
+    <Layout title={slugTitle + ' | Projects | Rémy Beumier'} description={proj.intro} img={'https://remybeumier.be' + proj.img}>
       <div className="container project-shape">
         <div data-aos="fade-left">
           <h1>{slugTitle}</h1>

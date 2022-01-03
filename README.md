@@ -11,10 +11,8 @@ npm run dev
 
 ## TODO
 
-- test safari, mobile
-- create real blog posts (next.js basics, darkmode, dev.to)
+- write blog posts (next.js basics, darkmode, goatcounter, dev.to)
 - save time machine when bee/eli paris goes live
-- decide for analytics: https://www.goatcounter.com/ (doesn't need policy -> need a way to work in nextjs !!)
 - improve perf (caching)
 - add more images of features/pages?
 - add project filter and order
@@ -29,4 +27,8 @@ npm run dev
 npm run build & npm run export (npm run deploy)
 Commit and Push your changes to master.
 This will trigger Github Action and deploy the changes to gh-pages.
-Check the result at https://beumsk.github.io
+Check the result at https://remybeumier.be
+
+## ANALYTICS
+
+Easy web analytics without tracking of personal data at https://beumsk.goatcounter.com/
