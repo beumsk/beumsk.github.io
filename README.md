@@ -12,6 +12,7 @@ npm run dev
 ## TODO
 
 - write blog posts (next.js basics, darkmode, goatcounter, dev.to)
+- blog posts tags/categories (+filters)
 - save time machine when bee/eli paris goes live
 - improve perf (caching)
 - add more images of features/pages?
