@@ -13,7 +13,7 @@ header {
     padding: 12px 8px;
     text-decoration: none;
     &.logo {
-      padding: 8px;
+      padding: 8px 16px 8px 0;
       img {
         height: 30px;
         width: auto;
@@ -27,5 +27,8 @@ header {
         filter: grayscale(0);
       }
     }
+  }
+  .btn {
+    margin: 8px 0 8px 16px;
   }
 }

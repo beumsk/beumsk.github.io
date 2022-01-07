@@ -18,7 +18,7 @@ export default function Header({onClick, theme}) {
         ))}
         <button 
           onClick={onClick} 
-          className="btn m-2" 
+          className="btn" 
           title={theme == 'dark' ? 'Switch to light mode' : 'Switch to dark mode'} 
           aria-label={theme == 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}>
             {theme === 'dark' ? <MdDarkMode /> : <MdLightMode /> }

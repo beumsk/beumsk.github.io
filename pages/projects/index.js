@@ -20,7 +20,7 @@ export default function Projects(props) {
         </div>
 
         <div data-aos="fade-up">
-          <Grid data={projects.filter(x => pro ? !x.pen : x.pen)} className="mt-10 mb-10" />
+          <Grid data={projects.filter(x => pro ? !x.pen : x.pen)} className="mt-10 mb-20" />
         </div>
         
       </div>

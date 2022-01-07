@@ -62,7 +62,7 @@ export default function DynamicProject(props) {
             <>
               <Codepen pen={proj.pen} />
 
-              <div className="mb-8">
+              <div className="mb-16">
                 <a href={"https://github.com/beumsk/" + proj.title} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">Github repository</a>
 
                 <Link href={personal[personal.indexOf(proj) + 1]?.link || personal[0].link}>
@@ -82,7 +82,7 @@ export default function DynamicProject(props) {
                 </figure>
               )}
 
-              <div className="mb-8">
+              <div className="mb-16">
                 {proj.current && <a href={proj.current} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">Live website</a>}
                 {proj.past && <a href={proj.past} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">Site as I left it</a>}
                 

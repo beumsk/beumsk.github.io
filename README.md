@@ -11,14 +11,18 @@ npm run dev
 
 ## TODO
 
+1.1
+- breadcrumb
 - write blog posts (next.js basics, darkmode, goatcounter, dev.to)
 - blog posts tags/categories (+filters)
-- save time machine when bee/eli paris goes live
-- improve perf (caching)
+1.2
 - add more images of features/pages?
 - add project filter and order
 - metrics animation? Number of projects/sites/hours/languages
 - improve cv (rethink projects and articles sections)
+general
+- save time machine when bee/eli paris goes live
+- improve perf (caching)
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)
 - rethink scss structure (BEM?)

@@ -7,8 +7,20 @@ export default function Blog(props) {
     <Layout title={props.title} description={props.description}>
       <div className="container blog-shape">
         <h1>Blog</h1>
+
+        {/* TODO: create category buttons */}
+
+        {/* <div>
+          <button className="btn mr-4 mb-4">
+            Category 1
+          </button>
+          <button className="btn">
+            Category 2
+          </button>
+        </div> */}
+
         <div data-aos="fade-up">
-          <Grid data={props.posts} className="mt-10 mb-10" />
+          <Grid data={props.posts} className="mt-10 mb-20" />
         </div>
       </div>
     </Layout>

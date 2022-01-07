@@ -21,7 +21,7 @@ export default function Custom404(props) {
           <Grid data={[randomPro, randomPerso, randomPost]} className="mt-10 mb-10" />
         </div>
         <div>
-          <Link href="/"><a className="btn">Go back Home</a></Link>
+          <Link href="/"><a className="btn mb-20">Go back Home</a></Link>
         </div>
         {/* <div style={{position: 'relative', aspectRatio: '1200/630'}}>
           <Image src="/images/posts/set-nextjs-lang.jpg" layout="fill" />
