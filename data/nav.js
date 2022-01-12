@@ -13,6 +13,6 @@ export const nav = [
   },
   {
     text: 'Contact',
-    link: '#contact'
+    link: '/#contact'
   }
 ];

@@ -10,7 +10,7 @@ export default function Grid(props) {
           <Link href={item.link || ''}>
             <a className="card__title" title="Learn more">
               <h2 className="t-ellipsis">
-                {item.title.replace(/-/g, " ").charAt(0).toUpperCase() + item.title.replace(/-/g, " ").slice(1)}
+                {item.title.replace(/-/g, ' ').charAt(0).toUpperCase() + item.title.replace(/-/g, ' ').slice(1)}
               </h2>
             </a>
           </Link>
@@ -30,7 +30,7 @@ export default function Grid(props) {
         <Link href={item.link || ''}>
           <a title="Learn more" tabIndex="-1">
             <div className="card__img">
-              <img src={item.img} alt={item.title.replace(/-/g, " ")} width="260" height="146" loading="lazy" />
+              <img src={item.img} alt={item.title.replace(/-/g, ' ')} width="260" height="146" loading="lazy" />
             </div>
           </a>
         </Link>

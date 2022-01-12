@@ -30,7 +30,7 @@ export default function DynamicProject(props) {
   const slug = router.query.slug;
   const proj = projects[projects.findIndex(x => x.title === slug)];
   const isPro = !proj.pen;
-  let slugTitle = proj.title.replace(/-/g, " ");
+  let slugTitle = proj.title.replace(/-/g, ' ');
   slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
 
   return (

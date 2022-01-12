@@ -12,7 +12,6 @@ npm run dev
 ## TODO
 
 1.1
-- breadcrumb
 - write blog posts (next.js basics, darkmode, goatcounter, dev.to)
 - blog posts tags/categories (+filters)
 1.2

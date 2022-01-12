@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Header from 'components/header';
 import Footer from 'components/footer';
+import Breadcrumb from 'components/breadcrumb';
 // import MobileNav from 'components/mobileNav';
 
 export default function Layout(props) {
@@ -30,6 +31,7 @@ export default function Layout(props) {
       </Head>
       <Header onClick={switchTheme} theme={theme} />
       <div className="over-h">
+        <Breadcrumb />
         {props.children}
       </div>
       <Footer />
