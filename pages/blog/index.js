@@ -11,7 +11,7 @@ export default function Blog(props) {
   const query = router.asPath.replace(/.*\?/g,"") === '/blog' ? '' : router.asPath.replace(/.*\?/g,"");
   const [cat, setCat] = useState(query ? props.posts.filter(x => x.categories.includes(query)) : props.posts);
 
-  const categoriesAll = props.posts.map(x => x.categories.split(', ')).flat().filter(x => x);
+  const categoriesAll = props.posts.map(x => x.categories?.split(', '))?.flat().filter(x => x);
   const categories = [...new Set(categoriesAll)];
 
   return (
