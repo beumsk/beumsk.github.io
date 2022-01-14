@@ -8,6 +8,8 @@ export default function DynamicBlogPost(props){
     + (new Date(props.data.date).getMonth()+1) + '.' 
     + new Date(props.data.date).getFullYear();
 
+  const categories = props.data.categories?.split(', ').filter(x => x);
+
   const nextLink = props.posts[(props.posts.findIndex((x) => x.title === props.data.title))+1]?.link 
     || props.posts[0].link;
 
@@ -18,7 +20,16 @@ export default function DynamicBlogPost(props){
           <article>
             <h1>{props.data.title}</h1>
             <img src={props.data.img} alt={props.data.title} width="300" height="150" className="post__img mb-5" />
-            <p className="post__date pb-5">{date}</p>
+            <div className="space-between-x pb-5">
+              <div className="post__categories">
+                {categories?.map(c => (
+                  <Link key={c} href={'/blog?'+c}>
+                    {c.charAt(0).toUpperCase() + c.slice(1)}
+                  </Link>
+                ))}
+              </div>
+              <p className="post__date">{date}</p>
+            </div>
             <div className="post__content mt-5 mb-10" dangerouslySetInnerHTML={{__html:props.data.content}}/>
             {/* TODO: add next/previous post link */}
             <div className="mb-16">

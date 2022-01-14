@@ -13,7 +13,7 @@
     &::before {
       width: 30px;
       height: 30px;
-      top: 80px;
+      top: 100px;
       right: 40px;
       animation: shape-blog 53s infinite alternate linear;
     }
@@ -36,6 +36,22 @@
         transform: translate(-20px, 320px);
       }
     }
+  }
+}
+
+.blog__categories .btn {
+  margin-bottom: 16px;
+  &:not(:last-of-type) {
+    margin-right: 16px;
+  }
+}
+
+.post__categories a {
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-decoration: underline;
+  &:not(:last-of-type) {
+    margin-right: 8px;
   }
 }
 

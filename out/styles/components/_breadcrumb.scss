@@ -1,7 +1,9 @@
 .breadcrumb {
+  background: var(--light);
   padding: 16px 0;
   ul {
     display: flex;
+    flex-wrap: wrap;
     padding-left: 0;
     li {
       display: inline-block;

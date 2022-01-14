@@ -280,6 +280,11 @@ button {
     left: 0;
     box-shadow: none;
   }
+  &.active {
+    color: var(--bg);
+    background-color: var(--text2);
+    border-color: var(--text2);
+  }
   cursor: pointer;
   transition: all 0.2s;
   &:hover,

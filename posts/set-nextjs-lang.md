@@ -3,6 +3,7 @@ title: 'Set Next.js lang'
 intro: 'Specify HTML lang attribute in a Next.js site'
 img: '/images/posts/set-nextjs-lang.jpg'
 date: '12/27/2021'
+categories: 'next.js, tutorial'
 ---
 
 It is advised to define the language of your site even if you offer a single one. It's very straightforward in plain HTML but it isn't so intuitive in Next.js. Let's see how we can do so.

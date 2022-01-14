@@ -3,6 +3,7 @@ title: 'Markdown Tutorial'
 intro: 'Introduction tutorial to the Markdown language'
 img: '/images/posts/markdown-tutorial.jpg'
 date: '12/28/2021'
+categories: 'tutorial'
 ---
 
 Markdown is a simple but widely used language, especially for documentation.

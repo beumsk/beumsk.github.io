@@ -16,6 +16,7 @@ export async function getAllPosts() {
             intro: meta.data.intro || '',
             img: meta.data.img || defaultImage,
             date: meta.data.date || '',
+            categories: meta.data.categories || '',
             link: '/blog/' + post.replace('.md',''),
         })
     }
@@ -32,5 +33,6 @@ export async function getPostBySlug(slug) {
         img: meta.data.img || defaultImage,
         content: content || '',
         date: meta.data.date || '',
+        categories: meta.data.categories || ''
     }
 }
