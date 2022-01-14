@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      
+	<url>
+		<loc>https://remybeumier.be/blog/markdown-tutorial</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/blog/set-nextjs-lang</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/blog</loc>
+		<priority>0.6</priority>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/bee-paris</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/brick-breaker</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/calculator</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/clock</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/color-game</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/connect-4</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/dad-jokes</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/date-counter</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/drum-machine</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/etch-a-sketch</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/giphy-search</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/hangman</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/higher-or-lower</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/kpmg-careers</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/kpmg-law</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/memory</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/minesweeper</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/omega</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/onomo</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/pokemon</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/quotes</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/simon-game</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/sliding-puzzle</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/snake</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/tetris</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/tic-tac-toe</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/timer</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects/whack-a-donkey-kong</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/projects</loc>
+		<priority>0.8</priority>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/resume-remy-beumier</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/scripts/goatcounter</loc>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+
+	<url>
+		<loc>https://remybeumier.be/</loc>
+		<priority>1</priority>
+		<lastmod>2022-01-14</lastmod>
+	</url>
+</urlset>
