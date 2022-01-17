@@ -81,10 +81,10 @@ Let's see how we can write with it!
 ## Task list
 ```
 - [x] Completed
-- [ ] Uncomplete
+- [ ] Uncompleted
 ```
 - [x] Completed
-- [ ] Uncomplete
+- [ ] Uncompleted
 
 ## Table
 ```
@@ -97,3 +97,5 @@ Let's see how we can write with it!
 | ----------- | ----------- |
 | row1 col1 | row1 col2 |
 | row2 col1 | row2 col2 |
+
+Enjoy writing with Markdown!

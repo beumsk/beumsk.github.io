@@ -6,10 +6,10 @@ date: '12/27/2021'
 categories: 'next.js, tutorial'
 ---
 
-It is advised to define the language of your site even if you offer a single one. It's very straightforward in plain HTML but it isn't so intuitive in Next.js. Let's see how we can do so.
+It is advised to define the language of your site, even if you offer a single one. It's very straightforward in plain HTML, but it isn't so intuitive in Next.js. Let's see how we can do so.
 
 ## Static Site Generation
-In Next.js, if you want to modify the `<head>` you import Head from next/Head but what if you want to pass a property to the `<html>` tag? Next provides an option to add another js file called '_document.js' allowing you to be in control of the upper HTML.
+In Next.js, if you want to modify the `<head>` you import Head from next/Head, but what if you want to pass a property to the `<html>` tag? Next provides an option to add another JS file – in the pages folder – called `_document.js` allowing you to be in control of the upper HTML.
 
 Here is the default content of it:
 
@@ -33,12 +33,12 @@ class MyDocument extends Document {
 export default MyDocument
 ```
 
-Make sure to add the above '_document.js' in the 'pages' folder.
-You can now add the lang property on html `<html lang="en">` and have the language defined for your website.
+Make sure the above `_document.js` is in the pages folder.
+You can now add the `lang` property on HTML `<html lang="en">` and have the language defined for your website.
 
 ## Server Side Rendering
 If your site works with SSR, you can use another solution.
-In next.config.js at the root of your project, define the following i18n object:
+In `next.config.js` at the root of your project, define the following `i18n` object:
 
 ```js
 module.exports = {
@@ -51,4 +51,4 @@ module.exports = {
 
 Note this solution only works in Next.js version 10 and newer.
 
-Enjoy coding with Next.js
+Enjoy coding with Next.js!

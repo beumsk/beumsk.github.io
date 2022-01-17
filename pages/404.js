@@ -4,7 +4,7 @@ import { getAllPosts } from '@api';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
 
-// import Image from 'next/image'
+// import Image from 'next/image';
 
 export default function Custom404(props) {
   const pro = projects.filter(x => !x.pen);
@@ -24,7 +24,7 @@ export default function Custom404(props) {
           <Link href="/"><a className="btn mb-20">Go back Home</a></Link>
         </div>
         {/* <div style={{position: 'relative', aspectRatio: '1200/630'}}>
-          <Image src="/images/posts/set-nextjs-lang.jpg" layout="fill" />
+          <Image src="/images/posts/nextjs-dark-mode.jpg" layout="fill" />
         </div> */}
       </div>
     </Layout>

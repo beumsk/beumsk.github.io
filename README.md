@@ -12,8 +12,12 @@ npm run dev
 ## TODO
 
 1.1
-- write blog posts (next.js basics, darkmode, goatcounter, dev.to)
-- blog posts tags/categories (+filters)
+- write blog posts (next.js basics, props to parent/child, window object, mdx to html, goatcounter, dev.to)
+- links between posts
+- links in mdx to open in new tabs
+- color for code snippets
+- spacings based on 8px
+- back to top button
 1.2
 - add more images of features/pages?
 - add project filter and order
