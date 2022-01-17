@@ -76,10 +76,23 @@
     margin-top: 1.5em;
     margin-bottom: 0.75em;
   }
+
   pre {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     background: var(--bg2);
+  }
+
+  code {
+    background: var(--bg2);
+    padding: 2px 4px;
+  }
+
+  blockquote {
+    margin: 20px auto;
+    padding: 8px 0 8px 20px;
+    border-left: solid 8px var(--bg3);
+    font-style: italic;
   }
 }
