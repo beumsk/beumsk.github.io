@@ -12,18 +12,18 @@ npm run dev
 ## TODO
 
 1.1
-- write blog posts (next.js basics, props to parent/child, window object, mdx to html, goatcounter, dev.to)
+- write blog posts (next.js basics, props to parent/child, window object, mdx to html, goatcounter, SSG vs SSR, dev.to)
 - links between posts
-- links in mdx to open in new tabs
-- color for code snippets
-- spacings based on 8px
 - back to top button
 1.2
 - add more images of features/pages?
-- add project filter and order
-- metrics animation? Number of projects/sites/hours/languages
 - improve cv (rethink projects and articles sections)
-general
+- links in mdx to open in new tabs
+- color for code snippets
+1.3
+- metrics animation? Number of projects/sites/hours/languages
+- add project filter and order
+X.X
 - save time machine when bee/eli paris goes live
 - improve perf (caching)
 - low res images (automate without next-optimized-images)

@@ -9,7 +9,7 @@ categories: 'next.js, tutorial'
 When I started listing the features I wanted for my new website, a dark mode toggle was in the top tier list as it's becoming a standard. Even though I'm not a big supporter of dark mode, I know people love it and I was willing to tackle this challenge.
 
 ## The CSS part
-For this feature, I wanted to use CSS variables. I have a range of variables that will switch according to the color mode.
+For this feature, we want to use CSS variables. We have a range of variables that will switch according to the color mode.
 Here is a snippet example:
 
 ```css
@@ -32,7 +32,7 @@ main.dark {
 }
 ```
 
-To finalise the styling part, I use the `prefers-color-scheme` check to match users settings.
+To finalise the styling part, we use the `prefers-color-scheme` check to match users settings.
 It needs to be overridden with the `.light` class.
 This is done this way:
 
@@ -114,7 +114,7 @@ export default function Main(props) {
 }
 ```
 
-You should have a functional dark mode toggle in your Next.js app by now, otherwise check the steps again or click the full solution link below.
+We have a functional dark mode toggle in your Next.js app by now. In case of struggle, check the steps again or click the full solution link below.
 
 **TLDR**: [Codesandbox: Dark mode toggle in Next.js](https://codesandbox.io/s/darkmode-0ubir).
 

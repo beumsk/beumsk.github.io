@@ -40,9 +40,9 @@
 }
 
 .blog__categories .btn {
-  margin-bottom: 16px;
+  margin-bottom: calc(2 * var(--spacing));
   &:not(:last-of-type) {
-    margin-right: 16px;
+    margin-right: calc(2 * var(--spacing));
   }
 }
 
@@ -51,7 +51,7 @@
   cursor: pointer;
   text-decoration: underline;
   &:not(:last-of-type) {
-    margin-right: 8px;
+    margin-right: var(--spacing);
   }
 }
 
@@ -78,20 +78,20 @@
   }
 
   pre {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-top: calc(2 * var(--spacing));
+    margin-bottom: calc(2 * var(--spacing));
+    padding: calc(2 * var(--spacing));
     background: var(--bg2);
   }
 
   code {
     background: var(--bg2);
-    padding: 2px 4px;
+    padding: calc(0.25 * var(--spacing)) calc(0.5 * var(--spacing));
   }
 
   blockquote {
-    margin: 20px auto;
-    padding: 8px 0 8px 20px;
+    margin: calc(2 * var(--spacing)) auto;
+    padding: var(--spacing) 0 var(--spacing) calc(2 * var(--spacing));
     border-left: solid 8px var(--bg3);
     font-style: italic;
   }

@@ -1,11 +1,11 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-gap: 80px;
-  padding: 20px;
+  grid-gap: calc(10 * var(--spacing));
+  padding: calc(2.5 * var(--spacing));
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
+    grid-gap: calc(5 * var(--spacing));
     padding: 0;
   }
 }
@@ -16,8 +16,8 @@
   .card__behind {
     width: 100%;
     height: 100%;
-    top: 20px;
-    left: 20px;
+    top: calc(2.5 * var(--spacing));
+    left: calc(2.5 * var(--spacing));
     box-shadow: var(--shadows4);
     @media screen and (min-width: 768px) {
       top: 0;
@@ -31,7 +31,7 @@
       background: var(--text10);
     }
     .card__title {
-      padding: 8px 11px;
+      padding: var(--spacing) calc(2 * var(--spacing));
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -54,8 +54,8 @@
       flex-direction: column;
       a {
         display: inline-block;
-        padding: 11px;
-        min-width: 40px;
+        padding: var(--spacing);
+        width: 40px;
         text-align: center;
         text-decoration: none;
         transition: all 0.2s;
@@ -76,8 +76,8 @@
       var(--bg2);
     position: relative;
     box-shadow: var(--shadow);
-    top: -20px;
-    left: -20px;
+    top: calc(-2.5 * var(--spacing));
+    left: calc(-2.5 * var(--spacing));
     @media screen and (min-width: 768px) {
       top: 0;
       left: 0;
@@ -100,13 +100,13 @@
   &:focus,
   &:focus-within {
     .card__behind {
-      top: 20px;
-      left: 20px;
+      top: calc(2.5 * var(--spacing));
+      left: calc(2.5 * var(--spacing));
     }
     .card__img {
       box-shadow: var(--shadow);
-      top: -20px;
-      left: -20px;
+      top: calc(-2.5 * var(--spacing));
+      left: calc(-2.5 * var(--spacing));
       img {
         filter: brightness(100%);
       }

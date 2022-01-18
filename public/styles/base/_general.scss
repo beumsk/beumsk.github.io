@@ -30,8 +30,7 @@ h1 {
   font-weight: normal;
   letter-spacing: 4px;
   display: inline-block;
-  margin: 32px 0 32px 0;
-  padding: 0 4px 4px 0;
+  margin: calc(4 * var(--spacing)) 0;
   animation: title-shadow 0.4s ease-in-out forwards;
 }
 
@@ -115,7 +114,7 @@ a {
 
 p {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing);
   line-height: 1.4;
   &:last-of-type {
     margin-bottom: 0;
@@ -185,8 +184,8 @@ main {
 
 .cols {
   display: flex;
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: calc(-2 * var(--spacing));
+  margin-right: calc(-2 * var(--spacing));
   &.cols-md,
   &.cols-lg,
   &.cols-xl {
@@ -196,8 +195,8 @@ main {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: calc(2 * var(--spacing));
+    padding-right: calc(2 * var(--spacing));
     &.is-3 {
       flex: none;
       width: 25%;
@@ -268,7 +267,7 @@ button {
   background-color: var(--bg);
   border: solid 1px;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: calc(0.5 * var(--spacing)) var(--spacing);
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -298,7 +297,7 @@ button {
 .wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
-  margin: 16px 0;
+  margin: calc(2 * var(--spacing)) 0;
   position: relative;
   .wrapper__img {
     position: absolute;

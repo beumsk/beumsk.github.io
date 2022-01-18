@@ -2,7 +2,7 @@
 figure.wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
-  margin-bottom: 32px;
+  margin-bottom: calc(4 * var(--spacing));
   min-height: 400px;
   position: relative;
   background: var(--text10);

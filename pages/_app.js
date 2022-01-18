@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     window.goatcounter.count({
       path: router.asPath
-      //   path: location.pathname + location.search + location.hash
+      // path: location.pathname + location.search + location.hash
     })
   }, [router]);
 
