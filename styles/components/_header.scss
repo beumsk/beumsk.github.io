@@ -10,10 +10,10 @@ header {
     justify-content: space-between;
   }
   a {
-    padding: 12px 8px;
+    padding: calc(1.5 * var(--spacing)) var(--spacing);
     text-decoration: none;
     &.logo {
-      padding: 8px 16px 8px 0;
+      padding: var(--spacing) calc(2 * var(--spacing)) var(--spacing) 0;
       img {
         height: 30px;
         width: auto;
@@ -29,6 +29,6 @@ header {
     }
   }
   .btn {
-    margin: 8px 0 8px 16px;
+    margin: var(--spacing) 0 var(--spacing) calc(2 * var(--spacing));
   }
 }
