@@ -4,13 +4,14 @@ import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
 
 export default function Grid(props) {
   const items = props.data.map((item, index) => {
+    const title = item.title.replace(/-/g, ' ').charAt(0).toUpperCase() + item.title.replace(/-/g, ' ').slice(1);
     return (
       <div className="card" key={index}>
         <div className="card__behind">
           <Link href={item.link || ''}>
-            <a className="card__title" title="Learn more">
+            <a className="card__title" title={title}>
               <h2 className="t-ellipsis">
-                {item.title.replace(/-/g, ' ').charAt(0).toUpperCase() + item.title.replace(/-/g, ' ').slice(1)}
+                {title}
               </h2>
             </a>
           </Link>

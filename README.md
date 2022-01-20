@@ -12,8 +12,7 @@ npm run dev
 ## TODO
 
 1.1
-- write blog posts (next.js basics, props to parent/child, window object, mdx to html, goatcounter, SSG vs SSR, dev.to)
-- links between posts
+- write blog posts (next.js basics, props to parent/child, mdx to html, goatcounter, SSG vs SSR, dev.to)
 - back to top button
 1.2
 - add more images of features/pages?

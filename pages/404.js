@@ -24,7 +24,7 @@ export default function Custom404(props) {
           <Link href="/"><a className="btn mb-20">Go back Home</a></Link>
         </div>
         {/* <div style={{position: 'relative', aspectRatio: '1200/630'}}>
-          <Image src="/images/posts/nextjs-dark-mode.jpg" layout="fill" />
+          <Image src="/images/posts/fix-the-window-is-not-defined-error.jpg" layout="fill" />
         </div> */}
       </div>
     </Layout>
