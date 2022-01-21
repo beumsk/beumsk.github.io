@@ -209,39 +209,6 @@ export const projects = [
     chall: ['setInterval & clearInterval', 'setTimeout']
   },
   {
-    title: 'kpmg-careers', 
-    link: '/projects/kpmg-careers', 
-    current: 'https://careers.kpmg.be/', 
-    past: 'https://web.archive.org/web/20200803122755/https://careers.kpmg.be/', 
-    img: '/images/projects/careers-kpmg-be.png', 
-    screen: '/images/projects/careers-kpmg-be-screen.png', 
-    intro: 'KPMG Belgium recruitment website built with Umbraco CMS.', 
-    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'], 
-    chall: ['Google map custom', 'JSON events', 'Slick responsive carousel']
-  },
-  {
-    title: 'kpmg-law', 
-    link: '/projects/kpmg-law', 
-    current: 'https://www.kpmglaw.be/', 
-    past: 'https://web.archive.org/web/20200812114928/https://www.klaw.be/', 
-    img: '/images/projects/klaw-be.png', 
-    screen: '/images/projects/klaw-be-screen.png', 
-    intro: 'KPMG Law (previously Klaw) website built with Umbraco CMS.', 
-    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'], 
-    chall: ['Discovering Umbraco', 'Use Uskinned theme', 'SEO']
-  },
-  {
-    title: 'bee-paris', 
-    link: '/projects/bee-paris', 
-    current: 'https://www.bee-paris.com/', 
-    past: '', 
-    img: '/images/projects/beeparis-com.png', 
-    screen: '/images/projects/beeparis-com-screen.png', 
-    intro: 'Bee Paris jewelry store website built with Angular, Node and Strapi', 
-    tech: ['Angular', 'HTML', 'CSS', 'JS', 'Sass'], 
-    chall: ['CSS grid', 'Multi-column layout', 'PrimeNG']
-  },
-  {
     title: 'onomo', 
     link: '/projects/onomo', 
     current: 'https://www.onomohotels.com/', 
@@ -263,5 +230,38 @@ export const projects = [
     tech: ['React', 'HTML', 'CSS', 'JS'], 
     chall: ['React', 'Styled system', 'Emotion', 'clip-path'],
     homepage: true
+  },
+  {
+    title: 'eli-paris', 
+    link: '/projects/eli-paris', 
+    current: 'https://www.eliparis.com/', 
+    past: 'http://web.archive.org/web/20220120123422/https://www.eliparis.com/accueil', 
+    img: '/images/projects/eliparis-com.png', 
+    screen: '/images/projects/eliparis-com-screen.png', 
+    intro: 'Eli Paris jewelry store website built with Angular, Node and Strapi', 
+    tech: ['Angular', 'HTML', 'CSS', 'JS', 'Sass'], 
+    chall: ['CSS grid', 'Multi-column layout', 'PrimeNG']
+  },
+  {
+    title: 'kpmg-careers', 
+    link: '/projects/kpmg-careers', 
+    current: 'https://careers.kpmg.be/', 
+    past: 'https://web.archive.org/web/20200803122755/https://careers.kpmg.be/', 
+    img: '/images/projects/careers-kpmg-be.png', 
+    screen: '/images/projects/careers-kpmg-be-screen.png', 
+    intro: 'KPMG Belgium recruitment website built with Umbraco CMS.', 
+    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'], 
+    chall: ['Google map custom', 'JSON events', 'Slick responsive carousel']
+  },
+  {
+    title: 'kpmg-law', 
+    link: '/projects/kpmg-law', 
+    current: 'https://www.kpmglaw.be/', 
+    past: 'https://web.archive.org/web/20200812114928/https://www.klaw.be/', 
+    img: '/images/projects/klaw-be.png', 
+    screen: '/images/projects/klaw-be-screen.png', 
+    intro: 'KPMG Law (previously Klaw) website built with Umbraco CMS.', 
+    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'], 
+    chall: ['Discovering Umbraco', 'Use Uskinned theme', 'SEO']
   },
 ];

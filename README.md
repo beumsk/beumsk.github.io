@@ -23,7 +23,6 @@ npm run dev
 - metrics animation? Number of projects/sites/hours/languages
 - add project filter and order
 X.X
-- save time machine when bee/eli paris goes live
 - improve perf (caching)
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)
