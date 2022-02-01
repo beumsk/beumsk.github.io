@@ -18,7 +18,7 @@ export default function Breadcrumb() {
               <li key={x}>
                 {i === split.length-1 ? 
                   <><AiFillCaretRight/>{x.replace(/-/g, ' ')}</> : 
-                  <><AiFillCaretRight/><Link href={'/'+x}><a>{x.replace(/-/g, ' ')}</a></Link></>}
+                  <><AiFillCaretRight/><Link href={`/${x}`}><a>{x.replace(/-/g, ' ')}</a></Link></>}
               </li>
             ))}
           </ul>

@@ -6,9 +6,9 @@ import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Grid from '@components/grid';
 
-export default function Home(props) {
+export default function Home({ title, description, posts }) {
   return (
-    <Layout title={props.title} description={props.description}>
+    <Layout title={title} description={description}>
       <section id="splash">
         <div>
           <div className="container" data-aos="fade-up">
@@ -67,7 +67,7 @@ export default function Home(props) {
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the latest posts.</p>
-          <Grid data={props.posts.slice(0, 3)} className="mt-10 mb-10" />
+          <Grid data={posts.slice(0, 3)} className="mt-10 mb-10" />
           <Link href="/blog"><a className="btn">Check all posts</a></Link>
         </div>
       </section>

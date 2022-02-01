@@ -5,14 +5,14 @@ import { projects } from '@data/projects';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
 
-export default function Projects(props) {
+export default function Projects({ title, description }) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g,"") === '/projects' ? '' : router.asPath.replace(/.*\?/g,"");
   const [pro, setPro] = useState(query.includes('personal') ? false : true);
 
   return (
-    <Layout title={props.title} description={props.description}>
+    <Layout title={title} description={description}>
       <div className="container projects-shape">
         <h1>Projects</h1>
 
@@ -20,12 +20,12 @@ export default function Projects(props) {
 
         <div>
           <Link href={'?professional'}>
-            <a onClick={() => setPro(true)} className={'btn mb-4 mr-4 ' + (pro && 'active')}>
+            <a onClick={() => setPro(true)} className={`btn mb-4 mr-4 ${pro && 'active'}`}>
               Professional projects
             </a>
           </Link>
           <Link href={'?personal'}>
-            <a onClick={() => setPro(false)} className={'btn mb-4 ' + (!pro && 'active')}>
+            <a onClick={() => setPro(false)} className={`btn mb-4 ${!pro && 'active'}`}>
               Personal projects
             </a>
           </Link>

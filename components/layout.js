@@ -5,7 +5,7 @@ import Footer from 'components/footer';
 import Breadcrumb from 'components/breadcrumb';
 // import MobileNav from 'components/mobileNav';
 
-export default function Layout(props) {
+export default function Layout({ img, title, description, children }) {
   const [theme, setTheme] = useState('');
 
   useEffect(() => {
@@ -19,20 +19,20 @@ export default function Layout(props) {
     setTheme(newTheme);
   }
 
-  const fullImageUrl = props.img && (props.img.startsWith('http') ? props.img : `https://remybeumier.be${props.img}`);
+  const fullImageUrl = img && (img.startsWith('http') ? img : `https://remybeumier.be${img}`);
 
   return (
     <main className={theme}>
       <Head>
-        <title key="title">{props.title}</title>
-        <meta name="description" content={props.description} key="description" />
+        <title key="title">{title}</title>
+        <meta name="description" content={description} key="description" />
         <meta property="og:image" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="og:image" />
         <meta property="og:image:secure_url" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="og:image:secure_url" />
       </Head>
       <Header onClick={switchTheme} theme={theme} />
       <div className="over-h">
         <Breadcrumb />
-        {props.children}
+        {children}
       </div>
       <Footer />
       {/* <MobileNav /> */}

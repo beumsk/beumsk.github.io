@@ -34,6 +34,7 @@ export default function MyApp({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
         <title key="title">Rémy Beumier | Front-end Developer</title>
+        <meta name="author" content="Rémy Beumier" key="author" />
         <meta name="description" content="Rémy Beumier's portfolio we /bsite as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me." key="description" />
         <meta property="og:image" content="https://remybeumier.be/images/rb.png" key="og:image" />
         <meta property="og:image:secure_url" content="https://remybeumier.be/images/rb.png" key="og:image:secure_url" />

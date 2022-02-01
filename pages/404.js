@@ -6,12 +6,12 @@ import Grid from 'components/grid';
 
 // import Image from 'next/image';
 
-export default function Custom404(props) {
+export default function Custom404({ posts }) {
   const pro = projects.filter(x => !x.pen);
   const perso = projects.filter(x => x.pen);
   const randomPro = pro[Math.floor(Math.random() * pro.length)];
   const randomPerso = perso[Math.floor(Math.random() * perso.length)];
-  const randomPost = props.posts[Math.floor(Math.random() * props.posts.length)];
+  const randomPost = posts[Math.floor(Math.random() * posts.length)];
 
   return (
     <Layout title="404 - Page Not Found | Rémy Beumier">
