@@ -24,10 +24,10 @@ export default function Layout(props) {
   return (
     <main className={theme}>
       <Head>
-        <title>{props.title}</title>
-        <meta name="description" content={props.description} />
-        <meta property="og:image" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} />
-        <meta property="og:image:secure_url" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} />
+        <title key="title">{props.title}</title>
+        <meta name="description" content={props.description} key="description" />
+        <meta property="og:image" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="og:image" />
+        <meta property="og:image:secure_url" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="og:image:secure_url" />
       </Head>
       <Header onClick={switchTheme} theme={theme} />
       <div className="over-h">
