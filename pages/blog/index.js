@@ -5,7 +5,7 @@ import { getAllPosts } from '@api';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
 
-export default function Blog({ posts, title, description }) {
+export default function Blog({ posts, title, description, url }) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g,"") === '/blog' ? '' : router.asPath.replace(/.*\?/g,"");
@@ -16,7 +16,7 @@ export default function Blog({ posts, title, description }) {
   const categories = [...new Set(categoriesAll)];
 
   return (
-    <Layout title={title} description={description}>
+    <Layout title={title} description={description} url={url}>
       <div className="container blog-shape">
         <h1>Blog</h1>
 
@@ -44,13 +44,13 @@ export default function Blog({ posts, title, description }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = await getAllPosts()
-
+  const allPosts = await getAllPosts();
   return {
     props: {
       posts: allPosts,
       title: 'Blog | Rémy Beumier',
-      description: 'My blog posts covering the web in general, especially the front-end development.'
+      description: 'My blog posts covering the web in general, especially the front-end development.',
+      url: 'https://remybeumier.be/blog',
     }
   }
 }

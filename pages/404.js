@@ -6,7 +6,7 @@ import Grid from 'components/grid';
 
 // import Image from 'next/image';
 
-export default function Custom404({ posts }) {
+export default function Custom404({ posts, title }) {
   const pro = projects.filter(x => !x.pen);
   const perso = projects.filter(x => x.pen);
   const randomPro = pro[Math.floor(Math.random() * pro.length)];
@@ -14,7 +14,7 @@ export default function Custom404({ posts }) {
   const randomPost = posts[Math.floor(Math.random() * posts.length)];
 
   return (
-    <Layout title="404 - Page Not Found | Rémy Beumier">
+    <Layout title={title}>
       <div className="container error-shape">
         <h1>404 - Page Not Found</h1>
         <div data-aos="fade-up">
@@ -32,11 +32,11 @@ export default function Custom404({ posts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = await getAllPosts()
-
+  const allPosts = await getAllPosts();
   return {
     props: {
-      posts: allPosts
+      posts: allPosts,
+      title: '404 - Page Not Found | Rémy Beumier',
     }
   }
 }

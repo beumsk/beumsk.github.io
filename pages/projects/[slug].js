@@ -22,14 +22,14 @@ const Tech = ({ name }) => {
   )
 }
 
-export default function DynamicProject({ projectss, slug, title, description, img }) {
+export default function DynamicProject({ projectss, slug, title, description, img, url }) {
   const personal = projectss.filter(x => x.pen);
   const professional = projectss.filter(x => !x.pen);
   const proj = projectss[projectss.findIndex(x => x.title === slug)];
   const isPro = !proj.pen;
 
   return (
-    <Layout title={`${title} | Projects | Rémy Beumier`} description={description} img={img}>
+    <Layout title={`${title} | Projects | Rémy Beumier`} description={description} img={img} url={url}>
       <div className="container project-shape">
         <div data-aos="fade-left">
           <h1>{title}</h1>
@@ -106,6 +106,7 @@ export async function getStaticProps(context) {
       title: slugTitle,
       description: proj.intro,
       img: `https://remybeumier.be${proj.img}`,
+      url: `https://remybeumier.be/projects/${context.params.slug}`,
     }
   };
 }

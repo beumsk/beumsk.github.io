@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getPostBySlug, getAllPosts } from "@api";
 import Layout from '@components/layout';
 
-export default function DynamicBlogPost({ data, posts, title, description, img }){
+export default function DynamicBlogPost({ data, posts, title, description, img, url }){
   const date = data.date === '' ? 'No date' 
     : `${new Date(data.date).getDate()}.${new Date(data.date).getMonth()+1}.${new Date(data.date).getFullYear()}`;
 
@@ -11,7 +11,7 @@ export default function DynamicBlogPost({ data, posts, title, description, img }
   const nextLink = posts[(posts.findIndex((x) => x.title === data.title))+1]?.link || posts[0].link;
 
   return (
-    <Layout title={`${title} | Blog | Rémy Beumier`} description={description} img={img}>
+    <Layout title={`${title} | Blog | Rémy Beumier`} description={description} img={img} url={url}>
       <div className="container narrow posts-shape"> 
         <div data-aos="fade-left">
           <article>
@@ -50,6 +50,7 @@ export async function getStaticProps(context){
       title: data.title,
       description: data.intro,
       img: data.img,
+      url: `https://remybeumier.be/blog/${context.params.slug}`,
     },
   }
 }

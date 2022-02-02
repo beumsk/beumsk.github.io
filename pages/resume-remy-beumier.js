@@ -6,9 +6,11 @@ export default function Resume() {
     <>
       <Head>
         <title>Resume | Rémy Beumier</title>
-        <meta name="description" content="Rémy Beumier's resume as a Front-end Developer" />
-        <meta property="og:image" content="https://remybeumier.be/images/rb.png" />
-        <meta property="og:image:secure_url" content="https://remybeumier.be/images/rb.png" />
+        <meta property="og:title" content="Resume | Rémy Beumier" key="og:title" />
+        <meta name="description" content="Rémy Beumier's resume as a Front-end Developer" key="description" />
+        <meta property="og:url" content="https://remybeumier.be/resume-remy-beumier" key="og:url" />
+        <meta property="og:image" content="https://remybeumier.be/images/rb.png" key="og:image" />
+        <meta property="og:image:secure_url" content="https://remybeumier.be/images/rb.png" key="og:image:secure_url" />
       </Head>
 
       <article className="resume">
