@@ -25,11 +25,18 @@ export default function Layout({ img, title, description, url, children }) {
     <main className={theme}>
       <Head>
         <title key="title">{title}</title>
-        <meta property="og:title" content={title} key="og:title" />
+        <meta name="title" content={title} key="title" />
         <meta name="description" content={description} key="description" />
+
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
         <meta property="og:url" content={url || 'https://remybeumier.be'} key="og:url" />
         <meta property="og:image" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="og:image" />
-        <meta property="og:image:secure_url" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="og:image:secure_url" />
+
+        <meta property="twitter:title" content={title} key="twitter:title" />
+        <meta property="twitter:description" content={description} key="twitter:description" />
+        <meta property="twitter:url" content={url || 'https://remybeumier.be'} key="twitter:url" />
+        <meta property="twitter:image" content={fullImageUrl || "https://remybeumier.be/images/rb.png"} key="twitter:image" />
       </Head>
       <Header onClick={switchTheme} theme={theme} />
       <div className="over-h">

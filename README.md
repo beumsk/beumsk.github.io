@@ -12,7 +12,6 @@ npm run dev
 ## TODO
 
 1.1
-- fix meta data -> socials are not getting my og info!!
 - write blog posts (next.js basics, props to parent/child, mdx to html, goatcounter, SSG vs SSR, dev.to)
 - back to top button
 - image description/figcaption
@@ -30,6 +29,7 @@ X.X
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)
 - rethink scss structure (BEM?)
+- update to NEXT.js 12
 
 ## DEPLOY
 
