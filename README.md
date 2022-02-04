@@ -6,13 +6,17 @@ Website built with React and Nextjs.
 
 ```
 npm install
+yarn install
 npm run dev
+yarn dev
 ```
+
+needs node v14
 
 ## TODO
 
 1.1
-- write blog posts (next.js basics, props to parent/child, mdx to html, goatcounter, SSG vs SSR, dev.to)
+- write blog posts (next.js basics, eslint setup, goatcounter, props to parent/child, mdx to html, SSG vs SSR, dev.to)
 - back to top button
 - image description/figcaption
 - skills section
@@ -33,10 +37,15 @@ X.X
 
 ## DEPLOY
 
-npm run build & npm run export (npm run deploy)
+```
+npm run lint
+yarn lint
+npm run deploy
+yarn deploy
+```
+
 Commit and Push your changes to master.
 This will trigger Github Action and deploy the changes to gh-pages.
-Check the result at https://remybeumier.be
 
 ## ANALYTICS
 

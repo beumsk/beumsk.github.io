@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import AOS from "aos";
+import AOS from 'aos';
 
-import "aos/dist/aos.css";
+import 'aos/dist/aos.css';
 import 'public/styles/style.scss';
 
 // This default export is required in a new `pages/_app.js` file.
@@ -11,15 +11,15 @@ export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
     window.goatcounter.count({
-      path: router.asPath
+      path: router.asPath,
       // path: location.pathname + location.search + location.hash
-    })
+    });
   }, [router]);
 
   useEffect(() => {
     AOS.init({
       once: true,
-      offset: 100
+      offset: 100,
     });
   }, []);
 
@@ -32,16 +32,28 @@ export default function MyApp({ Component, pageProps }) {
 
         <title key="title">Rémy Beumier | Front-end Developer</title>
         <meta name="title" content="Rémy Beumier | Front-end Developer" key="title" />
-        <meta name="description" content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me." key="description" />
+        <meta
+          name="description"
+          content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
+          key="description"
+        />
 
         <meta property="og:title" content="Rémy Beumier | Front-end Developer" key="og:title" />
-        <meta property="og:description" content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me." key="og:description" />
+        <meta
+          property="og:description"
+          content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
+          key="og:description"
+        />
         <meta property="og:url" content="https://remybeumier.be" key="og:url" />
         <meta property="og:image" content="https://remybeumier.be/images/rb.png" key="og:image" />
 
         <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
         <meta property="twitter:title" content="Rémy Beumier | Front-end Developer" key="twitter:title" />
-        <meta property="twitter:description" content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me." key="twitter:description" />
+        <meta
+          property="twitter:description"
+          content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
+          key="twitter:description"
+        />
         <meta property="twitter:url" content="https://remybeumier.be" key="twitter:url" />
         <meta property="twitter:image" content="https://remybeumier.be/images/rb.png" key="twitter:image" />
 
@@ -50,5 +62,5 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }

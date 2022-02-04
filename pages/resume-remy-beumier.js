@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { MdLaptop, MdMailOutline, MdOutlineArticle, MdOutlineSettings, MdPublic, MdWorkOutline } from 'react-icons/md';
 
 export default function Resume() {
@@ -18,18 +18,26 @@ export default function Resume() {
           <h1>Rémy Beumier</h1>
           <p className="subtitle">Front-end Developer</p>
         </section>
-        
+
         <section className="photo">
           <img src="/images/profile.jpg" alt="profile image Rémy Beumier" width="220" height="220" />
         </section>
 
         <section className="about">
           <p>I'm a web lover focused on front-end technologies.</p>
-          <p>I code everyday for a living and a hobby in Brussels always looking to improve myself by searching, experimenting and learning.</p>
+          <p>
+            I code everyday for a living and a hobby in Brussels always looking to improve myself by searching,
+            experimenting and learning.
+          </p>
         </section>
 
         <section className="experience">
-          <h2>Experience <span className="emoji"><MdWorkOutline /></span></h2>
+          <h2>
+            Experience
+            <span className="emoji">
+              <MdWorkOutline />
+            </span>
+          </h2>
           <div className="item">
             <h3>Integrator</h3>
             <p className="detail">Positive Thinking Company // November 2020 - Now</p>
@@ -49,7 +57,7 @@ export default function Resume() {
               <li>AEM: Creation of custom pages with HTML, CSS and JS.</li>
             </ul>
           </div>
-          
+
           <div className="item">
             <h3>Front-end Developer</h3>
             <p className="detail">FreeCodeCamp.org // December 2016 - Now</p>
@@ -61,23 +69,32 @@ export default function Resume() {
             </ul>
           </div>
         </section>
-        
+
         <section className="projects">
-          <h2>Projects <span className="emoji"><MdOutlineSettings /></span></h2>
+          <h2>
+            Projects
+            <span className="emoji">
+              <MdOutlineSettings />
+            </span>
+          </h2>
           <div className="item">
             <h3>Games</h3>
             <p className="detail">Collection of micro application games built with HTML, CSS and Javascript.</p>
             <p>
-              <a href="https://codepen.io/collection/nZpVKb" target="_blank" rel="noopener noreferrer">See games collection</a>
+              <a href="https://codepen.io/collection/nZpVKb" target="_blank" rel="noopener noreferrer">
+                See games collection
+              </a>
               <span className="print-only"> (https://codepen.io/collection/nZpVKb)</span>
             </p>
           </div>
-          
+
           <div className="item">
             <h3>API</h3>
             <p className="detail">Collection of micro applications based on API's.</p>
             <p>
-              <a href="https://codepen.io/collection/DZrGGj" target="_blank" rel="noopener noreferrer">See API collection</a>
+              <a href="https://codepen.io/collection/DZrGGj" target="_blank" rel="noopener noreferrer">
+                See API collection
+              </a>
               <span className="print-only"> (https://codepen.io/collection/DZrGGj)</span>
             </p>
           </div>
@@ -86,40 +103,88 @@ export default function Resume() {
             <h3>Tools</h3>
             <p className="detail">Collection of micro application tools built with HTML, CSS and Javascript.</p>
             <p>
-              <a href="https://codepen.io/collection/AZKOYW" target="_blank" rel="noopener noreferrer">See tools collection</a>
+              <a href="https://codepen.io/collection/AZKOYW" target="_blank" rel="noopener noreferrer">
+                See tools collection
+              </a>
               <span className="print-only"> (https://codepen.io/collection/AZKOYW)</span>
             </p>
           </div>
         </section>
-        
+
         <section className="articles">
-          <h2>Articles <span className="emoji"><MdOutlineArticle /></span></h2>
+          <h2>
+            Articles
+            <span className="emoji">
+              <MdOutlineArticle />
+            </span>
+          </h2>
           <ul className="list-no">
             <li>
-              <a href="https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation" target="_blank" rel="noopener noreferrer">Create a Responsive and Hybrid Navigation in Umbraco 7</a>
+              <a
+                href="https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Create a Responsive and Hybrid Navigation in Umbraco 7
+              </a>
               <span className="print-only"> (https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation)</span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g" target="_blank" rel="noopener noreferrer">How to add Emoji's in your website, using HTML, CSS or JavaScript</a>
-              <span className="print-only"> (https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g)</span>
+              <a
+                href="https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                How to add Emoji's in your website, using HTML, CSS or JavaScript
+              </a>
+              <span className="print-only">
+                (https://dev.to/beumsk/how-to-add-emoji-s-in-your-website-using-html-css-or-javascript-4g6g)
+              </span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i" target="_blank" rel="noopener noreferrer">Google Maps: Show multiple markers and add your event on click</a>
-              <span className="print-only"> (https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i)</span>
+              <a
+                href="https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Maps: Show multiple markers and add your event on click
+              </a>
+              <span className="print-only">
+                (https://dev.to/beumsk/google-maps-show-multiple-markers-and-add-your-event-on-click-226i)
+              </span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc" target="_blank" rel="noopener noreferrer">How to show code in a page; Prism code highlighter</a>
-              <span className="print-only"> (https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc)</span>
+              <a
+                href="https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                How to show code in a page; Prism code highlighter
+              </a>
+              <span className="print-only">
+                (https://dev.to/beumsk/how-to-show-code-in-a-page-prism-code-highlighter-3hcc)
+              </span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk/add-animations-on-scroll-with-aos-3o3n" target="_blank" rel="noopener noreferrer">Add Animations On Scroll with AOS</a>
+              <a
+                href="https://dev.to/beumsk/add-animations-on-scroll-with-aos-3o3n"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Add Animations On Scroll with AOS
+              </a>
               <span className="print-only"> (https://dev.to/beumsk/add-animations-on-scroll-with-aos-3o3n)</span>
             </li>
           </ul>
         </section>
 
         <section className="skills">
-          <h2>Skills <span className="emoji"><MdLaptop /></span></h2>
+          <h2>
+            Skills
+            <span className="emoji">
+              <MdLaptop />
+            </span>
+          </h2>
           <ul className="list-block">
             <li>HTML5 - Pug</li>
             <li>CSS3 - Sass - Bootstrap</li>
@@ -131,7 +196,12 @@ export default function Resume() {
         </section>
 
         <section className="languages">
-          <h2>Languages <span className="emoji"><MdPublic /></span></h2>
+          <h2>
+            Languages
+            <span className="emoji">
+              <MdPublic />
+            </span>
+          </h2>
           <ul className="list-block">
             <li>French</li>
             <li>English</li>
@@ -139,11 +209,25 @@ export default function Resume() {
         </section>
 
         <section className="contact">
-          <h2>Contact <span className="emoji"><MdMailOutline /></span></h2>
-          <p className="cta"><a href="mailto:remybeumier@gmail.com" target="_blank">remybeumier@gmail.com</a></p>
-          <p className="cta"><a href="https://remybeumier.be" target="_blank">remybeumier.be</a></p>
+          <h2>
+            Contact
+            <span className="emoji">
+              <MdMailOutline />
+            </span>
+          </h2>
+          <p className="cta">
+            <a href="mailto:remybeumier@gmail.com" target="_blank" rel="noreferrer">
+              remybeumier@gmail.com
+            </a>
+          </p>
+          <p className="cta">
+            {/* eslint-disable-next-line react/jsx-no-target-blank */}
+            <a href="https://remybeumier.be" target="_blank">
+              remybeumier.be
+            </a>
+          </p>
         </section>
       </article>
     </>
-  )
+  );
 }

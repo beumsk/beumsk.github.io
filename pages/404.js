@@ -7,8 +7,8 @@ import Grid from 'components/grid';
 // import Image from 'next/image';
 
 export default function Custom404({ posts, title }) {
-  const pro = projects.filter(x => !x.pen);
-  const perso = projects.filter(x => x.pen);
+  const pro = projects.filter((x) => !x.pen);
+  const perso = projects.filter((x) => x.pen);
   const randomPro = pro[Math.floor(Math.random() * pro.length)];
   const randomPerso = perso[Math.floor(Math.random() * perso.length)];
   const randomPost = posts[Math.floor(Math.random() * posts.length)];
@@ -21,14 +21,16 @@ export default function Custom404({ posts, title }) {
           <Grid data={[randomPro, randomPerso, randomPost]} className="mt-10 mb-10" />
         </div>
         <div>
-          <Link href="/"><a className="btn mb-20">Go back Home</a></Link>
+          <Link href="/">
+            <a className="btn mb-20">Go back Home</a>
+          </Link>
         </div>
         {/* <div style={{position: 'relative', aspectRatio: '1200/630'}}>
           <Image src="/images/posts/fix-the-window-is-not-defined-error.jpg" layout="fill" />
         </div> */}
       </div>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -37,6 +39,6 @@ export async function getStaticProps() {
     props: {
       posts: allPosts,
       title: '404 - Page Not Found | Rémy Beumier',
-    }
-  }
+    },
+  };
 }

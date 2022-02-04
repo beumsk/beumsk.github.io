@@ -6,8 +6,13 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* add "allow_local": true to data-goatcounter-settings to test in local env */}
-          <script data-goatcounter="https://beumsk.goatcounter.com/count" data-goatcounter-settings='{"no_onload": true}' async src="/scripts/goatcounter.js"></script>
-          
+          <script
+            data-goatcounter="https://beumsk.goatcounter.com/count"
+            data-goatcounter-settings='{"no_onload": true}'
+            async
+            src="/scripts/goatcounter.js"
+          ></script>
+
           {/* if no script allowed, overwrite AOS */}
           <noscript>
             <style type="text/css">
@@ -25,8 +30,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default MyDocument
+export default MyDocument;

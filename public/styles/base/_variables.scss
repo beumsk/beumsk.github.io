@@ -50,6 +50,11 @@ main.dark {
   --text20: rgba(256, 256, 256, 0.2);
   --text40: rgba(256, 256, 256, 0.4);
   --text80: rgba(256, 256, 256, 0.8);
+  header .logo img {
+    @media screen and (min-width: 768px) {
+      filter: grayscale(1) invert(1);
+    }
+  }
   .svg-divider::before {
     filter: invert(1);
   }
@@ -71,6 +76,11 @@ main.dark {
     --text20: rgba(256, 256, 256, 0.2);
     --text40: rgba(256, 256, 256, 0.4);
     --text80: rgba(256, 256, 256, 0.8);
+    header .logo img {
+      @media screen and (min-width: 768px) {
+        filter: grayscale(1) invert(1);
+      }
+    }
     .svg-divider::before {
       filter: invert(1);
     }

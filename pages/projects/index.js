@@ -8,7 +8,7 @@ import Grid from 'components/grid';
 export default function Projects({ title, description, url }) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
-  const query = router.asPath.replace(/.*\?/g,"") === '/projects' ? '' : router.asPath.replace(/.*\?/g,"");
+  const query = router.asPath.replace(/.*\?/g, '') === '/projects' ? '' : router.asPath.replace(/.*\?/g, '');
   const [pro, setPro] = useState(query.includes('personal') ? false : true);
 
   return (
@@ -32,12 +32,11 @@ export default function Projects({ title, description, url }) {
         </div>
 
         <div data-aos="fade-up">
-          <Grid data={projects.filter(x => pro ? !x.pen : x.pen)} className="mt-6 mb-20" />
+          <Grid data={projects.filter((x) => (pro ? !x.pen : x.pen))} className="mt-6 mb-20" />
         </div>
-        
       </div>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -46,6 +45,6 @@ export async function getStaticProps() {
       title: 'Projects | Rémy Beumier',
       description: 'My personal and professional projects developed with HTML, CSS, JS, React, Angular and many more.',
       url: 'https://remybeumier.be/projects',
-    }
-  }
+    },
+  };
 }

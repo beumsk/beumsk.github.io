@@ -8,11 +8,11 @@ import Grid from 'components/grid';
 export default function Blog({ posts, title, description, url }) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
-  const query = router.asPath.replace(/.*\?/g,"") === '/blog' ? '' : router.asPath.replace(/.*\?/g,"");
-  const [cat, setCat] = useState(query ? posts.filter(x => x.categories.includes(query)) : posts);
+  const query = router.asPath.replace(/.*\?/g, '') === '/blog' ? '' : router.asPath.replace(/.*\?/g, '');
+  const [cat, setCat] = useState(query ? posts.filter((x) => x.categories.includes(query)) : posts);
 
-  const categoriesAllRaw = posts.map(x => x.categories.split(', '));
-  const categoriesAll = [].concat(...categoriesAllRaw).filter(x => x);
+  const categoriesAllRaw = posts.map((x) => x.categories.split(', '));
+  const categoriesAll = [].concat(...categoriesAllRaw).filter((x) => x);
   const categories = [...new Set(categoriesAll)];
 
   return (
@@ -22,13 +22,16 @@ export default function Blog({ posts, title, description, url }) {
 
         <div className="blog__categories">
           <Link href="/blog">
-            <a className={`btn ${query==='' && 'active'}`} onClick={() => setCat(posts)}>
+            <a className={`btn ${query === '' && 'active'}`} onClick={() => setCat(posts)}>
               All posts
             </a>
           </Link>
-          {categories.map(c => (
+          {categories.map((c) => (
             <Link key={c} href={`?${c}`}>
-              <a className={`btn ${query===c && 'active'}`} onClick={() => setCat(posts.filter(x => x.categories.includes(c)))}>
+              <a
+                className={`btn ${query === c && 'active'}`}
+                onClick={() => setCat(posts.filter((x) => x.categories.includes(c)))}
+              >
                 {c.charAt(0).toUpperCase() + c.slice(1)}
               </a>
             </Link>
@@ -40,7 +43,7 @@ export default function Blog({ posts, title, description, url }) {
         </div>
       </div>
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
@@ -51,6 +54,6 @@ export async function getStaticProps() {
       title: 'Blog | Rémy Beumier',
       description: 'My blog posts covering the web in general, especially the front-end development.',
       url: 'https://remybeumier.be/blog',
-    }
-  }
+    },
+  };
 }

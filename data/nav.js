@@ -1,18 +1,18 @@
 export const nav = [
   {
     text: 'Home',
-    link: '/#'
+    link: '/#',
   },
   {
     text: 'Projects',
-    link: '/projects'
+    link: '/projects',
   },
   {
     text: 'Blog',
-    link: '/blog'
+    link: '/blog',
   },
   {
     text: 'Contact',
-    link: '/#contact'
-  }
+    link: '/#contact',
+  },
 ];

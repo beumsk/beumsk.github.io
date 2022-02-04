@@ -4,7 +4,7 @@ import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
 
 export default function Grid({ data, className }) {
   return (
-    <div className={"grid " + className}>
+    <div className={'grid ' + className}>
       {data.map((item, index) => {
         const title = item.title.replace(/-/g, ' ').charAt(0).toUpperCase() + item.title.replace(/-/g, ' ').slice(1);
         return (
@@ -12,21 +12,41 @@ export default function Grid({ data, className }) {
             <div className="card__behind">
               <Link href={item.link || ''}>
                 <a className="card__title" title={title}>
-                  <h2 className="t-ellipsis">
-                    {title}
-                  </h2>
+                  <h2 className="t-ellipsis">{title}</h2>
                 </a>
               </Link>
               {item.pen && (
                 <div className="card__links">
-                  <a href={"https://github.com/beumsk/" + item.title} target="_blank" rel="noopener noreferrer" title="Codepen link"><FaCodepen /></a>
-                  <a href={"https://codepen.io/beumsk/pen/" + item.pen} target="_blank" rel="noopener noreferrer" title="Github repository"><FaGithub /></a>
+                  <a
+                    href={'https://github.com/beumsk/' + item.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Codepen link"
+                  >
+                    <FaCodepen />
+                  </a>
+                  <a
+                    href={'https://codepen.io/beumsk/pen/' + item.pen}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Github repository"
+                  >
+                    <FaGithub />
+                  </a>
                 </div>
               )}
               {(item.current || item.past) && (
                 <div className="card__links">
-                  {item.current && <a href={item.current} target="_blank" rel="noopener noreferrer" title="Live website"><MdPublic /></a>}
-                  {item.past && <a href={item.past} target="_blank" rel="noopener noreferrer" title="Site as I left it"><MdSettingsBackupRestore /></a>}
+                  {item.current && (
+                    <a href={item.current} target="_blank" rel="noopener noreferrer" title="Live website">
+                      <MdPublic />
+                    </a>
+                  )}
+                  {item.past && (
+                    <a href={item.past} target="_blank" rel="noopener noreferrer" title="Site as I left it">
+                      <MdSettingsBackupRestore />
+                    </a>
+                  )}
                 </div>
               )}
             </div>
@@ -38,8 +58,8 @@ export default function Grid({ data, className }) {
               </a>
             </Link>
           </div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
