@@ -25,7 +25,7 @@ export default function Layout({ img, title, description, url, children }) {
     <main className={theme}>
       <Head>
         <title key="title">{title}</title>
-        <meta name="title" content={title} key="title" />
+        <meta name="title" content={title} key="meta:title" />
         <meta name="description" content={description} key="description" />
 
         <meta property="og:title" content={title} key="og:title" />

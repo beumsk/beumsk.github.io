@@ -29,6 +29,7 @@ needs node v14
 - metrics animation? Number of projects/sites/hours/languages
 - add project filter and order
 X.X
+- add proptypes
 - improve perf (caching)
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)

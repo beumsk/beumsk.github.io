@@ -31,7 +31,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:type" content="website" key="og:type" />
 
         <title key="title">Rémy Beumier | Front-end Developer</title>
-        <meta name="title" content="Rémy Beumier | Front-end Developer" key="title" />
+        <meta name="title" content="Rémy Beumier | Front-end Developer" key="meta:title" />
         <meta
           name="description"
           content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
