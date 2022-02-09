@@ -1,16 +1,20 @@
 import Head from 'next/head';
 import { MdLaptop, MdMailOutline, MdOutlineArticle, MdOutlineSettings, MdPublic, MdWorkOutline } from 'react-icons/md';
 
-export default function Resume() {
+export default function Resume({ title, description, url }) {
   return (
     <>
       <Head>
-        <title>Resume | Rémy Beumier</title>
-        <meta property="og:title" content="Resume | Rémy Beumier" key="og:title" />
-        <meta name="description" content="Rémy Beumier's resume as a Front-end Developer" key="description" />
-        <meta property="og:url" content="https://remybeumier.be/resume-remy-beumier" key="og:url" />
-        <meta property="og:image" content="https://remybeumier.be/images/rb.png" key="og:image" />
-        <meta property="og:image:secure_url" content="https://remybeumier.be/images/rb.png" key="og:image:secure_url" />
+        <title>{title}</title>
+        <meta name="description" content={description} key="description" />
+
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+        <meta property="og:url" content={url} key="og:url" />
+
+        <meta property="twitter:title" content={title} key="twitter:title" />
+        <meta property="twitter:description" content={description} key="twitter:description" />
+        <meta property="twitter:url" content={url} key="twitter:url" />
       </Head>
 
       <article className="resume">
@@ -230,4 +234,14 @@ export default function Resume() {
       </article>
     </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Resume | Rémy Beumier',
+      description: "Rémy Beumier's resume as a Front-end Developer",
+      url: 'https://remybeumier.be/resume-remy-beumier',
+    },
+  };
 }

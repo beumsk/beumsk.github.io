@@ -74,9 +74,9 @@ Let's see how we can write with it!
 
 ## Image
 ```
-![alt text](/images/rb.png)
+![alt text](/images/rb.jpg)
 ```
-![alt text](/images/rb.png)
+![alt text](/images/rb.jpg)
 
 ## Task list
 ```
