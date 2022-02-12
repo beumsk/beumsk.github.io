@@ -9,8 +9,10 @@ export default function Layout({ img, title, description, url, children }) {
   const [theme, setTheme] = useState('');
 
   useEffect(() => {
-    let localTheme = window.localStorage.getItem('theme');
-    setTheme(localTheme);
+    if (typeof window !== 'undefined') {
+      let localTheme = window.localStorage.getItem('theme');
+      setTheme(localTheme);
+    }
   }, []);
 
   const switchTheme = () => {

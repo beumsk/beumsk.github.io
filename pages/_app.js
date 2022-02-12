@@ -10,10 +10,12 @@ import 'public/styles/style.scss';
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
-    window.goatcounter.count({
-      path: router.asPath,
-      // path: location.pathname + location.search + location.hash
-    });
+    if (typeof window !== 'undefined') {
+      window.goatcounter.count({
+        path: router.asPath,
+        // path: location.pathname + location.search + location.hash
+      });
+    }
   }, [router]);
 
   useEffect(() => {
