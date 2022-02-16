@@ -8,6 +8,7 @@
     "lint": "next lint",
     "build": "next build",
     "start": "next start",
+    "local": "next build && next start",
     "export": "next export",
     "deploy": "npm run build && npm run export && node ./generate-sitemap.js",
     "sitemap": "node ./generate-sitemap.js"
