@@ -40,9 +40,9 @@
 }
 
 .blog__categories .btn {
-  margin-bottom: calc(2 * var(--spacing));
+  margin-bottom: 16px;
   &:not(:last-of-type) {
-    margin-right: calc(2 * var(--spacing));
+    margin-right: 16px;
   }
 }
 
@@ -51,7 +51,7 @@
   cursor: pointer;
   text-decoration: underline;
   &:not(:last-of-type) {
-    margin-right: var(--spacing);
+    margin-right: 8px;
   }
 }
 
@@ -78,20 +78,20 @@
   }
 
   pre {
-    margin-top: calc(2 * var(--spacing));
-    margin-bottom: calc(2 * var(--spacing));
-    padding: calc(2 * var(--spacing));
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
     background: var(--bg2);
   }
 
   code {
     background: var(--bg2);
-    padding: calc(0.25 * var(--spacing)) calc(0.5 * var(--spacing));
+    padding: 2px 4px;
   }
 
   blockquote {
-    margin: calc(2 * var(--spacing)) auto;
-    padding: var(--spacing) 0 var(--spacing) calc(2 * var(--spacing));
+    margin: 16px auto;
+    padding: 8px 0 8px 16px;
     border-left: solid 8px var(--bg3);
     font-style: italic;
   }
