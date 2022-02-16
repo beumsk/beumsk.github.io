@@ -16,13 +16,9 @@ needs node v14
 ## TODO
 
 1.1
-- write blog posts (next.js basics, eslint setup, goatcounter, props to parent/child, mdx to html, SSG vs SSR, dev.to)
+- write blog posts (next.js basics, goatcounter, props to parent/child, mdx to html, SSG vs SSR, dev.to)
 - back to top button
-- image description/figcaption
 - skills section
-- safari breaking error on 1/4 loads because of goatcounter .count undefined 
-  -> if (typeof window !== "undefined") in useEffect() ?
-- try grid backup for IE ?
 1.2
 - add more images of features/pages?
 - improve cv (rethink projects and articles sections)

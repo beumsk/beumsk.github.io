@@ -43,13 +43,13 @@ li.tech {
   list-style-type: none;
   display: inline-flex;
   border: solid 1px;
-  padding: calc(0.5 * var(--spacing)) var(--spacing);
-  margin-right: var(--spacing);
-  margin-bottom: var(--spacing);
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
   align-items: center;
   svg {
     width: 16px;
     height: 16px;
-    margin-right: calc(0.5 * var(--spacing));
+    margin-right: 4px;
   }
 }

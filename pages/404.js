@@ -25,8 +25,8 @@ export default function Custom404({ posts, title }) {
             <a className="btn mb-20">Go back Home</a>
           </Link>
         </div>
-        {/* <div style={{position: 'relative', aspectRatio: '1200/630'}}>
-          <Image src="/images/posts/fix-the-window-is-not-defined-error.jpg" layout="fill" />
+        {/* <div style={{ position: 'relative', aspectRatio: '1200/630' }}>
+          <Image src="/images/posts/set-up-eslint-into-nextjs.jpg" layout="fill" />
         </div> */}
       </div>
     </Layout>

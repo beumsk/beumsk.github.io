@@ -50,6 +50,9 @@ export default function Layout({ img, title, description, url, children }) {
       </div>
       <Footer />
       {/* <MobileNav /> */}
+      <div id="ie-banner">
+        Please open this website with a recent browser for the best experience. Avoid Internet Explorer at all costs.
+      </div>
     </main>
   );
 }

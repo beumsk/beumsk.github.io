@@ -18,6 +18,7 @@ body {
 }
 
 main {
+  font-family: Arial, Helvetica, sans-serif;
   font-family: var(--font-body);
   background-color: var(--bg);
   color: var(--text2);
@@ -30,7 +31,7 @@ h1 {
   font-weight: normal;
   letter-spacing: 4px;
   display: inline-block;
-  margin: calc(4 * var(--spacing)) 0;
+  margin: 32px 0;
   animation: title-shadow 0.4s ease-in-out forwards;
 }
 
@@ -42,41 +43,34 @@ h1 {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest);
   }
   25% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest);
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest);
   }
   37% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest);
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
+      3px 1px var(--primary-lightest);
   }
   50% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
-      4px 2px var(--primary-lightest);
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
+      3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest);
   }
   62% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
-      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest);
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
+      3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest);
   }
   75% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
-      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
+      3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
       6px 3px var(--primary-lightest);
   }
   87% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
-      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
+      3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
       6px 3px var(--primary-lightest), 7px 3px var(--primary-lightest);
   }
   100% {
-    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest),
-      2px 1px var(--primary-lightest), 3px 1px var(--primary-lightest),
-      4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
-      6px 3px var(--primary-lightest), 7px 3px var(--primary-lightest),
-      8px 4px var(--primary-lightest);
+    text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
+      3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
+      6px 3px var(--primary-lightest), 7px 3px var(--primary-lightest), 8px 4px var(--primary-lightest);
   }
 }
 
@@ -114,23 +108,27 @@ a {
 
 p {
   margin: 0;
-  margin-bottom: var(--spacing);
+  margin-bottom: 8px;
   line-height: 1.4;
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding-left: 20px;
+  li {
+    line-height: 1.4;
+  }
+}
+
+ul {
   list-style-type: square;
   &.nodisc {
     list-style: none;
     padding-left: 0;
-  }
-  li {
-    line-height: 1.4;
   }
 }
 
@@ -154,7 +152,7 @@ button {
 }
 
 strong {
-  color: #009688;
+  color: var(--primary);
 }
 
 main {
@@ -184,8 +182,8 @@ main {
 
 .cols {
   display: flex;
-  margin-left: calc(-2 * var(--spacing));
-  margin-right: calc(-2 * var(--spacing));
+  margin-left: -16px;
+  margin-right: -16px;
   &.cols-md,
   &.cols-lg,
   &.cols-xl {
@@ -195,8 +193,8 @@ main {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding-left: calc(2 * var(--spacing));
-    padding-right: calc(2 * var(--spacing));
+    padding-left: 16px;
+    padding-right: 16px;
     &.is-3 {
       flex: none;
       width: 25%;
@@ -267,7 +265,7 @@ button {
   background-color: var(--bg);
   border: solid 1px;
   text-decoration: none;
-  padding: calc(0.5 * var(--spacing)) var(--spacing);
+  padding: 4px 8px;
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -297,7 +295,7 @@ button {
 .wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
-  margin: calc(2 * var(--spacing)) 0;
+  margin: 16px 0;
   position: relative;
   .wrapper__img {
     position: absolute;
@@ -328,5 +326,41 @@ button {
     height: 100%;
     transform: skewY(2deg);
     z-index: 0;
+  }
+}
+
+/* target IE10 & IE11 */
+#ie-banner {
+  display: none;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #ie-banner {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: #009688;
+    color: #ffffff;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .grid .card {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    .grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .card {
+        width: 30%;
+      }
+    }
   }
 }
