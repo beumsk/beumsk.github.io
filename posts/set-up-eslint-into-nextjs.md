@@ -2,7 +2,7 @@
 title: 'Set up ESLint into Next.js'
 intro: 'How to set up the ESLint linter into a Next.js project'
 img: '/images/posts/set-up-eslint-into-nextjs.jpg'
-date: '01/29/2022'
+date: '02/11/2022'
 categories: 'next.js, tutorial'
 ---
 

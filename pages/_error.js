@@ -14,6 +14,7 @@ function Error({ statusCode }) {
   const router = useRouter();
 
   useEffect(() => {
+    // reload page to bypass safari error of window undefined
     router.reload();
   }, [router]);
 

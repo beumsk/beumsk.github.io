@@ -38,6 +38,7 @@ export default function MyApp({ Component, pageProps }) {
           content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
           key="description"
         />
+        <meta name="author" content="Rémy Beumier" key="author" />
 
         <meta property="og:title" content="Rémy Beumier | Front-end Developer" key="og:title" />
         <meta
@@ -48,7 +49,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://remybeumier.be" key="og:url" />
         <meta property="og:image" content="https://remybeumier.be/images/rb.jpg" key="og:image" />
 
-        <meta name="twitter:card" content="summary_large_image" key="twitter:card" />
+        <meta property="twitter:card" content="summary_large_image" key="twitter:card" />
         <meta property="twitter:title" content="Rémy Beumier | Front-end Developer" key="twitter:title" />
         <meta
           property="twitter:description"

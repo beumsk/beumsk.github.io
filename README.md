@@ -16,7 +16,7 @@ needs node v14
 ## TODO
 
 1.1
-- write blog posts (next.js basics, goatcounter, props to parent/child, mdx to html, SSG vs SSR, dev.to)
+- write blog posts (custom sitemap, goatcounter, nextjs custom error page, props to parent/child, mdx to html, SSG vs SSR, dev.to)
 - back to top button
 - skills section
 1.2
