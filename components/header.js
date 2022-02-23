@@ -6,19 +6,17 @@ export default function Header({ onClick, theme }) {
   return (
     <header>
       <div className="container">
-        {nav.map((n, i) =>
-          !i ? (
-            <Link href={n.link} key={n + i}>
+        {nav.map((n, i) => (
+          <Link href={n.link} key={n.text}>
+            {!i ? (
               <a className="logo">
                 <img src="/images/logo.svg" alt="Rémy Beumier logo" title={n.text} width="30" height="30" />
               </a>
-            </Link>
-          ) : (
-            <Link href={n.link} key={n + i}>
-              {n.text}
-            </Link>
-          )
-        )}
+            ) : (
+              <a>{n.text}</a>
+            )}
+          </Link>
+        ))}
         <button
           onClick={onClick}
           className="btn"

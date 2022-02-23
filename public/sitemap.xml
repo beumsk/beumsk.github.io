@@ -278,6 +278,13 @@
   </url>
 
   <url>
+    <loc>https://remybeumier.be/blog/generate-a-sitemap-in-nextjs</loc>
+    <lastmod>2022-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://remybeumier.be/blog/markdown-tutorial</loc>
     <lastmod>2022-02-08</lastmod>
     <changefreq>yearly</changefreq>

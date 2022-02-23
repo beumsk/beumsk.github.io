@@ -1,0 +1,210 @@
+---
+title: 'Generate a sitemap in Next.js'
+intro: 'How to generate an automatic and custom sitemap in your Next.js build?'
+img: '/images/posts/generate-a-sitemap-in-nextjs.jpg'
+date: '02/25/2022'
+categories: 'next.js, tutorial'
+---
+
+Sitemaps are important for web crawlers such as google bots, and therefore we need one to improve our site's SEO.
+
+Sadly, Next.js does not provide a go-to option regarding sitemap and I find the external libraries too limited. I tested `nextjs-sitemap-generator`, but I couldn't make it define the `lastmod` or `changefreq` with precision. 
+
+I decided to create something custom and firstly tried to make something with a `sitemap.xml.js` page. It wasn't a success because I couldn't make it an .xml file.
+
+I went a different way and built a `.mjs` file with the purpose of creating my `sitemap.xml`. It uses Node's file creation, `Globby` to crawl files and `Prettier` to format it.
+
+Let's walk through the steps of creating our custom sitemap generator together.
+
+## First version
+We want to make sure the `.mjs` script creates the sitemap.xml. We will achieve this with Node.
+
+```js
+import { writeFileSync } from 'fs';
+
+async function generate() {
+  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
+  const pages = [
+    '',
+    'about',
+    'contact'
+  ];
+  const baseUrl = 'https://your-url.com';
+  const sitemap = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${pages
+        .map((page) => {
+          return `
+            <url>
+              <loc>${baseUrl}/${path}</loc>
+              <changefreq>monthly</changefreq>
+            </url>
+          `;
+        })
+        .join('')}
+    </urlset>
+  `;
+
+  writeFileSync('public/sitemap.xml', formatted);
+}
+
+generate();
+
+```
+If you don't know much about the topic, [read more about the sitemap protocol](https://sitemaps.org/protocol.html).
+
+## Focus on the files you want in the sitemap
+We now want something that actually represents our website content. We will do that with `Globby` and we will fix the code format with `Prettier`.
+
+```js
+import { writeFileSync } from 'fs';
+import { globby } from 'globby';
+import prettier from 'prettier';
+async function generate() {
+  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
+  const pages = await globby(
+    [
+      // we list all .js files under /pages
+      'pages/*.js'
+      // we could add more specific files to the list such as .md
+    ],
+    // this line gets us more data check the doc: https://nodejs.org/api/fs.html#class-fsstats
+    { stats: true }
+  );
+  const baseUrl = 'https://your-url.com';
+  const sitemap = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${pages
+        .map((page) => {
+          const path = page.path
+            .replace('pages/', '')
+            .replace('index', '')
+            .replace('.js', '');
+
+          return `
+            <url>
+              <loc>${baseUrl}/${path}</loc>
+              <lastmod>${page.stats.mtime}</lastmod>
+              <changefreq>monthly</changefreq>
+            </url>
+          `;
+        })
+        .join('')}
+    </urlset>
+  `;
+
+  const formatted = prettier.format(sitemap, {
+    ...prettierConfig,
+    parser: 'html',
+  });
+
+  writeFileSync('public/sitemap.xml', formatted);
+}
+
+generate();
+```
+
+We have something working but still too generic, especially the `changefreq` and the missing `priority`.
+
+## Improve the logic based on your needs
+From this point, we want every entry of our sitemap to reflect its content. Let's add some function logic for this purpose.
+
+```js
+import { writeFileSync } from 'fs';
+import { globby } from 'globby';
+import prettier from 'prettier';
+
+async function generate() {
+  const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
+  const pages = await globby(
+    [
+      'pages/*.js'
+    ],
+    { stats: true }
+  );
+  const baseUrl = 'https://your-url.com';
+
+  const sitemap = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+      ${pages
+        .map((page) => {
+          const path = page.path
+            .replace('pages/', '')
+            .replace('index', '')
+            .replace('.js', '')
+
+          return `
+            <url>
+              <loc>${baseUrl}/${path}</loc>
+              <lastmod>${convertDate(page.stats.mtime)}</lastmod>
+              <changefreq>${changefreq(path)}</changefreq>
+              <priority>${priority(path)}</priority>
+            </url>
+          `;
+        })
+        .join('')}
+    </urlset>
+    `;
+
+  const formatted = prettier.format(sitemap, {
+    ...prettierConfig,
+    parser: 'html',
+  });
+
+  writeFileSync('public/sitemap.xml', formatted);
+}
+
+generate();
+
+function priority(path) {
+  switch (path) {
+    case '':
+      return '1.0';
+    case 'about':
+      return '0.8';
+    default:
+      return '0.6';
+  }
+}
+
+function changefreq(path) {
+  switch (path) {
+    case '':
+      return 'weekly';
+    case 'about':
+      return 'monthly';
+    default:
+      return 'yearly';
+  }
+}
+
+// convert date to format yyyy-mm-dd
+function convertDate(inputFormat) {
+  function pad(s) {
+    return s < 10 ? '0' + s : s;
+  }
+  var d = new Date(inputFormat);
+  return [d.getFullYear(), pad(d.getMonth() + 1), pad(d.getDate())].join('-');
+}
+```
+
+We have built a complete sitemap with specific URL, last modification date, change frequency and priority.
+Check out [the globby documentation for more possibilities](https://github.com/sindresorhus/globby).
+
+
+**TLDR**: [Codesandbox: Custom sitemap in Next.js](https://codesandbox.io/s/custom-sitemap-i3jvko).
+
+
+Would you improve this code or do it in another way? Don't hesitate to share your ideas!
+
+Enjoy coding with Next.js!

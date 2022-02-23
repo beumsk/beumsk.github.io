@@ -1,7 +1,7 @@
 {
   "name": "rb",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "My portfolio website created with Next.js presenting projects and blog posts.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,7 @@
     "sitemap": "node ./generate-sitemap.mjs"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rémy Beumier",
   "license": "ISC",
   "dependencies": {
     "aos": "^2.3.4",

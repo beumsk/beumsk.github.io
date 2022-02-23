@@ -36,7 +36,6 @@ async function generate() {
             .replace('posts', 'blog')
             .replace('.js', '')
             .replace('.jpg', '')
-            .replace('.js', '')
             .replace('.md', '');
 
           return `

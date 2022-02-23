@@ -1,8 +1,14 @@
-# New version of portfolio site
+# Rémy Beumier's portfolio site
 
 Website built with React and Nextjs.
 
-## How to install?
+Sass for styling.
+
+React icons for icons.
+
+Gray-matter and marked to turn .md files into html.
+
+## INSTALL
 
 ```
 npm install
@@ -16,17 +22,20 @@ needs node v14
 ## TODO
 
 1.1
-- write blog posts (custom sitemap, goatcounter, nextjs custom error page, props to parent/child, mdx to html, SSG vs SSR, dev.to)
-- back to top button
 - skills section
+- intro text for /blog and /projects
+- back to top button
+
 1.2
 - add more images of features/pages?
 - improve cv (rethink projects and articles sections)
 - links in mdx to open in new tabs
 - color for code snippets
+
 1.3
 - metrics animation? Number of projects/sites/hours/languages
 - add project filter and order
+
 X.X
 - add proptypes
 - improve perf (caching)
@@ -34,6 +43,14 @@ X.X
 - improve resume with react features (mapping)
 - rethink scss structure (BEM?)
 - update to NEXT.js 12
+
+Blog
+- goatcounter
+- nextjs custom error page
+- props to parent/child
+- mdx to html
+- SSG vs SSR
+- dev.to
 
 ## DEPLOY
 

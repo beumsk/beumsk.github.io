@@ -33,7 +33,7 @@ export default function Custom404({ posts, title }) {
           </Link>
         </div>
         {/* <div style={{ position: 'relative', aspectRatio: '1200/630' }}>
-          <Image src="/images/posts/set-up-eslint-into-nextjs.jpg" layout="fill" />
+          <Image src="/images/posts/generate-a-sitemap-in-nextjs.jpg" alt="img" layout="fill" />
         </div> */}
       </div>
     </Layout>

@@ -4,8 +4,8 @@ import { nav } from '@data/nav';
 export default function MobileNav() {
   return (
     <nav className="mobile-nav">
-      {nav.map((n, i) => (
-        <Link href={n.link} key={n + i}>
+      {nav.map((n) => (
+        <Link href={n.link} key={n.text}>
           {n.text}
         </Link>
       ))}

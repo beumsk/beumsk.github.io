@@ -50,8 +50,8 @@ export default function DynamicProject({ projectss, slug, title, description, im
             <>
               <h2>Technologies</h2>
               <ul className="pl-0 mb-6">
-                {proj.tech.map((t, i) => (
-                  <Tech key={i} name={t} />
+                {proj.tech.map((t) => (
+                  <Tech key={t} name={t} />
                 ))}
               </ul>
             </>
@@ -61,8 +61,8 @@ export default function DynamicProject({ projectss, slug, title, description, im
             <>
               <h2>Challenges, key lessons</h2>
               <ul className="mb-8">
-                {proj.chall.map((c, i) => (
-                  <li key={i}>{c}</li>
+                {proj.chall.map((c) => (
+                  <li key={c}>{c}</li>
                 ))}
               </ul>
             </>
