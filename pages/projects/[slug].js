@@ -96,14 +96,8 @@ export default function DynamicProject({ projectss, slug, title, description, im
           {isPro && (
             <>
               {proj.screen && (
-                <figure className="wrapper">
-                  <img
-                    src={proj.screen}
-                    alt={`Screenshot of ${proj.current}`}
-                    width="300"
-                    height="400"
-                    className="scroll"
-                  />
+                <figure className="project-screen mb-8">
+                  <img src={proj.screen} alt={`Screenshot of ${proj.current}`} width="300" height="400" />
                 </figure>
               )}
 

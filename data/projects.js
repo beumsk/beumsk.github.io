@@ -252,7 +252,7 @@ export const projects = [
     screen: '/images/projects/careers-kpmg-be-screen.png',
     intro: 'KPMG Belgium recruitment website built with Umbraco CMS.',
     tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'],
-    chall: ['Google map custom', 'JSON events', 'Slick responsive carousel'],
+    chall: ['Google maps custom', 'Instagram feed with Curator.io', 'JSON events', 'Slick responsive carousel'],
   },
   {
     title: 'kpmg-law',

@@ -21,7 +21,7 @@ needs node v14
 
 ## TODO
 
-1.1
+- new projects + codesandbox integration
 - skills section
 - intro text for /blog and /projects
 - back to top button

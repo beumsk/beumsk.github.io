@@ -53,3 +53,9 @@ li.tech {
     margin-right: 4px;
   }
 }
+
+figure.project-screen {
+  background: var(--text10);
+  border: solid 1px var(--light-grey);
+  box-shadow: var(--shadows6);
+}
