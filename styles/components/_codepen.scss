@@ -1,5 +1,4 @@
-.cp_embed_wrapper,
-figure.wrapper {
+.cp_embed_wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
   margin-bottom: 32px;
@@ -10,8 +9,7 @@ figure.wrapper {
   box-shadow: var(--shadows6);
 }
 
-.cp_embed_wrapper iframe,
-figure.wrapper img.scroll {
+.cp_embed_wrapper iframe {
   position: absolute;
   width: 100%;
   left: 0;
@@ -24,8 +22,4 @@ figure.wrapper img.scroll {
     height: 100% !important;
     border: none;
   }
-}
-
-figure.wrapper {
-  overflow-y: auto;
 }

@@ -292,19 +292,6 @@ button {
   }
 }
 
-.wrapper {
-  width: 100%;
-  padding: 56.25% 0 0 0;
-  margin: 16px 0;
-  position: relative;
-  .wrapper__img {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-  }
-}
-
 .t-ellipsis {
   white-space: nowrap;
   overflow: hidden;
