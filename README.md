@@ -37,7 +37,6 @@ needs node v14
 - add project filter and order
 
 X.X
-- add proptypes
 - improve perf (caching)
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
 import Header from 'components/header';
 import Footer from 'components/footer';
 import Breadcrumb from 'components/breadcrumb';
@@ -56,3 +57,11 @@ export default function Layout({ img, title, description, url, children }) {
     </main>
   );
 }
+
+Layout.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  img: PropTypes.string,
+  url: PropTypes.string,
+  children: PropTypes.node,
+};

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiSass, SiAngular, SiReact } from 'react-icons/si';
 import { getAllPosts } from '@api';
 import { projects } from '@data/projects';
@@ -104,6 +105,16 @@ export default function Home({ title, description, posts }) {
     </Layout>
   );
 }
+
+Home.defaultProps = {
+  title: 'Rémy Beumier | Front-end Developer',
+};
+
+Home.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  posts: PropTypes.array,
+};
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();

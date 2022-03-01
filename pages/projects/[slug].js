@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import {
   SiHtml5,
   SiCss3,
@@ -31,6 +32,10 @@ const Tech = ({ name }) => {
       <span>{name}</span>
     </li>
   );
+};
+
+Tech.propTypes = {
+  name: PropTypes.string,
 };
 
 export default function DynamicProject({ projectss, slug, title, description, img, url }) {
@@ -128,6 +133,19 @@ export default function DynamicProject({ projectss, slug, title, description, im
     </Layout>
   );
 }
+
+DynamicProject.defaultProps = {
+  title: 'Project | Rémy Beumier',
+};
+
+DynamicProject.propTypes = {
+  projectss: PropTypes.object,
+  slug: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  img: PropTypes.string,
+  url: PropTypes.string,
+};
 
 export async function getStaticProps(context) {
   const proj = projects[projects.findIndex((p) => p.title === context.params.slug)];

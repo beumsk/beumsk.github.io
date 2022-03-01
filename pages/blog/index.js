@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { getAllPosts } from '@api';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
@@ -45,6 +46,17 @@ export default function Blog({ posts, title, description, url }) {
     </Layout>
   );
 }
+
+Blog.defaultProps = {
+  title: 'Blog | Rémy Beumier',
+};
+
+Blog.propTypes = {
+  posts: PropTypes.array,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  url: PropTypes.string,
+};
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();

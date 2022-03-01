@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import { nav } from '@data/nav';
 
@@ -29,3 +30,8 @@ export default function Header({ onClick, theme }) {
     </header>
   );
 }
+
+Header.propTypes = {
+  theme: PropTypes.bool,
+  onClick: PropTypes.func,
+};

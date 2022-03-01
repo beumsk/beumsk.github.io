@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Codepen({ className, pen }) {
   return (
     <>
@@ -22,3 +24,8 @@ export default function Codepen({ className, pen }) {
     </>
   );
 }
+
+Codepen.propTypes = {
+  className: PropTypes.string,
+  pen: PropTypes.string,
+};

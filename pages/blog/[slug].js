@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { getPostBySlug, getAllPosts } from '@api';
 import Layout from '@components/layout';
 
@@ -45,6 +46,19 @@ export default function DynamicBlogPost({ data, posts, title, description, img, 
     </Layout>
   );
 }
+
+DynamicBlogPost.defaultProps = {
+  title: 'Blog | Rémy Beumier',
+};
+
+DynamicBlogPost.propTypes = {
+  title: PropTypes.string.isRequired,
+  posts: PropTypes.array,
+  description: PropTypes.string,
+  url: PropTypes.string,
+  img: PropTypes.string,
+  data: PropTypes.object,
+};
 
 export async function getStaticProps(context) {
   const next = await getAllPosts();

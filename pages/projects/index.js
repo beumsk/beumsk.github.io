@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
@@ -38,6 +39,16 @@ export default function Projects({ title, description, url }) {
     </Layout>
   );
 }
+
+Projects.defaultProps = {
+  title: 'Projects | Rémy Beumier',
+};
+
+Projects.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  url: PropTypes.string,
+};
 
 export async function getStaticProps() {
   return {

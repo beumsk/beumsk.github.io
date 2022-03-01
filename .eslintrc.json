@@ -3,6 +3,7 @@
   "rules": {
     // https://nextjs.org/docs/basic-features/eslint
     "react/no-unescaped-entities": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "react/prop-types": 1
   }
 }

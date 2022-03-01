@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { projects } from '@data/projects';
 import { getAllPosts } from '@api';
 import Layout from '@components/layout';
@@ -39,6 +40,15 @@ export default function Custom404({ posts, title }) {
     </Layout>
   );
 }
+
+Custom404.defaultProps = {
+  title: '404 - Page Not Found | Rémy Beumier',
+};
+
+Custom404.propTypes = {
+  title: PropTypes.string.isRequired,
+  posts: PropTypes.array,
+};
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts();

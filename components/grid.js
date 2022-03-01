@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 import { FaCodepen, FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
 
@@ -58,6 +59,10 @@ function GridItem({ item }) {
   );
 }
 
+GridItem.propTypes = {
+  item: PropTypes.object,
+};
+
 export default function Grid({ data, className }) {
   return (
     <div className={'grid ' + className}>
@@ -67,3 +72,8 @@ export default function Grid({ data, className }) {
     </div>
   );
 }
+
+Grid.propTypes = {
+  data: PropTypes.array,
+  className: PropTypes.string,
+};
