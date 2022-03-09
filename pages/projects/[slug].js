@@ -4,6 +4,7 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiTypescript,
   SiJquery,
   SiBootstrap,
   SiSass,
@@ -15,6 +16,7 @@ import {
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
 import Codepen from 'components/codepen';
+import Codesandbox from 'components/codesandbox';
 
 const Tech = ({ name }) => {
   return (
@@ -22,6 +24,7 @@ const Tech = ({ name }) => {
       {name === 'HTML' && <SiHtml5 color="#E44D26" />}
       {name === 'CSS' && <SiCss3 color="#1572B6" />}
       {name === 'JS' && <SiJavascript color="#F0DB4F" />}
+      {name === 'Typescript' && <SiTypescript color="#007ACC" />}
       {name === 'jQuery' && <SiJquery color="#0868AC" />}
       {name === 'Bootstrap' && <SiBootstrap color="#5B4282" />}
       {name === 'Sass' && <SiSass color="#CF649A" />}
@@ -39,10 +42,10 @@ Tech.propTypes = {
 };
 
 export default function DynamicProject({ projectss, slug, title, description, img, url }) {
-  const personal = projectss.filter((x) => x.pen);
-  const professional = projectss.filter((x) => !x.pen);
+  const personal = projectss.filter((x) => x.type === 'perso');
+  const professional = projectss.filter((x) => x.type === 'pro');
   const proj = projectss[projectss.findIndex((x) => x.title === slug)];
-  const isPro = !proj.pen;
+  const isPro = proj.type === 'pro';
 
   return (
     <Layout title={`${title} | Projects | Rémy Beumier`} description={description} img={img} url={url}>
@@ -75,7 +78,9 @@ export default function DynamicProject({ projectss, slug, title, description, im
 
           {!isPro && (
             <>
-              <Codepen pen={proj.pen} />
+              {proj.pen && <Codepen pen={proj.pen} title={proj.title} />}
+
+              {proj.sandbox && <Codesandbox sandbox={proj.sandbox} title={proj.title} />}
 
               <div className="mb-16">
                 <a
@@ -139,7 +144,7 @@ DynamicProject.defaultProps = {
 };
 
 DynamicProject.propTypes = {
-  projectss: PropTypes.object,
+  projectss: PropTypes.array,
   slug: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,

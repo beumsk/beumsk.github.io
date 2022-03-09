@@ -2,6 +2,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { FaCodepen, FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
+import { SiCodesandbox } from 'react-icons/si';
 
 function GridItem({ item }) {
   const title = item.title.replace(/-/g, ' ').charAt(0).toUpperCase() + item.title.replace(/-/g, ' ').slice(1);
@@ -13,18 +14,30 @@ function GridItem({ item }) {
             <h2 className="t-ellipsis">{title}</h2>
           </a>
         </Link>
-        {item.pen && (
+        {item.type === 'perso' && (
           <div className="card__links">
+            {item.pen && (
+              <a
+                href={'https://codepen.io/beumsk/pen/' + item.pen}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Codepen link"
+              >
+                <FaCodepen />
+              </a>
+            )}
+            {item.sandbox && (
+              <a
+                href={'https://codesandbox.io/s/' + item.sandbox}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Codesandbox link"
+              >
+                <SiCodesandbox />
+              </a>
+            )}
             <a
               href={'https://github.com/beumsk/' + item.title}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Codepen link"
-            >
-              <FaCodepen />
-            </a>
-            <a
-              href={'https://codepen.io/beumsk/pen/' + item.pen}
               target="_blank"
               rel="noopener noreferrer"
               title="Github repository"
@@ -33,7 +46,7 @@ function GridItem({ item }) {
             </a>
           </div>
         )}
-        {(item.current || item.past) && (
+        {item.type === 'pro' && (
           <div className="card__links">
             {item.current && (
               <a href={item.current} target="_blank" rel="noopener noreferrer" title="Live website">

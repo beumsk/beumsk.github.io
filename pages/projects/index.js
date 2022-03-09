@@ -33,7 +33,7 @@ export default function Projects({ title, description, url }) {
         </div>
 
         <div data-aos="fade-up">
-          <Grid data={projects.filter((x) => (pro ? !x.pen : x.pen))} className="mt-6 mb-20" />
+          <Grid data={projects.filter((x) => (pro ? x.type === 'pro' : x.type === 'perso'))} className="mt-6 mb-20" />
         </div>
       </div>
     </Layout>

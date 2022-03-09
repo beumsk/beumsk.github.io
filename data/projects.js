@@ -8,6 +8,19 @@ export const projects = [
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['array.splice', 'setInterval & clearInterval', 'click event listener on parent', 'linear-gradient'],
     homepage: true,
+    type: 'perso',
+  },
+  {
+    title: 'quiz',
+    link: '/projects/quiz',
+    img: '/images/projects/quiz.jpg',
+    sandbox: 'react-quiz-opxy5w',
+    intro:
+      'Try a set of 10 random questions fetched from Open Trivia DB in this Quiz built with React and score as much points as you can. You win 1 point per good answer but make 5 points when picking the good answer from the start!',
+    tech: ['React', 'Typescript', 'Sass'],
+    chall: ['React hooks', 'Typescript', 'fetching API', 'JSON'],
+    homepage: true,
+    type: 'perso',
   },
   {
     title: 'snake',
@@ -17,7 +30,8 @@ export const projects = [
     intro: 'Get as long as possible in this version of Snake!',
     tech: ['HTML', 'CSS', 'JS', 'jQuery'],
     chall: ['keydown event', 'setInterval & clearInterval', 'array.shift', 'mobile swipe'],
-    homepage: true,
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'minesweeper',
@@ -27,6 +41,8 @@ export const projects = [
     intro: 'Play Minesweeper in this 9x9 grid!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['setInterval & clearInterval', 'parentNode', 'hasFocus'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'whack-a-donkey-kong',
@@ -36,6 +52,8 @@ export const projects = [
     intro: 'Crush these Donky Kongs in this whack a mole!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['setInterval & clearInterval', 'parentNode', 'classList'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'hangman',
@@ -45,6 +63,8 @@ export const projects = [
     intro: 'The Hangman game as in your childhood!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['array.concat', 'string.split'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'dad-jokes',
@@ -54,6 +74,8 @@ export const projects = [
     intro: 'Go and get a random dad joke!',
     tech: ['HTML', 'CSS', 'JS', 'jQuery'],
     chall: ['AJAX call', 'JSON'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'giphy-search',
@@ -63,6 +85,8 @@ export const projects = [
     intro: 'Find the gif you need with Giphy Search!',
     tech: ['HTML', 'CSS', 'JS', 'jQuery'],
     chall: ['AJAX call', 'JSON', 'setTimeout'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'tetris',
@@ -72,6 +96,8 @@ export const projects = [
     intro: 'Break lines and stay alive for as long as you can in this Tetris!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['Babel', 'array.forEach', 'array.some', 'setInterval & clearInterval', 'keyup event'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'simon-game',
@@ -81,6 +107,8 @@ export const projects = [
     intro: 'Train your brain with the famous Simon game!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['childNodes', 'Math.random', 'Audio', 'setInterval', 'setTimeout'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'drum-machine',
@@ -90,6 +118,8 @@ export const projects = [
     intro: 'Smash this Drum Machine!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['Audio', 'childNodes', 'keyup event'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'clock',
@@ -99,6 +129,8 @@ export const projects = [
     intro: 'Check the clock and get the time!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['Date', 'getHours', 'getMinutes', 'transform: rotate', 'tranform-origin'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'etch-a-sketch',
@@ -108,6 +140,8 @@ export const projects = [
     intro: 'Try to sketch something in this!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['input event', 'parseFloat', 'toString', 'offsetWidth'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'calculator',
@@ -117,6 +151,8 @@ export const projects = [
     intro: 'Fully functional Calculator!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['Math.round', 'eval', 'insertAdjacentHTML', 'box-shadow'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'higher-or-lower',
@@ -126,6 +162,8 @@ export const projects = [
     intro: 'Guess if the next card will be Higher or Lower!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['array.indexOf', 'Math.random'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'tic-tac-toe',
@@ -135,6 +173,8 @@ export const projects = [
     intro: 'Play Tic Tac Toe or OXO against a dumb AI!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['classList', 'setTimeout', 'Math.random'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'sliding-puzzle',
@@ -144,6 +184,8 @@ export const projects = [
     intro: 'Try to solve this sliding puzzle!',
     tech: ['HTML', 'CSS', 'JS', 'Sass'],
     chall: ['setTimeout', 'Math.random', 'array.splice'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'pokemon',
@@ -153,6 +195,8 @@ export const projects = [
     intro: 'Find out what Pokemon you are!',
     tech: ['HTML', 'CSS', 'JS', 'jQuery'],
     chall: ['@keyframes', 'transform: rotate'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'color-game',
@@ -162,6 +206,8 @@ export const projects = [
     intro: 'Sharpen your RGB knowledge by playing this little Color game!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['display: grid', 'setTimeout', 'array.push'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'brick-breaker',
@@ -171,6 +217,8 @@ export const projects = [
     intro: 'Break all the bricks in this first level!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['canvas', 'mousemove event'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'connect-4',
@@ -180,6 +228,8 @@ export const projects = [
     intro: 'Play Connect 4 with a friend and align 4 of yours!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: [':not()', ':nth-of-type()', 'array.slice'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'date-counter',
@@ -190,6 +240,8 @@ export const projects = [
       'Find out how many days passed since a certain date, or between two dates, or what date will ti be in x days.',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['input event', 'Date', 'getDate', 'getMonth', 'getFullYear'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'quotes',
@@ -199,6 +251,8 @@ export const projects = [
     intro: 'Click and get a random quote from Forismatic!',
     tech: ['HTML', 'CSS', 'JS', 'Bootstrap', 'jQuery'],
     chall: ['AJAX call', 'JSON'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'timer',
@@ -208,6 +262,8 @@ export const projects = [
     intro: 'Set a timer for anything!',
     tech: ['HTML', 'CSS', 'JS'],
     chall: ['setInterval & clearInterval', 'setTimeout'],
+    homepage: false,
+    type: 'perso',
   },
   {
     title: 'onomo',
@@ -219,6 +275,8 @@ export const projects = [
     intro: 'Onomo hotels booking website built with React',
     tech: ['React', 'HTML', 'CSS', 'JS'],
     chall: ['React', 'Styled system', 'Emotion', 'datepicker'],
+    homepage: false,
+    type: 'pro',
   },
   {
     title: 'omega',
@@ -231,6 +289,7 @@ export const projects = [
     tech: ['React', 'HTML', 'CSS', 'JS'],
     chall: ['React', 'Styled system', 'Emotion', 'clip-path'],
     homepage: true,
+    type: 'pro',
   },
   {
     title: 'eli-paris',
@@ -242,6 +301,8 @@ export const projects = [
     intro: 'Eli Paris jewelry store website built with Angular, Node and Strapi',
     tech: ['Angular', 'HTML', 'CSS', 'JS', 'Sass'],
     chall: ['CSS grid', 'Multi-column layout', 'PrimeNG'],
+    homepage: false,
+    type: 'pro',
   },
   {
     title: 'kpmg-careers',
@@ -253,6 +314,8 @@ export const projects = [
     intro: 'KPMG Belgium recruitment website built with Umbraco CMS.',
     tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'],
     chall: ['Google maps custom', 'Instagram feed with Curator.io', 'JSON events', 'Slick responsive carousel'],
+    homepage: false,
+    type: 'pro',
   },
   {
     title: 'kpmg-law',
@@ -264,5 +327,7 @@ export const projects = [
     intro: 'KPMG Law (previously Klaw) website built with Umbraco CMS.',
     tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JS', 'Sass'],
     chall: ['Discovering Umbraco', 'Use Uskinned theme', 'SEO'],
+    homepage: false,
+    type: 'pro',
   },
 ];

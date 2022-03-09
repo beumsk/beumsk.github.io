@@ -9,8 +9,8 @@ import Grid from 'components/grid';
 // import Image from 'next/image';
 
 export default function Custom404({ posts, title }) {
-  const pro = projects.filter((x) => !x.pen);
-  const perso = projects.filter((x) => x.pen);
+  const pro = projects.filter((x) => x.type === 'pro');
+  const perso = projects.filter((x) => x.type === 'perso');
   const [random, setRandom] = useState([]);
 
   useEffect(() => {
