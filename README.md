@@ -21,7 +21,7 @@ needs node v14
 
 ## TODO
 
-- new projects (movies, recipes)
+- new projects (stars, recipes)
 - skills section
 - intro text for /blog and /projects
 - back to top button
