@@ -17,8 +17,6 @@ function Error({ statusCode }) {
   useEffect(() => {
     // reload page to bypass safari error of window undefined
     router.reload();
-    // }, []);
-    // avoid infinite reload, is removing router from dependency array enough?
   }, [router]);
 
   return (
