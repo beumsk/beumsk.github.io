@@ -12,6 +12,9 @@ import {
   SiReact,
   SiCsharp,
   SiUmbraco,
+  SiRedux,
+  SiMaterialui,
+  SiChakraui,
 } from 'react-icons/si';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
@@ -30,6 +33,9 @@ const Tech = ({ name }) => {
       {name === 'Sass' && <SiSass color="#CF649A" />}
       {name === 'Angular' && <SiAngular color="#A6120D" />}
       {name === 'React' && <SiReact color="#61DBFB" />}
+      {name === 'Redux' && <SiRedux color="#764ABC" />}
+      {name === 'Material UI' && <SiMaterialui color="#007fff" />}
+      {name === 'Chakra UI' && <SiChakraui color="#3cc7bd" />}
       {name === 'C#' && <SiCsharp color="#390092" />}
       {name === 'Umbraco' && <SiUmbraco color="#3544b1" />}
       <span>{name}</span>

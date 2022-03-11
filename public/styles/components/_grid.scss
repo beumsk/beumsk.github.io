@@ -82,15 +82,15 @@
       top: 0;
       left: 0;
       box-shadow: none;
-      border: solid 1px var(--bg2);
+      border-top: solid 1px var(--bg2);
+      border-left: solid 1px var(--bg2);
     }
     img {
       display: block;
       object-fit: cover;
-      object-position: right bottom;
       aspect-ratio: 16/9;
       width: 100%;
-      height: auto;
+      height: 100%;
       transition: all 0.2s;
     }
   }

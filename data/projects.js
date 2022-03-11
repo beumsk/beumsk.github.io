@@ -11,15 +11,26 @@ export const projects = [
     type: 'perso',
   },
   {
+    title: 'movies',
+    link: '/projects/movies',
+    img: '/images/projects/movies.jpg',
+    sandbox: 'github/beumsk/React-Movies',
+    intro: 'Search or scroll for movies and series. Get general info and learn about their actors.',
+    tech: ['React', 'Redux', 'Material UI'],
+    chall: ['React router dom', 'Redux', 'Redux thunk', 'fetching API', 'Material UI'],
+    homepage: true,
+    type: 'perso',
+  },
+  {
     title: 'quiz',
     link: '/projects/quiz',
     img: '/images/projects/quiz.jpg',
-    sandbox: 'react-quiz-opxy5w',
+    sandbox: 'github/beumsk/Quiz',
     intro:
       'Try a set of 10 random questions fetched from Open Trivia DB in this Quiz built with React and score as much points as you can. You win 1 point per good answer but make 5 points when picking the good answer from the start!',
     tech: ['React', 'Typescript', 'Sass'],
     chall: ['React hooks', 'Typescript', 'fetching API', 'JSON'],
-    homepage: true,
+    homepage: false,
     type: 'perso',
   },
   {
