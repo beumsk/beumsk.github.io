@@ -19,8 +19,6 @@ function Error({ statusCode }) {
     router.reload();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // avoid infinite reload, is removing router from dependency array enough?
-  // }, [router]);
 
   return (
     <div style={styleDiv}>

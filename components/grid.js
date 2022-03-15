@@ -23,7 +23,7 @@ function GridItem({ item }) {
                 rel="noopener noreferrer"
                 title="Codepen link"
               >
-                <FaCodepen />
+                <FaCodepen title="Codepen" aria-labelledby="Codepen" />
               </a>
             )}
             {item.sandbox && (
@@ -33,7 +33,7 @@ function GridItem({ item }) {
                 rel="noopener noreferrer"
                 title="Codesandbox link"
               >
-                <SiCodesandbox />
+                <SiCodesandbox title="Codesandbox" aria-labelledby="Codesandbox" />
               </a>
             )}
             <a
@@ -42,7 +42,7 @@ function GridItem({ item }) {
               rel="noopener noreferrer"
               title="Github repository"
             >
-              <FaGithub />
+              <FaGithub title="Github" aria-labelledby="Github" />
             </a>
           </div>
         )}
@@ -50,12 +50,12 @@ function GridItem({ item }) {
           <div className="card__links">
             {item.current && (
               <a href={item.current} target="_blank" rel="noopener noreferrer" title="Live website">
-                <MdPublic />
+                <MdPublic title="Live website" aria-labelledby="Live website" />
               </a>
             )}
             {item.past && (
               <a href={item.past} target="_blank" rel="noopener noreferrer" title="Site as I left it">
-                <MdSettingsBackupRestore />
+                <MdSettingsBackupRestore title="Site as I left it" aria-labelledby="Site as I left it" />
               </a>
             )}
           </div>

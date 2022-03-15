@@ -44,8 +44,8 @@ export default function Home({ title, description, posts }) {
                 libraries such as <strong>Bootstrap</strong>, <strong>Sass</strong> and <strong>jQuery</strong>.
               </p>
               <p className="mb-5">
-                I've recently started to code with both <strong>Angular</strong> and <strong>React</strong>, and I'm
-                discovering their power and complexity.
+                I've recently jumped into coding with <strong>React</strong>, and I'm grasping its power and complexity
+                combined with Hooks, Redux, Material UI, and many more.
               </p>
               <Link href="/resume-remy-beumier">
                 <a className="btn mb-4 mr-4" target="_blank">
@@ -59,14 +59,14 @@ export default function Home({ title, description, posts }) {
             {/* TODO: full list of skills (+ soft ones?) */}
             <div className="col centered">
               <div className="languages mx-2">
-                <SiHtml5 title="HTML5" />
-                <SiCss3 title="CSS3" />
-                <SiJavascript title="JavaScript" />
-                <SiJquery title="jQuery" />
-                <SiBootstrap title="Bootstrap" />
-                <SiSass title="Sass" />
-                <SiAngular title="Angular" />
-                <SiReact title="React" />
+                <SiHtml5 title="HTML" aria-labelledby="HTML" />
+                <SiCss3 title="CSS" aria-labelledby="CSS" />
+                <SiJavascript title="JavaScript" aria-labelledby="JavaScript" />
+                <SiReact title="React" aria-labelledby="React" />
+                <SiJquery title="jQuery" aria-labelledby="jQuery" />
+                <SiBootstrap title="Bootstrap" aria-labelledby="Bootstrap" />
+                <SiSass title="Sass" aria-labelledby="Sass" />
+                <SiAngular title="Angular" aria-labelledby="Angular" />
               </div>
               <img
                 src="/images/developer-thinking.svg"

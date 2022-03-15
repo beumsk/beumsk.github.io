@@ -160,6 +160,15 @@ main {
   flex-direction: column;
 }
 
+.sr-only {
+  text-indent: -10000px;
+  height: 0;
+}
+
+.ch-80 {
+  max-width: 80ch;
+}
+
 .container {
   width: 100%;
   max-width: calc(100% - 40px);

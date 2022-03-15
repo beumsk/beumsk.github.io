@@ -24,20 +24,20 @@ import Codesandbox from 'components/codesandbox';
 const Tech = ({ name }) => {
   return (
     <li className="tech">
-      {name === 'HTML' && <SiHtml5 color="#E44D26" />}
-      {name === 'CSS' && <SiCss3 color="#1572B6" />}
-      {name === 'JS' && <SiJavascript color="#F0DB4F" />}
-      {name === 'Typescript' && <SiTypescript color="#007ACC" />}
-      {name === 'jQuery' && <SiJquery color="#0868AC" />}
-      {name === 'Bootstrap' && <SiBootstrap color="#5B4282" />}
-      {name === 'Sass' && <SiSass color="#CF649A" />}
-      {name === 'Angular' && <SiAngular color="#A6120D" />}
-      {name === 'React' && <SiReact color="#61DBFB" />}
-      {name === 'Redux' && <SiRedux color="#764ABC" />}
-      {name === 'Material UI' && <SiMaterialui color="#007fff" />}
-      {name === 'Chakra UI' && <SiChakraui color="#3cc7bd" />}
-      {name === 'C#' && <SiCsharp color="#390092" />}
-      {name === 'Umbraco' && <SiUmbraco color="#3544b1" />}
+      {name === 'HTML' && <SiHtml5 color="#E44D26" title="HTML" aria-labelledby="HTML" />}
+      {name === 'CSS' && <SiCss3 color="#1572B6" title="CSS" aria-labelledby="CSS" />}
+      {name === 'JavaScript' && <SiJavascript color="#F0DB4F" title="JavaScript" aria-labelledby="JavaScript" />}
+      {name === 'Typescript' && <SiTypescript color="#007ACC" title="Typescript" aria-labelledby="Typescript" />}
+      {name === 'jQuery' && <SiJquery color="#0868AC" title="jQuery" aria-labelledby="jQuery" />}
+      {name === 'Bootstrap' && <SiBootstrap color="#5B4282" title="Bootstrap" aria-labelledby="Bootstrap" />}
+      {name === 'Sass' && <SiSass color="#CF649A" title="Sass" aria-labelledby="Sass" />}
+      {name === 'Angular' && <SiAngular color="#A6120D" title="Angular" aria-labelledby="Angular" />}
+      {name === 'React' && <SiReact color="#61DBFB" title="React" aria-labelledby="React" />}
+      {name === 'Redux' && <SiRedux color="#764ABC" title="Redux" aria-labelledby="Redux" />}
+      {name === 'Material UI' && <SiMaterialui color="#007fff" title="Material UI" aria-labelledby="Material UI" />}
+      {name === 'Chakra UI' && <SiChakraui color="#3cc7bd" title="Chakra UI" aria-labelledby="Chakra UI" />}
+      {name === 'C#' && <SiCsharp color="#390092" title="C#" aria-labelledby="C#" />}
+      {name === 'Umbraco' && <SiUmbraco color="#3544b1" title="Umbraco" aria-labelledby="Umbraco" />}
       <span>{name}</span>
     </li>
   );
@@ -73,7 +73,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
 
           {proj.chall.length > 0 && (
             <>
-              <h2>Challenges, key lessons</h2>
+              <h2>Challenges and learning</h2>
               <ul className="mb-8">
                 {proj.chall.map((c) => (
                   <li key={c}>{c}</li>
@@ -114,6 +114,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
               {proj.screen && (
                 <figure className="project-screen mb-8">
                   <img src={proj.screen} alt={`Screenshot of ${proj.current}`} width="300" height="400" />
+                  <figcaption className="sr-only">{`Full size screenshot of ${title} website homepage`}</figcaption>
                 </figure>
               )}
 

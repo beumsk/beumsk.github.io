@@ -21,6 +21,11 @@ export default function Blog({ posts, title, description, url }) {
       <div className="container blog-shape">
         <h1>Blog</h1>
 
+        <p className="ch-80 mb-8">
+          I write blog articles I wish I could have come across while building and enhancing this website. They aim to
+          cover topics like React and Next.js, but are not limited to those.
+        </p>
+
         <div className="blog__categories">
           <Link href="/blog">
             <a className={`btn ${query === '' && 'active'}`} onClick={() => setCat(posts)}>

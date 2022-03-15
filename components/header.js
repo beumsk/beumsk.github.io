@@ -24,7 +24,11 @@ export default function Header({ onClick, theme }) {
           title={theme == 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           aria-label={theme == 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
         >
-          {theme === 'dark' ? <MdDarkMode /> : <MdLightMode />}
+          {theme === 'dark' ? (
+            <MdDarkMode title="Dark mode" aria-labelledby="Dark mode" />
+          ) : (
+            <MdLightMode title="Light mode" aria-labelledby="Light mode" />
+          )}
         </button>
       </div>
     </header>
