@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
 import { getPostBySlug, getAllPosts } from '@api';
 import Layout from '@components/layout';
 
 export default function DynamicBlogPost({ data, posts, title, description, img, url }) {
+  const router = useRouter();
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [router]);
+
   const date =
     data.date === ''
       ? 'No date'

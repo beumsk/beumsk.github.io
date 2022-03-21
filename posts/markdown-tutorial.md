@@ -60,6 +60,16 @@ Let's see how we can write with it!
 ```
 `code`
 
+## Block code
+````
+```
+// some line of code
+```
+````
+```
+// some line of code
+```
+
 ## Horizontal rule
 ```
 ---

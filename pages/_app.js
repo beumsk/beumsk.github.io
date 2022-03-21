@@ -24,7 +24,7 @@ export default function MyApp({ Component, pageProps }) {
       once: true,
       offset: 100,
     });
-  }, []);
+  }, [router]);
 
   return (
     <>

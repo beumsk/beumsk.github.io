@@ -25,26 +25,26 @@ Following Next.js advice, we run `yarn lint` in the terminal to face another err
 Would we have more rules to our linter, there is a way to extend what Next.js set as linting.
 1. We should have a `.eslintrc.json` file to open
 Strict:
-```json
+```js
 {
   "extends": "next/core-web-vitals"
 }
 ```
 Basic: 
-```json
+```js
 {
   "extends": "next"
 }
 ```
 2. We make the `extends` an array of strings and add anything, for example `eslint-config-airbnb`
-```json
+```js
 {
   "extends": ["next/core-web-vitals", "eslint-config-airbnb"]
 }
 ```
 3. Install it with the command `yarn add --dev eslint-config-airbnb`
 4. If we want to change any linter rule, here is the way
-```json
+```js
 {
   "extends": ["next/core-web-vitals", "eslint-config-airbnb"],
   "rules": {

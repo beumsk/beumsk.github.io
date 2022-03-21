@@ -22,21 +22,19 @@ needs node v14
 ## TODO
 
 - new projects (recipes)
+
+1.2
 - projects challs to become small sentences
 - skills section
 - back to top button
 
-1.2
-- add more images of features/pages?
-- improve cv (rethink projects and articles sections)
-- links in mdx to open in new tabs
-- color for code snippets
-
 1.3
+- links in mdx to open in new tabs
 - metrics animation? Number of projects/sites/hours/languages
 - add project filter and order
 
 X.X
+- add more images of features/pages?
 - improve perf (caching)
 - low res images (automate without next-optimized-images)
 - improve resume with react features (mapping)
