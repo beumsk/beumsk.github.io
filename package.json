@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "local": "next build && next start",
+    "analyze": "cross-env ANALYZE=true next build",
     "export": "next export",
     "deploy": " node ./generate-sitemap.mjs && npm run build && npm run export",
     "sitemap": "node ./generate-sitemap.mjs"
@@ -29,6 +30,8 @@
     "sass": "1.37.5"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "12.1.0",
+    "cross-env": "7.0.3",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.10",
     "eslint-config-prettier": "8.3.0",

@@ -106,4 +106,16 @@
     border-left: solid 8px var(--bg3);
     font-style: italic;
   }
+
+  /* Prism overrides for dark theme */
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
+    background: var(--bg2);
+  }
+
+  code[class*='language-'],
+  pre[class*='language-'] {
+    text-shadow: none;
+    color: var(--text);
+  }
 }
