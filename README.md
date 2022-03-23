@@ -30,7 +30,7 @@ needs node v14
 
 1.3
 - links in mdx to open in new tabs
-- metrics animation? Number of projects/sites/hours/languages
+- metrics animation? Number of projects/sites/hours/languages/experience
 - add project filter and order
 
 X.X
