@@ -28,7 +28,7 @@ async function generate() {
 
       ${pages
         .map((page) => {
-          const path = page.path
+          let path = page.path
             .replace('pages/', '')
             .replace('index', '')
             .replace('public/images/projects/', 'projects/')
@@ -37,6 +37,10 @@ async function generate() {
             .replace('.js', '')
             .replace('.jpg', '')
             .replace('.md', '');
+
+          if (path === 'blog/' || path === 'projects/') {
+            path = path.slice(0, -1);
+          }
 
           return `
             <url>
@@ -73,8 +77,8 @@ function priority(path) {
       return '1.0';
     case 'resume-remy-beumier':
     case 'remy-beumier-resume.pdf':
-    case 'projects/':
-    case 'blog/':
+    case 'projects':
+    case 'blog':
       return '0.8';
     default:
       return '0.6';
@@ -84,11 +88,11 @@ function priority(path) {
 function changefreq(path) {
   switch (path) {
     case '':
-    case 'blog/':
+    case 'blog':
       return 'weekly';
     case 'resume-remy-beumier':
     case 'remy-beumier-resume.pdf':
-    case 'projects/':
+    case 'projects':
       return 'monthly';
     default:
       return 'yearly';

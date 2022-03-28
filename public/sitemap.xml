@@ -26,7 +26,7 @@
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/</loc>
+    <loc>https://remybeumier.be/projects</loc>
     <lastmod>2022-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -42,13 +42,6 @@
   <url>
     <loc>https://remybeumier.be/projects/calculator</loc>
     <lastmod>2022-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://remybeumier.be/projects/careers-kpmg-be</loc>
-    <lastmod>2022-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -96,7 +89,7 @@
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/eliparis-com</loc>
+    <loc>https://remybeumier.be/projects/eli-paris</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -110,21 +103,7 @@
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/find-your-lyrics</loc>
-    <lastmod>2022-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
     <loc>https://remybeumier.be/projects/giphy-search</loc>
-    <lastmod>2022-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://remybeumier.be/projects/github-profiles</loc>
     <lastmod>2022-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -145,7 +124,14 @@
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/klaw-be</loc>
+    <loc>https://remybeumier.be/projects/kpmg-careers</loc>
+    <lastmod>2022-03-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://remybeumier.be/projects/kpmg-law</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -173,14 +159,14 @@
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/onomohotels-com</loc>
+    <loc>https://remybeumier.be/projects/omega</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/parcomega-ca</loc>
+    <loc>https://remybeumier.be/projects/onomo</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -202,13 +188,6 @@
 
   <url>
     <loc>https://remybeumier.be/projects/quotes</loc>
-    <lastmod>2022-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://remybeumier.be/projects/shi-fu-mi</loc>
     <lastmod>2022-02-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -278,14 +257,7 @@
   </url>
 
   <url>
-    <loc>https://remybeumier.be/projects/wiki-viewer</loc>
-    <lastmod>2022-02-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://remybeumier.be/blog/</loc>
+    <loc>https://remybeumier.be/blog</loc>
     <lastmod>2022-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
