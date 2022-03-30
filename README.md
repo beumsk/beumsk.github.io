@@ -21,7 +21,7 @@ needs node v14
 
 ## TODO
 
-- new projects (recipes)
+- new projects (todolist, recipes, shop)
 
 1.2
 - projects challs to become small sentences
@@ -34,6 +34,7 @@ needs node v14
 - add project filter and order
 
 X.X
+- trailing slash urls not working (only prod)
 - add more images of features/pages?
 - improve perf (caching)
 - low res images (automate without next-optimized-images)
