@@ -22,9 +22,10 @@ needs node v14
 ## TODO
 
 - new projects (todolist, recipes, shop)
+- change profile pic
 
 1.2
-- projects challs to become small sentences
+- itemscope, itemtype, itemprop, content for SEO (schema.org)
 - skills section
 - back to top button
 
