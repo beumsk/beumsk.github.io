@@ -22,7 +22,6 @@ needs node v14
 ## TODO
 
 - new projects (todolist, recipes, shop)
-- change profile pic
 
 1.2
 - itemscope, itemtype, itemprop, content for SEO (schema.org)

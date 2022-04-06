@@ -25,7 +25,7 @@ export default function Resume({ title, description, url }) {
         </section>
 
         <section className="photo">
-          <img src="/images/profile.jpg" alt="profile image Rémy Beumier" width="220" height="220" />
+          <img src="/images/profile.png" alt="profile image Rémy Beumier" width="220" height="220" />
         </section>
 
         <section className="about">
@@ -71,7 +71,7 @@ export default function Resume({ title, description, url }) {
               <li>HTML: HTML5 and Accessibility.</li>
               <li>CSS: CSS3, Responsiveness, Sass and Bootstrap.</li>
               <li>Javascript: ES6, jQuery and Json.</li>
-              <li>React: Props, Hooks and Redux</li>
+              <li>React: Props, Hooks and Redux.</li>
               <li>Git: Github.</li>
             </ul>
           </div>
@@ -130,13 +130,13 @@ export default function Resume({ title, description, url }) {
               <a href="https://remybeumier.be/blog" target="_blank" rel="noopener noreferrer">
                 React and Next.js articles
               </a>
-              <span className="print-only">(https://remybeumier.be/blog)</span>
+              <span className="print-only"> (https://remybeumier.be/blog)</span>
             </li>
             <li>
               <a href="https://dev.to/beumsk" target="_blank" rel="noopener noreferrer">
                 JavaScript, CSS and HTML articles
               </a>
-              <span className="print-only">(https://dev.to/beumsk)</span>
+              <span className="print-only"> (https://dev.to/beumsk)</span>
             </li>
             {/* <li>
               <a
@@ -188,6 +188,7 @@ export default function Resume({ title, description, url }) {
               <MdMailOutline title="Contacts" aria-labelledby="Contacts" />
             </span>
           </h2>
+          <img className="qr print-only" src="/images/qr.png" alt="QR code link to my website" />
           <p className="cta">
             <a href="mailto:remybeumier@gmail.com" target="_blank" rel="noreferrer">
               remybeumier@gmail.com

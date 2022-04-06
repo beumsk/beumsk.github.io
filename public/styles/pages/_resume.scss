@@ -62,9 +62,13 @@
   .photo img {
     display: block;
     width: 100%;
-    max-width: 220px;
+    max-width: 230px;
     height: auto;
     margin: auto;
+    padding: 10px 10px 0 10px;
+    border: solid 1px lightgrey;
+    background: rgba(256, 256, 256, 0.2);
+    filter: grayscale(0.1);
   }
 
   .about {
@@ -82,9 +86,6 @@
 
   .articles {
     grid-area: articles;
-    .list-no a {
-      display: block;
-    }
   }
 
   .contact {
@@ -226,6 +227,8 @@
 
     .photo img {
       margin: 0;
+      max-width: 200px;
+      padding: 0;
     }
 
     h1,
@@ -241,6 +244,11 @@
 
     .print-url {
       font-size: 1.4rem;
+    }
+
+    .contact .qr {
+      float: right;
+      width: 80px;
     }
   }
 
