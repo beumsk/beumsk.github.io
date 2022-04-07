@@ -33,7 +33,9 @@ export default function DynamicBlogPost({ data, posts, title, description, img, 
               <div className="post__categories">
                 {categories?.map((c) => (
                   <Link key={c} href={`/blog?${c}`}>
-                    <a itemProp="articleSection">{c.charAt(0).toUpperCase() + c.slice(1)}</a>
+                    <a>
+                      <span itemProp="articleSection">{c.charAt(0).toUpperCase() + c.slice(1)}</span>
+                    </a>
                   </Link>
                 ))}
               </div>
