@@ -26,14 +26,14 @@ export default function DynamicBlogPost({ data, posts, title, description, img, 
     <Layout title={`${title} | Blog | Rémy Beumier`} description={description} img={img} url={url} itemtype="Article">
       <div className="container narrow posts-shape">
         <div data-aos="fade-left">
-          <article itemProp="articleSection">
+          <article>
             <h1 itemProp="headline name">{data.title}</h1>
             <img src={data.img} alt={data.title} width="300" height="150" className="post__img mb-5" itemProp="image" />
             <div className="space-between-x pb-5">
               <div className="post__categories">
                 {categories?.map((c) => (
                   <Link key={c} href={`/blog?${c}`}>
-                    {c.charAt(0).toUpperCase() + c.slice(1)}
+                    <a itemProp="articleSection">{c.charAt(0).toUpperCase() + c.slice(1)}</a>
                   </Link>
                 ))}
               </div>
