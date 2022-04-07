@@ -6,7 +6,7 @@ import Footer from 'components/footer';
 import Breadcrumb from 'components/breadcrumb';
 // import MobileNav from 'components/mobileNav';
 
-export default function Layout({ img, title, description, url, children }) {
+export default function Layout({ img, title, description, url, children, itemtype }) {
   const [theme, setTheme] = useState('');
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Layout({ img, title, description, url, children }) {
   const fullImageUrl = img && (img.startsWith('http') ? img : `https://remybeumier.be${img}`);
 
   return (
-    <main className={theme}>
+    <main className={theme} itemScope={!!itemtype} itemType={itemtype ? 'http://schema.org/' + itemtype : false}>
       <Head>
         <title key="title">{title}</title>
         <meta name="description" content={description} key="description" />
@@ -64,4 +64,5 @@ Layout.propTypes = {
   img: PropTypes.string,
   url: PropTypes.string,
   children: PropTypes.node,
+  itemtype: PropTypes.string,
 };

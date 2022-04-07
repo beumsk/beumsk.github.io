@@ -24,7 +24,6 @@ needs node v14
 - new projects (todolist, recipes, shop)
 
 1.2
-- itemscope, itemtype, itemprop, content for SEO (schema.org)
 - skills section
 - back to top button
 

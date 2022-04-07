@@ -24,7 +24,12 @@ export default function Footer() {
             <span className="ml-1">LinkedIn</span>
           </a>
         </div>
-        <p className="copy">&copy; {new Date().getFullYear()} | Rémy Beumier</p>
+        <p className="copy">
+          &copy; {new Date().getFullYear()} |{' '}
+          <span itemProp="author" itemScope itemType="http://schema.org/Person">
+            <span itemProp="name">Rémy Beumier</span>
+          </span>
+        </p>
       </div>
     </footer>
   );

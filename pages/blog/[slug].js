@@ -23,12 +23,12 @@ export default function DynamicBlogPost({ data, posts, title, description, img, 
   const nextLink = posts[posts.findIndex((x) => x.title === data.title) + 1]?.link || posts[0].link;
 
   return (
-    <Layout title={`${title} | Blog | Rémy Beumier`} description={description} img={img} url={url}>
+    <Layout title={`${title} | Blog | Rémy Beumier`} description={description} img={img} url={url} itemtype="Article">
       <div className="container narrow posts-shape">
         <div data-aos="fade-left">
-          <article>
-            <h1>{data.title}</h1>
-            <img src={data.img} alt={data.title} width="300" height="150" className="post__img mb-5" />
+          <article itemProp="articleSection">
+            <h1 itemProp="headline name">{data.title}</h1>
+            <img src={data.img} alt={data.title} width="300" height="150" className="post__img mb-5" itemProp="image" />
             <div className="space-between-x pb-5">
               <div className="post__categories">
                 {categories?.map((c) => (
@@ -37,9 +37,16 @@ export default function DynamicBlogPost({ data, posts, title, description, img, 
                   </Link>
                 ))}
               </div>
-              <p className="post__date">{date}</p>
+              {/* TODO: add dateModified */}
+              <p className="post__date" itemProp="datePublished" content={data.date}>
+                {date}
+              </p>
             </div>
-            <div className="post__content mt-5 mb-10" dangerouslySetInnerHTML={{ __html: data.content }} />
+            <div
+              className="post__content mt-5 mb-10"
+              dangerouslySetInnerHTML={{ __html: data.content }}
+              itemProp="articleBody"
+            />
             {/* TODO: add previous post link */}
             <div className="mb-16">
               <Link href={nextLink}>
