@@ -24,25 +24,22 @@ needs node v14
 - new projects (todolist, recipes, shop)
 
 1.2
-- skills section
+- skills section: links to projects filtered
+- metrics animation? Number of projects/sites/hours/languages/experience
 - back to top button
 
 1.3
 - links in mdx to open in new tabs
-- metrics animation? Number of projects/sites/hours/languages/experience
 - add project filter and order
 
 X.X
 - trailing slash urls not working (only prod)
 - add more images of features/pages?
-- improve perf (caching)
 - low res images (automate without next-optimized-images)
-- improve resume with react features (mapping)
 - rethink scss structure (BEM?)
 - update to NEXT.js 12
 
 Blog
-- goatcounter
 - nextjs custom error page
 - props to parent/child
 - mdx to html

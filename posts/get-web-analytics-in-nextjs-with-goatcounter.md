@@ -1,0 +1,109 @@
+---
+title: 'Get web analytics in Next.js with Goatcounter'
+intro: 'How to track your Next.js web analytics without tracking of personal data with Goatcounter'
+img: '/images/posts/get-web-analytics-in-nextjs-with-goatcounter.jpg'
+date: '04/07/2022'
+categories: 'next.js, tutorial, analytics'
+---
+
+Next.js is more and more complete with the years and it adds features every other month. One feature that we want for our websites is analytics. Vercel, the company behind Next.js provides an analytics tool that seems very complete as long as we decide to host our site on their platform. But what are the options for those of us not willing to host on that site?
+
+Of course, Google is one of the many options, but as I was searching I realised I could use a less famous approach that doesn't track visitor's personal data and which is very lightweight.
+
+That solution is called GoatCounter. It is an open source web analytics platform aiming to offer easy to use and meaningful privacy-friendly web analytics.
+
+> We will use the hosted service as it is free for non-commercial use. Feel free to go an extra step by self-hosting the service and don't hesitate to make a donation.
+
+Let's see how we can implement this tool with our SSG Next.js website! 🚀
+
+
+## Create a GoatCounter account
+The first step is to create an account at [GoatCounter](https://goatcounter.com/signup). 
+The design is not the sexiest, but it is very functional and easy to understand.
+
+We can reach our account at: _https://[my-code].goatcounter.com_. Make sure to replace `[my-code]` with your actual account code.
+
+In the settings, we will be able to disable the analytics for certain IP addresses, especially, ours.
+If needed, we can also delete some data, import some other data and manage many other settings.
+
+The dashboard presents useful data about pages traffic, top referrers, visitors locations, browsers, devices, etc. The layout ot this dashboard is editable.
+
+![GoatCounter dashboard example](https://static.zgo.at/screenshot.png)
+
+
+## Integrate GoatCounter inside Next.js
+In order to get the data into our dashboard, we need to link GoatCounter to our Next.js app.
+
+### 1. Download GoatCounter file
+
+We will download a version of the [GoatCounter code](https://gc.zgo.at/count.js). 
+We can add it under the `public/script` folder in our solution.
+
+### 2. Connect the app to GoatCounter.com
+
+GoatCounter needs to receive the info from our website, and we will create a connection inside `_document.js`. To be able to run some testing, there is an option to allow GoatCounter in your local solution. It is mentioned as a comment in the snippet below.
+
+```js
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          {/* add "allow_local": true to data-goatcounter-settings to test in local env */}
+          <script
+            data-goatcounter="https://beumsk.goatcounter.com/count"
+            data-goatcounter-settings='{"no_onload": true}'
+            async
+            src="/scripts/goatcounter.js"
+          ></script>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;
+```
+
+You could experiment with Next.js Script component, but I somehow couldn't make it work properly.
+
+### 3. Add the GoatCounter logic
+
+Inside `_app.js`, we need to use the `useEffect` trick seen in another tutorial to [use the window object with Next](/blog/fix-the-window-is-not-defined-error). That way we can inform GoatCounter about every route change it can count in its analytics.
+
+```js
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.goatcounter.count({
+        path: router.asPath
+      });
+    }
+  }, [router]);
+
+  return (
+    <Component {...pageProps} />
+  );
+}
+```
+
+Reaching this point, we should have been able to test GoatCounter locally, and it should work once delivered on production.
+
+> Keep in mind that ad blockers may interfere with GoatCounter
+
+I'm personally very satisfied so far with the service, as it allows me to check my site's web analytics respecting visitor's privacy with a very light script.
+
+
+Enjoy coding with Next.js!
+

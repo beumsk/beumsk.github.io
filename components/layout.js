@@ -25,7 +25,11 @@ export default function Layout({ img, title, description, url, children, itemtyp
   const fullImageUrl = img && (img.startsWith('http') ? img : `https://remybeumier.be${img}`);
 
   return (
-    <main className={theme} itemScope={!!itemtype} itemType={itemtype ? 'http://schema.org/' + itemtype : false}>
+    <main
+      className={theme}
+      itemScope={!!itemtype ? true : undefined}
+      itemType={itemtype ? 'http://schema.org/' + itemtype : undefined}
+    >
       <Head>
         <title key="title">{title}</title>
         <meta name="description" content={description} key="description" />
