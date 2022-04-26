@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiBootstrap, SiSass, SiAngular, SiReact } from 'react-icons/si';
 import { getAllPosts } from '@api';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Grid from '@components/grid';
+import Tech from '@components/tech';
 
 export default function Home({ title, description, posts }) {
+  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'bootstrap', 'sass', 'angular'];
+
   return (
     <Layout title={title} description={description}>
       <section id="splash">
@@ -56,18 +58,8 @@ export default function Home({ title, description, posts }) {
                 Download my resume
               </a>
             </div>
-            {/* TODO: full list of skills (+ soft ones?) */}
-            <div className="col centered">
-              <div className="languages mx-2">
-                <SiHtml5 title="HTML" aria-labelledby="HTML" />
-                <SiCss3 title="CSS" aria-labelledby="CSS" />
-                <SiJavascript title="JavaScript" aria-labelledby="JavaScript" />
-                <SiReact title="React" aria-labelledby="React" />
-                <SiJquery title="jQuery" aria-labelledby="jQuery" />
-                <SiBootstrap title="Bootstrap" aria-labelledby="Bootstrap" />
-                <SiSass title="Sass" aria-labelledby="Sass" />
-                <SiAngular title="Angular" aria-labelledby="Angular" />
-              </div>
+
+            <div className="col centered-v">
               <img
                 src="/images/developer-thinking.svg"
                 alt="developer thinking next to a computer"
@@ -76,6 +68,15 @@ export default function Home({ title, description, posts }) {
                 loading="lazy"
                 className="mt-5 mb-5"
               />
+              <div className="languages my-2 mx-2">
+                {skillsList.map((s) => (
+                  <Link key={s} href={`/projects?${s}`}>
+                    <a hover={s}>
+                      <Tech name={s} />
+                    </a>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
@@ -11,6 +11,12 @@ export default function Blog({ posts, title, description, url }) {
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g, '') === '/blog' ? '' : router.asPath.replace(/.*\?/g, '');
   const [cat, setCat] = useState(query ? posts.filter((x) => x.categories.includes(query)) : posts);
+
+  useEffect(() => {
+    if (!query) {
+      setCat(posts);
+    }
+  }, [router, query]);
 
   const categoriesAllRaw = posts.map((x) => x.categories.split(', '));
   const categoriesAll = [].concat(...categoriesAllRaw).filter((x) => x);

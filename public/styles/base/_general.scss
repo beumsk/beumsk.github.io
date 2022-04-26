@@ -247,7 +247,13 @@ main {
 
 .centered {
   display: flex;
-  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-v {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -289,8 +295,9 @@ button {
   }
   cursor: pointer;
   transition: all 0.2s;
-  &:hover,
-  &:focus {
+  &:not(.active):hover,
+  &:not(.active):focus {
+    color: var(--primary);
     left: -2px;
     top: -2px;
     box-shadow: 4px 4px var(--primary-light);

@@ -1,47 +1,10 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiTypescript,
-  SiJquery,
-  SiBootstrap,
-  SiSass,
-  SiAngular,
-  SiReact,
-  SiCsharp,
-  SiUmbraco,
-  SiRedux,
-  SiMaterialui,
-  SiChakraui,
-} from 'react-icons/si';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
+import Tech from '@components/tech';
 import Codepen from 'components/codepen';
 import Codesandbox from 'components/codesandbox';
-
-const Tech = ({ name }) => {
-  return (
-    <li className="tech">
-      {name === 'HTML' && <SiHtml5 color="#E44D26" title="HTML" aria-labelledby="HTML" />}
-      {name === 'CSS' && <SiCss3 color="#1572B6" title="CSS" aria-labelledby="CSS" />}
-      {name === 'JavaScript' && <SiJavascript color="#F0DB4F" title="JavaScript" aria-labelledby="JavaScript" />}
-      {name === 'Typescript' && <SiTypescript color="#007ACC" title="Typescript" aria-labelledby="Typescript" />}
-      {name === 'jQuery' && <SiJquery color="#0868AC" title="jQuery" aria-labelledby="jQuery" />}
-      {name === 'Bootstrap' && <SiBootstrap color="#5B4282" title="Bootstrap" aria-labelledby="Bootstrap" />}
-      {name === 'Sass' && <SiSass color="#CF649A" title="Sass" aria-labelledby="Sass" />}
-      {name === 'Angular' && <SiAngular color="#A6120D" title="Angular" aria-labelledby="Angular" />}
-      {name === 'React' && <SiReact color="#61DBFB" title="React" aria-labelledby="React" />}
-      {name === 'Redux' && <SiRedux color="#764ABC" title="Redux" aria-labelledby="Redux" />}
-      {name === 'Material UI' && <SiMaterialui color="#007fff" title="Material UI" aria-labelledby="Material UI" />}
-      {name === 'Chakra UI' && <SiChakraui color="#3cc7bd" title="Chakra UI" aria-labelledby="Chakra UI" />}
-      {name === 'C#' && <SiCsharp color="#390092" title="C#" aria-labelledby="C#" />}
-      {name === 'Umbraco' && <SiUmbraco color="#3544b1" title="Umbraco" aria-labelledby="Umbraco" />}
-      <span>{name}</span>
-    </li>
-  );
-};
 
 Tech.propTypes = {
   name: PropTypes.string,
@@ -63,9 +26,16 @@ export default function DynamicProject({ projectss, slug, title, description, im
           {proj.tech.length > 0 && (
             <>
               <h2>Technologies</h2>
-              <ul className="pl-0 mb-6">
+              <ul className="mb-6 tech-list">
                 {proj.tech.map((t) => (
-                  <Tech key={t} name={t} />
+                  <li key={t}>
+                    <Link href={`/projects?${t}`}>
+                      <a className="btn">
+                        <Tech name={t} color />
+                        <span>{t}</span>
+                      </a>
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </>

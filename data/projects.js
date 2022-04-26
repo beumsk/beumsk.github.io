@@ -6,8 +6,8 @@ export const projects = [
     past: 'https://web.archive.org/web/20211213130244/https://app.staging.onomohotels.com/',
     img: '/images/projects/onomo.jpg',
     screen: '/images/projects/onomo-screen.png',
-    intro: 'Onomo hotels booking website built with React',
-    tech: ['React', 'HTML', 'CSS', 'JavaScript'],
+    intro: 'Onomo hotels booking website built with React.',
+    tech: ['react', 'html', 'css', 'javascript'],
     chall: [
       'Improve React knowledge for integration',
       'Use Styled-system and Emotion for styling',
@@ -24,8 +24,8 @@ export const projects = [
     past: 'https://web.archive.org/web/20211213130150/https://app.staging.parcomega.ca/en/',
     img: '/images/projects/omega.jpg',
     screen: '/images/projects/omega-screen.png',
-    intro: 'Onomo hotels booking website built with React',
-    tech: ['React', 'HTML', 'CSS', 'JavaScript'],
+    intro: 'Onomo hotels booking website built with React.',
+    tech: ['react', 'html', 'css', 'javascript'],
     chall: [
       'Discover integration with React',
       'Use Styled-system and Emotion for styling',
@@ -42,8 +42,8 @@ export const projects = [
     past: 'http://web.archive.org/web/20220120123422/https://www.eliparis.com/accueil',
     img: '/images/projects/eli-paris.jpg',
     screen: '/images/projects/eli-paris-screen.png',
-    intro: 'Eli Paris jewelry store website built with Angular, Node and Strapi',
-    tech: ['Angular', 'HTML', 'CSS', 'JavaScript', 'Sass'],
+    intro: 'Eli Paris jewelry store website built with Angular, Node and Strapi.',
+    tech: ['angular', 'html', 'css', 'javascript', 'sass'],
     chall: [
       'Discover integration with Angular',
       'Use Prime NG for component library',
@@ -61,7 +61,7 @@ export const projects = [
     img: '/images/projects/kpmg-careers.jpg',
     screen: '/images/projects/kpmg-careers-screen.png',
     intro: 'KPMG Belgium recruitment website built with Umbraco CMS.',
-    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JavaScript', 'Sass'],
+    tech: ['umbraco', 'c#', 'html', 'css', 'javascript', 'sass'],
     chall: [
       'Create a custom Google maps toolkit',
       'Implement an Instagram feed with Curator.io',
@@ -80,7 +80,7 @@ export const projects = [
     img: '/images/projects/kpmg-law.jpg',
     screen: '/images/projects/kpmg-law-screen.png',
     intro: 'KPMG Law (previously Klaw) website built with Umbraco CMS.',
-    tech: ['Umbraco', 'C#', 'HTML', 'CSS', 'JavaScript', 'Sass'],
+    tech: ['umbraco', 'c#', 'html', 'css', 'javascript', 'sass'],
     chall: [
       'Discover Umbraco and C#',
       'Use Uskinned theme and improve it',
@@ -96,7 +96,7 @@ export const projects = [
     img: '/images/projects/memory.jpg',
     pen: 'xdoKjX',
     intro: 'Find pairs as fast as possible in this Memory!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Array.splice to remove a certain array element',
       'setInterval & clearInterval for the timer of the game',
@@ -112,7 +112,7 @@ export const projects = [
     img: '/images/projects/movies.jpg',
     sandbox: 'github/beumsk/React-Movies',
     intro: 'Search or scroll for movies and series. Get general info and learn about their actors.',
-    tech: ['React', 'Redux', 'Material UI'],
+    tech: ['react', 'redux', 'material ui'],
     chall: [
       'React router dom to handle the navigation',
       'Redux to handle states accross the app',
@@ -130,7 +130,7 @@ export const projects = [
     sandbox: 'github/beumsk/Quiz',
     intro:
       'Try a set of 10 random questions fetched from Open Trivia DB in this Quiz built with React and score as much points as you can. You win 1 point per good answer but make 5 points when picking the good answer from the start!',
-    tech: ['React', 'Typescript', 'Sass'],
+    tech: ['react', 'typescript', 'sass'],
     chall: [
       'React hooks: useState and useEffect',
       'Use Typescript for React components',
@@ -146,7 +146,7 @@ export const projects = [
     img: '/images/projects/snake.jpg',
     pen: 'PmPxEo',
     intro: 'Get as long as possible in this version of Snake!',
-    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+    tech: ['html', 'css', 'javascript', 'jquery'],
     chall: [
       'Keydown event to manage the snake',
       'setInterval & clearInterval for the snake and the timer',
@@ -162,7 +162,7 @@ export const projects = [
     img: '/images/projects/star-match.jpg',
     pen: 'YzEyVYp',
     intro: 'Play by picking 1 or more numbers that sum to the number of stars',
-    tech: ['React', 'JavaScript', 'CSS'],
+    tech: ['react', 'javascript', 'css'],
     chall: [
       'Build one of my first React project',
       'Use the useState and useEffect hooks',
@@ -178,7 +178,7 @@ export const projects = [
     img: '/images/projects/minesweeper.jpg',
     pen: 'JJYqop',
     intro: 'Play Minesweeper in this 9x9 grid!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Use setInterval & clearInterval to manage the timer',
       'Table to handle adjacent cells checks',
@@ -193,7 +193,7 @@ export const projects = [
     img: '/images/projects/whack-a-donkey-kong.jpg',
     pen: 'YabyJJ',
     intro: 'Crush these Donkey Kongs in this whack a mole!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'setInterval & clearInterval to handle the timer',
       'setTimeout to animate the Kongs on click',
@@ -208,7 +208,7 @@ export const projects = [
     img: '/images/projects/hangman.jpg',
     pen: 'ZEzvEdz',
     intro: 'The Hangman game as in your childhood!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Organise collaboration with open sourcers',
       'Array.concat to combine the different arrays into one',
@@ -223,7 +223,7 @@ export const projects = [
     img: '/images/projects/dad-jokes.jpg',
     pen: 'LKXvrq',
     intro: 'Go and get a random dad joke!',
-    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+    tech: ['html', 'css', 'javascript', 'jquery'],
     chall: ['AJAX call with jQuery', 'JSON parse and stringify methods'],
     homepage: false,
     type: 'perso',
@@ -234,7 +234,7 @@ export const projects = [
     img: '/images/projects/giphy-search.jpg',
     pen: 'EExyvQ',
     intro: 'Find the gif you need with Giphy Search!',
-    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+    tech: ['html', 'css', 'javascript', 'jquery'],
     chall: [
       'jQuery for JavaScript: form data, events, select elements, animations',
       'AJAX call with jQuery',
@@ -250,7 +250,7 @@ export const projects = [
     img: '/images/projects/tetris.jpg',
     pen: 'eYpxowj',
     intro: 'Break lines and stay alive for as long as you can in this Tetris!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Babel to translate newer JavaScript to work with older browsers',
       'Array.forEach to loop over an array',
@@ -267,7 +267,7 @@ export const projects = [
     img: '/images/projects/simon-game.jpg',
     pen: 'LWqpGM',
     intro: 'Train your brain with the famous Simon game!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Use childNodes to point to the right elements',
       'Math.random to pick a random element',
@@ -283,7 +283,7 @@ export const projects = [
     img: '/images/projects/drum-machine.jpg',
     pen: 'dwmoyE',
     intro: 'Smash this Drum Machine!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: ['Audio to play the music sounds', 'Target elements with getElementById', 'Click on tiles with keyup event'],
     homepage: false,
     type: 'perso',
@@ -294,7 +294,7 @@ export const projects = [
     img: '/images/projects/clock.jpg',
     pen: 'YQoBJK',
     intro: 'Check the clock and get the time!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Work with Date and its methods getHours and getMinutes',
       'Use CSS transform to rotate the clock hands',
@@ -309,7 +309,7 @@ export const projects = [
     img: '/images/projects/etch-a-sketch.jpg',
     pen: 'dVWPOW',
     intro: 'Try to sketch something in this!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Input event to listen to every input modification',
       'Turn string into number with parseFloat',
@@ -325,7 +325,7 @@ export const projects = [
     img: '/images/projects/calculator.jpg',
     pen: 'dvdZjx',
     intro: 'Fully functional Calculator!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Math.round to round numbers',
       'Use eval to process calculation',
@@ -341,7 +341,7 @@ export const projects = [
     img: '/images/projects/higher-or-lower.jpg',
     pen: 'bGbLzzE',
     intro: 'Guess if the next card will be Higher or Lower!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Select elements with querySelector',
       'Find index with Array.indexOf',
@@ -356,7 +356,7 @@ export const projects = [
     img: '/images/projects/tic-tac-toe.jpg',
     pen: 'ZevLbx',
     intro: 'Play Tic Tac Toe or OXO against a dumb AI!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Use classList methods to act on element classes',
       'Delay functions with setTimeout',
@@ -371,7 +371,7 @@ export const projects = [
     img: '/images/projects/sliding-puzzle.jpg',
     pen: 'RjzGBO',
     intro: 'Try to solve this sliding puzzle!',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Sass'],
+    tech: ['html', 'css', 'javascript', 'sass'],
     chall: [
       'Swap the position of elements',
       'Use before and after methods to insert elements',
@@ -386,7 +386,7 @@ export const projects = [
     img: '/images/projects/pokemon.jpg',
     pen: 'rjBWWR',
     intro: 'Find out what Pokemon you are!',
-    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
+    tech: ['html', 'css', 'javascript', 'jquery'],
     chall: [
       'Manage jQuery fading animations',
       '@keyframes to handle rotation animations',
@@ -401,7 +401,7 @@ export const projects = [
     img: '/images/projects/color-game.jpg',
     pen: 'poyXqWZ',
     intro: 'Sharpen your RGB knowledge by playing this little Color game!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: ['Define the display with CSS grids', 'Use BEM to name elements classes', 'Create HTML elements with JS'],
     homepage: false,
     type: 'perso',
@@ -412,7 +412,7 @@ export const projects = [
     img: '/images/projects/brick-breaker.jpg',
     pen: 'GEgjEb',
     intro: 'Break all the bricks in this first level!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Create blocks, bar and ball with Canvas',
       'Mousemove event to handle the bar of the game',
@@ -427,7 +427,7 @@ export const projects = [
     img: '/images/projects/connect-4.jpg',
     pen: 'bqWqGV',
     intro: 'Play Connect 4 with a friend and align 4 of yours!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Create all elements with JavaScript',
       'Use the :not() CSS selector',
@@ -444,7 +444,7 @@ export const projects = [
     pen: 'oWYVYj',
     intro:
       'Find out how many days passed since a certain date, or between two dates, or what date will ti be in x days.',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Listen to input changes with Input event',
       'Date methods to get the right info',
@@ -460,7 +460,7 @@ export const projects = [
     img: '/images/projects/quotes.jpg',
     pen: 'xgGzdJ',
     intro: 'Click and get a random quote from Forismatic!',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'jQuery'],
+    tech: ['html', 'css', 'javascript', 'bootstrap', 'jquery'],
     chall: ['Get quotes through an AJAX call', 'Parse and Stringify JSON data'],
     homepage: false,
     type: 'perso',
@@ -471,7 +471,7 @@ export const projects = [
     img: '/images/projects/timer.jpg',
     pen: 'WpKWgG',
     intro: 'Set a timer for anything!',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['html', 'css', 'javascript'],
     chall: [
       'Handle the time with setInterval & clearInterval',
       'Delay functions with setTimeout',

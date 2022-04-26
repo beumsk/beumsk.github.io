@@ -24,8 +24,7 @@ needs node v14
 - new projects (todolist, recipes, shop)
 
 1.2
-- skills section: links to projects filtered
-- metrics animation? Number of projects/sites/hours/languages/experience
+- metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 
 1.3
