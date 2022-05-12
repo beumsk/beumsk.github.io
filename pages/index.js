@@ -8,7 +8,7 @@ import Grid from '@components/grid';
 import Tech from '@components/tech';
 
 export default function Home({ title, description, posts }) {
-  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'bootstrap', 'sass', 'angular'];
+  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
 
   return (
     <Layout title={title} description={description}>

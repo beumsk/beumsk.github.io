@@ -19,7 +19,7 @@ export default function Projects({ title, description, url }) {
     }
   }, [router, query]);
 
-  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'bootstrap', 'sass', 'angular'];
+  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
   // const skillsList = [...new Set(projects.map((p) => p.tech).flat())];
 
   return (
@@ -50,7 +50,7 @@ export default function Projects({ title, description, url }) {
             <Link key={s} href={`?${s}`}>
               <a onClick={() => setFilter(s)} className={`btn ${filter === s ? 'active' : ''}`}>
                 <Tech name={s} />
-                <span>{s}</span>
+                <span>{s.replace('-', ' ')}</span>
               </a>
             </Link>
           ))}

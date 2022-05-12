@@ -32,7 +32,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
                     <Link href={`/projects?${t}`}>
                       <a className="btn">
                         <Tech name={t} color />
-                        <span>{t}</span>
+                        <span>{t.replace('-', ' ')}</span>
                       </a>
                     </Link>
                   </li>
