@@ -145,6 +145,36 @@ section {
         &[hover='angular'] {
           color: #a6120d;
         }
+        &[hover='typescript'] {
+          color: #007acc;
+        }
+        &[hover='redux'] {
+          color: #764abc;
+        }
+        &[hover='material-ui'] {
+          color: #007fff;
+        }
+        &[hover='chakra-ui'] {
+          color: #3cc7bd;
+        }
+        &[hover='styled-components'] {
+          color: #db7093;
+        }
+        &[hover='node.js'] {
+          color: #689f63;
+        }
+        &[hover='firebase'] {
+          color: #ffa50e;
+        }
+        &[hover='mongo-db'] {
+          color: #00684a;
+        }
+        &[hover='c#'] {
+          color: #390092;
+        }
+        &[hover='umbraco'] {
+          color: #3544b1;
+        }
       }
       svg {
         display: block;
