@@ -21,7 +21,7 @@ needs node v14
 
 ## TODO
 
-- new projects (todolist, recipes, shop)
+- new projects (todolist?, padel?)
 
 1.2
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
