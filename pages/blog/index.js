@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-// import { getAllPosts } from '@api';
 import { getPosts } from '@api';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
@@ -71,7 +70,6 @@ Blog.propTypes = {
 };
 
 export async function getStaticProps() {
-  // const allPosts = await getAllPosts();
   const allPosts = await getPosts();
   return {
     props: {

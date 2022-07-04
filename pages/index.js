@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-// import { getAllPosts } from '@api';
 import { getPosts } from '@api';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
@@ -119,7 +118,6 @@ Home.propTypes = {
 };
 
 export async function getStaticProps() {
-  // const allPosts = await getAllPosts();
   const allPosts = await getPosts();
 
   return {

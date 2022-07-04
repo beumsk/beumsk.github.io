@@ -36,7 +36,6 @@ X.X
 - add more images of features/pages?
 - low res images (automate without next-optimized-images)
 - rethink scss structure (BEM?)
-- update to NEXT.js 12 (webpack 5 issue with raw-loader; asset/source isn't working the same)
 
 Blog
 - nextjs custom error page

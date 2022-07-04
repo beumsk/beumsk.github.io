@@ -4,11 +4,10 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
-// import { getPostBySlug, getAllPosts } from '@api';
 import { getPost, getPosts } from '@api';
 import Layout from '@components/layout';
 
-export default function DynamicBlogPost({ data, posts, content, title, description, img, url, date, categories }) {
+export default function DynamicBlogPost({ posts, content, title, description, img, url, date, categories }) {
   const router = useRouter();
   useEffect(() => {
     Prism.highlightAll();
@@ -79,18 +78,14 @@ DynamicBlogPost.propTypes = {
   img: PropTypes.string,
   date: PropTypes.string,
   categories: PropTypes.any,
-  data: PropTypes.object,
 };
 
 export async function getStaticProps(context) {
-  // const next = await getAllPosts();
   const next = await getPosts();
-  // const data = await getPostBySlug(context.params.slug);
   const data = await getPost(context.params.slug);
   return {
     props: {
       posts: next,
-      data: data,
       content: data.content,
       title: data.title,
       description: data.intro,
@@ -103,7 +98,6 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  // let paths = await getAllPosts();
   let paths = await getPosts();
   paths = paths.map((post) => ({
     params: { slug: post.slug },
