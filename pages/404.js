@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { projects } from '@data/projects';
-import { getAllPosts } from '@api';
+// import { getAllPosts } from '@api';
+import { getPosts } from '@api';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
 
@@ -51,7 +52,8 @@ Custom404.propTypes = {
 };
 
 export async function getStaticProps() {
-  const allPosts = await getAllPosts();
+  // const allPosts = await getAllPosts();
+  const allPosts = await getPosts();
   return {
     props: {
       posts: allPosts,

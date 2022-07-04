@@ -1,38 +1,39 @@
+import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
 
 const defaultImage = 'https://via.placeholder.com/400x200';
 
-export async function getAllPosts() {
-  const context = require.context('../posts', false, /\.md$/);
-  const posts = [];
-  for (const key of context.keys()) {
-    const post = key.slice(2);
-    const fileContent = await import(`../posts/${post}`);
-    const meta = matter(fileContent.default);
-    posts.push({
-      slug: post.replace('.md',''),
-      title: meta.data.title,
-      intro: meta.data.intro || '',
-      img: meta.data.img || defaultImage,
-      date: meta.data.date || '',
-      categories: meta.data.categories || '',
-      link: `/blog/${post.replace('.md','')}`,
-    })
-  }
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-}
+export const getPosts = () => {
+  const files = fs.readdirSync(path.join('posts'));
+  const allPostsData = files.map((fileName) => {
+    const slug = fileName.replace('.md', '');
+    const fileContents = fs.readFileSync(path.join(`posts/${slug}.md`), 'utf8');
+    const { data } = matter(fileContents);
+    return {
+      slug,
+      title: data.title,
+      intro: data.intro || '',
+      img: data.img || defaultImage,
+      date: data.date || '',
+      categories: data.categories || '',
+      link: `/blog/${slug}`,
+    };
+  });
+  return allPostsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+};
 
-export async function getPostBySlug(slug) {
-  const fileContent = await import(`../posts/${slug}.md`);
-  const meta = matter(fileContent.default);
-  const content = marked(meta.content);
+export const getPost = (slug) => {
+  const fileContents = fs.readFileSync(path.join(`posts/${slug}.md`), 'utf8');
+  const { data, content } = matter(fileContents);
+  const markedContent = marked(content);
   return {
-    title: meta.data.title,
-    intro: meta.data.intro || '',
-    img: meta.data.img || defaultImage,
-    content: content || '',
-    date: meta.data.date || '',
-    categories: meta.data.categories || ''
-  }
-}
+    title: data.title,
+    intro: data.intro || '',
+    img: data.img || defaultImage,
+    content: markedContent || '',
+    date: data.date || '',
+    categories: data.categories || '',
+  };
+};
