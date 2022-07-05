@@ -39,6 +39,7 @@ X.X
 
 Blog
 - nextjs custom error page
+- local ssg site with python
 - props to parent/child
 - mdx to html
 - SSG vs SSR
