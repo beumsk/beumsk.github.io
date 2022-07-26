@@ -40,9 +40,9 @@ export default function DynamicBlogPost({ posts, content, title, description, im
                 ))}
               </div>
               {/* TODO: add dateModified */}
-              <p className="post__date" itemProp="datePublished" content={processedDate}>
+              <time className="post__date" itemProp="datePublished" content={processedDate} dateTime={processedDate}>
                 {processedDate}
-              </p>
+              </time>
             </div>
             <div
               className="post__content mt-5 mb-10"
@@ -58,6 +58,7 @@ export default function DynamicBlogPost({ posts, content, title, description, im
                 <a className="btn">Back to blog listing</a>
               </Link>
             </div>
+            {/* TODO: add posts suggestions */}
           </article>
         </div>
       </div>

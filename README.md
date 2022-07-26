@@ -21,15 +21,18 @@ needs node v14
 
 ## TODO
 
-- new projects (todolist?, padel?)
+- new projects (todolist?)
 
 1.2
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
+- article date modified
+- previous article/project link
+- make navigation buttons different from each other (projects, article)
+- add suggestions of articles/projects
 
 1.3
 - links in mdx to open in new tabs
-- add project filter and order
 
 X.X
 - trailing slash urls not working (only prod)
@@ -37,7 +40,7 @@ X.X
 - low res images (automate without next-optimized-images)
 - rethink scss structure (BEM?)
 
-Blog
+Blog posts
 - nextjs custom error page
 - local ssg site with python
 - props to parent/child
