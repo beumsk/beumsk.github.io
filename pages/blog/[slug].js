@@ -6,6 +6,8 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import { getPost, getPosts } from '@api';
 import Layout from '@components/layout';
+import Grid from '@components/grid';
+import { AiFillCaretLeft } from 'react-icons/ai';
 
 export default function DynamicBlogPost({ posts, content, title, description, img, url, date, categories }) {
   const router = useRouter();
@@ -20,7 +22,9 @@ export default function DynamicBlogPost({ posts, content, title, description, im
 
   const categoriesList = categories?.split(', ').filter((x) => x);
 
-  const nextLink = posts[posts.findIndex((x) => x.title === title) + 1]?.link || posts[0].link;
+  const nextLink = posts[posts.findIndex((x) => x.title === title) + 1] || posts[0];
+  const previousLink = posts[posts.findIndex((x) => x.title === title) - 1] || posts[posts.length - 1];
+  const relatedLinks = [previousLink, nextLink];
 
   return (
     <Layout title={`${title} | Blog | Rémy Beumier`} description={description} img={img} url={url} itemtype="Article">
@@ -29,6 +33,7 @@ export default function DynamicBlogPost({ posts, content, title, description, im
           <article>
             <h1 itemProp="headline name">{title}</h1>
             <img src={img} alt={title} width="300" height="150" className="post__img mb-5" itemProp="image" />
+
             <div className="space-between-x pb-5">
               <div className="post__categories">
                 {categoriesList?.map((c) => (
@@ -44,21 +49,26 @@ export default function DynamicBlogPost({ posts, content, title, description, im
                 {processedDate}
               </time>
             </div>
+
             <div
               className="post__content mt-5 mb-10"
               dangerouslySetInnerHTML={{ __html: content }}
               itemProp="articleBody"
             />
-            {/* TODO: add previous post link */}
-            <div className="mb-16">
-              <Link href={nextLink}>
-                <a className="btn mb-4 mr-4">Next blog post</a>
-              </Link>
+
+            <div className="pt-4 mb-16">
               <Link href="/blog">
-                <a className="btn">Back to blog listing</a>
+                <a className="btn">
+                  <AiFillCaretLeft className="mr-1" />
+                  Back to blog listing
+                </a>
               </Link>
             </div>
-            {/* TODO: add posts suggestions */}
+
+            <div>
+              <p className="related-title">Suggested articles</p>
+              <Grid data={relatedLinks} className="mt-6 mb-20" />
+            </div>
           </article>
         </div>
       </div>

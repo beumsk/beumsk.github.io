@@ -23,15 +23,10 @@ needs node v14
 
 - new projects (todolist?)
 
-1.2
+1.3
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 - article date modified
-- previous article/project link
-- make navigation buttons different from each other (projects, article)
-- add suggestions of articles/projects
-
-1.3
 - links in mdx to open in new tabs
 
 X.X

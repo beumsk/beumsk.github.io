@@ -33,7 +33,7 @@ export const projects = [
       'Responsiveness of the different components of the site',
       'Special outlined style on titles',
     ],
-    homepage: true,
+    homepage: false,
     type: 'pro',
   },
   {

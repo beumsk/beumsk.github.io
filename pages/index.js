@@ -6,6 +6,8 @@ import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Grid from '@components/grid';
 import Tech from '@components/tech';
+import { MdFileDownload } from 'react-icons/md';
+import { AiFillCaretRight } from 'react-icons/ai';
 
 export default function Home({ title, description, posts }) {
   const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
@@ -52,10 +54,12 @@ export default function Home({ title, description, posts }) {
               <Link href="/resume-remy-beumier">
                 <a className="btn mb-4 mr-4" target="_blank">
                   Check out my resume
+                  <AiFillCaretRight className="ml-1" />
                 </a>
               </Link>
               <a className="btn mb-4" href="remy-beumier-resume.pdf" target="_blank" download>
                 Download my resume
+                <MdFileDownload className="ml-1" />
               </a>
             </div>
 
@@ -88,7 +92,10 @@ export default function Home({ title, description, posts }) {
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
           <Grid data={projects.filter((x) => x.homepage).slice(0, 3)} className="mt-10 mb-10" />
           <Link href="/projects">
-            <a className="btn">Check all projects</a>
+            <a className="btn">
+              Check all projects
+              <AiFillCaretRight className="ml-1" />
+            </a>
           </Link>
         </div>
       </section>
@@ -99,7 +106,10 @@ export default function Home({ title, description, posts }) {
           <p>I write some stuff about coding and the web in general. Here are the latest posts.</p>
           <Grid data={posts.slice(0, 3)} className="mt-10 mb-10" />
           <Link href="/blog">
-            <a className="btn">Check all posts</a>
+            <a className="btn">
+              Check all posts
+              <AiFillCaretRight className="ml-1" />
+            </a>
           </Link>
         </div>
       </section>
