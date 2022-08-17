@@ -1,0 +1,56 @@
+---
+title: 'Change Next.js error pages'
+intro: 'How to change the default Next.js error pages and make it your own'
+img: '/images/posts/change-nextjs-error-pages.jpg'
+date: '08/17/2022'
+categories: 'next.js, tutorial'
+---
+
+Next.js handles many aspects of our website out of the box but, sometimes we want to go a step extra and change what they decided. One of those times was to change the default error pages to have something in line with the whole website. Let's see how we can make those pages our playing ground!
+
+## Error 404 page
+Modifying the error 404 page is one step that we can't overlook. Every wrong or dead link will point to that page and we must take that to our advantage. It's as simple as creating `404.js` in the pages folder.
+
+```js
+export default function Custom404() {
+  return <h1>404 - Page Not Found</h1>
+}
+```
+
+## Error 500 page
+Set up the error 500 page is another step that we should manage. In the same fashion as the 404, we create a `500.js` file in the pages folder.
+
+```js
+export default function Custom500() {
+  return <h1>500 - Server-side error occurred</h1>
+}
+```
+
+## Create the _error.js page
+This is the way to unlock the error page for customisation. We create a new file at the root of the pages folder with the name `_error.js` and we can start with the code from the official documentation.
+
+```js
+function Error({ statusCode }) {
+  return (
+    <p>
+      {statusCode
+        ? `An error ${statusCode} occurred on server`
+        : 'An error occurred on client'}
+    </p>
+  )
+}
+
+Error.getInitialProps = ({ res, err }) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404
+  return { statusCode }
+}
+
+export default Error
+```
+
+From there, we are now able to modify the wording on these pages, but not only. Almost everything that you can do with Next.js you, can do in this custom error page. Styling, adding components, and much more. 
+
+Sadly, as pointed in the [official documentation](https://nextjs.org/docs/advanced-features/custom-error-page), `_error.js` does not currently support Next.js Data Fetching methods like `getStaticProps` or `getServerSideProps`.
+
+Enjoy coding with Next.js!
+
