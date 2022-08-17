@@ -278,6 +278,13 @@
   </url>
 
   <url>
+    <loc>https://remybeumier.be/blog/change-nextjs-error-pages</loc>
+    <lastmod>2022-08-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://remybeumier.be/blog/fix-the-window-is-not-defined-error</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>yearly</changefreq>
