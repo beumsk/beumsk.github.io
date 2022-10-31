@@ -28,6 +28,7 @@ needs node v14
 - back to top button
 - article date modified
 - links in mdx to open in new tabs
+- components in mdx to have codepen/codesandbox integrated
 
 X.X
 - trailing slash urls not working (only prod)
@@ -36,6 +37,8 @@ X.X
 - rethink scss structure (BEM?)
 
 Blog posts
+- css posts: switch button, accordion, dropdown, css-only?
+- use prism in your nextjs markdown (+scss)
 - local ssg site with python
 - props to parent/child
 - mdx to html

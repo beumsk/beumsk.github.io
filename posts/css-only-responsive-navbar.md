@@ -1,0 +1,240 @@
+---
+title: 'CSS only responsive Navbar'
+intro: 'How to build a CSS responsive navigation bar menu without JavaScript'
+img: '/images/posts/css-only-responsive-navbar.jpg'
+date: '10/31/2022'
+categories: 'css, tutorial'
+---
+
+I do more and more JavaScript because of the usual requirements in projects, but I will always love a useful, adaptable and cross-browser working CSS trick.
+
+I recently had to build an advanced header navigation and for some reasons it was easier not to use any JavaScript for this. Even though I knew for sure I could handle big screen layout and transitions with CSS only, I thought complexity would come with smaller devices and thus organizing the links differently.
+
+I also wanted a single navigation in HTML to avoid duplication of code and a fair level of browser compatibility (by fair I mean no IE).
+
+Without further ado, let's dive into a working solution for our case with a first step into the HTML. It's kept dead simple, except for the checkbox that we will understand later.
+
+## The HTML structure for the navigation
+
+```html
+<header class="header">
+  <!-- this checkbox handles the hide/show menu logic -->
+  <input type="checkbox" class="header__burger">
+
+  <a href="https://remybeumier.be" target="_blank" class="header__logo">
+    <img src="path" alt="alt" />
+  </a>
+
+  <div class="header__links">
+    <a href="#0" class="header__link">Link with sublinks</a>
+    <div class="header__sublinks">
+      <a href="#0">Sublink</a>
+      <a href="#0">Sublink</a>
+      <a href="#0">Sublink</a>
+      <a href="#0">Sublink</a>
+      <a href="#0">Sublink</a>
+    </div>
+    <a href="#0" class="header__link">Link</a>
+    <a href="#0" class="header__link">Link</a>
+    <a href="#0" class="header__link">Link</a>
+    <a href="#0" class="header__link">Link</a>
+  </div>
+</header>
+```
+
+If you don't risk any heart attack, you can check the result as of now. It will give you a 'wow' effect when we will add some styling; Actually, I still have that great feeling after many years of web development.
+
+## Small screens header styling
+
+Following a mobile first mindset, we will start with the SCSS from the tiniest screens.
+
+```scss
+.header {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+
+  .header__logo {
+    display: flex;
+    padding: 11px;
+    transition: background-color 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: #f5f5f5;
+    }
+    svg {
+      min-width: 32px;
+    }
+  }
+
+  .header__links {
+    display: none;
+    flex-direction: column;
+    padding: 8px 0;
+    border-top: solid 1px #e5e5e5;
+    width: 100%;
+  }
+
+  .header__link {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 16px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:hover,
+    &:focus {
+      background-color: #f5fafb;
+      color: #80d0c7;
+    }
+    &.active {
+      background-color: #f5fafb;
+    }
+    + .header__sublinks {
+      > a {
+        display: block;
+        padding: 4px 8px;
+        margin-left: 16px;
+        color: #55626a;
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+          color: #80d0c7;
+          background-color: #f5fafb;
+        }
+      }
+    }
+  }
+}
+```
+
+Should you need to convert it into CSS, don't hesitate to copy and paste it over https://www.sassmeister.com/ or https://sass.js.org/.
+
+Regarding the code, I don't think it contains anything fancy. We use `position: sticky` because it is so easy for top nav, a bit of `flex` layout and transitions but that's it for this part.
+
+## The CSS trick
+
+Here is the gold of the article. We will see that we handle the toggle with the checkbox element and its `:checked` pseudo class. We also totally change its design to have a burger element.
+
+```scss
+.header__burger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 54px;
+  height: 54px;
+  margin: 0;
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  &::after {
+    content: "";
+    height: 24px;
+    width: 24px;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    background: linear-gradient(
+      to bottom,
+      #80d0c7 20%,
+      transparent 20% 40%,
+      #80d0c7 40% 60%,
+      transparent 60% 80%,
+      #80d0c7 80% 100%
+    );
+  }
+  &:hover,
+  &:focus {
+    background-color: #f5f5f5;
+  }
+  &:checked {
+    ~ .header__links {
+      display: flex;
+    }
+  }
+}
+```
+
+The first comment about this snippet will be about the design of the checkbox. As you can see, we removed its default with `appearance: none` and we applied a gradient as background to mimic a burger menu. I could have avoided the `::after`, but I liked the idea to have a bigger click area. Of course, we could change this to an icon font, or a label pointing to the checkbox giving us a lot more possibilities.
+
+And secondly, we handle the show/hide logic. We are looking for the checkbox to be `:checked` [Browser compatibility on caniuse](https://caniuse.com/mdn-css_selectors_checked), and we select the `.header__links` among its sibling with the `~` selector. As of now, we can nicely toggle the menu on or off without JavaScript.
+
+> Some could argue a burger menu is not so user-friendly. I think given how widely it's used, a user will understand directly what it is and how to use it.
+
+## Big screens header styling
+
+I know it's not the core content of the article, but let's design our navigation completely and give it a nice look on desktops too.
+
+```scss
+@media only screen and (min-width: 1024px) {
+  flex-direction: row;
+  align-items: center;
+
+  .header__links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    border-top: none;
+    width: auto;
+  }
+
+  .header__link {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 54px;
+    padding: 9px 10px;
+    &:hover,
+    &:focus {
+      + .header__sublinks {
+        height: 42px;
+      }
+    }
+
+    + .header__sublinks {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 54px;
+      height: 0;
+      overflow: hidden;
+      background-color: #f5fafb;
+      border-top: solid 1px #e5e5e5;
+      transition: height 0.3s ease-in-out;
+      > a {
+        padding: 10px;
+        margin-left: 0;
+        color: #333;
+        font-size: 1rem;
+      }
+      &:hover,
+      &:focus-within {
+        height: 42px;
+      }
+    }
+  }
+
+  .header__burger {
+    display: none;
+  }
+}
+```
+
+There isn't much magic in those lines. We are hiding the burger checkbox and are giving the navbar a horizontal layout to be able to display every link nicely. The only challenge was to design the sublinks in a catchy way. By default we give that sub navigation `height: 0` and once we hover its parent link, we adjust the height with a smooth transition.
+
+## Final navigation result 
+
+**TLDR**: Find the complete solution for this [Responsive CSS only navigation bar using a burger menu on Codepen](https://codepen.io/beumsk/pen/bGKbZoV). Feel free to take inspiration from it and adapt it to your exact need.
+
+Enjoy coding with CSS!
+

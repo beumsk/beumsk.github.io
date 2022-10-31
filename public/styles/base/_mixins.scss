@@ -1,29 +1,73 @@
 @mixin generate($prefix, $property) {
-  $sizes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
+  $sizes: 0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25;
   $spacing: 4px;
+
   @for $i from 1 through length($sizes) {
     $size: nth($sizes, $i);
-    @if ($prefix == 'mx' or $prefix == 'px') {
+
+    @if ($prefix =='mx' or $prefix =='px') {
       .#{$prefix}-#{$i - 1} {
-        #{$property}-left: $spacing * $size + !important;
-        #{$property}-right: $spacing * $size + !important;
+        #{$property}-left: $spacing * $size !important;
+        #{$property}-right: $spacing * $size !important;
       }
-    } @else if ($prefix == 'my' or $prefix == 'py') {
+    }
+
+    @else if ($prefix =='my' or $prefix =='py') {
       .#{$prefix}-#{$i - 1} {
-        #{$property}-top: $spacing * $size + !important;
-        #{$property}-bottom: $spacing * $size + !important;
+        #{$property}-top: $spacing * $size !important;
+        #{$property}-bottom: $spacing * $size !important;
       }
-    } @else {
+    }
+
+    @else {
       .#{$prefix}-#{$i - 1} {
-        #{$property}: $spacing * $size + !important;
+        #{$property}: $spacing * $size !important;
       }
     }
   }
 }
 
-$rules: [ [ml, margin-left], [mr, margin-right], [mt, margin-top], [mb, margin-bottom], [mx, margin], [my, margin], [m,
-  margin], [pl, padding-left], [pr, padding-right], [pt, padding-top], [pb, padding-bottom], [px, padding], [py,
-  padding], [p, padding] ];
+$rules: (
+  (ml, margin-left),
+  (mr, margin-right),
+  (mt, margin-top),
+  (mb, margin-bottom),
+  (mx, margin),
+  (my, margin),
+  (m, margin),
+  (pl, padding-left),
+  (pr, padding-right),
+  (pt, padding-top),
+  (pb, padding-bottom),
+  (px, padding),
+  (py, padding),
+  (p, padding)
+);
 
 @each $item in $rules {
   @include generate(nth($item, 1), nth($item, 2));

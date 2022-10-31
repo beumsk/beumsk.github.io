@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import Prism from 'prismjs';
+import 'prismjs/components/prism-scss.min.js';
 import 'prismjs/themes/prism.css';
 import { getPost, getPosts } from '@api';
 import Layout from '@components/layout';
