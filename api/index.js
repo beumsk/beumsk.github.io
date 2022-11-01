@@ -1,7 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import marked from 'marked';
+import { marked } from 'marked';
+
+const renderer = new marked.Renderer();
+const linkRenderer = renderer.link;
+renderer.link = (href, title, text) => {
+  const localLink = href.startsWith(`http`);
+  const html = linkRenderer.call(renderer, href, title, text);
+  return localLink ? html.replace(/^<a /, `<a target="_blank" rel="noreferrer noopener nofollow" `) : html;
+};
+
+// https://marked.js.org/using_pro#extensions
+// or
+// https://mdxjs.com/docs/getting-started/
 
 const defaultImage = 'https://via.placeholder.com/400x200';
 
@@ -27,7 +39,7 @@ export const getPosts = () => {
 export const getPost = (slug) => {
   const fileContents = fs.readFileSync(path.join(`posts/${slug}.md`), 'utf8');
   const { data, content } = matter(fileContents);
-  const markedContent = marked(content);
+  const markedContent = marked.parse(content, { renderer });
   return {
     title: data.title,
     intro: data.intro || '',

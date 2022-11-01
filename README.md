@@ -27,7 +27,6 @@ needs node v14
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 - article date modified
-- links in mdx to open in new tabs
 - components in mdx to have codepen/codesandbox integrated
 
 X.X
