@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { getPosts } from '@api';
 import { projects } from '@data/projects';
+import { posts } from '@data/posts';
 import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Grid from '@components/grid';
@@ -9,7 +9,8 @@ import Tech from '@components/tech';
 import { MdFileDownload } from 'react-icons/md';
 import { AiFillCaretRight } from 'react-icons/ai';
 
-export default function Home({ title, description, posts }) {
+// export default function Home({ title, description, posts }) {
+export default function Home({ title, description }) {
   const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
 
   return (
@@ -128,11 +129,8 @@ Home.propTypes = {
 };
 
 export async function getStaticProps() {
-  const allPosts = await getPosts();
-
   return {
     props: {
-      posts: allPosts,
       title: 'Rémy Beumier | Front-end Developer',
       description:
         "Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.",

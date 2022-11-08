@@ -1,10 +1,11 @@
 ---
 title: 'CSS only responsive Navbar'
 intro: 'How to build a CSS responsive navigation bar menu without JavaScript'
-img: '/images/posts/css-only-responsive-navbar.jpg'
 date: '10/31/2022'
 categories: 'css, tutorial'
 ---
+
+import BlogLayout from '@components/blogLayout';
 
 I do more and more JavaScript because of the usual requirements in projects, but I will always love a useful, adaptable and cross-browser working CSS trick.
 
@@ -19,7 +20,7 @@ Without further ado, let's dive into a working solution for our case with a firs
 ```html
 <header class="header">
   <!-- this checkbox handles the hide/show menu logic -->
-  <input type="checkbox" class="header__burger">
+  <input type="checkbox" class="header__burger" />
 
   <a href="https://remybeumier.be" target="_blank" class="header__logo">
     <img src="path" alt="alt" />
@@ -114,7 +115,7 @@ Following a mobile first mindset, we will start with the SCSS from the tiniest s
 }
 ```
 
-Should you need to convert it into CSS, don't hesitate to copy and paste it over https://www.sassmeister.com/ or https://sass.js.org/.
+Should you need to convert it into CSS, don't hesitate to copy and paste it over <a href="https://www.sassmeister.com/" target="_blank">https://www.sassmeister.com/</a> or <a href="https://sass.js.org/" target="_blank">https://sass.js.org/</a>.
 
 Regarding the code, I don't think it contains anything fancy. We use `position: sticky` because it is so easy for top nav, a bit of `flex` layout and transitions but that's it for this part.
 
@@ -134,7 +135,7 @@ Here is the gold of the article. We will see that we handle the toggle with the 
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   &::after {
-    content: "";
+    content: '';
     height: 24px;
     width: 24px;
     top: 15px;
@@ -163,7 +164,7 @@ Here is the gold of the article. We will see that we handle the toggle with the 
 
 The first comment about this snippet will be about the design of the checkbox. As you can see, we removed its default with `appearance: none` and we applied a gradient as background to mimic a burger menu. I could have avoided the `::after`, but I liked the idea to have a bigger click area. Of course, we could change this to an icon font, or a label pointing to the checkbox giving us a lot more possibilities.
 
-And secondly, we handle the show/hide logic. We are looking for the checkbox to be `:checked` [Browser compatibility on caniuse](https://caniuse.com/mdn-css_selectors_checked), and we select the `.header__links` among its sibling with the `~` selector. As of now, we can nicely toggle the menu on or off without JavaScript.
+And secondly, we handle the show/hide logic. We are looking for the checkbox to be `:checked` <a href="https://caniuse.com/mdn-css_selectors_checked" target="_blank">Browser compatibility on caniuse</a>, and we select the `.header__links` among its sibling with the `~` selector. As of now, we can nicely toggle the menu on or off without JavaScript.
 
 > Some could argue a burger menu is not so user-friendly. I think given how widely it's used, a user will understand directly what it is and how to use it.
 
@@ -232,9 +233,10 @@ I know it's not the core content of the article, but let's design our navigation
 
 There isn't much magic in those lines. We are hiding the burger checkbox and are giving the navbar a horizontal layout to be able to display every link nicely. The only challenge was to design the sublinks in a catchy way. By default we give that sub navigation `height: 0` and once we hover its parent link, we adjust the height with a smooth transition.
 
-## Final navigation result 
+## Final navigation result
 
-**TLDR**: Find the complete solution for this [Responsive CSS only navigation bar using a burger menu on Codepen](https://codepen.io/beumsk/pen/bGKbZoV). Feel free to take inspiration from it and adapt it to your exact need.
+**TLDR**: Find the complete solution for this <a href="https://codepen.io/beumsk/pen/bGKbZoV" target="_blank">Responsive CSS only navigation bar using a burger menu on Codepen</a>. Feel free to take inspiration from it and adapt it to your exact need.
 
 Enjoy coding with CSS!
 
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

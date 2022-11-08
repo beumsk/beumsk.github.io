@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { getPosts } from '@api';
+import { posts } from '@data/posts';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
 
-export default function Blog({ posts, title, description, url }) {
+export default function Blog({ title, description, url }) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g, '') === '/blog' ? '' : router.asPath.replace(/.*\?/g, '');
@@ -70,10 +70,8 @@ Blog.propTypes = {
 };
 
 export async function getStaticProps() {
-  const allPosts = await getPosts();
   return {
     props: {
-      posts: allPosts,
       title: 'Blog | Rémy Beumier',
       description: 'My blog posts covering the web in general, especially the front-end development.',
       url: 'https://remybeumier.be/blog',

@@ -6,7 +6,7 @@
 >
   <url>
     <loc>https://remybeumier.be/</loc>
-    <lastmod>2022-07-28</lastmod>
+    <lastmod>2022-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -272,70 +272,70 @@
 
   <url>
     <loc>https://remybeumier.be/blog</loc>
-    <lastmod>2022-07-04</lastmod>
+    <lastmod>2022-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/change-nextjs-error-pages</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/css-only-responsive-navbar</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/fix-the-window-is-not-defined-error</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/generate-a-sitemap-in-nextjs</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/get-web-analytics-in-nextjs-with-goatcounter</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/markdown-tutorial</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/nextjs-dark-mode</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/set-nextjs-lang</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog/set-up-eslint-into-nextjs</loc>
-    <lastmod>2022-11-01</lastmod>
+    <lastmod>2022-11-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

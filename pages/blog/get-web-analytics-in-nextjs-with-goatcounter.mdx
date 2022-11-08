@@ -1,10 +1,11 @@
 ---
 title: 'Get web analytics in Next.js with Goatcounter'
 intro: 'How to track your Next.js web analytics without tracking of personal data with Goatcounter'
-img: '/images/posts/get-web-analytics-in-nextjs-with-goatcounter.jpg'
 date: '04/07/2022'
 categories: 'next.js, tutorial, analytics'
 ---
+
+import BlogLayout from '@components/blogLayout';
 
 Next.js is more and more complete with the years and it adds features every other month. One feature that we want for our websites is analytics. Vercel, the company behind Next.js provides an analytics tool that seems very complete as long as we decide to host our site on their platform. But what are the options for those of us not willing to host on that site?
 
@@ -16,9 +17,9 @@ That solution is called GoatCounter. It is an open source web analytics platform
 
 Let's see how we can implement this tool with our SSG Next.js website! 🚀
 
-
 ## Create a GoatCounter account
-The first step is to create an account at [GoatCounter](https://goatcounter.com/signup). 
+
+The first step is to create an account at <a href="https://goatcounter.com/signup" target="_blank">GoatCounter</a>.
 The design is not the sexiest, but it is very functional and easy to understand.
 
 We can reach our account at: _https://[my-code].goatcounter.com_. Make sure to replace `[my-code]` with your actual account code.
@@ -26,17 +27,17 @@ We can reach our account at: _https://[my-code].goatcounter.com_. Make sure to r
 In the settings, we will be able to disable the analytics for certain IP addresses, especially, ours.
 If needed, we can also delete some data, import some other data and manage many other settings.
 
-The dashboard presents useful data about pages traffic, top referrers, visitors locations, browsers, devices, etc. The layout ot this dashboard is editable.
+The dashboard presents useful data about pages traffic, top referrers, visitors locations, browsers, devices, etc. The layout of this dashboard is editable.
 
 ![GoatCounter dashboard example](https://static.zgo.at/screenshot.png)
 
-
 ## Integrate GoatCounter inside Next.js
+
 In order to get the data into our dashboard, we need to link GoatCounter to our Next.js app.
 
 ### 1. Download GoatCounter file
 
-We will download a version of the [GoatCounter code](https://gc.zgo.at/count.js). 
+We will download a version of the <a href="https://gc.zgo.at/count.js" target="_blank">GoatCounter code</a>.
 We can add it under the `public/script` folder in our solution.
 
 ### 2. Connect the app to GoatCounter.com
@@ -87,14 +88,12 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.goatcounter.count({
-        path: router.asPath
+        path: router.asPath,
       });
     }
   }, [router]);
 
-  return (
-    <Component {...pageProps} />
-  );
+  return <Component {...pageProps} />;
 }
 ```
 
@@ -104,6 +103,6 @@ Reaching this point, we should have been able to test GoatCounter locally, and i
 
 I'm personally very satisfied so far with the service, as it allows me to check my site's web analytics respecting visitor's privacy with a very light script.
 
-
 Enjoy coding with Next.js!
 
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

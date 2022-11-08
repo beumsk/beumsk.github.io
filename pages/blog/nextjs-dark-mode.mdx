@@ -1,14 +1,16 @@
 ---
 title: 'Next.js dark mode'
 intro: 'How to add a dark mode to your Next.js site'
-img: '/images/posts/nextjs-dark-mode.jpg'
 date: '01/15/2022'
 categories: 'next.js, tutorial'
 ---
 
+import BlogLayout from '@components/blogLayout';
+
 When I started listing the features I wanted for my new website, a dark mode toggle was in the top tier list as it's becoming a standard. Even though I'm not a big supporter of dark mode, I know people love it and I was willing to tackle this challenge.
 
 ## The CSS part
+
 For this feature, we want to use CSS variables. We have a range of variables that will switch according to the color mode.
 Here is a snippet example:
 
@@ -54,6 +56,7 @@ This is done this way:
 ```
 
 ## The JavaScript and Next.js part
+
 Let's see how we can make this dark mode toggle with `useEffect` and `useState`.
 First, let's create a button that will change the class of our `main` element.
 
@@ -68,15 +71,15 @@ export default function Main(props) {
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-  }
+  };
 
   return (
     <main className={theme}>
       <button onClick={switchTheme} theme={theme}>
-        {theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        {theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
       </button>
     </main>
-  )
+  );
 }
 ```
 
@@ -94,30 +97,32 @@ export default function Main(props) {
   const [theme, setTheme] = useState('');
 
   useEffect(() => {
-      let localTheme = window.localStorage.getItem('theme');
-      setTheme(localTheme);
-  }, [])
+    let localTheme = window.localStorage.getItem('theme');
+    setTheme(localTheme);
+  }, []);
 
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     window.localStorage.setItem('theme', newTheme);
     setTheme(newTheme);
-  }
+  };
 
   return (
     <main className={theme}>
       <button onClick={switchTheme} theme={theme}>
-        {theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        {theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
       </button>
     </main>
-  )
+  );
 }
 ```
 
 We have a functional dark mode toggle in your Next.js app by now. In case of struggle, check the steps again or click the full solution link below.
 
-**TLDR**: [Codesandbox: Dark mode toggle in Next.js](https://codesandbox.io/s/darkmode-0ubir).
+**TLDR**: <a href="https://codesandbox.io/s/darkmode-0ubir" target="_blank">Codesandbox: Dark mode toggle in Next.js</a>.
 
 > I really wanted to share my solution for this, as I found it particularly difficult to make it run, especially with the `localStorage`. I hope it will make your coding easier.
 
 Enjoy coding with Next.js!
+
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

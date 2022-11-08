@@ -1,32 +1,36 @@
 ---
 title: 'Fix the Window is not defined error'
 intro: 'How to fix the error Window is not defined in Next.js'
-img: '/images/posts/fix-the-window-is-not-defined-error.jpg'
 date: '01/22/2022'
 categories: 'next.js, tutorial'
 ---
 
+import BlogLayout from '@components/blogLayout';
+
 Next.js is very useful in many aspects, but nothing is perfect. One difficult point is the use of the `window` object. It is used in many libraries and tools such as analytics and, because Next.js uses pre-rendering, the window may be undefined and may therefore break our site.
 
 ## Wait for window to be ready
+
 This is the usual fix we find for this issue. Somehow it was never the fitting solution in my projects, but I still try it every time.
 
 ```js
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   // Client-side-only code
 }
 ```
 
 ## With useEffect
+
 The other solution requires a better knowledge of React, using the `useEffect` hook. It is working because this hook will wait for the mounting of the page. Pay attention to the empty array, which is needed to work.
 
 ```js
 useEffect(() => {
-    // Client-side-only code
-}, [])
+  // Client-side-only code
+}, []);
 ```
 
 For a working example, check [this article on dark mode](/blog/nextjs-dark-mode).
 
 Enjoy coding with Next.js!
 
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { projects } from '@data/projects';
-import { getPosts } from '@api';
+import { posts } from '@data/posts';
 import Layout from '@components/layout';
 import Grid from 'components/grid';
 
 // import Image from 'next/image';
 
-export default function Custom404({ posts, title }) {
+export default function Custom404({ title }) {
   const pro = projects.filter((x) => x.type === 'pro');
   const perso = projects.filter((x) => x.type === 'perso');
   const [random, setRandom] = useState([]);
@@ -51,10 +51,8 @@ Custom404.propTypes = {
 };
 
 export async function getStaticProps() {
-  const allPosts = await getPosts();
   return {
     props: {
-      posts: allPosts,
       title: '404 - Page Not Found | Rémy Beumier',
     },
   };

@@ -1,14 +1,16 @@
 ---
 title: 'Set Next.js lang'
 intro: 'Specify HTML lang attribute in a Next.js site'
-img: '/images/posts/set-nextjs-lang.jpg'
 date: '12/27/2021'
 categories: 'next.js, tutorial'
 ---
 
+import BlogLayout from '@components/blogLayout';
+
 It is advised and a good practice to define the language of a site. It's very straightforward in plain HTML, but it isn't so intuitive in Next.js. Let's see how we can do it.
 
 ## Static Site Generation
+
 In Next.js, if we want to modify the `<head>` we import Head from next/Head, but what if we want to pass a property to the `<html>` tag? Next provides an option to add another JS file – in the pages folder – called `_document.js` allowing us to be in control of the upper HTML.
 
 Here is the default content of it:
@@ -26,25 +28,26 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default MyDocument
+export default MyDocument;
 ```
 
 Make sure the above `_document.js` is in the pages folder.
 We can now add the `lang` property on HTML `<html lang="en">` and have the language defined for our website.
 
 ## Server Side Rendering
+
 If our site works with SSR, we can use another solution.
 In `next.config.js` at the root of our project, define the following `i18n` object:
 
 ```js
 module.exports = {
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+    locales: ['en'],
+    defaultLocale: 'en',
   },
 };
 ```
@@ -52,3 +55,5 @@ module.exports = {
 Note this solution only works in Next.js version 10 and newer.
 
 Enjoy coding with Next.js!
+
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

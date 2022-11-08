@@ -1,14 +1,15 @@
 ---
 title: 'Generate a sitemap in Next.js'
 intro: 'How to generate an automatic and custom sitemap in your Next.js build?'
-img: '/images/posts/generate-a-sitemap-in-nextjs.jpg'
 date: '02/25/2022'
 categories: 'next.js, tutorial'
 ---
 
+import BlogLayout from '@components/blogLayout';
+
 Sitemaps are important for web crawlers such as google bots, and therefore we need one to improve our site's SEO.
 
-Sadly, Next.js does not provide a go-to option regarding sitemap and I find the external libraries too limited. I tested `nextjs-sitemap-generator`, but I couldn't make it define the `lastmod` or `changefreq` with precision. 
+Sadly, Next.js does not provide a go-to option regarding sitemap and I find the external libraries too limited. I tested `nextjs-sitemap-generator`, but I couldn't make it define the `lastmod` or `changefreq` with precision.
 
 I decided to create something custom and firstly tried to make something with a `sitemap.xml.js` page. It wasn't a success because I couldn't make it an .xml file.
 
@@ -17,6 +18,7 @@ I went a different way and built a `.mjs` file with the purpose of creating my `
 Let's walk through the steps of creating our custom sitemap generator together.
 
 ## First version
+
 We want to make sure the `.mjs` script creates the sitemap.xml. We will achieve this with Node.
 
 ```js
@@ -24,11 +26,7 @@ import { writeFileSync } from 'fs';
 
 async function generate() {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
-  const pages = [
-    '',
-    'about',
-    'contact'
-  ];
+  const pages = ['', 'about', 'contact'];
   const baseUrl = 'https://your-url.com';
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
@@ -52,11 +50,12 @@ async function generate() {
 }
 
 generate();
-
 ```
-If you don't know much about the topic, [read more about the sitemap protocol](https://sitemaps.org/protocol.html).
+
+If you don't know much about the topic, <a href="https://sitemaps.org/protocol.html" target="_blank">read more about the sitemap protocol</a>.
 
 ## Focus on the files you want in the sitemap
+
 We now want something that actually represents our website content. We will do that with `Globby` and we will fix the code format with `Prettier`.
 
 ```js
@@ -68,7 +67,7 @@ async function generate() {
   const pages = await globby(
     [
       // we list all .js files under /pages
-      'pages/*.js'
+      'pages/*.js',
       // we could add more specific files to the list such as .md
     ],
     // this line gets us more data check the doc: https://nodejs.org/api/fs.html#class-fsstats
@@ -82,10 +81,7 @@ async function generate() {
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       ${pages
         .map((page) => {
-          const path = page.path
-            .replace('pages/', '')
-            .replace('index', '')
-            .replace('.js', '');
+          const path = page.path.replace('pages/', '').replace('index', '').replace('.js', '');
 
           return `
             <url>
@@ -113,6 +109,7 @@ generate();
 We have something working but still too generic, especially the `changefreq` and the missing `priority`.
 
 ## Improve the logic based on your needs
+
 From this point, we want every entry of our sitemap to reflect its content. Let's add some function logic for this purpose.
 
 ```js
@@ -122,12 +119,7 @@ import prettier from 'prettier';
 
 async function generate() {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
-  const pages = await globby(
-    [
-      'pages/*.js'
-    ],
-    { stats: true }
-  );
+  const pages = await globby(['pages/*.js'], { stats: true });
   const baseUrl = 'https://your-url.com';
 
   const sitemap = `
@@ -138,10 +130,7 @@ async function generate() {
 
       ${pages
         .map((page) => {
-          const path = page.path
-            .replace('pages/', '')
-            .replace('index', '')
-            .replace('.js', '')
+          const path = page.path.replace('pages/', '').replace('index', '').replace('.js', '');
 
           return `
             <url>
@@ -199,12 +188,12 @@ function convertDate(inputFormat) {
 ```
 
 We have built a complete sitemap with specific URL, last modification date, change frequency and priority.
-Check out [the globby documentation for more possibilities](https://github.com/sindresorhus/globby).
+Check out <a href="https://github.com/sindresorhus/globby" target="_blank">the globby documentation for more possibilities</a>.
 
-
-**TLDR**: [Codesandbox: Custom sitemap in Next.js](https://codesandbox.io/s/custom-sitemap-i3jvko).
-
+**TLDR**: <a href="https://codesandbox.io/s/custom-sitemap-i3jvko" target="_blank">Codesandbox: Custom sitemap in Next.js</a>.
 
 Would you improve this code or do it in another way? Don't hesitate to share your ideas!
 
 Enjoy coding with Next.js!
+
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

@@ -14,7 +14,7 @@ async function generate() {
       'public/images/projects/*.jpg',
       '!public/images/projects/*-screen.*',
       'pages/blog/index.js',
-      'posts/*.md',
+      'pages/blog/*.mdx',
     ],
     { stats: true }
   );
@@ -36,7 +36,7 @@ async function generate() {
             .replace('posts', 'blog')
             .replace('.js', '')
             .replace('.jpg', '')
-            .replace('.md', '');
+            .replace('.mdx', '');
 
           if (path === 'blog/' || path === 'projects/') {
             path = path.slice(0, -1);

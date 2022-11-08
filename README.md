@@ -6,7 +6,9 @@ Sass for styling.
 
 React icons for icons.
 
-Gray-matter and marked to turn .md files into html.
+MDX turn .mdx files into html.
+
+Gray-matter gets the meta data out of .mdx files
 
 ## INSTALL
 
@@ -23,11 +25,11 @@ needs node v14
 
 - new projects (todolist?)
 
-1.3
+1.4
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 - article date modified
-- components in mdx to have codepen/codesandbox integrated
+- add codepen/codesandbox to blog posts
 
 X.X
 - trailing slash urls not working (only prod)
@@ -38,6 +40,7 @@ X.X
 Blog posts
 - css posts: switch button, accordion, dropdown, css-only?
 - use prism in your nextjs markdown (+scss)
+- use mdx with nextjs
 - local ssg site with python
 - props to parent/child
 - mdx to html
