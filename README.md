@@ -29,7 +29,6 @@ needs node v14
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 - article date modified
-- add codepen/codesandbox to blog posts
 
 X.X
 - trailing slash urls not working (only prod)
@@ -43,7 +42,7 @@ Blog posts
 - use mdx with nextjs
 - local ssg site with python
 - props to parent/child
-- mdx to html
+- md to html
 - SSG vs SSR
 - dev.to
 

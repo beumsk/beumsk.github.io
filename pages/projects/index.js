@@ -4,8 +4,8 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
-import Grid from 'components/grid';
-import Tech from 'components/tech';
+import Grid from '@components/grid';
+import Tech from '@components/tech';
 
 export default function Projects({ title, description, url }) {
   const router = useRouter();
@@ -57,16 +57,16 @@ export default function Projects({ title, description, url }) {
         </div>
 
         <div data-aos="fade-up">
-          {filter === '' && <Grid data={projects} className="mt-6 mb-20" />}
+          {filter === '' && <Grid data={projects} className="mt-5 mb-20" />}
           {filter === 'personal' || filter === 'professional' ? (
             <Grid
               data={projects.filter((x) => (filter === 'professional' ? x.type === 'pro' : x.type === 'perso'))}
-              className="mt-6 mb-20"
+              className="mt-5 mb-20"
             />
           ) : (
             <Grid
               data={projects.filter((x) => x.tech[x.tech.findIndex((t) => t.toLowerCase() === filter)] === filter)}
-              className="mt-6 mb-20"
+              className="mt-5 mb-20"
             />
           )}
         </div>

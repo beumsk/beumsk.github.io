@@ -39,7 +39,7 @@ export default function BlogLayout({ children }) {
               <h1 itemProp="headline name">{title}</h1>
               <img src={img} alt={title} width="300" height="150" className="post__img mb-5" itemProp="image" />
 
-              <div className="space-between-x pb-5">
+              <div className="space-between-x mb-10">
                 <div className="post__categories">
                   {categoriesList?.map((c) => (
                     <Link key={c} href={`/blog?${c}`}>
@@ -55,11 +55,11 @@ export default function BlogLayout({ children }) {
                 </time>
               </div>
 
-              <div className="post__content mt-5 mb-10" itemProp="articleBody">
+              <div className="post__content mb-10" itemProp="articleBody">
                 {children}
               </div>
 
-              <div className="pt-4 mb-16">
+              <div className="mb-15">
                 <Link href="/blog">
                   <a className="btn">
                     <AiFillCaretLeft className="mr-1" />
@@ -69,8 +69,8 @@ export default function BlogLayout({ children }) {
               </div>
 
               <div>
-                <p className="related-title">Suggested articles</p>
-                <Grid data={relatedLinks} className="mt-6 mb-20" />
+                <p className="related-title mb-5">Suggested articles</p>
+                <Grid data={relatedLinks} className="mb-20" />
               </div>
             </article>
           </div>

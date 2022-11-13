@@ -4,7 +4,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { posts } from '@data/posts';
 import Layout from '@components/layout';
-import Grid from 'components/grid';
+import Grid from '@components/grid';
 
 export default function Blog({ title, description, url }) {
   const router = useRouter();

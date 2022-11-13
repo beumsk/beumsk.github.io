@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { AiFillCaretLeft } from 'react-icons/ai';
+import { FaGithub } from 'react-icons/fa';
+import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
 import { projects } from '@data/projects';
 import Layout from '@components/layout';
 import Tech from '@components/tech';
-import Codepen from 'components/codepen';
-import Codesandbox from 'components/codesandbox';
+import Codepen from '@components/codepen';
+import Codesandbox from '@components/codesandbox';
 import Grid from '@components/grid';
-import { AiFillCaretLeft } from 'react-icons/ai';
-import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
-import { FaGithub } from 'react-icons/fa';
 
 Tech.propTypes = {
   name: PropTypes.string,
@@ -69,13 +69,13 @@ export default function DynamicProject({ projectss, slug, title, description, im
           {!isPro && proj.sandbox && <Codesandbox sandbox={proj.sandbox} title={proj.title} />}
 
           {isPro && proj.screen && (
-            <figure className="project-screen mb-8">
+            <figure className="project-screen">
               <img src={proj.screen} alt={`Screenshot of ${proj.current}`} width="300" height="400" />
               <figcaption className="sr-only">{`Full size screenshot of ${title} website homepage`}</figcaption>
             </figure>
           )}
 
-          <div className="pt-4 mb-16">
+          <div className="mb-15">
             <Link href="/projects">
               <a className="btn mb-4 mr-4" style={{ verticalAlign: 'bottom' }}>
                 <AiFillCaretLeft className="mr-1" />
@@ -115,8 +115,8 @@ export default function DynamicProject({ projectss, slug, title, description, im
           </div>
 
           <div>
-            <p className="related-title">Suggested projects</p>
-            <Grid data={relatedLinks} className="mt-6 mb-20" />
+            <p className="related-title mb-5">Suggested projects</p>
+            <Grid data={relatedLinks} className="mb-20" />
           </div>
         </div>
       </div>

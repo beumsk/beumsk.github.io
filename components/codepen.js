@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export default function Codepen({ className, pen, title }) {
   return (
     <>
-      <div className={'code-iframe-wrapper ' + className}>
+      <div className={'code-iframe-wrapper ' + (className || '')}>
         <iframe
           height="300"
           scrolling="no"

@@ -4,31 +4,39 @@ header {
   top: 0;
   box-shadow: 0 1px 2px 0 var(--text40);
   z-index: 50;
-  > div {
+
+  >div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   a {
     padding: 12px 8px;
     color: var(--text2);
     text-decoration: none;
+
     &.logo {
       padding: 8px 16px 8px 0;
+
       img {
         height: 30px;
         width: auto;
+
         @media screen and (min-width: 768px) {
           filter: grayscale(1);
         }
+
         transition: filter 0.2s;
       }
+
       &:hover img,
       &:focus img {
         filter: grayscale(0);
       }
     }
   }
+
   .btn {
     margin: 8px 0 8px 16px;
   }

@@ -78,7 +78,7 @@ GridItem.propTypes = {
 
 export default function Grid({ data, className }) {
   return (
-    <div className={'grid ' + className}>
+    <div className={'grid ' + (className || '')}>
       {data.map((item) => {
         return <GridItem key={item.title} item={item} />;
       })}

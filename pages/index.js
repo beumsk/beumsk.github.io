@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import { AiFillCaretRight } from 'react-icons/ai';
+import { MdFileDownload } from 'react-icons/md';
 import { projects } from '@data/projects';
 import { posts } from '@data/posts';
 import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Grid from '@components/grid';
 import Tech from '@components/tech';
-import { MdFileDownload } from 'react-icons/md';
-import { AiFillCaretRight } from 'react-icons/ai';
 
 // export default function Home({ title, description, posts }) {
 export default function Home({ title, description }) {
@@ -92,12 +92,14 @@ export default function Home({ title, description }) {
           <h2>Projects</h2>
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
           <Grid data={projects.filter((x) => x.homepage).slice(0, 3)} className="mt-10 mb-10" />
-          <Link href="/projects">
-            <a className="btn">
-              Check all projects
-              <AiFillCaretRight className="ml-1" />
-            </a>
-          </Link>
+          <div className="btn-wrapper">
+            <Link href="/projects">
+              <a className="btn">
+                Check all projects
+                <AiFillCaretRight className="ml-1" />
+              </a>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -106,12 +108,14 @@ export default function Home({ title, description }) {
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the latest posts.</p>
           <Grid data={posts.slice(0, 3)} className="mt-10 mb-10" />
-          <Link href="/blog">
-            <a className="btn">
-              Check all posts
-              <AiFillCaretRight className="ml-1" />
-            </a>
-          </Link>
+          <div className="btn-wrapper">
+            <Link href="/blog">
+              <a className="btn">
+                Check all posts
+                <AiFillCaretRight className="ml-1" />
+              </a>
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>

@@ -3,9 +3,11 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-gap: 80px;
   padding: 20px 10px;
+
   @media screen and (min-width: 600px) {
     padding: 20px;
   }
+
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 40px;
@@ -17,26 +19,34 @@
   position: relative;
   aspect-ratio: 16/9;
   margin: 0 10px;
+
   @media screen and (min-width: 600px) {
     margin: 0;
   }
+
   .card__behind {
     width: 100%;
     height: 100%;
     top: 20px;
     left: 20px;
     box-shadow: var(--shadows4);
+
     @media screen and (min-width: 768px) {
       top: 0;
       left: 0;
     }
+
     position: absolute;
     background: var(--bg2);
-    transition: all 0.2s, top 0.2s linear, left 0.2s linear;
+    transition: all 0.2s,
+    top 0.2s linear,
+    left 0.2s linear;
+
     a:focus {
       z-index: 2;
       background: var(--text10);
     }
+
     .card__title {
       padding: 8px 16px;
       position: absolute;
@@ -47,18 +57,22 @@
       font-size: 2.1rem;
       line-height: 1;
       text-decoration: none;
+
       h2 {
         margin: 0;
+
         svg {
           vertical-align: text-top;
         }
       }
     }
+
     .card__links {
       position: absolute;
       right: 0;
       display: flex;
       flex-direction: column;
+
       a {
         display: inline-block;
         padding: 8px;
@@ -68,6 +82,7 @@
         transition: all 0.2s;
         color: var(--text2);
         font-size: 2rem;
+
         &:hover,
         &:focus {
           color: var(--primary);
@@ -75,6 +90,7 @@
       }
     }
   }
+
   .card__img {
     width: 100%;
     height: 100%;
@@ -85,6 +101,7 @@
     box-shadow: var(--shadow);
     top: -20px;
     left: -20px;
+
     @media screen and (min-width: 768px) {
       top: 0;
       left: 0;
@@ -92,6 +109,7 @@
       border-top: solid 1px var(--bg2);
       border-left: solid 1px var(--bg2);
     }
+
     img {
       display: block;
       object-fit: cover;
@@ -101,6 +119,7 @@
       transition: all 0.2s;
     }
   }
+
   &:hover,
   &:focus,
   &:focus-within {
@@ -108,10 +127,12 @@
       top: 20px;
       left: 20px;
     }
+
     .card__img {
       box-shadow: var(--shadow);
       top: -20px;
       left: -20px;
+
       img {
         filter: brightness(110%);
       }
