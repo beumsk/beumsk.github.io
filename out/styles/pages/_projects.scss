@@ -1,4 +1,5 @@
 @media screen and (min-width: 992px) {
+
   .project-shape,
   .projects-shape {
     &::before {
@@ -9,6 +10,7 @@
       transform: rotate(100deg);
     }
   }
+
   .projects-shape {
     &::before {
       width: 30px;
@@ -17,12 +19,14 @@
       right: 40px;
       animation: shape-projects 53s infinite alternate linear;
     }
+
     @keyframes shape-projects {
       100% {
         transform: translate(-350px, 20px);
       }
     }
   }
+
   .project-shape {
     &::before {
       width: 50px;
@@ -31,6 +35,7 @@
       right: 80px;
       animation: shape-project 53s infinite alternate linear;
     }
+
     @keyframes shape-project {
       100% {
         transform: translate(-350px, 120px);
@@ -42,19 +47,22 @@
 .tech-list {
   padding-left: 0;
   list-style-type: none;
-  > li,
-  > a {
+
+  >li,
+  >a {
     font-size: 1.2rem;
     text-transform: uppercase;
     margin-right: 8px;
     margin-bottom: 8px;
     display: inline-flex;
+
     svg {
       width: 16px;
       height: 16px;
       margin-right: 8px;
       transition: color 0.2s;
     }
+
     &:not(.active):hover svg {
       color: var(--primary) !important;
     }
@@ -65,4 +73,5 @@ figure.project-screen {
   background: var(--text10);
   border: solid 1px var(--light-grey);
   box-shadow: var(--shadows6);
+  margin-bottom: 52px;
 }

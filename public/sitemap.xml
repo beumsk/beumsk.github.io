@@ -6,7 +6,7 @@
 >
   <url>
     <loc>https://remybeumier.be/</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2022-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -27,7 +27,7 @@
 
   <url>
     <loc>https://remybeumier.be/projects</loc>
-    <lastmod>2022-06-30</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -272,7 +272,7 @@
 
   <url>
     <loc>https://remybeumier.be/blog</loc>
-    <lastmod>2022-11-05</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
