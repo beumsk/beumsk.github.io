@@ -9,7 +9,6 @@ import Logo from '@components/logo';
 import Grid from '@components/grid';
 import Tech from '@components/tech';
 
-// export default function Home({ title, description, posts }) {
 export default function Home({ title, description }) {
   const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
 
