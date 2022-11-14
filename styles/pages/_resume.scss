@@ -38,6 +38,7 @@
   .name {
     grid-area: name;
   }
+
   @media (min-width: 480px) {
     .name {
       display: -webkit-box;
@@ -165,6 +166,7 @@
     color: white;
     transition: color 0.2s, background-color 0.2s;
   }
+
   a:hover,
   a:focus {
     color: lightgrey;

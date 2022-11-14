@@ -12,6 +12,7 @@
       right: 40px;
       animation: shape-error 53s infinite alternate linear;
     }
+
     @keyframes shape-error {
       100% {
         transform: translate(-350px, 320px);
