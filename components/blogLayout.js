@@ -10,6 +10,9 @@ import { posts } from '@data/posts';
 import Layout from '@components/layout';
 import Grid from '@components/grid';
 
+const convertDate = (d) =>
+  d === '' ? 'No date' : `${new Date(d).getDate()}.${new Date(d).getMonth() + 1}.${new Date(d).getFullYear()}`;
+
 export default function BlogLayout({ children }) {
   const router = useRouter();
   useEffect(() => {
@@ -17,12 +20,7 @@ export default function BlogLayout({ children }) {
   }, [router]);
 
   const post = posts.filter((p) => p.slug === router.asPath.replace('/blog/', ''));
-  const { title, intro, img, date, categories, url } = post[0];
-
-  const processedDate =
-    date === ''
-      ? 'No date'
-      : `${new Date(date).getDate()}.${new Date(date).getMonth() + 1}.${new Date(date).getFullYear()}`;
+  const { title, intro, img, published, modified, categories, url } = post[0];
 
   const categoriesList = categories?.split(', ').filter((x) => x);
 
@@ -32,7 +30,7 @@ export default function BlogLayout({ children }) {
 
   return (
     <>
-      <Layout title={`${title} | Blog | Rémy Beumier`} description={intro} img={img} url={url} itemtype="Article">
+      <Layout title={`${title} | Blog | Rémy Beumier`} description={intro} itemtype="Article" {...post[0]}>
         <div className="container narrow posts-shape">
           <div data-aos="fade-left">
             <article>
@@ -49,10 +47,24 @@ export default function BlogLayout({ children }) {
                     </Link>
                   ))}
                 </div>
-                {/* TODO: add dateModified */}
-                <time className="post__date" itemProp="datePublished" content={processedDate} dateTime={processedDate}>
-                  {processedDate}
-                </time>
+                <div>
+                  <time
+                    className="post__date"
+                    itemProp="datePublished"
+                    content={convertDate(published)}
+                    dateTime={convertDate(published)}
+                  >
+                    Published on: {convertDate(published)}
+                  </time>
+                  <time
+                    className="post__date"
+                    itemProp="dateModified"
+                    content={convertDate(modified)}
+                    dateTime={convertDate(modified)}
+                  >
+                    Modified on: {convertDate(modified)}
+                  </time>
+                </div>
               </div>
 
               <div className="post__content mb-10" itemProp="articleBody">

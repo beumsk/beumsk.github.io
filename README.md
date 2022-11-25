@@ -24,11 +24,11 @@ needs node v14
 ## TODO
 
 - new projects (todolist?)
+- figure out why the github ci doesn't build properly
 
 1.4
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
-- article date modified
 
 X.X
 - trailing slash urls not working (only prod)

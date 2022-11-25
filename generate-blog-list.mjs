@@ -15,14 +15,15 @@ export const getPosts = () => {
         title: data.title,
         intro: data.intro || '',
         img: `/images/posts/${slug}.jpg`,
-        date: data.date || '',
+        published: data.published || '',
+        modified: data.modified || '',
         categories: data.categories || '',
         link: `/blog/${slug}`,
         url: `https://remybeumier.be/blog/${slug}`,
       };
     })
     .filter((x) => x.title);
-  return allPostsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return allPostsData.sort((a, b) => new Date(b.published) - new Date(a.published));
 };
 
 async function generate() {
