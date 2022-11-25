@@ -33,10 +33,12 @@ export default function Layout({ img, title, description, url, children, itemtyp
       <Head>
         <title key="title">{title}</title>
         <meta name="description" content={description} key="description" />
+
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />
         <meta property="og:url" content={url || 'https://remybeumier.be'} key="og:url" />
         <meta property="og:image" content={fullImageUrl || 'https://remybeumier.be/images/rb.jpg'} key="og:image" />
+
         <meta property="twitter:title" content={title} key="twitter:title" />
         <meta property="twitter:description" content={description} key="twitter:description" />
         <meta property="twitter:url" content={url || 'https://remybeumier.be'} key="twitter:url" />
@@ -45,6 +47,7 @@ export default function Layout({ img, title, description, url, children, itemtyp
           content={fullImageUrl || 'https://remybeumier.be/images/rb.jpg'}
           key="twitter:image"
         />
+
         {published && <meta property="article:published_time" content={published} />}
         {modified && <meta property="article:modified_time" content={modified} />}
       </Head>
