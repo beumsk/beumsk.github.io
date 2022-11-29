@@ -24,7 +24,7 @@ needs node v14
 ## TODO
 
 - new projects (todolist?)
-- figure out why the github ci doesn't build properly
+- figure out why the github ci doesn't build properly -> /gh-pages doesn't get the commit
 
 1.4
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills

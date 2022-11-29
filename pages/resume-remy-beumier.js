@@ -43,10 +43,21 @@ export default function Resume({ title, description, url }) {
               <MdWorkOutline title="Experience" aria-labelledby="Experience" />
             </span>
           </h2>
+
           <div className="item">
-            <h3>Integrator</h3>
+            <h3>Front-end Developer</h3>
+            <p className="detail">BICS // August 2022 - December 2022</p>
+            <ul>
+              <li>React Component Library based on Figma and built with Ant Design, Less and Storybook.</li>
+              <li>JavaScript Component Library based on Figma and built with JS, Sass and Storybook.</li>
+            </ul>
+          </div>
+
+          <div className="item">
+            <h3>Front-end Developer & Integrator</h3>
             <p className="detail">Positive Thinking Company // November 2020 - Now</p>
             <ul>
+              <li>Paris Padel Major website built with React, Emotion and styled-system.</li>
               <li>African hotels website built with React, Emotion and styled-system.</li>
               <li>Canadian zoo website built with React, Emotion and styled-system.</li>
               <li>E-commerce project from scratch working with Angular, PrimeNG and Sass.</li>
@@ -61,18 +72,6 @@ export default function Resume({ title, description, url }) {
               <li>Umbraco CMS: Creation of websites with HTML, CSS, JS and C#.</li>
               <li>Sharepoint: Creation of custom web parts with HTML, CSS and JS.</li>
               <li>Adobe Experience Manager: Creation of custom pages with HTML, CSS and JS.</li>
-            </ul>
-          </div>
-
-          <div className="item">
-            <h3>Front-end Developer</h3>
-            <p className="detail">FreeCodeCamp.org // December 2016 - Now</p>
-            <ul>
-              <li>HTML: HTML5 and Accessibility.</li>
-              <li>CSS: CSS3, Responsiveness, Sass and Bootstrap.</li>
-              <li>Javascript: ES6, jQuery and Json.</li>
-              <li>React: Props, Hooks and Redux.</li>
-              <li>Git: Github.</li>
             </ul>
           </div>
         </section>
@@ -138,16 +137,6 @@ export default function Resume({ title, description, url }) {
               </a>
               <span className="print-only"> (https://dev.to/beumsk)</span>
             </li>
-            {/* <li>
-              <a
-                href="https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Umbraco article
-              </a>
-              <span className="print-only"> (https://24days.in/umbraco-cms/2019/responsive-hybrid-navigation)</span>
-            </li> */}
           </ul>
         </section>
 
@@ -159,9 +148,10 @@ export default function Resume({ title, description, url }) {
             </span>
           </h2>
           <ul className="list-block">
-            <li>HTML5 - Pug</li>
-            <li>CSS3 - Sass - CSS-in-JS</li>
-            <li>Bootstrap - Bulma - Tailwind - Material UI</li>
+            <li>HTML5 - Accessibility</li>
+            <li>CSS3 - Sass - Less - CSS-in-JS</li>
+            <li>Bootstrap - Bulma - Tailwind</li>
+            <li>Material UI - Ant Design</li>
             <li>JavaScript - ES6 - JSX - Typescript - jQuery</li>
             <li>React, Redux</li>
             <li>Git - Github</li>
