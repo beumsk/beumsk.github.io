@@ -77,6 +77,17 @@ export const posts = [
     url: 'https://remybeumier.be/blog/nextjs-dark-mode',
   },
   {
+    slug: 'css-only-toggle-switch-button',
+    title: 'CSS only toggle switch button',
+    intro: 'How to design a CSS only and accessible toggle switch button',
+    img: '/images/posts/css-only-toggle-switch-button.jpg',
+    published: '2022-01-03',
+    modified: '2022-01-04',
+    categories: 'css, tutorial',
+    link: '/blog/css-only-toggle-switch-button',
+    url: 'https://remybeumier.be/blog/css-only-toggle-switch-button',
+  },
+  {
     slug: 'markdown-tutorial',
     title: 'Markdown Tutorial',
     intro: 'Introduction tutorial to the Markdown language',
