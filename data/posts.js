@@ -1,11 +1,22 @@
 export const posts = [
   {
+    slug: 'css-only-toggle-switch-button',
+    title: 'CSS only toggle switch button',
+    intro: 'How to design a CSS only and accessible toggle switch button',
+    img: '/images/posts/css-only-toggle-switch-button.jpg',
+    published: '2023-01-03',
+    modified: '2023-01-04',
+    categories: 'css, tutorial',
+    link: '/blog/css-only-toggle-switch-button',
+    url: 'https://remybeumier.be/blog/css-only-toggle-switch-button',
+  },
+  {
     slug: 'css-only-responsive-navbar',
     title: 'CSS only responsive Navbar',
     intro: 'How to build a CSS responsive navigation bar menu without JavaScript',
     img: '/images/posts/css-only-responsive-navbar.jpg',
     published: '2022-10-31',
-    modified: '2022-11-08',
+    modified: '2023-01-04',
     categories: 'css, tutorial',
     link: '/blog/css-only-responsive-navbar',
     url: 'https://remybeumier.be/blog/css-only-responsive-navbar',

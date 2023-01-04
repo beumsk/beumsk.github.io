@@ -24,7 +24,6 @@ needs node v14
 ## TODO
 
 - new projects (todolist?)
-- figure out why the github ci doesn't build properly -> /gh-pages doesn't get the commit
 
 1.4
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
@@ -57,6 +56,72 @@ yarn deploy
 
 Commit and Push your changes to master.
 This will trigger Github Action and deploy the changes to gh-pages.
+
+## BLOG POSTS
+
+- Create a new .mdx file under `/pages/blog`
+- Give it a powerful name
+- Add the meta data at the very top
+  ```
+  ---
+  title: 'Post title'
+  intro: 'Post longer title or intro'
+  published: '2022-12-30'
+  modified: '2022-12-31'
+  categories: 'next.js, css, tutorial, analytics'
+  ---
+  ```
+- Write the post with keywords, speaking with we, code examples and a final result on codepen or codesandbox
+- Review spell on https://languagetool.org/
+- Create blog post image: https://codepen.io/beumsk/full/wvjYygY
+
+## PROJECTS
+
+### PRO
+
+- Add en entry in data/projects.js
+  ```
+  {
+    title: 'project title',
+    link: '/projects/project-title',
+    intro: 'Project intro text',
+    current: 'https://www.current-link.com/',
+    past: 'https://web.archive.org/web/xxxxxxxxxxx/https://past-link.com/',
+    img: '/images/projects/project-title.jpg',
+    screen: '/images/projects/project-title-screen.png',
+    tech: ['tech1', 'tech2'],
+    chall: [
+      'First challenge',
+      'Second challenge',
+    ],
+    homepage: true,
+    type: 'pro',
+  },
+  ```
+- Add an miniature image
+- Add a full size screenshot of live version if it's a professional project
+
+### PERSO
+
+- Add en entry in data/projects.js
+  ```
+  {
+    title: 'project title',
+    link: '/projects/project-title',
+    intro: 'Project intro text',
+    img: '/images/projects/project-title.jpg',
+    pen: 'xxxxxx',
+    sandbox: 'sandbox-title-xxxxxx',
+    tech: ['tech1', 'tech2'],
+    chall: [
+      'First challenge',
+      'Second challenge',
+    ],
+    homepage: true,
+    type: 'perso',
+    }
+  ```
+- Add an miniature image
 
 ## ANALYTICS
 
