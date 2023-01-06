@@ -11,7 +11,7 @@
     "local": "npm run blog && next build && next start",
     "analyze": "cross-env ANALYZE=true next build",
     "export": "next export",
-    "deploy": "npm run blog && npm run sitemap && npm run build && npm run export",
+    "deploy": "npm run blog && npm run build && npm run export",
     "sitemap": "node ./generate-sitemap.mjs",
     "blog": "node ./generate-blog-list.mjs"
   },

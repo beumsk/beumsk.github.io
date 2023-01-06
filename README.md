@@ -21,22 +21,34 @@ yarn dev
 
 needs node v14
 
+## DEPLOY
+
+Ensure you updated the sitemap with `npm run sitemap` or `yarn sitemap`
+
+Also make sure your linter is error-free with `npm run lint` or `yarn lint`
+
+Deployment should be managed by the pipeline (`npm run deploy` or `yarn deploy`)
+
+Commit and Push your changes to master.
+This will trigger Github Action and deploy the changes to gh-pages.
+
 ## TODO
 
-- new projects (todolist?)
+- add new projects (todolist?)
 
 1.4
+- rework sitemap: basing on modified date of item is wrong with github pipeline -> use real dates
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 
 X.X
-- trailing slash urls not working (only prod)
+- trailing slash urls not working (issue with github)
 - add more images of features/pages?
 - low res images (automate without next-optimized-images)
 - rethink scss structure (BEM?)
 
 Blog posts
-- css posts: switch button, accordion, dropdown, css-only?
+- css posts: accordion, dropdown, css-only?
 - use prism in your nextjs markdown (+scss)
 - use mdx with nextjs
 - local ssg site with python
@@ -44,18 +56,6 @@ Blog posts
 - md to html
 - SSG vs SSR
 - dev.to
-
-## DEPLOY
-
-```
-npm run lint
-yarn lint
-npm run deploy
-yarn deploy
-```
-
-Commit and Push your changes to master.
-This will trigger Github Action and deploy the changes to gh-pages.
 
 ## BLOG POSTS
 
@@ -119,7 +119,7 @@ This will trigger Github Action and deploy the changes to gh-pages.
     ],
     homepage: true,
     type: 'perso',
-    }
+  }
   ```
 - Add an miniature image
 
