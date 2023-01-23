@@ -31,9 +31,9 @@ export default function Home({ title, description }) {
         <div className="container" data-aos="fade-right">
           <div className="cols cols-lg">
             <div className="col">
-              <h2>I'm Rémy, I am a Web Lover based in Brussels and I specialise in Front-end Development.</h2>
+              <h2>I'm Rémy, I'm a Web Lover based in Brussels and I specialise in Front-end Development.</h2>
               <p>
-                Since my young years, I have always enjoyed building things. I started developing my hunger for{' '}
+                Ever since my young years, I have always enjoyed building things. I started developing my passion for{' '}
                 <strong>creation</strong> with Lego, continued with Minecraft and ultimately discovered{' '}
                 <strong>Web development</strong>.
               </p>
@@ -43,13 +43,15 @@ export default function Home({ title, description }) {
                 <strong>front-end</strong> technologies.
               </p>
               <p>
-                I now code everyday for a living and as a hobby with the powerful trio <strong>HTML</strong>,{' '}
-                <strong>CSS</strong> and <strong>JavaScript</strong>, as well as some additional frameworks and
-                libraries such as <strong>Bootstrap</strong>, <strong>Sass</strong> and <strong>jQuery</strong>.
+                I began coding everyday for a living and as a hobby with <strong>HTML</strong>, <strong>CSS</strong> and
+                <strong>JavaScript</strong>. I could improve my skills step by step by working as a team player, using
+                <strong>Git</strong>, <strong>Agile</strong> methodologies, <strong>NPM</strong> and{' '}
+                <strong>Figma</strong>, among others.
               </p>
-              <p className="mb-5">
-                I've recently jumped into coding with <strong>React</strong>, and I'm grasping its power and complexity
-                combined with Hooks, Redux, Material UI, and many more.
+              <p>
+                <strong>React</strong> is now an essential part of my daily coding routine, combined with{' '}
+                <strong>Redux</strong>, <strong>Ant Design</strong>,<strong>Sass</strong>, <strong>CSS-in-JS</strong>{' '}
+                and many more.
               </p>
               <Link href="/resume-remy-beumier">
                 <a className="btn mb-4 mr-4" target="_blank">
