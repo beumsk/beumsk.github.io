@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import Header from 'components/header';
-import Footer from 'components/footer';
-import Breadcrumb from 'components/breadcrumb';
-// import MobileNav from 'components/mobileNav';
+import Header from '@components/header';
+import Footer from '@components/footer';
+import Breadcrumb from '@components/breadcrumb';
+// import MobileNav from '@components/mobileNav';
 
 export default function Layout({ img, title, description, url, children, itemtype, published, modified }) {
   const [theme, setTheme] = useState('');

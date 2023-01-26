@@ -48,7 +48,7 @@ X.X
 - rethink scss structure (BEM?)
 
 Blog posts
-- css posts: accordion, dropdown, css-only?
+- css posts: dropdown, input with label animation
 - use prism in your nextjs markdown (+scss)
 - use mdx with nextjs
 - local ssg site with python
