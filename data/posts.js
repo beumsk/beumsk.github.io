@@ -1,5 +1,16 @@
 export const posts = [
   {
+    slug: 'css-only-accordion',
+    title: 'CSS only accordion',
+    intro: 'How to design a CSS only and accessible accordion',
+    img: '/images/posts/css-only-accordion.jpg',
+    published: '2023-01-27',
+    modified: '2023-01-27',
+    categories: 'css, tutorial',
+    link: '/blog/css-only-accordion',
+    url: 'https://remybeumier.be/blog/css-only-accordion',
+  },
+  {
     slug: 'css-only-toggle-switch-button',
     title: 'CSS only toggle switch button',
     intro: 'How to design a CSS only and accessible toggle switch button',
