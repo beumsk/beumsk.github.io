@@ -19,9 +19,9 @@
   "author": "Rémy Beumier",
   "license": "ISC",
   "dependencies": {
-    "@mdx-js/loader": "^2.1.5",
-    "@mdx-js/react": "^2.1.5",
-    "@next/mdx": "^13.0.2",
+    "@mdx-js/loader": "2.1.5",
+    "@mdx-js/react": "2.1.5",
+    "@next/mdx": "13.0.2",
     "aos": "2.3.4",
     "cross-env": "7.0.3",
     "eslint": "7.32.0",
@@ -36,7 +36,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "4.3.1",
-    "remark-frontmatter": "^4.0.1",
+    "remark-frontmatter": "4.0.1",
     "sass": "1.37.5"
   },
   "devDependencies": {},
