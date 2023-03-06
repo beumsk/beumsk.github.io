@@ -70,7 +70,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
 
           {isPro && proj.screen && (
             <figure className="project-screen">
-              <img src={proj.screen} alt={`Screenshot of ${proj.current}`} width="300" height="400" />
+              <img src={proj.screen} alt={`Screenshot of ${proj.current}`} width="300" height="400" loading="lazy" />
               <figcaption className="sr-only">{`Full size screenshot of ${title} website homepage`}</figcaption>
             </figure>
           )}
