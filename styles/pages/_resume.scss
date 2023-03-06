@@ -3,7 +3,7 @@
   min-height: 100vh;
   line-height: 1.3;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  color: white;
+  color: #fcfcfc;
   background: #009688;
   background-image: linear-gradient(135deg, #00796b 50%, #009688 50%);
   background-image: linear-gradient(135deg, #26a69a, #004d40);
@@ -163,7 +163,7 @@
   }
 
   a {
-    color: white;
+    color: #fcfcfc;
     transition: color 0.2s, background-color 0.2s;
   }
 
@@ -268,15 +268,15 @@
       display: inline-block;
       margin: 0 0 8px 0;
       padding: 4px 8px;
-      border: solid 1px white;
+      border: solid 1px #fcfcfc;
       text-decoration: none;
       color: #333;
-      background: white;
+      background: #fcfcfc;
     }
 
     .cta a:hover,
     .cta a:focus {
-      color: white;
+      color: #fcfcfc;
       background: transparent;
     }
   }

@@ -5,7 +5,7 @@ main {
   --primary-lightest: #b2dfdb;
   --secondary: ;
   --action: ;
-  --text: #000000;
+  --text: #111111;
   --text2: #333333;
   --text3: #454545;
   --dark: #333333;
@@ -15,7 +15,7 @@ main {
   --light: #eeeeee;
   --bg3: #dddddd;
   --bg2: #eeeeee;
-  --bg: #ffffff;
+  --bg: #fcfcfc;
   --bg10: rgba(256, 256, 256, 0.1);
   --bg20: rgba(256, 256, 256, 0.2);
   --bg40: rgba(256, 256, 256, 0.4);
@@ -32,12 +32,12 @@ main {
 }
 
 main.dark {
-  --text: #ffffff;
+  --text: #fcfcfc;
   --text2: #eeeeee;
   --text3: #dddddd;
   --bg3: #454545;
   --bg2: #333333;
-  --bg: #000000;
+  --bg: #111111;
   --bg10: rgba(0, 0, 0, 0.1);
   --bg20: rgba(0, 0, 0, 0.2);
   --bg40: rgba(0, 0, 0, 0.4);
@@ -54,18 +54,18 @@ main.dark {
   }
 
   .svg-divider::before {
-    filter: invert(1);
+    filter: invert(0.94);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   main {
-    --text: #ffffff;
+    --text: #fcfcfc;
     --text2: #eeeeee;
     --text3: #dddddd;
     --bg3: #454545;
     --bg2: #333333;
-    --bg: #000000;
+    --bg: #111111;
     --bg10: rgba(0, 0, 0, 0.1);
     --bg20: rgba(0, 0, 0, 0.2);
     --bg40: rgba(0, 0, 0, 0.4);
@@ -82,18 +82,18 @@ main.dark {
     }
 
     .svg-divider::before {
-      filter: invert(1);
+      filter: invert(0.94);
     }
   }
 
   // TODO: check that this actually works
   main.light {
-    --text: #000000;
+    --text: #111111;
     --text2: #333333;
     --text3: #454545;
     --bg3: #dddddd;
     --bg2: #eeeeee;
-    --bg: #ffffff;
+    --bg: #fcfcfc;
     --bg10: rgba(256, 256, 256, 0.1);
     --bg20: rgba(256, 256, 256, 0.2);
     --bg40: rgba(256, 256, 256, 0.4);
