@@ -43,14 +43,14 @@ export default function Home({ title, description }) {
                 <strong>front-end</strong> technologies.
               </p>
               <p>
-                I began coding everyday for a living and as a hobby with <strong>HTML</strong>, <strong>CSS</strong> and
-                <strong>JavaScript</strong>. I could improve my skills step by step by working as a team player, using
+                I began coding everyday for a living and as a hobby with <strong>HTML</strong>, <strong>CSS</strong> and{' '}
+                <strong>JavaScript</strong>. I could improve my skills step by step by working as a team player, using{' '}
                 <strong>Git</strong>, <strong>Agile</strong> methodologies, <strong>NPM</strong> and{' '}
                 <strong>Figma</strong>, among others.
               </p>
               <p className="mb-5">
                 <strong>React</strong> is now an essential part of my daily coding routine, combined with{' '}
-                <strong>Redux</strong>, <strong>Ant Design</strong>,<strong>Sass</strong>, <strong>CSS-in-JS</strong>{' '}
+                <strong>Redux</strong>, <strong>Ant Design</strong>, <strong>Sass</strong>, <strong>CSS-in-JS</strong>{' '}
                 and many more.
               </p>
               <Link href="/resume-remy-beumier">
