@@ -1,0 +1,158 @@
+---
+title: 'Setup Sass in the best way'
+intro: 'How to setup Sass with the best compiling settings and start developing with it'
+published: '2023-04-06'
+modified: '2023-04-06'
+categories: 'sass, css, tutorial'
+---
+
+import BlogLayout from '@components/blogLayout';
+import Codesandbox from '@components/codesandbox';
+
+So far in this blog, I have mostly written about Next.js and CSS. Today, I will focus on a topic that I consider to be in between those two. I love CSS very much and there comes a point in a project where I want to abstract, sharpen or simply be able to nest selectors. That's where Sass comes into play. I know there are alternative CSS preprocessors in the likes of Less or Stylus, but I have always used Sass the most.
+
+<blockquote>
+  Sass (Syntactically Awesome Style Sheets) is a stylesheet language that’s compiled to CSS. It allows you to use
+  variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large
+  stylesheets well-organized and makes it easy to share design within and across projects.
+  <cite>sass-lang.com</cite>
+</blockquote>
+
+Before diving into Sass, it's important to differentiate its two syntaxes:
+
+- The original syntax (.sass), known as SASS, using indentation to define blocks of code
+- The newer syntax (.scss), known as SCSS, similar to CSS syntaxes
+
+In this piece, I will use the SCSS syntax over the Sass one because I find it more readable.
+
+Some frontend frameworks give you a working environment with Sass compiling capabilities out of the box. Create React App does for example. But how do you set up the Sass compiler on your own?
+
+## Installing Sass
+
+_I assume you already have Node and NPM installed on your machine and you have started your project with `npm init`._
+
+First things first, let's install Sass. Forget about node-sass and others, the advised way is to use Dart Sass today.
+
+```plaintext
+npm i sass
+yarn add sass
+```
+
+The next step is to compile the Sass we have into formal CSS.
+
+## Compile Sass
+
+Let's create a .scss file with a few lines.
+
+```scss
+// src/scss/style.scss
+.example {
+  color: blue;
+  &:hover {
+    color: red;
+  }
+}
+```
+
+In our package.json, we want to add a script that will compile that Sass file.
+
+```json
+"scripts": {
+  "sass": "sass src/scss/style.scss public/css/style.css"
+}
+```
+
+We should then find the following CSS in `public/css/style.css`.
+
+```css
+/* public/css/style.css */
+.example {
+  color: blue;
+}
+.example:hover {
+  color: red;
+}
+```
+
+Do we need to run that command every time we change our CSS? Of course not. Let's see how to avoid that in the next section.
+
+## Settings
+
+There are various settings that will help us tailor our compiling behavior and output.
+
+The first one is the most useful; The `--watch` option, or `-w`, will watch your specified Sass files and compile at any change.
+
+```json
+"scripts": {
+  "sass": "sass src/scss/style.scss public/css/style.css --watch"
+}
+```
+
+The second one I use is the `--no-source-map` option, which prevents the generation of a source map in the outputted .css file.
+
+```json
+"scripts": {
+  "sass": "sass src/scss/style.scss public/css/style.css --no-source-map"
+}
+```
+
+Another setting is the `--style`. By defining it to `compressed`, we will receive a minimized CSS file.
+
+```json
+"scripts": {
+  "sass": "sass src/scss/style.scss public/css/style.css --style=compressed"
+}
+```
+
+The last point we will see in this section is about compiling multiple files. The first script will compile two (or more) different Sass stylesheets, while the second one will compile all the Sass files in `src/scss` and output them in `public/css`.
+
+```json
+"scripts": {
+  "sass-two": "sass src/scss/first.scss:public/css/first.css src/scss/second.scss:public/css/second.css",
+  "sass-folder": "sass src/scss:public/css"
+}
+```
+
+Please find <a href="https://sass-lang.com/documentation/cli/dart-sass" target="_blank">more about settings in the official documentation.</a>
+
+## Add autoprefixer
+
+I would love that Sass CLI would handle autoprefixer, but as far as I know it's not the case. Autoprefixer will go through your CSS and, based on the level of browser compatibility you need, will output a new version with necessary specific browser prefixes.
+
+We will need other packages to be able to use autoprefixer.
+
+```plaintext
+npm i postcss postcss-cli autoprefixer
+yarn add postcss postcss-cli autoprefixer
+```
+
+And another script in our package.json.
+
+```json
+"scripts": {
+  "prefix": "postcss public/css/style.css --replace --use autoprefixer -b 'defaults' --no-map"
+}
+```
+
+Now that we have discussed all those settings, let's take a look at the scripts that I prefer to use for compiling Sass.
+
+```json
+"scripts": {
+  "watch": "sass src/scss/style.scss public/css/style.css --no-source-map --watch",
+  "sass": "sass src/scss/style.scss public/css/style.css --no-source-map --style=compressed",
+  "prefix": "postcss public/css/style.css --replace --use autoprefixer -b 'defaults' --no-map",
+  "compile": "npm run sass && npm run prefix"
+}
+```
+
+We have `watch` that we would use during development to compile on every change in our Sass and we have `compile` which will be useful for production by compiling and compressing our .scss files while improving cross-browser compatibility.
+
+**TLDR**: <a href="https://codesandbox.io/p/sandbox/setup-sass-jbjjlx" target="_blank">Codesandbox: Setup Sass in the best way</a>.
+
+<Codesandbox sandbox="setup-sass-climu2" title="Setup Sass in the best way" />
+
+I find Sass really useful and enjoyable, but I often forget how to set it up. I hope this guide will help you leverage the best of CSS by making it more efficient and maintainable.
+
+Enjoy coding with Sass!
+
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

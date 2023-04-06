@@ -117,6 +117,15 @@
     padding: 8px 0 8px 16px;
     border-left: solid 8px var(--bg3);
     font-style: italic;
+
+    cite {
+      display: block;
+      margin-top: 8px;
+
+      &::before {
+        content: '—';
+      }
+    }
   }
 
   /* Prism overrides for dark theme */
