@@ -50,8 +50,8 @@ X.X
 - rethink scss structure (BEM?)
 
 Blog posts
-- css posts: dropdown, input with label animation
 - use prism in your nextjs markdown (+scss)
+- css posts: dropdown, input with label animation
 - use mdx with nextjs
 - local ssg site with python
 - props to parent/child

@@ -1,8 +1,8 @@
 ---
-title: 'Setup Sass in the best way'
-intro: 'How to setup Sass with the best compiling settings and start developing with it'
+title: 'Set up Sass in the best way'
+intro: 'How to set up Sass with the best compiling settings and start developing with it'
 published: '2023-04-06'
-modified: '2023-04-06'
+modified: '2023-04-07'
 categories: 'sass, css, tutorial'
 ---
 
@@ -33,8 +33,8 @@ _I assume you already have Node and NPM installed on your machine and you have s
 
 First things first, let's install Sass. Forget about node-sass and others, the advised way is to use Dart Sass today.
 
-```plaintext
-npm i sass
+```shell
+npm install sass
 yarn add sass
 ```
 
@@ -121,8 +121,8 @@ I would love that Sass CLI would handle autoprefixer, but as far as I know it's 
 
 We will need other packages to be able to use autoprefixer.
 
-```plaintext
-npm i postcss postcss-cli autoprefixer
+```shell
+npm install postcss postcss-cli autoprefixer
 yarn add postcss postcss-cli autoprefixer
 ```
 
@@ -148,8 +148,6 @@ Now that we have discussed all those settings, let's take a look at the scripts 
 We have `watch` that we would use during development to compile on every change in our Sass and we have `compile` which will be useful for production by compiling and compressing our .scss files while improving cross-browser compatibility.
 
 **TLDR**: <a href="https://codesandbox.io/p/sandbox/setup-sass-jbjjlx" target="_blank">Codesandbox: Setup Sass in the best way</a>.
-
-<Codesandbox sandbox="setup-sass-climu2" title="Setup Sass in the best way" />
 
 I find Sass really useful and enjoyable, but I often forget how to set it up. I hope this guide will help you leverage the best of CSS by making it more efficient and maintainable.
 

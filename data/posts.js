@@ -1,14 +1,14 @@
 export const posts = [
   {
-    slug: 'setup-sass-in-the-best-way',
-    title: 'Setup Sass in the best way',
-    intro: 'How to setup Sass with the best compiling settings and start developing with it',
-    img: '/images/posts/setup-sass-in-the-best-way.jpg',
+    slug: 'set-up-sass-in-the-best-way',
+    title: 'Set up Sass in the best way',
+    intro: 'How to set up Sass with the best compiling settings and start developing with it',
+    img: '/images/posts/set-up-sass-in-the-best-way.jpg',
     published: '2023-04-06',
-    modified: '2023-04-06',
+    modified: '2023-04-07',
     categories: 'sass, css, tutorial',
-    link: '/blog/setup-sass-in-the-best-way',
-    url: 'https://remybeumier.be/blog/setup-sass-in-the-best-way',
+    link: '/blog/set-up-sass-in-the-best-way',
+    url: 'https://remybeumier.be/blog/set-up-sass-in-the-best-way',
   },
   {
     slug: 'css-only-accordion',

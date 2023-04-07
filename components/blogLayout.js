@@ -4,6 +4,8 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-scss.min.js';
+import 'prismjs/components/prism-json.min.js';
+import 'prismjs/components/prism-bash.min.js';
 import 'prismjs/themes/prism.css';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import { posts } from '@data/posts';
