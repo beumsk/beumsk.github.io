@@ -33,7 +33,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
       <div className="container project-shape">
         <div data-aos="fade-left">
           <h1>{title}</h1>
-          <p className="mb-8">{description}</p>
+          <p className="intro mb-8">{description}</p>
 
           {proj.tech.length > 0 && (
             <>
@@ -55,7 +55,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
 
           {proj.chall.length > 0 && (
             <>
-              <h2>Challenges and learning</h2>
+              <h2>Challenges and accomplishments</h2>
               <ul className="mb-8">
                 {proj.chall.map((c) => (
                   <li key={c}>{c}</li>

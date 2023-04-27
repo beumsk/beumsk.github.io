@@ -19,7 +19,7 @@ export default function Projects({ title, description, url }) {
     }
   }, [router, query]);
 
-  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
+  const skillsList = ['react', 'javascript', 'html', 'css', 'sass', 'jquery', 'angular'];
   // const skillsList = [...new Set(projects.map((p) => p.tech).flat())];
 
   return (

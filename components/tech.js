@@ -17,6 +17,7 @@ import {
   SiNodedotjs,
   SiFirebase,
   SiMongodb,
+  SiJest,
 } from 'react-icons/si';
 import PropTypes from 'prop-types';
 
@@ -48,6 +49,7 @@ export default function Tech({ name, color }) {
       {name === 'styled-components' && (
         <SiStyledcomponents title="Styled components" aria-labelledby="Styled components" />
       )}
+      {name === 'jest' && <SiJest color={color ? '#99415B' : ''} title="Jest" aria-labelledby="Jest" />}
       {name === 'node.js' && <SiNodedotjs color={color ? '#689F63' : ''} title="Node.js" aria-labelledby="Node.js" />}
       {name === 'firebase' && <SiFirebase color={color ? '#FFA50E' : ''} title="Firebase" aria-labelledby="Firebase" />}
       {name === 'mongo-db' && <SiMongodb color={color ? '#00684A' : ''} title="Mongo DB" aria-labelledby="Mongo DB" />}
