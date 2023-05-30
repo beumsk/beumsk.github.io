@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { projects } from '@data/projects';
+import projects from '@data/projects';
 import Layout from '@components/layout';
 import Grid from '@components/grid';
 import Tech from '@components/tech';

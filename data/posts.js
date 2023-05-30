@@ -1,4 +1,4 @@
-export const posts = [
+const posts = [
   {
     slug: 'set-up-sass-in-the-best-way',
     title: 'Set up Sass in the best way',
@@ -132,3 +132,4 @@ export const posts = [
     url: 'https://remybeumier.be/blog/set-nextjs-lang',
   },
 ];
+module.exports = posts;

@@ -1,4 +1,4 @@
-export const projects = [
+const projects = [
   {
     title: 'omega',
     link: '/projects/omega',
@@ -6,6 +6,7 @@ export const projects = [
     past: 'https://web.archive.org/web/20211213130150/https://app.staging.parcomega.ca/en/',
     img: '/images/projects/omega.jpg',
     screen: '/images/projects/omega-screen.png',
+    modified: '2023-04-27',
     intro:
       'Omega zoo booking website with React. Information about the park and its animals as well as ability to book your stay, table or entrance via ticketing system.',
     tech: ['react', 'html', 'css', 'javascript'],
@@ -25,6 +26,7 @@ export const projects = [
     past: 'https://web.archive.org/web/20220714150729/https://www.parispadelmajor.com/',
     img: '/images/projects/padel.jpg',
     screen: '/images/projects/padel-screen.png',
+    modified: '2023-04-27',
     intro:
       'Paris Premier Padel Major website built with React. PPPM official website giving access to the latest news, pictures and videos as well as live scoring and ticketing system.',
     tech: ['react', 'html', 'css', 'javascript'],
@@ -45,6 +47,7 @@ export const projects = [
     past: 'https://web.archive.org/web/20211213130244/https://app.staging.onomohotels.com/',
     img: '/images/projects/onomo.jpg',
     screen: '/images/projects/onomo-screen.png',
+    modified: '2023-04-27',
     intro:
       'Onomo hotels booking website with React. Possibility to search and book hotels through a complete booking journey.',
     tech: ['react', 'html', 'css', 'javascript'],
@@ -63,6 +66,7 @@ export const projects = [
     past: 'http://web.archive.org/web/20220120123422/https://www.eliparis.com/accueil',
     img: '/images/projects/eli-paris.jpg',
     screen: '/images/projects/eli-paris-screen.png',
+    modified: '2023-04-27',
     intro:
       'Eli Paris jewelry store website built with Angular, Node and Strapi. Complete back office to manage the content of the site. Cart, payment and invoice processes.',
     tech: ['angular', 'html', 'css', 'javascript', 'sass'],
@@ -81,6 +85,7 @@ export const projects = [
     past: 'https://web.archive.org/web/20200803122755/https://careers.kpmg.be/',
     img: '/images/projects/kpmg-careers.jpg',
     screen: '/images/projects/kpmg-careers-screen.png',
+    modified: '2022-04-25',
     intro: 'KPMG Belgium recruitment website built with Umbraco CMS.',
     tech: ['umbraco', 'c#', 'html', 'css', 'javascript', 'sass'],
     chall: [
@@ -100,6 +105,7 @@ export const projects = [
     past: 'https://web.archive.org/web/20200812114928/https://www.klaw.be/',
     img: '/images/projects/kpmg-law.jpg',
     screen: '/images/projects/kpmg-law-screen.png',
+    modified: '2022-04-25',
     intro: 'KPMG Law (previously Klaw) website built with Umbraco CMS.',
     tech: ['umbraco', 'c#', 'html', 'css', 'javascript', 'sass'],
     chall: [
@@ -116,6 +122,7 @@ export const projects = [
     link: '/projects/shop',
     img: '/images/projects/shop.jpg',
     sandbox: 'react-shop-client-csvvwz',
+    modified: '2023-04-27',
     intro: 'Shop app built with React, Redux, Styled-components, Node and MongoDB.',
     tech: ['react', 'redux', 'styled-components', 'jest', 'node.js', 'mongo-db'],
     chall: [
@@ -134,6 +141,7 @@ export const projects = [
     link: '/projects/memory',
     img: '/images/projects/memory.jpg',
     pen: 'xdoKjX',
+    modified: '2021-11-01',
     intro: 'Find pairs as fast as possible in this Memory!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -150,6 +158,7 @@ export const projects = [
     link: '/projects/movies',
     img: '/images/projects/movies.jpg',
     sandbox: 'github/beumsk/React-Movies',
+    modified: '2022-03-11',
     intro: 'Search or scroll for movies and series. Get general info and learn about their actors.',
     tech: ['react', 'redux', 'material-ui'],
     chall: [
@@ -167,6 +176,7 @@ export const projects = [
     link: '/projects/recipes',
     img: '/images/projects/recipes.jpg',
     sandbox: 'github/beumsk/Recipes',
+    modified: '2022-06-30',
     intro: 'Create your recipes or find some from a wide API.',
     tech: ['react', 'firebase', 'chakra-ui'],
     chall: [
@@ -185,6 +195,7 @@ export const projects = [
     link: '/projects/quiz',
     img: '/images/projects/quiz.jpg',
     sandbox: 'github/beumsk/Quiz',
+    modified: '2022-03-11',
     intro:
       'Try a set of 10 random questions fetched from Open Trivia DB in this Quiz built with React and score as much points as you can. You win 1 point per good answer but make 5 points when picking the good answer from the start!',
     tech: ['react', 'typescript', 'sass'],
@@ -202,6 +213,7 @@ export const projects = [
     link: '/projects/snake',
     img: '/images/projects/snake.jpg',
     pen: 'PmPxEo',
+    modified: '2021-11-01',
     intro: 'Get as long as possible in this version of Snake!',
     tech: ['html', 'css', 'javascript', 'jquery'],
     chall: [
@@ -218,6 +230,7 @@ export const projects = [
     link: '/projects/star-match',
     img: '/images/projects/star-match.jpg',
     pen: 'YzEyVYp',
+    modified: '2022-04-25',
     intro: 'Play by picking 1 or more numbers that sum to the number of stars',
     tech: ['react', 'javascript', 'css'],
     chall: [
@@ -234,6 +247,7 @@ export const projects = [
     link: '/projects/minesweeper',
     img: '/images/projects/minesweeper.jpg',
     pen: 'JJYqop',
+    modified: '2021-11-01',
     intro: 'Play Minesweeper in this 9x9 grid!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -249,6 +263,7 @@ export const projects = [
     link: '/projects/whack-a-donkey-kong',
     img: '/images/projects/whack-a-donkey-kong.jpg',
     pen: 'YabyJJ',
+    modified: '2021-11-01',
     intro: 'Crush these Donkey Kongs in this whack a mole!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -264,6 +279,7 @@ export const projects = [
     link: '/projects/hangman',
     img: '/images/projects/hangman.jpg',
     pen: 'ZEzvEdz',
+    modified: '2021-11-01',
     intro: 'The Hangman game as in your childhood!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -279,6 +295,7 @@ export const projects = [
     link: '/projects/dad-jokes',
     img: '/images/projects/dad-jokes.jpg',
     pen: 'LKXvrq',
+    modified: '2021-11-01',
     intro: 'Go and get a random dad joke!',
     tech: ['html', 'css', 'javascript', 'jquery'],
     chall: ['AJAX call with jQuery', 'JSON parse and stringify methods'],
@@ -290,6 +307,7 @@ export const projects = [
     link: '/projects/giphy-search',
     img: '/images/projects/giphy-search.jpg',
     pen: 'EExyvQ',
+    modified: '2021-11-01',
     intro: 'Find the gif you need with Giphy Search!',
     tech: ['html', 'css', 'javascript', 'jquery'],
     chall: [
@@ -306,6 +324,7 @@ export const projects = [
     link: '/projects/tetris',
     img: '/images/projects/tetris.jpg',
     pen: 'eYpxowj',
+    modified: '2021-11-01',
     intro: 'Break lines and stay alive for as long as you can in this Tetris!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -323,6 +342,7 @@ export const projects = [
     link: '/projects/simon-game',
     img: '/images/projects/simon-game.jpg',
     pen: 'LWqpGM',
+    modified: '2021-11-01',
     intro: 'Train your brain with the famous Simon game!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -339,6 +359,7 @@ export const projects = [
     link: '/projects/drum-machine',
     img: '/images/projects/drum-machine.jpg',
     pen: 'dwmoyE',
+    modified: '2021-11-01',
     intro: 'Smash this Drum Machine!',
     tech: ['html', 'css', 'javascript'],
     chall: ['Audio to play the music sounds', 'Target elements with getElementById', 'Click on tiles with keyup event'],
@@ -350,6 +371,7 @@ export const projects = [
     link: '/projects/clock',
     img: '/images/projects/clock.jpg',
     pen: 'YQoBJK',
+    modified: '2021-11-01',
     intro: 'Check the clock and get the time!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -365,6 +387,7 @@ export const projects = [
     link: '/projects/etch-a-sketch',
     img: '/images/projects/etch-a-sketch.jpg',
     pen: 'dVWPOW',
+    modified: '2021-11-01',
     intro: 'Try to sketch something in this!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -381,6 +404,7 @@ export const projects = [
     link: '/projects/calculator',
     img: '/images/projects/calculator.jpg',
     pen: 'dvdZjx',
+    modified: '2021-11-01',
     intro: 'Fully functional Calculator!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -397,6 +421,7 @@ export const projects = [
     link: '/projects/higher-or-lower',
     img: '/images/projects/higher-or-lower.jpg',
     pen: 'bGbLzzE',
+    modified: '2021-11-01',
     intro: 'Guess if the next card will be Higher or Lower!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -412,6 +437,7 @@ export const projects = [
     link: '/projects/tic-tac-toe',
     img: '/images/projects/tic-tac-toe.jpg',
     pen: 'ZevLbx',
+    modified: '2021-11-01',
     intro: 'Play Tic Tac Toe or OXO against a dumb AI!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -427,6 +453,7 @@ export const projects = [
     link: '/projects/sliding-puzzle',
     img: '/images/projects/sliding-puzzle.jpg',
     pen: 'RjzGBO',
+    modified: '2021-11-01',
     intro: 'Try to solve this sliding puzzle!',
     tech: ['html', 'css', 'javascript', 'sass'],
     chall: [
@@ -442,6 +469,7 @@ export const projects = [
     link: '/projects/pokemon',
     img: '/images/projects/pokemon.jpg',
     pen: 'rjBWWR',
+    modified: '2021-11-01',
     intro: 'Find out what Pokemon you are!',
     tech: ['html', 'css', 'javascript', 'jquery'],
     chall: [
@@ -457,6 +485,7 @@ export const projects = [
     link: '/projects/color-game',
     img: '/images/projects/color-game.jpg',
     pen: 'poyXqWZ',
+    modified: '2021-11-01',
     intro: 'Sharpen your RGB knowledge by playing this little Color game!',
     tech: ['html', 'css', 'javascript'],
     chall: ['Define the display with CSS grids', 'Use BEM to name elements classes', 'Create HTML elements with JS'],
@@ -468,6 +497,7 @@ export const projects = [
     link: '/projects/brick-breaker',
     img: '/images/projects/brick-breaker.jpg',
     pen: 'GEgjEb',
+    modified: '2021-11-01',
     intro: 'Break all the bricks in this first level!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -483,6 +513,7 @@ export const projects = [
     link: '/projects/connect-4',
     img: '/images/projects/connect-4.jpg',
     pen: 'bqWqGV',
+    modified: '2021-11-01',
     intro: 'Play Connect 4 with a friend and align 4 of yours!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -499,6 +530,7 @@ export const projects = [
     link: '/projects/date-counter',
     img: '/images/projects/date-counter.jpg',
     pen: 'oWYVYj',
+    modified: '2021-11-01',
     intro:
       'Find out how many days passed since a certain date, or between two dates, or what date will ti be in x days.',
     tech: ['html', 'css', 'javascript'],
@@ -516,6 +548,7 @@ export const projects = [
     link: '/projects/quotes',
     img: '/images/projects/quotes.jpg',
     pen: 'xgGzdJ',
+    modified: '2021-11-01',
     intro: 'Click and get a random quote from Forismatic!',
     tech: ['html', 'css', 'javascript', 'bootstrap', 'jquery'],
     chall: ['Get quotes through an AJAX call', 'Parse and Stringify JSON data'],
@@ -527,6 +560,7 @@ export const projects = [
     link: '/projects/timer',
     img: '/images/projects/timer.jpg',
     pen: 'WpKWgG',
+    modified: '2021-11-01',
     intro: 'Set a timer for anything!',
     tech: ['html', 'css', 'javascript'],
     chall: [
@@ -538,3 +572,5 @@ export const projects = [
     type: 'perso',
   },
 ];
+
+module.exports = projects;

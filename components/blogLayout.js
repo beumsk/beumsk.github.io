@@ -8,7 +8,7 @@ import 'prismjs/components/prism-json.min.js';
 import 'prismjs/components/prism-bash.min.js';
 import 'prismjs/themes/prism.css';
 import { AiFillCaretLeft } from 'react-icons/ai';
-import { posts } from '@data/posts';
+import posts from '@data/posts';
 import Layout from '@components/layout';
 import Grid from '@components/grid';
 

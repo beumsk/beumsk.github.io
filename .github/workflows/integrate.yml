@@ -26,7 +26,7 @@ jobs:
           cache: 'npm'
       - run: npm install
       - run: npm run blog
-      # - run: npm run sitemap
+      - run: npm run sitemap
       - run: npm run build
       - run: npm run export
         env:

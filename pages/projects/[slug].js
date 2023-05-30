@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
-import { projects } from '@data/projects';
+import projects from '@data/projects';
 import Layout from '@components/layout';
 import Tech from '@components/tech';
 import Codepen from '@components/codepen';

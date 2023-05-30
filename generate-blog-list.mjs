@@ -30,7 +30,7 @@ async function generate() {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
   const posts = getPosts();
 
-  const fileContent = `export const posts = ${JSON.stringify(posts)}`;
+  const fileContent = `const posts = ${JSON.stringify(posts)}; module.exports = posts;`;
 
   const formatted = prettier.format(fileContent, {
     ...prettierConfig,

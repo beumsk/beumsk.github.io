@@ -1,24 +1,18 @@
 import { writeFileSync } from 'fs';
-import { globby } from 'globby';
 import prettier from 'prettier';
+import projects from './data/projects.js';
+import posts from './data/posts.js';
 
 async function generate() {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
-  const pages = await globby(
-    [
-      'pages/*.js',
-      '!pages/_*.js',
-      '!pages/404.js',
-      'public/remy-beumier-resume.pdf',
-      'pages/projects/index.js',
-      'public/images/projects/*.jpg',
-      '!public/images/projects/*-screen.*',
-      'pages/blog/index.js',
-      'pages/blog/*.mdx',
-    ],
-    { stats: true }
-  );
   const baseUrl = 'https://remybeumier.be';
+  const pages = [
+    { link: '', modified: '2023-05-29', freq: 'yearly', prio: '1.0' },
+    { link: '/resume-remy-beumier', modified: '2023-04-27', freq: 'monthly', prio: '0.8' },
+    { link: '/remy-beumier-resume.pdf', modified: '2023-04-27', freq: 'monthly', prio: '0.8' },
+    { link: '/projects', modified: '2023-05-29', freq: 'monthly', prio: '0.8' },
+    { link: '/blog', modified: '2023-05-29', freq: 'monthly', prio: '0.8' },
+  ];
 
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
@@ -26,28 +20,14 @@ async function generate() {
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-      ${pages
-        .map((page) => {
-          let path = page.path
-            .replace('pages/', '')
-            .replace('index', '')
-            .replace('public/images/projects/', 'projects/')
-            .replace('public/', '')
-            .replace('posts', 'blog')
-            .replace('.js', '')
-            .replace('.jpg', '')
-            .replace('.mdx', '');
-
-          if (path === 'blog/' || path === 'projects/') {
-            path = path.slice(0, -1);
-          }
-
+      ${[...pages, ...projects, ...posts]
+        .map((item) => {
           return `
             <url>
-              <loc>${baseUrl}/${path}</loc>
-              <lastmod>${lastmod(page.stats.mtime, '2021-11-1')}</lastmod>
-              <changefreq>${changefreq(path)}</changefreq>
-              <priority>${priority(path)}</priority>
+              <loc>${baseUrl}${item.link}</loc>
+              <lastmod>${item.modified || '2021-11-1'}</lastmod>
+              <changefreq>${item.freq || 'yearly'}</changefreq>
+              <priority>${item.prio || '0.6'}</priority>
             </url>
           `;
         })
@@ -64,45 +44,3 @@ async function generate() {
 }
 
 generate();
-
-function lastmod(chosenDate, fileDate) {
-  const mDate = new Date(fileDate);
-  const launchDate = new Date(chosenDate);
-  return mDate > launchDate ? convertDate(mDate) : convertDate(launchDate);
-}
-
-function priority(path) {
-  switch (path) {
-    case '':
-      return '1.0';
-    case 'resume-remy-beumier':
-    case 'remy-beumier-resume.pdf':
-    case 'projects':
-    case 'blog':
-      return '0.8';
-    default:
-      return '0.6';
-  }
-}
-
-function changefreq(path) {
-  switch (path) {
-    case '':
-    case 'blog':
-      return 'weekly';
-    case 'resume-remy-beumier':
-    case 'remy-beumier-resume.pdf':
-    case 'projects':
-      return 'monthly';
-    default:
-      return 'yearly';
-  }
-}
-
-function convertDate(inputFormat) {
-  function pad(s) {
-    return s < 10 ? '0' + s : s;
-  }
-  var d = new Date(inputFormat);
-  return [d.getFullYear(), pad(d.getMonth() + 1), pad(d.getDate())].join('-'); // yyyy-mm-dd
-}

@@ -39,7 +39,6 @@ This will trigger Github Action and deploy the changes to gh-pages.
 - review design: https://anthonyhobday.com/sideprojects/saferules/
 
 1.4
-- rework sitemap: basing on modified date of item is wrong with github pipeline -> use real dates
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 

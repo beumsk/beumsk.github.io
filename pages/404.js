@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { projects } from '@data/projects';
-import { posts } from '@data/posts';
+import projects from '@data/projects';
+import posts from '@data/posts';
 import Layout from '@components/layout';
 import Grid from '@components/grid';
 
