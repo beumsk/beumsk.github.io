@@ -1,4 +1,5 @@
-@mixin generate($prefix, $property) {
+// Spacing classes generation
+@mixin generate-spacing-classes($prefix, $property) {
   $sizes: 0,
   1,
   2,
@@ -25,7 +26,7 @@
   23,
   24,
   25;
-  $spacing: 4px;
+  $spacing: 0.25rem;
 
   @for $i from 1 through length($sizes) {
     $size: nth($sizes, $i);
@@ -70,5 +71,29 @@ $rules: (
 );
 
 @each $item in $rules {
-  @include generate(nth($item, 1), nth($item, 2));
+  @include generate-spacing-classes(nth($item, 1), nth($item, 2));
+}
+
+// Moving shapes
+@mixin moving-shapes($class, $side, $top, $right, $sec, $rotate, $translateX, $translateY) {
+  .#{$class} {
+    &::before {
+      content: '';
+      position: absolute;
+      background: var(--primary);
+      box-shadow: 1.25rem 1.25rem var(--bg), 1.25rem 1.25rem 0 1px var(--text2);
+      transform: rotate($rotate);
+      width: $side;
+      height: $side;
+      top: $top;
+      right: $right;
+      animation: $class $sec infinite alternate linear;
+    }
+  }
+
+  @keyframes #{$class} {
+    100% {
+      transform: translate($translateX, $translateY);
+    }
+  }
 }

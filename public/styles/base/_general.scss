@@ -4,7 +4,8 @@
 
 body {
   font-family: system-ui;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  min-width: 320px;
 }
 
 #__next main {
@@ -23,11 +24,11 @@ main {
 h1 {
   color: var(--primary);
   font-family: var(--font-title);
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: normal;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
   display: inline-block;
-  margin: 32px 0;
+  margin: 2rem 0;
   animation: title-shadow 0.4s ease-in-out forwards;
 }
 
@@ -35,34 +36,42 @@ h1 {
   0% {
     text-shadow: none;
   }
+
   12% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest);
   }
+
   25% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest);
   }
+
   37% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
       3px 1px var(--primary-lightest);
   }
+
   50% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
       3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest);
   }
+
   62% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
       3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest);
   }
+
   75% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
       3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
       6px 3px var(--primary-lightest);
   }
+
   87% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
       3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
       6px 3px var(--primary-lightest), 7px 3px var(--primary-lightest);
   }
+
   100% {
     text-shadow: 0px 0 var(--primary-lightest), 1px 0 var(--primary-lightest), 2px 1px var(--primary-lightest),
       3px 1px var(--primary-lightest), 4px 2px var(--primary-lightest), 5px 2px var(--primary-lightest),
@@ -72,17 +81,17 @@ h1 {
 
 h2 {
   font-family: var(--font-title);
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   font-weight: normal;
 }
 
 h3 {
-  font-size: 2.1rem;
+  font-size: 1.25rem;
   font-weight: normal;
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   font-weight: normal;
 }
 
@@ -96,6 +105,7 @@ h4 {
 a {
   line-height: 1.4;
   color: inherit;
+
   &:hover,
   &:focus {
     color: var(--primary);
@@ -104,21 +114,23 @@ a {
 
 p {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0.5em;
   line-height: 1.4;
+
   &:last-of-type {
     margin-bottom: 0;
   }
 }
 
 p.related-title {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
 }
 
 ul,
 ol {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 1.25rem;
+
   li {
     line-height: 1.6;
   }
@@ -126,6 +138,7 @@ ol {
 
 ul {
   list-style-type: square;
+
   &.nodisc {
     list-style: none;
     padding-left: 0;
@@ -145,6 +158,7 @@ figure {
 button {
   line-height: 1.4;
   color: inherit;
+
   &:hover,
   &:focus {
     color: var(--primary);
@@ -173,15 +187,19 @@ main {
   width: 100%;
   max-width: calc(100% - 40px);
   margin: 0 auto;
+
   @media screen and (min-width: 768px) {
     max-width: 720px;
   }
+
   @media screen and (min-width: 992px) {
     max-width: 960px;
   }
+
   @media screen and (min-width: 1200px) {
     max-width: 1140px;
   }
+
   &.narrow {
     @media screen and (min-width: 768px) {
       max-width: 80ch;
@@ -191,35 +209,42 @@ main {
 
 .cols {
   display: flex;
-  margin-left: -16px;
-  margin-right: -16px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+
   &.cols-md,
   &.cols-lg,
   &.cols-xl {
     display: block;
   }
+
   .col {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
     &.is-3 {
       flex: none;
       width: 25%;
     }
+
     &.is-4 {
       flex: none;
       width: 33.33333%;
     }
+
     &.is-6 {
       flex: none;
       width: 50%;
     }
+
     &.is-8 {
       flex: none;
       width: 66.66667%;
     }
+
     &.is-9 {
       flex: none;
       width: 75%;
@@ -280,30 +305,34 @@ button {
   background-color: var(--bg);
   border: solid 1px;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
   display: inline-flex;
   align-items: center;
   position: relative;
-  top: -2px;
-  left: -2px;
+  top: -0.125rem;
+  left: -0.125rem;
   box-shadow: 4px 4px var(--primary-light);
+
   @media screen and (min-width: 768px) {
     top: 0;
     left: 0;
     box-shadow: none;
   }
+
   &.active {
     color: var(--bg);
     background-color: var(--text2);
     border-color: var(--text2);
   }
+
   cursor: pointer;
   transition: all 0.2s;
+
   &:not(.active):hover,
   &:not(.active):focus {
     color: var(--primary);
-    left: -2px;
-    top: -2px;
+    top: -0.125rem;
+    left: -0.125rem;
     box-shadow: 4px 4px var(--primary-light);
   }
 }
@@ -317,9 +346,11 @@ button {
 
 .skewed {
   position: relative;
+
   &:nth-of-type(even)::before {
     background: var(--bg2);
   }
+
   &::before {
     content: '';
     position: absolute;
@@ -336,7 +367,9 @@ button {
 #ie-banner {
   display: none;
 }
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
   #ie-banner {
     display: block;
     position: fixed;
@@ -355,12 +388,14 @@ button {
   .grid .card {
     margin-bottom: 32px;
   }
+
   @media screen and (min-width: 768px) {
     .grid {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
+
       .card {
         width: 30%;
       }

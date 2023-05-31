@@ -27,7 +27,7 @@ export default function Home({ title, description }) {
       </section>
 
       <section id="about" className="svg-divider">
-        <div className="back-shapes"></div>
+        <div className="home-shapes"></div>
         <div className="container" data-aos="fade-right">
           <div className="cols cols-lg">
             <div className="col">

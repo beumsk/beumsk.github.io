@@ -23,8 +23,6 @@ needs node v14
 
 ## DEPLOY
 
-Ensure you updated the sitemap with `npm run sitemap` or `yarn sitemap`
-
 Also make sure your linter is error-free with `npm run lint` or `yarn lint`
 
 Deployment should be managed by the pipeline (`npm run deploy` or `yarn deploy`)

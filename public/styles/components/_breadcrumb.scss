@@ -1,6 +1,6 @@
 .breadcrumb {
   background: var(--bg2);
-  padding: 16px 0;
+  padding: 1rem 0;
 
   ul {
     display: flex;
@@ -9,13 +9,13 @@
 
     li {
       display: inline-block;
-      margin-right: 8px;
-      font-size: 1.2rem;
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
       color: var(--text2);
 
       svg {
-        margin-right: 8px;
-        padding-top: 4px;
+        margin-right: 0.5rem;
+        padding-top: 0.25rem;
       }
     }
   }

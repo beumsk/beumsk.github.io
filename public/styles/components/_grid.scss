@@ -1,16 +1,16 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-gap: 80px;
-  padding: 20px 10px;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 5rem;
+  padding: 1.25rem 0.625rem;
 
   @media screen and (min-width: 600px) {
-    padding: 20px;
+    padding: 1.25rem;
   }
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-gap: 2.5rem;
     padding: 0;
   }
 }
@@ -18,7 +18,7 @@
 .card {
   position: relative;
   aspect-ratio: 16/9;
-  margin: 0 10px;
+  margin: 0 0.625rem;
 
   @media screen and (min-width: 600px) {
     margin: 0;
@@ -27,8 +27,8 @@
   .card__behind {
     width: 100%;
     height: 100%;
-    top: 20px;
-    left: 20px;
+    top: 1.25rem;
+    left: 1.25rem;
     box-shadow: var(--shadows4);
 
     @media screen and (min-width: 768px) {
@@ -48,18 +48,18 @@
     }
 
     .card__title {
-      padding: 8px 16px;
+      padding: 0.5rem 1rem;
       position: absolute;
       bottom: 0;
       width: 100%;
       color: var(--primary);
       font-weight: normal;
-      font-size: 2.1rem;
       line-height: 1;
       text-decoration: none;
 
       h2 {
         margin: 0;
+        font-size: 1.5rem;
 
         svg {
           vertical-align: text-top;
@@ -75,13 +75,14 @@
 
       a {
         display: inline-block;
-        padding: 8px;
-        width: 40px;
+        padding: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         text-align: center;
         text-decoration: none;
         transition: all 0.2s;
         color: var(--text2);
-        font-size: 2rem;
+        font-size: 1.25rem;
 
         &:hover,
         &:focus {
@@ -99,8 +100,8 @@
       var(--bg2);
     position: relative;
     box-shadow: var(--shadow);
-    top: -20px;
-    left: -20px;
+    top: -1.25rem;
+    left: -1.25rem;
 
     @media screen and (min-width: 768px) {
       top: 0;
@@ -122,14 +123,14 @@
   &:focus,
   &:focus-within {
     .card__behind {
-      top: 20px;
-      left: 20px;
+      top: 1.25rem;
+      left: 1.25rem;
     }
 
     .card__img {
       box-shadow: var(--shadow);
-      top: -20px;
-      left: -20px;
+      top: -1.25rem;
+      left: -1.25rem;
 
       img {
         filter: brightness(110%);

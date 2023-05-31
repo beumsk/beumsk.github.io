@@ -26,9 +26,9 @@ main {
   --text80: rgba(0, 0, 0, 0.8);
   --font-title: 'Share Tech Mono', monospace;
   --font-body: 'Open Sans', sans-serif;
-  --shadow: 0 2px 6px var(--text20);
-  --shadows4: 4px 4px var(--primary-light), 8px 8px var(--primary-lightest);
-  --shadows6: 6px 6px var(--primary-light), 12px 12px var(--primary-lightest);
+  --shadow: 0 0.125rem 0.375rem var(--text20);
+  --shadows4: 0.25rem 0.25rem var(--primary-light), 0.5rem 0.5rem var(--primary-lightest);
+  --shadows6: 0.375rem 0.375rem var(--primary-light), 0.75rem 0.75rem var(--primary-lightest);
 }
 
 main.dark {
