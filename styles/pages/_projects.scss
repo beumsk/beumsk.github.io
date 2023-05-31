@@ -1,51 +1,10 @@
 @media screen and (min-width: 992px) {
-
-  .project-shape,
-  .projects-shape {
-    &::before {
-      content: '';
-      position: absolute;
-      background: var(--primary);
-      box-shadow: 20px 20px var(--bg), 20px 20px 0 1px var(--text2);
-      transform: rotate(100deg);
-    }
-  }
-
-  .projects-shape {
-    &::before {
-      width: 30px;
-      height: 30px;
-      top: 100px;
-      right: 40px;
-      animation: shape-projects 53s infinite alternate linear;
-    }
-
-    @keyframes shape-projects {
-      100% {
-        transform: translate(-350px, 20px);
-      }
-    }
-  }
-
-  .project-shape {
-    &::before {
-      width: 50px;
-      height: 50px;
-      top: 120px;
-      right: 80px;
-      animation: shape-project 53s infinite alternate linear;
-    }
-
-    @keyframes shape-project {
-      100% {
-        transform: translate(-350px, 120px);
-      }
-    }
-  }
+  @include moving-shapes(projects-shape, 2rem, 8rem, 2.5rem, 53s, 100deg, -22rem, 1rem);
+  @include moving-shapes(project-shape, 2.5rem, 8.5rem, 24rem, 53s, -100deg, 18rem, 1rem);
 }
 
 .intro {
-  padding: 8px 0 8px 16px;
+  padding: 0.5rem 0 0.5rem 1rem;
   border-left: solid 4px #4db6ac;
 }
 
@@ -55,16 +14,16 @@
 
   >li,
   >a {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
     display: inline-flex;
 
     svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 8px;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
       transition: color 0.2s;
     }
 
@@ -78,5 +37,5 @@ figure.project-screen {
   background: var(--text10);
   border: solid 1px var(--light-grey);
   box-shadow: var(--shadows6);
-  margin-bottom: 52px;
+  margin-bottom: calc(2.5rem + 12px);
 }

@@ -1,8 +1,8 @@
 .code-iframe-wrapper {
   width: 100%;
   padding: 56.25% 0 0 0;
-  margin-bottom: 52px;
-  min-height: 400px;
+  margin-bottom: calc(2.5rem + 12px);
+  min-height: 25rem;
   position: relative;
   background: var(--text10);
   border: solid 1px var(--light-grey);

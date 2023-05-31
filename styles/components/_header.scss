@@ -12,15 +12,15 @@ header {
   }
 
   a {
-    padding: 12px 8px;
+    padding: 0.75rem 0.5rem;
     color: var(--text2);
     text-decoration: none;
 
     &.logo {
-      padding: 8px 16px 8px 0;
+      padding: 0.5rem 1rem 0.5rem 0;
 
       img {
-        height: 30px;
+        height: 1.875rem;
         width: auto;
 
         @media screen and (min-width: 768px) {
@@ -38,6 +38,6 @@ header {
   }
 
   .btn {
-    margin: 8px 0 8px 16px;
+    margin: 0.5rem 0 0.5rem 1rem;
   }
 }

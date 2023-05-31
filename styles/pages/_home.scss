@@ -1,12 +1,12 @@
 section {
-  padding: 40px 0;
+  padding: 2.5rem 0;
 
   @media screen and (min-width: 768px) {
-    padding: 60px 0;
+    padding: 3.75rem 0;
   }
 
   @media screen and (min-width: 992px) {
-    padding: 100px 0;
+    padding: 6.25rem 0;
   }
 }
 
@@ -15,14 +15,14 @@ section {
   background: url(/images/road.jpg) center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 80px;
+  padding-bottom: 5rem;
 
   @media screen and (min-width: 768px) {
-    padding-bottom: 100px;
+    padding-bottom: 6rem;
   }
 
   @media screen and (min-width: 992px) {
-    padding-bottom: 140px;
+    padding-bottom: 8rem;
   }
 
   .title {
@@ -31,7 +31,7 @@ section {
 
   h1 {
     display: block;
-    font-size: 6rem;
+    font-size: 3.75rem;
     margin-top: 0;
     margin-bottom: 0;
     box-shadow: none;
@@ -44,7 +44,7 @@ section {
   }
 
   p {
-    font-size: 3.2rem;
+    font-size: 2rem;
     color: var(--dark);
   }
 }
@@ -61,16 +61,16 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    top: -39px;
-    height: 40px;
-    background-size: 100% 60px;
+    top: calc(-2.5rem + 1px);
+    height: 2.5rem;
+    background-size: 100% 3.75rem;
     background-position: 100%;
     transform: rotateY(180deg);
     background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 381 77.25" preserveAspectRatio="none"><g fill="%23fcfcfc"><path d="M0 68.78l381-33.86v42.33H0z"/><path d="M0 43.38l381-25.4v59.27H0z" opacity=".33"/><path d="M0 17.98L381 0v77.25H0z" opacity=".33"/></g></svg>');
   }
 
   @media screen and (min-width: 992px) {
-    .back-shapes {
+    .home-shapes {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -82,36 +82,36 @@ section {
         content: '';
         position: absolute;
         background: var(--primary);
-        box-shadow: 20px 20px var(--bg), 20px 20px 0 1px var(--text2);
+        box-shadow: 1.25rem 1.25rem var(--bg), 1.25rem 1.25rem 0 1px var(--text2);
       }
 
       &::before {
-        width: 30px;
-        height: 30px;
-        top: 30px;
-        left: 40px;
+        width: 2rem;
+        height: 2rem;
+        top: 1.5rem;
+        left: 2.5rem;
         transform: rotate(100deg);
-        animation: shape-about-1 33s infinite alternate linear;
+        animation: home-shape-1 33s infinite alternate linear;
       }
 
       &::after {
-        width: 40px;
-        height: 40px;
-        right: 40px;
-        bottom: 60px;
+        width: 2.5rem;
+        height: 2.5rem;
+        right: 2.5rem;
+        bottom: 4rem;
         transform: rotate(-190deg);
-        animation: shape-about-2 29s infinite alternate linear;
+        animation: home-shape-2 29s infinite alternate linear;
       }
 
-      @keyframes shape-about-1 {
+      @keyframes home-shape-1 {
         100% {
-          transform: translate(150px, 10px);
+          transform: translate(10rem, 0.5rem);
         }
       }
 
-      @keyframes shape-about-2 {
+      @keyframes home-shape-2 {
         100% {
-          transform: translate(-140px, -10px);
+          transform: translate(-8rem, -0.5rem);
         }
       }
     }
@@ -126,14 +126,14 @@ section {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 0.5rem;
 
     @media screen and (min-width: 768px) {
       margin-top: 0;
     }
 
     a {
-      padding: 4px;
+      padding: 0.25rem;
       transition: color 0.2s ease, transform 0.2s ease;
 
       &:hover,
@@ -215,14 +215,14 @@ section {
 
       svg {
         display: block;
-        font-size: 24px;
+        font-size: 1.5rem;
 
         &:last-of-type {
           margin-right: 0;
         }
 
         @media screen and (min-width: 768px) {
-          font-size: 32px;
+          font-size: 2rem;
         }
       }
     }

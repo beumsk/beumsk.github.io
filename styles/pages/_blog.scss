@@ -1,73 +1,32 @@
 @media screen and (min-width: 992px) {
-
-  .blog-shape,
-  .posts-shape {
-    &::before {
-      content: '';
-      position: absolute;
-      background: var(--primary);
-      box-shadow: 20px 20px var(--bg), 20px 20px 0 1px var(--text2);
-      transform: rotate(100deg);
-    }
-  }
-
-  .blog-shape {
-    &::before {
-      width: 30px;
-      height: 30px;
-      top: 100px;
-      right: 40px;
-      animation: shape-blog 53s infinite alternate linear;
-    }
-
-    @keyframes shape-blog {
-      100% {
-        transform: translate(-350px, 20px);
-      }
-    }
-  }
-
-  .posts-shape {
-    &::before {
-      width: 50px;
-      height: 50px;
-      top: 120px;
-      right: 40px;
-      animation: shape-posts 53s infinite alternate linear;
-    }
-
-    @keyframes shape-posts {
-      100% {
-        transform: translate(-20px, 320px);
-      }
-    }
-  }
+  @include moving-shapes(blog-shape, 2rem, 8rem, 2.5rem, 53s, 100deg, -20rem, 1rem);
+  @include moving-shapes(posts-shape, 3rem, 10rem, 2.5rem, 53s, -100deg, -1rem, 20rem);
 }
 
 .blog__categories .btn {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 
   &:not(:last-of-type) {
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
 }
 
 .post__categories a {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   cursor: pointer;
   text-decoration: underline;
 
   &:not(:last-of-type) {
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
 }
 
 .post__date {
   display: block;
   text-align: right;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
@@ -91,36 +50,36 @@
 
   ul,
   ol {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   img {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   pre {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    padding: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     background: var(--bg2);
     overflow-x: auto;
   }
 
   code {
     background: var(--bg2);
-    padding: 2px 4px;
+    padding: 0.125rem 0.25rem;
   }
 
   blockquote {
-    margin: 16px auto;
-    padding: 8px 0 8px 16px;
-    border-left: solid 8px var(--bg3);
+    margin: 1rem auto;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-left: solid 0.5rem var(--bg3);
     font-style: italic;
 
     cite {
       display: block;
-      margin-top: 8px;
+      margin-top: 0.5rem;
 
       &::before {
         content: '— ';
@@ -138,11 +97,11 @@
   pre[class*='language-'] {
     text-shadow: none;
     color: var(--text);
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
 
   .code-iframe-wrapper {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
   }
 }
