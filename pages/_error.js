@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 const styleDiv = {
@@ -13,12 +12,6 @@ const styleDiv = {
 // eslint-disable-next-line react/prop-types
 function Error({ statusCode }) {
   const router = useRouter();
-
-  useEffect(() => {
-    // reload page to bypass safari error of window undefined
-    router.reload();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div style={styleDiv}>

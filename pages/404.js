@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import posts from '@data/posts';
 import Layout from '@components/layout';
 import Grid from '@components/grid';
 
 // import Image from 'next/image';
 
 export default function Custom404({ title, projects, posts }) {
+  const router = useRouter();
+
+  // fix for trailling slash URL error from Github pages
+  useEffect(() => {
+    if (router.asPath.endsWith('/')) {
+      router.replace(router.asPath.replace(/\/$/, ''));
+    }
+  }, [router]);
+
   const pro = projects.filter((x) => x.type === 'pro');
   const perso = projects.filter((x) => x.type === 'perso');
   const [random, setRandom] = useState([]);

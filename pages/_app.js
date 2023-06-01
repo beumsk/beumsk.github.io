@@ -11,8 +11,9 @@ import 'public/styles/style.scss';
 // eslint-disable-next-line react/prop-types
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.goatcounter) {
       window.goatcounter.count({
         path: router.asPath,
         // path: location.pathname + location.search + location.hash
