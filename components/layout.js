@@ -6,7 +6,7 @@ import Footer from '@components/footer';
 import Breadcrumb from '@components/breadcrumb';
 // import MobileNav from '@components/mobileNav';
 
-export default function Layout({ img, title, description, url, children, itemtype, published, modified }) {
+export default function Layout({ title, description, img, url, children, itemtype, published, modified }) {
   const [theme, setTheme] = useState('');
 
   useEffect(() => {

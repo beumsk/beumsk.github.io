@@ -21,8 +21,8 @@ export default function BlogLayout({ children }) {
     Prism.highlightAll();
   }, [router]);
 
-  const post = posts.filter((p) => p.slug === router.asPath.replace('/blog/', ''));
-  const { title, intro, img, published, modified, categories, url } = post[0];
+  const post = posts.find((p) => p.slug === router.asPath.replace('/blog/', ''));
+  const { title, intro, img, published, modified, categories } = post;
 
   const categoriesList = categories?.split(', ').filter((x) => x);
 
@@ -32,7 +32,7 @@ export default function BlogLayout({ children }) {
 
   return (
     <>
-      <Layout title={`${title} | Blog | Rémy Beumier`} description={intro} itemtype="Article" {...post[0]}>
+      <Layout title={`${title} | Blog | Rémy Beumier`} description={intro} itemtype="Article" {...post}>
         <div className="container narrow posts-shape">
           <div data-aos="fade-left">
             <article>
@@ -95,7 +95,5 @@ export default function BlogLayout({ children }) {
 }
 
 BlogLayout.propTypes = {
-  meta: PropTypes.object,
   children: PropTypes.node,
-  posts: PropTypes.array,
 };

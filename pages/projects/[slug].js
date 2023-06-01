@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
-import projects from '@data/projects';
 import Layout from '@components/layout';
 import Tech from '@components/tech';
 import Codepen from '@components/codepen';
@@ -14,32 +13,21 @@ Tech.propTypes = {
   name: PropTypes.string,
 };
 
-export default function DynamicProject({ projectss, slug, title, description, img, url }) {
-  const personal = projectss.filter((x) => x.type === 'perso');
-  const professional = projectss.filter((x) => x.type === 'pro');
-  const proj = projectss[projectss.findIndex((x) => x.title === slug)];
-  const isPro = proj.type === 'pro';
-
-  const nextLink = isPro
-    ? professional[professional.findIndex((x) => x.title === slug) + 1] || professional[0]
-    : personal[personal.findIndex((x) => x.title === slug) + 1] || personal[0];
-  const previousLink = isPro
-    ? professional[professional.findIndex((x) => x.title === slug) - 1] || professional[professional.length - 1]
-    : personal[personal.findIndex((x) => x.title === slug) - 1] || personal[personal.length - 1];
-  const relatedLinks = [previousLink, nextLink];
+export default function DynamicProject({ project, relatedLinks, img, url }) {
+  const isPro = project.type === 'pro';
 
   return (
-    <Layout title={`${title} | Projects | Rémy Beumier`} description={description} img={img} url={url}>
+    <Layout title={`${project.title} | Projects | Rémy Beumier`} description={project.intro} img={img} url={url}>
       <div className="container project-shape">
         <div data-aos="fade-left">
-          <h1>{title}</h1>
-          <p className="intro mb-8">{description}</p>
+          <h1>{project.title}</h1>
+          <p className="intro mb-8">{project.intro}</p>
 
-          {proj.tech.length > 0 && (
+          {project.tech.length > 0 && (
             <>
               <h2>Technologies</h2>
               <ul className="mb-6 tech-list">
-                {proj.tech.map((t) => (
+                {project.tech.map((t) => (
                   <li key={t}>
                     <Link href={`/projects?${t}`}>
                       <a className="btn">
@@ -53,25 +41,31 @@ export default function DynamicProject({ projectss, slug, title, description, im
             </>
           )}
 
-          {proj.chall.length > 0 && (
+          {project.chall.length > 0 && (
             <>
               <h2>Challenges and accomplishments</h2>
               <ul className="mb-8">
-                {proj.chall.map((c) => (
+                {project.chall.map((c) => (
                   <li key={c}>{c}</li>
                 ))}
               </ul>
             </>
           )}
 
-          {!isPro && proj.pen && <Codepen pen={proj.pen} title={proj.title} />}
+          {!isPro && project.pen && <Codepen pen={project.pen} title={project.title} />}
 
-          {!isPro && proj.sandbox && <Codesandbox sandbox={proj.sandbox} title={proj.title} />}
+          {!isPro && project.sandbox && <Codesandbox sandbox={project.sandbox} title={project.title} />}
 
-          {isPro && proj.screen && (
+          {isPro && project.screen && (
             <figure className="project-screen">
-              <img src={proj.screen} alt={`Screenshot of ${proj.current}`} width="300" height="400" loading="lazy" />
-              <figcaption className="sr-only">{`Full size screenshot of ${title} website homepage`}</figcaption>
+              <img
+                src={project.screen}
+                alt={`Screenshot of ${project.current}`}
+                width="300"
+                height="400"
+                loading="lazy"
+              />
+              <figcaption className="sr-only">{`Full size screenshot of ${project.title} website homepage`}</figcaption>
             </figure>
           )}
 
@@ -85,7 +79,7 @@ export default function DynamicProject({ projectss, slug, title, description, im
 
             {!isPro && (
               <a
-                href={`https://github.com/beumsk/${proj.title}`}
+                href={`https://github.com/beumsk/${project.title}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn mb-4 mr-4"
@@ -95,15 +89,15 @@ export default function DynamicProject({ projectss, slug, title, description, im
               </a>
             )}
 
-            {isPro && proj.current && (
-              <a href={proj.current} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
+            {isPro && project.current && (
+              <a href={project.current} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
                 Live website
                 <MdPublic title="Live website" aria-labelledby="Live website" className="ml-1" />
               </a>
             )}
 
-            {isPro && proj.past && (
-              <a href={proj.past} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
+            {isPro && project.past && (
+              <a href={project.past} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
                 Site as I left it
                 <MdSettingsBackupRestore
                   title="Site as I left it"
@@ -124,38 +118,43 @@ export default function DynamicProject({ projectss, slug, title, description, im
   );
 }
 
-DynamicProject.defaultProps = {
-  title: 'Project | Rémy Beumier',
-};
-
 DynamicProject.propTypes = {
-  projectss: PropTypes.array,
-  slug: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
+  project: PropTypes.object,
+  relatedLinks: PropTypes.array,
   img: PropTypes.string,
   url: PropTypes.string,
 };
 
 export async function getStaticProps(context) {
-  const proj = projects[projects.findIndex((p) => p.title === context.params.slug)];
-  let slugTitle = proj.title.replace(/-/g, ' ');
-  slugTitle = slugTitle.charAt(0).toUpperCase() + slugTitle.slice(1);
+  const projects = require('@data/projects');
+  const project = projects.find((p) => p.slug === context.params.slug);
+  const personal = projects.filter((x) => x.type === 'perso');
+  const professional = projects.filter((x) => x.type === 'pro');
+  const previousLink =
+    project.type === 'pro'
+      ? professional[professional.findIndex((x) => x.slug === context.params.slug) - 1] ||
+        professional[professional.length - 1]
+      : personal[personal.findIndex((x) => x.slug === context.params.slug) - 1] || personal[personal.length - 1];
+  const nextLink =
+    project.type === 'pro'
+      ? professional[professional.findIndex((x) => x.slug === context.params.slug) + 1] || professional[0]
+      : personal[personal.findIndex((x) => x.slug === context.params.slug) + 1] || personal[0];
+  const relatedLinks = [previousLink, nextLink];
+
   return {
     props: {
-      projectss: projects,
-      slug: context.params.slug,
-      title: slugTitle,
-      description: proj.intro,
-      img: `https://remybeumier.be${proj.img}`,
+      project: project,
+      relatedLinks: relatedLinks,
+      img: `https://remybeumier.be${project.img}`,
       url: `https://remybeumier.be/projects/${context.params.slug}`,
     },
   };
 }
 
 export async function getStaticPaths() {
+  const projects = require('@data/projects');
   const paths = projects.map((p) => ({
-    params: { slug: p.title },
+    params: { slug: p.slug },
   }));
   return {
     paths,

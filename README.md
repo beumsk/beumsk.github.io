@@ -43,8 +43,9 @@ This will trigger Github Action and deploy the changes to gh-pages.
 X.X
 - trailing slash urls not working (issue with github)
 - add more images of features/pages?
-- low res images (automate without next-optimized-images)
+- low res images (automate without next-optimized-images -> sharp?)
 - rethink scss structure (BEM?)
+- fix multiple reload on safari
 
 Blog posts
 - use prism in your nextjs markdown (+scss)

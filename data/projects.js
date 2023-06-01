@@ -1,6 +1,7 @@
 const projects = [
   {
-    title: 'omega',
+    slug: 'omega',
+    title: 'Omega',
     link: '/projects/omega',
     current: 'https://www.parcomega.ca/',
     past: 'https://web.archive.org/web/20211213130150/https://app.staging.parcomega.ca/en/',
@@ -20,7 +21,8 @@ const projects = [
     type: 'pro',
   },
   {
-    title: 'padel',
+    slug: 'padel',
+    title: 'Padel',
     link: '/projects/padel',
     current: 'https://www.parispadelmajor.com/',
     past: 'https://web.archive.org/web/20220714150729/https://www.parispadelmajor.com/',
@@ -41,7 +43,8 @@ const projects = [
     type: 'pro',
   },
   {
-    title: 'onomo',
+    slug: 'onomo',
+    title: 'Onomo',
     link: '/projects/onomo',
     current: 'https://www.onomohotels.com/',
     past: 'https://web.archive.org/web/20211213130244/https://app.staging.onomohotels.com/',
@@ -60,7 +63,8 @@ const projects = [
     type: 'pro',
   },
   {
-    title: 'eli-paris',
+    slug: 'eli-paris',
+    title: 'Eli Paris',
     link: '/projects/eli-paris',
     current: 'https://www.eliparis.com/',
     past: 'http://web.archive.org/web/20220120123422/https://www.eliparis.com/accueil',
@@ -79,7 +83,8 @@ const projects = [
     type: 'pro',
   },
   {
-    title: 'kpmg-careers',
+    slug: 'kpmg-careers',
+    title: 'KPMG Careers',
     link: '/projects/kpmg-careers',
     current: 'https://careers.kpmg.be/',
     past: 'https://web.archive.org/web/20200803122755/https://careers.kpmg.be/',
@@ -99,7 +104,8 @@ const projects = [
     type: 'pro',
   },
   {
-    title: 'kpmg-law',
+    slug: 'kpmg-law',
+    title: 'KPMG Law',
     link: '/projects/kpmg-law',
     current: 'https://www.kpmglaw.be/',
     past: 'https://web.archive.org/web/20200812114928/https://www.klaw.be/',
@@ -118,7 +124,8 @@ const projects = [
     type: 'pro',
   },
   {
-    title: 'shop',
+    slug: 'shop',
+    title: 'Shop',
     link: '/projects/shop',
     img: '/images/projects/shop.jpg',
     sandbox: 'react-shop-client-csvvwz',
@@ -137,7 +144,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'memory',
+    slug: 'memory',
+    title: 'Memory',
     link: '/projects/memory',
     img: '/images/projects/memory.jpg',
     pen: 'xdoKjX',
@@ -154,7 +162,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'movies',
+    slug: 'movies',
+    title: 'Movies',
     link: '/projects/movies',
     img: '/images/projects/movies.jpg',
     sandbox: 'github/beumsk/React-Movies',
@@ -172,7 +181,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'recipes',
+    slug: 'recipes',
+    title: 'Recipes',
     link: '/projects/recipes',
     img: '/images/projects/recipes.jpg',
     sandbox: 'github/beumsk/Recipes',
@@ -191,7 +201,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'quiz',
+    slug: 'quiz',
+    title: 'Quiz',
     link: '/projects/quiz',
     img: '/images/projects/quiz.jpg',
     sandbox: 'github/beumsk/Quiz',
@@ -209,7 +220,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'snake',
+    slug: 'snake',
+    title: 'Snake',
     link: '/projects/snake',
     img: '/images/projects/snake.jpg',
     pen: 'PmPxEo',
@@ -226,7 +238,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'star-match',
+    slug: 'star-match',
+    title: 'Star Match',
     link: '/projects/star-match',
     img: '/images/projects/star-match.jpg',
     pen: 'YzEyVYp',
@@ -243,7 +256,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'minesweeper',
+    slug: 'minesweeper',
+    title: 'Minesweeper',
     link: '/projects/minesweeper',
     img: '/images/projects/minesweeper.jpg',
     pen: 'JJYqop',
@@ -259,7 +273,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'whack-a-donkey-kong',
+    slug: 'whack-a-donkey-kong',
+    title: 'Whack a Donkey Kong',
     link: '/projects/whack-a-donkey-kong',
     img: '/images/projects/whack-a-donkey-kong.jpg',
     pen: 'YabyJJ',
@@ -275,7 +290,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'hangman',
+    slug: 'hangman',
+    title: 'Hangman',
     link: '/projects/hangman',
     img: '/images/projects/hangman.jpg',
     pen: 'ZEzvEdz',
@@ -291,7 +307,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'dad-jokes',
+    slug: 'dad-jokes',
+    title: 'Dad jokes',
     link: '/projects/dad-jokes',
     img: '/images/projects/dad-jokes.jpg',
     pen: 'LKXvrq',
@@ -303,7 +320,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'giphy-search',
+    slug: 'giphy-search',
+    title: 'Giphy search',
     link: '/projects/giphy-search',
     img: '/images/projects/giphy-search.jpg',
     pen: 'EExyvQ',
@@ -320,7 +338,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'tetris',
+    slug: 'tetris',
+    title: 'Tetris',
     link: '/projects/tetris',
     img: '/images/projects/tetris.jpg',
     pen: 'eYpxowj',
@@ -338,7 +357,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'simon-game',
+    slug: 'simon-game',
+    title: 'Simon game',
     link: '/projects/simon-game',
     img: '/images/projects/simon-game.jpg',
     pen: 'LWqpGM',
@@ -355,7 +375,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'drum-machine',
+    slug: 'drum-machine',
+    title: 'Drum machine',
     link: '/projects/drum-machine',
     img: '/images/projects/drum-machine.jpg',
     pen: 'dwmoyE',
@@ -367,7 +388,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'clock',
+    slug: 'clock',
+    title: 'Clock',
     link: '/projects/clock',
     img: '/images/projects/clock.jpg',
     pen: 'YQoBJK',
@@ -383,7 +405,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'etch-a-sketch',
+    slug: 'etch-a-sketch',
+    title: 'Etch a Sketch',
     link: '/projects/etch-a-sketch',
     img: '/images/projects/etch-a-sketch.jpg',
     pen: 'dVWPOW',
@@ -400,7 +423,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'calculator',
+    slug: 'calculator',
+    title: 'Calculator',
     link: '/projects/calculator',
     img: '/images/projects/calculator.jpg',
     pen: 'dvdZjx',
@@ -417,7 +441,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'higher-or-lower',
+    slug: 'higher-or-lower',
+    title: 'Higher or Lower',
     link: '/projects/higher-or-lower',
     img: '/images/projects/higher-or-lower.jpg',
     pen: 'bGbLzzE',
@@ -433,7 +458,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'tic-tac-toe',
+    slug: 'tic-tac-toe',
+    title: 'Tic Tac Toe',
     link: '/projects/tic-tac-toe',
     img: '/images/projects/tic-tac-toe.jpg',
     pen: 'ZevLbx',
@@ -449,7 +475,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'sliding-puzzle',
+    slug: 'sliding-puzzle',
+    title: 'Sliding Puzzle',
     link: '/projects/sliding-puzzle',
     img: '/images/projects/sliding-puzzle.jpg',
     pen: 'RjzGBO',
@@ -465,7 +492,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'pokemon',
+    slug: 'pokemon',
+    title: 'Pokemon',
     link: '/projects/pokemon',
     img: '/images/projects/pokemon.jpg',
     pen: 'rjBWWR',
@@ -481,7 +509,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'color-game',
+    slug: 'color-game',
+    title: 'Color game',
     link: '/projects/color-game',
     img: '/images/projects/color-game.jpg',
     pen: 'poyXqWZ',
@@ -493,7 +522,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'brick-breaker',
+    slug: 'brick-breaker',
+    title: 'Brick breaker',
     link: '/projects/brick-breaker',
     img: '/images/projects/brick-breaker.jpg',
     pen: 'GEgjEb',
@@ -509,7 +539,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'connect-4',
+    slug: 'connect-4',
+    title: 'Connect 4',
     link: '/projects/connect-4',
     img: '/images/projects/connect-4.jpg',
     pen: 'bqWqGV',
@@ -526,7 +557,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'date-counter',
+    slug: 'date-counter',
+    title: 'Date counter',
     link: '/projects/date-counter',
     img: '/images/projects/date-counter.jpg',
     pen: 'oWYVYj',
@@ -544,7 +576,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'quotes',
+    slug: 'quotes',
+    title: 'Quotes',
     link: '/projects/quotes',
     img: '/images/projects/quotes.jpg',
     pen: 'xgGzdJ',
@@ -556,7 +589,8 @@ const projects = [
     type: 'perso',
   },
   {
-    title: 'timer',
+    slug: 'timer',
+    title: 'Timer',
     link: '/projects/timer',
     img: '/images/projects/timer.jpg',
     pen: 'WpKWgG',

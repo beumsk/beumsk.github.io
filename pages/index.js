@@ -2,14 +2,12 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { MdFileDownload } from 'react-icons/md';
-import projects from '@data/projects';
-import posts from '@data/posts';
 import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Grid from '@components/grid';
 import Tech from '@components/tech';
 
-export default function Home({ title, description }) {
+export default function Home({ title, description, projects, posts }) {
   const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
 
   return (
@@ -123,22 +121,24 @@ export default function Home({ title, description }) {
   );
 }
 
-Home.defaultProps = {
-  title: 'Rémy Beumier | Front-end Developer',
-};
-
 Home.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
+  projects: PropTypes.array,
   posts: PropTypes.array,
 };
 
 export async function getStaticProps() {
+  const projects = require('@data/projects');
+  const posts = require('@data/posts');
+
   return {
     props: {
       title: 'Rémy Beumier | Front-end Developer',
       description:
         "Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.",
+      projects: projects,
+      posts: posts,
     },
   };
 }

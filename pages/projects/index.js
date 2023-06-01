@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import projects from '@data/projects';
 import Layout from '@components/layout';
 import Grid from '@components/grid';
 import Tech from '@components/tech';
 
-export default function Projects({ title, description, url }) {
+export default function Projects({ title, description, url, projects }) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g, '') === '/projects' ? '' : router.asPath.replace(/.*\?/g, '');
@@ -75,22 +74,21 @@ export default function Projects({ title, description, url }) {
   );
 }
 
-Projects.defaultProps = {
-  title: 'Projects | Rémy Beumier',
-};
-
 Projects.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   url: PropTypes.string,
+  projects: PropTypes.array,
 };
 
 export async function getStaticProps() {
+  const projects = require('@data/projects');
   return {
     props: {
       title: 'Projects | Rémy Beumier',
       description: 'My personal and professional projects developed with HTML, CSS, JS, React, Angular and many more.',
       url: 'https://remybeumier.be/projects',
+      projects: projects,
     },
   };
 }

@@ -5,13 +5,12 @@ import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
 import { SiCodesandbox } from 'react-icons/si';
 
 function GridItem({ item }) {
-  const title = item.title.replace(/-/g, ' ').charAt(0).toUpperCase() + item.title.replace(/-/g, ' ').slice(1);
   return (
     <div className="card">
       <div className="card__behind">
         <Link href={item.link || ''}>
-          <a className="card__title" title={title}>
-            <h2 className="t-ellipsis">{title}</h2>
+          <a className="card__title" title={item.title}>
+            <h2 className="t-ellipsis">{item.title}</h2>
           </a>
         </Link>
         {item.type === 'perso' && (
@@ -62,9 +61,9 @@ function GridItem({ item }) {
         )}
       </div>
       <Link href={item.link || ''}>
-        <a title="Learn more" tabIndex="-1">
+        <a title={item.title} tabIndex="-1">
           <div className="card__img">
-            <img src={item.img} alt={item.title.replace(/-/g, ' ')} width="260" height="146" loading="lazy" />
+            <img src={item.img} alt={item.title} width="260" height="146" loading="lazy" />
           </div>
         </a>
       </Link>

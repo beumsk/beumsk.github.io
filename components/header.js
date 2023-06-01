@@ -36,6 +36,6 @@ export default function Header({ onClick, theme }) {
 }
 
 Header.propTypes = {
-  theme: PropTypes.string,
   onClick: PropTypes.func,
+  theme: PropTypes.string,
 };
