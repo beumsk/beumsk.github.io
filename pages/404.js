@@ -47,6 +47,8 @@ export default function Custom404({ title, pro, perso, posts }) {
       </Layout>
     );
   }
+
+  return null;
 }
 
 Custom404.propTypes = {
