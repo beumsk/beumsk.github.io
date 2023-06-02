@@ -33,7 +33,7 @@ export default function BlogLayout({ children }) {
   return (
     <>
       <Layout title={`${title} | Blog | Rémy Beumier`} description={intro} itemtype="Article" {...post}>
-        <div className="container narrow posts-shape">
+        <div className="container narrow post-shape">
           <div data-aos="fade-left">
             <article>
               <h1 itemProp="headline name">{title}</h1>
@@ -83,7 +83,7 @@ export default function BlogLayout({ children }) {
               </div>
 
               <div>
-                <p className="related-title mb-5">Suggested articles</p>
+                <h2 className="mb-5">Suggested articles</h2>
                 <Grid data={relatedLinks} className="mb-20" />
               </div>
             </article>

@@ -31,7 +31,7 @@ export default function Projects({ title, description, url, projects }) {
           codes I am most proud of, whether they are professional or personal.
         </p>
 
-        <div className="tech-list mb-4">
+        <div className="project__tech-list mb-4">
           <Link href={'?professional'}>
             <a onClick={() => setFilter('professional')} className={`btn ${filter === 'professional' ? 'active' : ''}`}>
               Professional projects
@@ -44,7 +44,7 @@ export default function Projects({ title, description, url, projects }) {
           </Link>
         </div>
 
-        <div className="tech-list">
+        <div className="project__tech-list">
           {skillsList.map((s) => (
             <Link key={s} href={`?${s}`}>
               <a onClick={() => setFilter(s)} className={`btn ${filter === s ? 'active' : ''}`}>

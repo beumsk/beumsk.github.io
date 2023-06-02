@@ -1,6 +1,6 @@
 @media screen and (min-width: 992px) {
   @include moving-shapes(blog-shape, 2rem, 8rem, 2.5rem, 53s, 100deg, -20rem, 1rem);
-  @include moving-shapes(posts-shape, 3rem, 10rem, 2.5rem, 53s, -100deg, -1rem, 20rem);
+  @include moving-shapes(post-shape, 3rem, 10rem, 2.5rem, 53s, -100deg, -1rem, 20rem);
 }
 
 .blog__categories .btn {

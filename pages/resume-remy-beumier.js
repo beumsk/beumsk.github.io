@@ -19,12 +19,12 @@ export default function Resume({ title, description, url }) {
       </Head>
 
       <article className="resume">
-        <section className="name">
+        <section className="resume__name">
           <h1>Rémy Beumier</h1>
           <p className="subtitle">Frontend Developer</p>
         </section>
 
-        <section className="contact">
+        <section className="resume__contact">
           <p>
             <a href="mailto:remybeumier@gmail.com" target="_blank" rel="noreferrer">
               remybeumier@gmail.com
@@ -48,7 +48,7 @@ export default function Resume({ title, description, url }) {
           </p>
         </section>
 
-        <section className="experience">
+        <section className="resume__experience">
           <h2>
             Experience
             <span className="emoji">
@@ -178,7 +178,7 @@ export default function Resume({ title, description, url }) {
           </div>
         </section>
 
-        <section className="projects">
+        <section className="resume__projects">
           <h2>
             Projects
             <span className="emoji">
@@ -198,7 +198,7 @@ export default function Resume({ title, description, url }) {
           </div>
         </section>
 
-        <section className="skills">
+        <section className="resume__skills">
           <h2>
             Skills
             <span className="emoji">
@@ -261,7 +261,7 @@ export default function Resume({ title, description, url }) {
           </ul>
         </section>
 
-        <section className="articles">
+        <section className="resume__articles">
           <h2>
             Articles
             <span className="emoji">

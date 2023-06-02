@@ -24,31 +24,31 @@
     @include grid;
   }
 
-  .name {
+  .resume__name {
     grid-area: name;
   }
 
-  .contact {
+  .resume__contact {
     grid-area: contact;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .experience {
+  .resume__experience {
     grid-area: experience;
     text-align: justify;
   }
 
-  .projects {
+  .resume__projects {
     grid-area: projects;
   }
 
-  .articles {
+  .resume__articles {
     grid-area: articles;
   }
 
-  .skills {
+  .resume__skills {
     grid-area: skills;
   }
 

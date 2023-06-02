@@ -1,6 +1,6 @@
 {
   "name": "rb",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "My portfolio website created with Next.js presenting projects and blog posts.",
   "main": "index.js",
   "scripts": {

@@ -5,7 +5,7 @@ import { nav } from '@data/nav';
 
 export default function Header({ onClick, theme }) {
   return (
-    <header>
+    <header className="header">
       <div className="container">
         {nav.map((n, i) => (
           <Link href={n.link} key={n.text}>

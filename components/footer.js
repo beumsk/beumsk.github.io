@@ -26,7 +26,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="over-h svg-divider">
+    <footer id="contact" className="contact over-h svg-divider">
       <div className="container" data-aos="fade-left">
         <p className="mb-5">Feel free to get in touch and stay connected with me via these different channels.</p>
         <div className="mb-10">
@@ -40,7 +40,7 @@ export default function Footer() {
             );
           })}
         </div>
-        <p className="copy">
+        <p className="contact__copy">
           &copy; {new Date().getFullYear()} |{' '}
           <span itemProp="author" itemScope itemType="http://schema.org/Person">
             <span itemProp="name">Rémy Beumier</span>

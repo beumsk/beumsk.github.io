@@ -12,10 +12,10 @@ export default function Home({ title, description, projects, posts }) {
 
   return (
     <Layout title={title} description={description}>
-      <section id="splash">
+      <section id="splash" className="splash">
         <div>
           <div className="container" data-aos="fade-up">
-            <div className="title">
+            <div className="t-center">
               <h1>Rémy Beumier</h1>
               <p>Front-end Dev</p>
               <Logo />
@@ -24,7 +24,7 @@ export default function Home({ title, description, projects, posts }) {
         </div>
       </section>
 
-      <section id="about" className="svg-divider">
+      <section id="about" className="about svg-divider">
         <div className="home-shapes"></div>
         <div className="container" data-aos="fade-right">
           <div className="cols cols-lg">
@@ -70,9 +70,9 @@ export default function Home({ title, description, projects, posts }) {
                 width="270"
                 height="112"
                 loading="lazy"
-                className="mt-5 mb-5"
+                className="about__img mt-5 mb-5"
               />
-              <div className="languages my-2 mx-2">
+              <div className="about__languages my-2 mx-2">
                 {skillsList.map((s) => (
                   <Link key={s} href={`/projects?${s}`}>
                     <a hover={s}>
@@ -91,7 +91,7 @@ export default function Home({ title, description, projects, posts }) {
           <h2>Projects</h2>
           <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
           <Grid data={projects.filter((x) => x.homepage).slice(0, 3)} className="mt-10 mb-10" />
-          <div className="btn-wrapper">
+          <div className="btn-wrapper-right">
             <Link href="/projects">
               <a className="btn">
                 Check all projects
@@ -102,12 +102,12 @@ export default function Home({ title, description, projects, posts }) {
         </div>
       </section>
 
-      <section id="blog">
+      <section id="blog" className="">
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
           <p>I write some stuff about coding and the web in general. Here are the latest posts.</p>
           <Grid data={posts.slice(0, 3)} className="mt-10 mb-10" />
-          <div className="btn-wrapper">
+          <div className="btn-wrapper-right">
             <Link href="/blog">
               <a className="btn">
                 Check all posts

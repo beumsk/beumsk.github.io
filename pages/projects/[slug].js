@@ -21,12 +21,12 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
       <div className="container project-shape">
         <div data-aos="fade-left">
           <h1>{project.title}</h1>
-          <p className="intro mb-8">{project.intro}</p>
+          <p className="project__intro mb-8">{project.intro}</p>
 
           {project.tech.length > 0 && (
             <>
               <h2>Technologies</h2>
-              <ul className="mb-6 tech-list">
+              <ul className="mb-6 project__tech-list">
                 {project.tech.map((t) => (
                   <li key={t}>
                     <Link href={`/projects?${t}`}>
@@ -57,7 +57,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
           {!isPro && project.sandbox && <Codesandbox sandbox={project.sandbox} title={project.title} />}
 
           {isPro && project.screen && (
-            <figure className="project-screen">
+            <figure className="project__screen">
               <img
                 src={project.screen}
                 alt={`Screenshot of ${project.current}`}
@@ -109,7 +109,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
           </div>
 
           <div>
-            <p className="related-title mb-5">Suggested projects</p>
+            <h2 className="mb-5">Suggested projects</h2>
             <Grid data={relatedLinks} className="mb-20" />
           </div>
         </div>

@@ -36,16 +36,14 @@ This will trigger Github Action and deploy the changes to gh-pages.
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
 - review design: https://anthonyhobday.com/sideprojects/saferules/
 
-1.4
+1.5
 - metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
 - back to top button
 
 X.X
-- trailing slash urls not working (issue with github)
 - add more images of features/pages?
 - low res images (automate without next-optimized-images -> sharp?)
-- rethink scss structure (BEM?)
-- fix multiple reload on safari
+- automate project screenshots with package?
 
 Blog posts
 - use prism in your nextjs markdown (+scss)
@@ -82,13 +80,15 @@ Blog posts
 - Add en entry in data/projects.js
   ```
   {
-    title: 'project title',
+    slug: 'project-title',
+    title: 'Project title',
     link: '/projects/project-title',
     intro: 'Project intro text',
     current: 'https://www.current-link.com/',
     past: 'https://web.archive.org/web/xxxxxxxxxxx/https://past-link.com/',
     img: '/images/projects/project-title.jpg',
     screen: '/images/projects/project-title-screen.png',
+    modified: '2022-12-31',
     tech: ['tech1', 'tech2'],
     chall: [
       'First challenge',
@@ -98,7 +98,7 @@ Blog posts
     type: 'pro',
   },
   ```
-- Add an miniature image
+- Add a miniature image
 - Add a full size screenshot of live version if it's a professional project
 
 ### PERSO
@@ -106,12 +106,14 @@ Blog posts
 - Add en entry in data/projects.js
   ```
   {
-    title: 'project title',
+    slug: 'project-title',
+    title: 'Project title',
     link: '/projects/project-title',
     intro: 'Project intro text',
     img: '/images/projects/project-title.jpg',
     pen: 'xxxxxx',
     sandbox: 'sandbox-title-xxxxxx',
+    modified: '2022-12-31',
     tech: ['tech1', 'tech2'],
     chall: [
       'First challenge',
@@ -121,7 +123,7 @@ Blog posts
     type: 'perso',
   }
   ```
-- Add an miniature image
+- Add a miniature image
 
 ## ANALYTICS
 

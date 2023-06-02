@@ -1,4 +1,4 @@
-#contact {
+.contact {
   position: relative;
   background: var(--bg2);
   text-align: center;
@@ -14,7 +14,7 @@
     padding-top: 8rem;
   }
 
-  .copy {
+  .contact__copy {
     font-size: 0.875rem;
   }
 
