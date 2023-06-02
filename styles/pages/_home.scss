@@ -10,7 +10,7 @@ section {
   }
 }
 
-#splash {
+.splash {
   position: relative;
   background: url(/images/road.jpg) center;
   background-size: cover;
@@ -23,10 +23,6 @@ section {
 
   @media screen and (min-width: 992px) {
     padding-bottom: 8rem;
-  }
-
-  .title {
-    text-align: center;
   }
 
   h1 {
@@ -49,7 +45,7 @@ section {
   }
 }
 
-#about {
+.about {
   position: relative;
 
   &.svg-divider::before {
@@ -117,12 +113,12 @@ section {
     }
   }
 
-  img {
+  .about__img {
     transform: scale(-1, 1);
     min-width: 0;
   }
 
-  .languages {
+  .about__languages {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -234,6 +230,6 @@ section {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 64 64'%3E%3Cdefs%3E%3Cpath id='Artboard-5' fill='%23999999' fill-opacity='0.5' fill-rule='nonzero' d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/defs%3E%3Cuse href='%23Artboard-5' transform='rotate(45)' transform-origin='0' /%3E%3C/svg%3E");
 }
 
-.btn-wrapper {
+.btn-wrapper-right {
   text-align: right;
 }

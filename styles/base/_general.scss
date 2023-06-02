@@ -122,10 +122,6 @@ p {
   }
 }
 
-p.related-title {
-  font-size: 1.5rem;
-}
-
 ul,
 ol {
   margin: 0;
@@ -312,6 +308,8 @@ button {
   top: -0.125rem;
   left: -0.125rem;
   box-shadow: 4px 4px var(--primary-light);
+  cursor: pointer;
+  transition: all 0.2s;
 
   @media screen and (min-width: 768px) {
     top: 0;
@@ -325,8 +323,6 @@ button {
     border-color: var(--text2);
   }
 
-  cursor: pointer;
-  transition: all 0.2s;
 
   &:not(.active):hover,
   &:not(.active):focus {
@@ -335,6 +331,10 @@ button {
     left: -0.125rem;
     box-shadow: 4px 4px var(--primary-light);
   }
+}
+
+.t-center {
+  text-align: center;
 }
 
 .t-ellipsis {
