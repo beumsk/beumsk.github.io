@@ -42,8 +42,6 @@ This will trigger Github Action and deploy the changes to gh-pages.
 
 X.X
 - add more images of features/pages?
-- low res images (automate without next-optimized-images -> sharp?)
-- automate project screenshots with package?
 
 Blog posts
 - use prism in your nextjs markdown (+scss)
@@ -71,7 +69,7 @@ Blog posts
   ```
 - Write the post with keywords, speaking with we, code examples and a final result on codepen or codesandbox
 - Review spell on https://languagetool.org/
-- Create blog post image: https://codepen.io/beumsk/full/wvjYygY
+- Create blog post image: https://codepen.io/beumsk/full/wvjYygY and upload in /public/images/posts
 
 ## PROJECTS
 
@@ -98,8 +96,8 @@ Blog posts
     type: 'pro',
   },
   ```
-- Add a miniature image
-- Add a full size screenshot of live version if it's a professional project
+- Create an optimized miniature image and upload in /public/images/projects
+- Create an optimized full size screenshot of live version and upload in /public/images/projects
 
 ### PERSO
 
@@ -123,7 +121,7 @@ Blog posts
     type: 'perso',
   }
   ```
-- Add a miniature image
+- Create an optimized miniature image and upload in /public/images/projects
 
 ## ANALYTICS
 
