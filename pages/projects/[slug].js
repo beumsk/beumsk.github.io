@@ -23,7 +23,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
           <h1>{project.title}</h1>
           <p className="project__intro mb-8">{project.intro}</p>
 
-          {project.tech.length > 0 && (
+          {project.tech.length > 0 ? (
             <>
               <h2>Technologies</h2>
               <ul className="mb-6 project__tech-list">
@@ -39,9 +39,9 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
                 ))}
               </ul>
             </>
-          )}
+          ) : null}
 
-          {project.chall.length > 0 && (
+          {project.chall.length > 0 ? (
             <>
               <h2>Challenges and accomplishments</h2>
               <ul className="mb-8">
@@ -50,13 +50,13 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
                 ))}
               </ul>
             </>
-          )}
+          ) : null}
 
-          {!isPro && project.pen && <Codepen pen={project.pen} title={project.title} />}
+          {!isPro && project.pen ? <Codepen pen={project.pen} title={project.title} /> : null}
 
-          {!isPro && project.sandbox && <Codesandbox sandbox={project.sandbox} title={project.title} />}
+          {!isPro && project.sandbox ? <Codesandbox sandbox={project.sandbox} title={project.title} /> : null}
 
-          {isPro && project.screen && (
+          {isPro && project.screen ? (
             <figure className="project__screen">
               <img
                 src={project.screen}
@@ -67,7 +67,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
               />
               <figcaption className="sr-only">{`Full size screenshot of ${project.title} website homepage`}</figcaption>
             </figure>
-          )}
+          ) : null}
 
           <div className="mb-15">
             <Link href="/projects">
@@ -77,7 +77,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
               </a>
             </Link>
 
-            {!isPro && (
+            {!isPro ? (
               <a
                 href={`https://github.com/beumsk/${project.title}`}
                 target="_blank"
@@ -87,16 +87,16 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
                 Github repository
                 <FaGithub title="Github" aria-labelledby="Github" className="ml-1" />
               </a>
-            )}
+            ) : null}
 
-            {isPro && project.current && (
+            {isPro && project.current ? (
               <a href={project.current} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
                 Live website
                 <MdPublic title="Live website" aria-labelledby="Live website" className="ml-1" />
               </a>
-            )}
+            ) : null}
 
-            {isPro && project.past && (
+            {isPro && project.past ? (
               <a href={project.past} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
                 Site as I left it
                 <MdSettingsBackupRestore
@@ -105,7 +105,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
                   className="ml-1"
                 />
               </a>
-            )}
+            ) : null}
           </div>
 
           <div>

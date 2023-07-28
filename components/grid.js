@@ -13,9 +13,9 @@ function GridItem({ item }) {
             <h2 className="t-ellipsis">{item.title}</h2>
           </a>
         </Link>
-        {item.type === 'perso' && (
+        {item.type === 'perso' ? (
           <div className="card__links">
-            {item.pen && (
+            {item.pen ? (
               <a
                 href={'https://codepen.io/beumsk/pen/' + item.pen}
                 target="_blank"
@@ -24,8 +24,8 @@ function GridItem({ item }) {
               >
                 <FaCodepen title="Codepen" aria-labelledby="Codepen" />
               </a>
-            )}
-            {item.sandbox && (
+            ) : null}
+            {item.sandbox ? (
               <a
                 href={'https://codesandbox.io/s/' + item.sandbox}
                 target="_blank"
@@ -34,7 +34,7 @@ function GridItem({ item }) {
               >
                 <SiCodesandbox title="Codesandbox" aria-labelledby="Codesandbox" />
               </a>
-            )}
+            ) : null}
             <a
               href={'https://github.com/beumsk/' + item.title}
               target="_blank"
@@ -44,21 +44,21 @@ function GridItem({ item }) {
               <FaGithub title="Github" aria-labelledby="Github" />
             </a>
           </div>
-        )}
-        {item.type === 'pro' && (
+        ) : null}
+        {item.type === 'pro' ? (
           <div className="card__links">
-            {item.current && (
+            {item.current ? (
               <a href={item.current} target="_blank" rel="noopener noreferrer" title="Live website">
                 <MdPublic title="Live website" aria-labelledby="Live website" />
               </a>
-            )}
-            {item.past && (
+            ) : null}
+            {item.past ? (
               <a href={item.past} target="_blank" rel="noopener noreferrer" title="Site as I left it">
                 <MdSettingsBackupRestore title="Site as I left it" aria-labelledby="Site as I left it" />
               </a>
-            )}
+            ) : null}
           </div>
-        )}
+        ) : null}
       </div>
       <Link href={item.link || ''}>
         <a title={item.title} tabIndex="-1">

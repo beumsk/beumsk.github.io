@@ -56,7 +56,7 @@ export default function Projects({ title, description, url, projects }) {
         </div>
 
         <div data-aos="fade-up">
-          {filter === '' && <Grid data={projects} className="mt-5 mb-20" />}
+          {filter === '' ? <Grid data={projects} className="mt-5 mb-20" /> : null}
           {filter === 'personal' || filter === 'professional' ? (
             <Grid
               data={projects.filter((x) => (filter === 'professional' ? x.type === 'pro' : x.type === 'perso'))}

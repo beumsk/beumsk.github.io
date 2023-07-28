@@ -8,34 +8,32 @@ export default function Breadcrumb() {
   const route = router.asPath.replace(/\?.*/g, "$'");
   const split = route.split('/').filter((x) => x);
 
-  return (
-    router.route !== '/' && (
-      <div className="breadcrumb">
-        <div className="container">
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
+  return router.route !== '/' ? (
+    <div className="breadcrumb">
+      <div className="container">
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          {split.map((x, i) => (
+            <li key={x}>
+              {i === split.length - 1 ? (
+                <>
+                  <AiFillCaretRight />
+                  {x.replace(/-/g, ' ')}
+                </>
+              ) : (
+                <>
+                  <AiFillCaretRight />
+                  <Link href={`/${x}`}>
+                    <a>{x.replace(/-/g, ' ')}</a>
+                  </Link>
+                </>
+              )}
             </li>
-            {split.map((x, i) => (
-              <li key={x}>
-                {i === split.length - 1 ? (
-                  <>
-                    <AiFillCaretRight />
-                    {x.replace(/-/g, ' ')}
-                  </>
-                ) : (
-                  <>
-                    <AiFillCaretRight />
-                    <Link href={`/${x}`}>
-                      <a>{x.replace(/-/g, ' ')}</a>
-                    </Link>
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+          ))}
+        </ul>
       </div>
-    )
-  );
+    </div>
+  ) : null;
 }

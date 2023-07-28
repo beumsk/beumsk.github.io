@@ -34,14 +34,14 @@ export default function Blog({ title, description, url }) {
 
         <div className="blog__categories">
           <Link href="/blog">
-            <a className={`btn ${query === '' && 'active'}`} onClick={() => setCat(posts)}>
+            <a className={`btn ${query === '' ? 'active' : ''}`} onClick={() => setCat(posts)}>
               All posts
             </a>
           </Link>
           {categories.map((c) => (
             <Link key={c} href={`?${c}`}>
               <a
-                className={`btn ${query === c && 'active'}`}
+                className={`btn ${query === c ? 'active' : ''}`}
                 onClick={() => setCat(posts.filter((x) => x.categories.includes(c)))}
               >
                 {c.charAt(0).toUpperCase() + c.slice(1)}

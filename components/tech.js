@@ -24,37 +24,47 @@ import PropTypes from 'prop-types';
 export default function Tech({ name, color }) {
   return (
     <>
-      {name === 'html' && <SiHtml5 color={color ? '#E44D26' : ''} title="HTML" aria-labelledby="HTML" />}
-      {name === 'css' && <SiCss3 color={color ? '#1572B6' : ''} title="CSS" aria-labelledby="CSS" />}
-      {name === 'javascript' && (
+      {name === 'html' ? <SiHtml5 color={color ? '#E44D26' : ''} title="HTML" aria-labelledby="HTML" /> : null}
+      {name === 'css' ? <SiCss3 color={color ? '#1572B6' : ''} title="CSS" aria-labelledby="CSS" /> : null}
+      {name === 'javascript' ? (
         <SiJavascript color={color ? '#F0DB4F' : ''} title="JavaScript" aria-labelledby="JavaScript" />
-      )}
-      {name === 'typescript' && (
+      ) : null}
+      {name === 'typescript' ? (
         <SiTypescript color={color ? '#007ACC' : ''} title="Typescript" aria-labelledby="Typescript" />
-      )}
-      {name === 'jquery' && <SiJquery color={color ? '#0868AC' : ''} title="jQuery" aria-labelledby="jQuery" />}
-      {name === 'bootstrap' && (
+      ) : null}
+      {name === 'jquery' ? <SiJquery color={color ? '#0868AC' : ''} title="jQuery" aria-labelledby="jQuery" /> : null}
+      {name === 'bootstrap' ? (
         <SiBootstrap color={color ? '#5B4282' : ''} title="Bootstrap" aria-labelledby="Bootstrap" />
-      )}
-      {name === 'sass' && <SiSass color={color ? '#CF649A' : ''} title="Sass" aria-labelledby="Sass" />}
-      {name === 'angular' && <SiAngular color={color ? '#A6120D' : ''} title="Angular" aria-labelledby="Angular" />}
-      {name === 'react' && <SiReact color={color ? '#61DBFB' : ''} title="React" aria-labelledby="React" />}
-      {name === 'redux' && <SiRedux color={color ? '#764ABC' : ''} title="Redux" aria-labelledby="Redux" />}
-      {name === 'material-ui' && (
+      ) : null}
+      {name === 'sass' ? <SiSass color={color ? '#CF649A' : ''} title="Sass" aria-labelledby="Sass" /> : null}
+      {name === 'angular' ? (
+        <SiAngular color={color ? '#A6120D' : ''} title="Angular" aria-labelledby="Angular" />
+      ) : null}
+      {name === 'react' ? <SiReact color={color ? '#61DBFB' : ''} title="React" aria-labelledby="React" /> : null}
+      {name === 'redux' ? <SiRedux color={color ? '#764ABC' : ''} title="Redux" aria-labelledby="Redux" /> : null}
+      {name === 'material-ui' ? (
         <SiMaterialui color={color ? '#007fff' : ''} title="Material UI" aria-labelledby="Material UI" />
-      )}
-      {name === 'chakra-ui' && (
+      ) : null}
+      {name === 'chakra-ui' ? (
         <SiChakraui color={color ? '#3cc7bd' : ''} title="Chakra UI" aria-labelledby="Chakra UI" />
-      )}
-      {name === 'styled-components' && (
+      ) : null}
+      {name === 'styled-components' ? (
         <SiStyledcomponents title="Styled components" aria-labelledby="Styled components" />
-      )}
-      {name === 'jest' && <SiJest color={color ? '#99415B' : ''} title="Jest" aria-labelledby="Jest" />}
-      {name === 'node.js' && <SiNodedotjs color={color ? '#689F63' : ''} title="Node.js" aria-labelledby="Node.js" />}
-      {name === 'firebase' && <SiFirebase color={color ? '#FFA50E' : ''} title="Firebase" aria-labelledby="Firebase" />}
-      {name === 'mongo-db' && <SiMongodb color={color ? '#00684A' : ''} title="Mongo DB" aria-labelledby="Mongo DB" />}
-      {name === 'c#' && <SiCsharp color={color ? '#390092' : ''} title="C#" aria-labelledby="C#" />}
-      {name === 'umbraco' && <SiUmbraco color={color ? '#3544b1' : ''} title="Umbraco" aria-labelledby="Umbraco" />}
+      ) : null}
+      {name === 'jest' ? <SiJest color={color ? '#99415B' : ''} title="Jest" aria-labelledby="Jest" /> : null}
+      {name === 'node.js' ? (
+        <SiNodedotjs color={color ? '#689F63' : ''} title="Node.js" aria-labelledby="Node.js" />
+      ) : null}
+      {name === 'firebase' ? (
+        <SiFirebase color={color ? '#FFA50E' : ''} title="Firebase" aria-labelledby="Firebase" />
+      ) : null}
+      {name === 'mongo-db' ? (
+        <SiMongodb color={color ? '#00684A' : ''} title="Mongo DB" aria-labelledby="Mongo DB" />
+      ) : null}
+      {name === 'c#' ? <SiCsharp color={color ? '#390092' : ''} title="C#" aria-labelledby="C#" /> : null}
+      {name === 'umbraco' ? (
+        <SiUmbraco color={color ? '#3544b1' : ''} title="Umbraco" aria-labelledby="Umbraco" />
+      ) : null}
     </>
   );
 }

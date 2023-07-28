@@ -22,7 +22,7 @@ export default function Layout({ title, description, img, url, children, itemtyp
     setTheme(newTheme);
   };
 
-  const fullImageUrl = img && (img.startsWith('http') ? img : `https://remybeumier.be${img}`);
+  const fullImageUrl = img ? (img.startsWith('http') ? img : `https://remybeumier.be${img}`) : null;
 
   return (
     <main
@@ -48,8 +48,8 @@ export default function Layout({ title, description, img, url, children, itemtyp
           key="twitter:image"
         />
 
-        {published && <meta property="article:published_time" content={published} />}
-        {modified && <meta property="article:modified_time" content={modified} />}
+        {published ? <meta property="article:published_time" content={published} /> : null}
+        {modified ? <meta property="article:modified_time" content={modified} /> : null}
       </Head>
       <Header onClick={switchTheme} theme={theme} />
       <div className="over-h">
