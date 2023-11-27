@@ -32,6 +32,7 @@ This will trigger Github Action and deploy the changes to gh-pages.
 
 ## TODO
 
+- shorten cv old web experience?
 - add new projects (todolist?)
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
 - review design: https://anthonyhobday.com/sideprojects/saferules/

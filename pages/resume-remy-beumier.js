@@ -21,7 +21,7 @@ export default function Resume({ title, description, url }) {
       <article className="resume">
         <section className="resume__name">
           <h1>Rémy Beumier</h1>
-          <p className="subtitle">Frontend Developer</p>
+          <p className="subtitle">Front-end Developer</p>
         </section>
 
         <section className="resume__contact">
@@ -57,23 +57,47 @@ export default function Resume({ title, description, url }) {
           </h2>
 
           <div className="item">
-            <h3>Frontend Developer & Integrator</h3>
+            <h3>Front-end Developer</h3>
+            <p className="detail">VOO // June 2023 - Now</p>
+            <p className="intro">
+              Front-end developer at VOO in service experience team. Different web and mobile projects, from scratch or
+              to improve, using React, React Native, TypeScript, Node.js and Firebase.
+            </p>
+
+            <h4>Wall-e: web app in React and Node.js</h4>
+            <ul>
+              <li>Type safety with TypeScript</li>
+              <li>Automation scripts with Testcafe</li>
+              <li>Front-end development in React, TS, CSS-in-JS</li>
+              <li>Back-end improvements in Node.js, MySQL and Firebase</li>
+            </ul>
+
+            <h4>Voices: mobile app in React Native and Firebase</h4>
+            <ul>
+              <li>React Native development with Expo for iOS and Android</li>
+              <li>Real time database with Firebase</li>
+              <li>Real time data, chat and notifications</li>
+            </ul>
+          </div>
+
+          <div className="item">
+            <h3>Front-end Developer & Integrator</h3>
             <p className="detail">Positive Thinking Company // November 2020 - Now</p>
             <p className="intro">
-              Frontend developer and integrator in the PTC Delivery Center, I worked on different projects, mostly in
+              Front-end developer and integrator in the PTC Delivery Center, I worked on different projects, mostly in
               React, using industry standards such as Scrum agile, Git, Npm, Confluence, Jira and Figma.
             </p>
 
             <h4>Paris Padel Major: Padel tournament website.</h4>
             <ul>
-              <li>Frontend development from Figma design using React and CSS-in-JS (Emotion & Styled-system)</li>
+              <li>Front-end development from Figma design using React and CSS-in-JS (Emotion & Styled-system)</li>
               <li>Used advanced CSS grid developed for the layout of the blog, image and video items</li>
               <li>Conducted tests with Jest and React Testing Library</li>
             </ul>
 
             <h4>Onomo: African hotels website</h4>
             <ul>
-              <li>Integration and frontend development from Figma designs to React and CSS-in-JS coding</li>
+              <li>Integration and front-end development from Figma designs to React and CSS-in-JS coding</li>
               <li>
                 Complete booking process with advanced forms such as a Date picker, phone numbers (regex) and custom
                 select
@@ -83,7 +107,7 @@ export default function Resume({ title, description, url }) {
 
             <h4>Omega: Canadian zoo website</h4>
             <ul>
-              <li>Integration and frontend development from Figma designs to React and CSS-in-JS coding</li>
+              <li>Integration and front-end development from Figma designs to React and CSS-in-JS coding</li>
               <li>Complex components in the likes of a Swiper, a Carousel, Deep navigation bar and Filtering</li>
               <li>Used recent CSS features in the names of Image clip-path and CSS grids</li>
             </ul>
@@ -93,16 +117,10 @@ export default function Resume({ title, description, url }) {
               <li>Integration development from InVision designs to Angular and Sass</li>
               <li>CSS from scratch with Sass leveraging Grids and Multi-columns layouts</li>
             </ul>
-
-            <h4>iHub: Banking platform</h4>
-            <ul>
-              <li>Integration development from Sketch designs to Angular and Sass</li>
-              <li>Added theming with CSS custom properties</li>
-            </ul>
           </div>
 
           <div className="item">
-            <h3>Frontend Developer</h3>
+            <h3>Front-end Developer</h3>
             <p className="detail">BICS // August 2022 - December 2022</p>
             <p className="intro">
               Front-end developer on a 5-month long mission to manage the development of two BICS Components libraries.
@@ -132,10 +150,10 @@ export default function Resume({ title, description, url }) {
           </div>
 
           <div className="item">
-            <h3>Frontend Developer</h3>
+            <h3>Front-end Developer</h3>
             <p className="detail">KPMG Belgium // May 2017 - November 2020</p>
             <p className="intro">
-              Development and improvement of internal websites working with different frontend languages (e.g., HTML,
+              Development and improvement of internal websites working with different front-end languages (e.g., HTML,
               CSS, JS) and transversal tools.
             </p>
 
@@ -208,9 +226,13 @@ export default function Resume({ title, description, url }) {
           <h4>Development skills</h4>
           <ul>
             <li>React</li>
+            <li>React Native</li>
             <li>JavaScript</li>
+            <li>TypeScript</li>
             <li>Redux</li>
             <li>Next.js</li>
+            <li>Node.js</li>
+            <li>Firebase</li>
             <li>CSS</li>
             <li>HTML</li>
             <li>Npm</li>
@@ -225,11 +247,7 @@ export default function Resume({ title, description, url }) {
             <li>Bootstrap</li>
             <li>Bulma</li>
             <li>Tailwind</li>
-            <li>MUI</li>
-            <li>Ant Design</li>
             <li>ES6</li>
-            <li>JSX</li>
-            <li>jQuery</li>
             <li>Git</li>
           </ul>
           <h4>Methodologies and Tools</h4>

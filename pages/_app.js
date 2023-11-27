@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import AOS from 'aos';
 
-import 'aos/dist/aos.css';
 import 'public/styles/font-import.css';
+import 'aos/dist/aos.css';
 import 'public/styles/style.scss';
 
 // This default export is required in a new `pages/_app.js` file.

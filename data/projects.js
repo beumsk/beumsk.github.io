@@ -7,12 +7,12 @@ const projects = [
     past: 'https://web.archive.org/web/20211213130150/https://app.staging.parcomega.ca/en/',
     img: '/images/projects/omega.jpg',
     screen: '/images/projects/omega-screen.png',
-    modified: '2023-04-27',
+    modified: '2023-11-27',
     intro:
       'Omega zoo booking website with React. Information about the park and its animals as well as ability to book your stay, table or entrance via ticketing system.',
     tech: ['react', 'html', 'css', 'javascript'],
     chall: [
-      'Integration and frontend development from Figma designs to React and CSS-in-JS coding',
+      'Integration and front-end development from Figma designs to React and CSS-in-JS coding',
       'Use Styled-system and Emotion for styling',
       'Complex components in the likes of a Swiper, a Carousel, Deep navigation bar and Filtering',
       'Used recent CSS features in the names of Image clip-path and CSS grids',
@@ -28,12 +28,12 @@ const projects = [
     past: 'https://web.archive.org/web/20220714150729/https://www.parispadelmajor.com/',
     img: '/images/projects/padel.jpg',
     screen: '/images/projects/padel-screen.png',
-    modified: '2023-04-27',
+    modified: '2023-11-27',
     intro:
       'Paris Premier Padel Major website built with React. PPPM official website giving access to the latest news, pictures and videos as well as live scoring and ticketing system.',
     tech: ['react', 'html', 'css', 'javascript'],
     chall: [
-      'Frontend development from Figma design using React and CSS-in-JS',
+      'Front-end development from Figma design using React and CSS-in-JS',
       'Use Styled-system and Emotion for styling',
       'Used advanced CSS grid developed for the layout of the blog, image and video items',
       'Ensured responsiveness of the different components of the site',
@@ -50,12 +50,12 @@ const projects = [
     past: 'https://web.archive.org/web/20211213130244/https://app.staging.onomohotels.com/',
     img: '/images/projects/onomo.jpg',
     screen: '/images/projects/onomo-screen.png',
-    modified: '2023-04-27',
+    modified: '2023-11-27',
     intro:
       'Onomo hotels booking website with React. Possibility to search and book hotels through a complete booking journey.',
     tech: ['react', 'html', 'css', 'javascript'],
     chall: [
-      'Integration and frontend development from Figma designs to React and CSS-in-JS coding',
+      'Integration and front-end development from Figma designs to React and CSS-in-JS coding',
       'Use Styled-system and Emotion for styling',
       'Complete booking process with advanced forms such as a Date picker, phone numbers (regex) and custom select',
     ],
