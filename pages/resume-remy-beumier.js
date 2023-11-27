@@ -57,7 +57,7 @@ export default function Resume({ title, description, url }) {
           </h2>
 
           <div className="item">
-            <h3>Front-end Developer</h3>
+            <h3>Front-end Developer @VOO</h3>
             <p className="detail">VOO // June 2023 - Now</p>
             <p className="intro">
               Front-end developer at VOO in service experience team. Different web and mobile projects, from scratch or
@@ -81,7 +81,7 @@ export default function Resume({ title, description, url }) {
           </div>
 
           <div className="item">
-            <h3>Front-end Developer & Integrator</h3>
+            <h3>Front-end Developer & Integrator @PTC</h3>
             <p className="detail">Positive Thinking Company // November 2020 - Now</p>
             <p className="intro">
               Front-end developer and integrator in the PTC Delivery Center, I worked on different projects, mostly in
@@ -120,7 +120,7 @@ export default function Resume({ title, description, url }) {
           </div>
 
           <div className="item">
-            <h3>Front-end Developer</h3>
+            <h3>Front-end Developer @BICS</h3>
             <p className="detail">BICS // August 2022 - December 2022</p>
             <p className="intro">
               Front-end developer on a 5-month long mission to manage the development of two BICS Components libraries.
@@ -150,7 +150,7 @@ export default function Resume({ title, description, url }) {
           </div>
 
           <div className="item">
-            <h3>Front-end Developer</h3>
+            <h3>Front-end Developer @KPMG</h3>
             <p className="detail">KPMG Belgium // May 2017 - November 2020</p>
             <p className="intro">
               Development and improvement of internal websites working with different front-end languages (e.g., HTML,
