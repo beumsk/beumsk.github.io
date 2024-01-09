@@ -59,7 +59,7 @@ main.dark {
 }
 
 @media (prefers-color-scheme: dark) {
-  main {
+  main:not(.light) {
     --text: #fcfcfc;
     --text2: #eeeeee;
     --text3: #dddddd;
@@ -84,23 +84,5 @@ main.dark {
     .svg-divider::before {
       filter: invert(0.94);
     }
-  }
-
-  // TODO: check that this actually works
-  main.light {
-    --text: #111111;
-    --text2: #333333;
-    --text3: #454545;
-    --bg3: #dddddd;
-    --bg2: #eeeeee;
-    --bg: #fcfcfc;
-    --bg10: rgba(256, 256, 256, 0.1);
-    --bg20: rgba(256, 256, 256, 0.2);
-    --bg40: rgba(256, 256, 256, 0.4);
-    --bg80: rgba(256, 256, 256, 0.8);
-    --text10: rgba(0, 0, 0, 0.1);
-    --text20: rgba(0, 0, 0, 0.2);
-    --text40: rgba(0, 0, 0, 0.4);
-    --text80: rgba(0, 0, 0, 0.8);
   }
 }
