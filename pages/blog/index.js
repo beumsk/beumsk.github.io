@@ -39,7 +39,7 @@ export default function Blog({ title, description, url }) {
             </a>
           </Link>
           {categories.map((c) => (
-            <Link key={c} href={`?${c}`}>
+            <Link key={c} href={`?${c}`} scroll={false}>
               <a
                 className={`btn ${query === c ? 'active' : ''}`}
                 onClick={() => setCat(posts.filter((x) => x.categories.includes(c)))}

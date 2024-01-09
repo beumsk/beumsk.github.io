@@ -32,12 +32,12 @@ export default function Projects({ title, description, url, projects }) {
         </p>
 
         <div className="project__tech-list mb-4">
-          <Link href={'?professional'}>
+          <Link href={'?professional'} scroll={false}>
             <a onClick={() => setFilter('professional')} className={`btn ${filter === 'professional' ? 'active' : ''}`}>
               Professional projects
             </a>
           </Link>
-          <Link href={'?personal'}>
+          <Link href={'?personal'} scroll={false}>
             <a onClick={() => setFilter('personal')} className={`btn ${filter === 'personal' ? 'active' : ''}`}>
               Personal projects
             </a>
@@ -46,7 +46,7 @@ export default function Projects({ title, description, url, projects }) {
 
         <div className="project__tech-list">
           {skillsList.map((s) => (
-            <Link key={s} href={`?${s}`}>
+            <Link key={s} href={`?${s}`} scroll={false}>
               <a onClick={() => setFilter(s)} className={`btn ${filter === s ? 'active' : ''}`}>
                 <Tech name={s} />
                 <span>{s.replace('-', ' ')}</span>
