@@ -6,6 +6,8 @@ body {
   font-family: system-ui;
   font-size: 1rem;
   min-width: 320px;
+  color-scheme: light dark;
+  scroll-behavior: smooth;
 }
 
 #__next main {
@@ -19,6 +21,8 @@ main {
   font-family: var(--font-body);
   background-color: var(--bg);
   color: var(--text2);
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -109,6 +113,7 @@ a {
   &:hover,
   &:focus {
     color: var(--primary);
+    transition: all var(--transition);
   }
 }
 
@@ -120,6 +125,10 @@ p {
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+strong {
+  color: var(--primary);
 }
 
 ul,
@@ -154,145 +163,16 @@ figure {
 button {
   line-height: 1.4;
   color: inherit;
+  border: solid 1px var(--text);
+  background: none;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
 
-  &:hover,
-  &:focus {
-    color: var(--primary);
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
   }
-}
-
-strong {
-  color: var(--primary);
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-}
-
-.sr-only {
-  text-indent: -10000px;
-  height: 0;
-}
-
-.ch-80 {
-  max-width: 80ch;
-}
-
-.container {
-  width: 100%;
-  max-width: calc(100% - 40px);
-  margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-    max-width: 720px;
-  }
-
-  @media screen and (min-width: 992px) {
-    max-width: 960px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 1140px;
-  }
-
-  &.narrow {
-    @media screen and (min-width: 768px) {
-      max-width: 80ch;
-    }
-  }
-}
-
-.cols {
-  display: flex;
-  margin-left: -1rem;
-  margin-right: -1rem;
-
-  &.cols-md,
-  &.cols-lg,
-  &.cols-xl {
-    display: block;
-  }
-
-  .col {
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    &.is-3 {
-      flex: none;
-      width: 25%;
-    }
-
-    &.is-4 {
-      flex: none;
-      width: 33.33333%;
-    }
-
-    &.is-6 {
-      flex: none;
-      width: 50%;
-    }
-
-    &.is-8 {
-      flex: none;
-      width: 66.66667%;
-    }
-
-    &.is-9 {
-      flex: none;
-      width: 75%;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .cols.cols-md {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .cols.cols-lg {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .cols.cols-xl {
-    display: flex;
-  }
-}
-
-.over-h {
-  overflow: hidden;
-}
-
-.centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.centered-v {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.space-between-x {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.space-between-y {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .btn,
@@ -309,7 +189,7 @@ button {
   left: -0.125rem;
   box-shadow: 4px 4px var(--primary-light);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all var(--transition);
 
   @media screen and (min-width: 768px) {
     top: 0;
@@ -323,82 +203,11 @@ button {
     border-color: var(--text2);
   }
 
-
   &:not(.active):hover,
   &:not(.active):focus {
     color: var(--primary);
     top: -0.125rem;
     left: -0.125rem;
     box-shadow: 4px 4px var(--primary-light);
-  }
-}
-
-.t-center {
-  text-align: center;
-}
-
-.t-ellipsis {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-}
-
-.skewed {
-  position: relative;
-
-  &:nth-of-type(even)::before {
-    background: var(--bg2);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: skewY(2deg);
-    z-index: 0;
-  }
-}
-
-/* target IE10 & IE11 */
-#ie-banner {
-  display: none;
-}
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  #ie-banner {
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    background: #009688;
-    color: #ffffff;
-    height: 60px;
-    line-height: 60px;
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .grid .card {
-    margin-bottom: 32px;
-  }
-
-  @media screen and (min-width: 768px) {
-    .grid {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-
-      .card {
-        width: 30%;
-      }
-    }
   }
 }

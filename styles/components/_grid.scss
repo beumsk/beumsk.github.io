@@ -38,9 +38,7 @@
 
     position: absolute;
     background: var(--bg2);
-    transition: all 0.2s,
-    top 0.2s linear,
-    left 0.2s linear;
+    transition: all var(--transition);
 
     a:focus {
       z-index: 2;
@@ -80,7 +78,7 @@
         height: 2.5rem;
         text-align: center;
         text-decoration: none;
-        transition: all 0.2s;
+        transition: all var(--transition);
         color: var(--text2);
         font-size: 1.25rem;
 
@@ -95,7 +93,7 @@
   .card__img {
     width: 100%;
     height: 100%;
-    transition: all 0.2s, top 0.2s linear, left 0.2s linear;
+    transition: all var(--transition);
     background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="18" height="36" viewBox="0 0 36 72"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%23009688" fill-opacity="0.4"%3E%3Cpath d="M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'),
       var(--bg2);
     position: relative;
@@ -115,7 +113,7 @@
       aspect-ratio: 16/9;
       width: 100%;
       height: 100%;
-      transition: all 0.2s;
+      transition: all var(--transition);
     }
   }
 

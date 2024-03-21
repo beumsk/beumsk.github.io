@@ -1,0 +1,39 @@
+/* target IE10 & IE11 */
+#ie-banner {
+  display: none;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  #ie-banner {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: #009688;
+    color: #ffffff;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .grid .card {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .card {
+        width: 30%;
+      }
+    }
+  }
+}
