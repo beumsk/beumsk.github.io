@@ -130,7 +130,7 @@ section {
 
     a {
       padding: 0.25rem;
-      transition: color 0.2s ease, transform 0.2s ease;
+      transition: all var(--transition);
 
       &:hover,
       &:focus {

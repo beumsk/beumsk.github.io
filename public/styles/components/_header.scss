@@ -13,7 +13,6 @@
 
   a {
     padding: 0.75rem 0.5rem;
-    color: var(--text2);
     text-decoration: none;
 
     &.logo {
@@ -27,7 +26,7 @@
           filter: grayscale(1);
         }
 
-        transition: filter 0.2s;
+        transition: filter var(--transition);
       }
 
       &:hover img,

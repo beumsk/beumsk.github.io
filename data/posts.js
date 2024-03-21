@@ -5,7 +5,7 @@ const posts = [
     intro: 'How to set up Sass with the best compiling settings and start developing with it',
     img: '/images/posts/set-up-sass-in-the-best-way.jpg',
     published: '2023-04-06',
-    modified: '2023-04-07',
+    modified: '2023-11-27',
     categories: 'sass, css, tutorial',
     link: '/blog/set-up-sass-in-the-best-way',
     url: 'https://remybeumier.be/blog/set-up-sass-in-the-best-way',

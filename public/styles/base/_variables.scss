@@ -29,6 +29,8 @@ main {
   --shadow: 0 0.125rem 0.375rem var(--text20);
   --shadows4: 0.25rem 0.25rem var(--primary-light), 0.5rem 0.5rem var(--primary-lightest);
   --shadows6: 0.375rem 0.375rem var(--primary-light), 0.75rem 0.75rem var(--primary-lightest);
+
+  --transition: 0.2s linear;
 }
 
 main.dark {
