@@ -1,20 +1,20 @@
 import { useRouter } from 'next/router';
 
-const styleDiv = {
-  height: '100vh',
-  textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
-
 // eslint-disable-next-line react/prop-types
 function Error({ statusCode }) {
   const router = useRouter();
 
   return (
-    <div style={styleDiv}>
+    <div
+      style={{
+        height: '100vh',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <p>
         {statusCode
           ? `An error ${statusCode} occurred on server`

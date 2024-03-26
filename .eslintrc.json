@@ -4,6 +4,30 @@
     // https://nextjs.org/docs/basic-features/eslint
     "react/no-unescaped-entities": "off",
     "@next/next/no-img-element": "off",
-    "react/prop-types": 1
+    "react/prop-types": 0,
+    "react-hooks/exhaustive-deps": "off",
+    "no-unused-vars": ["warn", { "args": "none" }],
+    "no-console": "warn",
+    "import/order": [
+      "warn",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          { "pattern": "react", "group": "builtin", "position": "before" },
+          { "pattern": "next/**", "group": "external", "position": "before" },
+          { "pattern": "@data/**", "group": "internal", "position": "before" },
+          { "pattern": "@components/**", "group": "internal", "position": "before" },
+          { "pattern": "@types/**", "group": "internal", "position": "before" },
+          { "pattern": "./*", "group": "internal", "position": "after" },
+          { "pattern": "../*", "group": "internal", "position": "after" }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }

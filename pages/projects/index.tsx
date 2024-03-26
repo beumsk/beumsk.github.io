@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
-import Layout from '@components/layout';
+import { useRouter } from 'next/router';
 import Grid from '@components/grid';
+import Layout from '@components/layout';
 import Tech from '@components/tech';
+import { ProjectType } from '@types';
 
-export default function Projects({ title, description, url, projects }) {
+type ProjectsProps = {
+  title: string;
+  description: string;
+  url: string;
+  projects: ProjectType[];
+};
+
+export default function Projects({ title, description, url, projects }: ProjectsProps) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g, '') === '/projects' ? '' : router.asPath.replace(/.*\?/g, '');
@@ -73,13 +80,6 @@ export default function Projects({ title, description, url, projects }) {
     </Layout>
   );
 }
-
-Projects.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  url: PropTypes.string,
-  projects: PropTypes.array,
-};
 
 export async function getStaticProps() {
   const projects = require('@data/projects');

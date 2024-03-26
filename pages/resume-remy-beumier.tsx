@@ -1,8 +1,13 @@
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import { MdLaptop, MdOutlineArticle, MdOutlineSettings, MdWorkOutline } from 'react-icons/md';
 
-export default function Resume({ title, description, url }) {
+type ResumeProps = {
+  title: string;
+  description: string;
+  url: string;
+};
+
+export default function Resume({ title, description, url }: ResumeProps) {
   return (
     <>
       <Head>
@@ -305,16 +310,6 @@ export default function Resume({ title, description, url }) {
     </>
   );
 }
-
-Resume.defaultProps = {
-  title: 'Resume | Rémy Beumier',
-};
-
-Resume.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  url: PropTypes.string,
-};
 
 export async function getStaticProps() {
   return {

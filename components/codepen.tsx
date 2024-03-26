@@ -1,6 +1,10 @@
-import PropTypes from 'prop-types';
+type CodepenProps = {
+  className?: string;
+  pen: string;
+  title: string;
+};
 
-export default function Codepen({ className, pen, title }) {
+export default function Codepen({ className, pen, title }: CodepenProps) {
   return (
     <>
       <div className={'code-iframe-wrapper ' + (className || '')}>
@@ -23,9 +27,3 @@ export default function Codepen({ className, pen, title }) {
     </>
   );
 }
-
-Codepen.propTypes = {
-  className: PropTypes.string,
-  pen: PropTypes.string,
-  title: PropTypes.string,
-};

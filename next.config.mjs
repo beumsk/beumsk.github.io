@@ -24,7 +24,7 @@ const conf = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
 };
 
 export default conf;

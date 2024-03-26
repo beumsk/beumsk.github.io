@@ -1,13 +1,19 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
-import Layout from '@components/layout';
 import Grid from '@components/grid';
-
+import Layout from '@components/layout';
+import { PostType, ProjectType } from '@types';
 // import Image from 'next/image';
 
-export default function Custom404({ title, pro, perso, posts }) {
+type Custom404Props = {
+  title: string;
+  pro: ProjectType[];
+  perso: ProjectType[];
+  posts: PostType[];
+};
+
+export default function Custom404({ title, pro, perso, posts }: Custom404Props) {
   const router = useRouter();
 
   // fix for trailling slash URL error from Github pages
@@ -50,13 +56,6 @@ export default function Custom404({ title, pro, perso, posts }) {
 
   return null;
 }
-
-Custom404.propTypes = {
-  title: PropTypes.string.isRequired,
-  pro: PropTypes.array,
-  perso: PropTypes.array,
-  posts: PropTypes.array,
-};
 
 export async function getStaticProps() {
   const projects = require('@data/projects');

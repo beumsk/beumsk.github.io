@@ -19,9 +19,13 @@ import {
   SiMongodb,
   SiJest,
 } from 'react-icons/si';
-import PropTypes from 'prop-types';
 
-export default function Tech({ name, color }) {
+type TechProps = {
+  name: string;
+  color?: boolean;
+};
+
+export default function Tech({ name, color }: TechProps) {
   return (
     <>
       {name === 'html' ? <SiHtml5 color={color ? '#E44D26' : ''} title="HTML" aria-labelledby="HTML" /> : null}
@@ -68,8 +72,3 @@ export default function Tech({ name, color }) {
     </>
   );
 }
-
-Tech.propTypes = {
-  name: PropTypes.string,
-  color: PropTypes.bool,
-};

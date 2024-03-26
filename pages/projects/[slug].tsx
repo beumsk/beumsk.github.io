@@ -1,19 +1,21 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
-import Layout from '@components/layout';
-import Tech from '@components/tech';
 import Codepen from '@components/codepen';
 import Codesandbox from '@components/codesandbox';
 import Grid from '@components/grid';
+import Layout from '@components/layout';
+import Tech from '@components/tech';
+import { ProjectType } from '@types';
 
-Tech.propTypes = {
-  name: PropTypes.string,
+type DynamicProjectProps = {
+  project: ProjectType;
+  relatedLinks: ProjectType[];
+  img: string;
+  url: string;
 };
-
-export default function DynamicProject({ project, relatedLinks, img, url }) {
+export default function DynamicProject({ project, relatedLinks, img, url }: DynamicProjectProps) {
   const isPro = project.type === 'pro';
 
   return (
@@ -117,13 +119,6 @@ export default function DynamicProject({ project, relatedLinks, img, url }) {
     </Layout>
   );
 }
-
-DynamicProject.propTypes = {
-  project: PropTypes.object,
-  relatedLinks: PropTypes.array,
-  img: PropTypes.string,
-  url: PropTypes.string,
-};
 
 export async function getStaticProps(context) {
   const projects = require('@data/projects');

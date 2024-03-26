@@ -1,18 +1,29 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
-import Header from '@components/header';
-import Footer from '@components/footer';
 import Breadcrumb from '@components/breadcrumb';
+import Footer from '@components/footer';
+import Header from '@components/header';
+import { ThemeType } from '@types';
 // import MobileNav from '@components/mobileNav';
 
-export default function Layout({ title, description, img, url, children, itemtype, published, modified }) {
-  const [theme, setTheme] = useState('');
+type LayoutProps = {
+  title: string;
+  description?: string;
+  img?: string;
+  url?: string;
+  children: React.ReactNode;
+  itemtype?: string;
+  published?: string;
+  modified?: string;
+};
+
+export default function Layout({ title, description, img, url, children, itemtype, published, modified }: LayoutProps) {
+  const [theme, setTheme] = useState<ThemeType>('');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       let localTheme = window.localStorage.getItem('theme');
-      setTheme(localTheme);
+      setTheme(localTheme as ThemeType);
     }
   }, []);
 
@@ -64,14 +75,3 @@ export default function Layout({ title, description, img, url, children, itemtyp
     </main>
   );
 }
-
-Layout.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  img: PropTypes.string,
-  url: PropTypes.string,
-  children: PropTypes.node,
-  itemtype: PropTypes.string,
-  published: PropTypes.string,
-  modified: PropTypes.string,
-};

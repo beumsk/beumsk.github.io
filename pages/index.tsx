@@ -1,13 +1,20 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { MdFileDownload } from 'react-icons/md';
+import Grid from '@components/grid';
 import Layout from '@components/layout';
 import Logo from '@components/logo';
-import Grid from '@components/grid';
 import Tech from '@components/tech';
+import { PostType, ProjectType } from '@types';
 
-export default function Home({ title, description, projects, posts }) {
+type HomeProps = {
+  title: string;
+  description: string;
+  projects: ProjectType[];
+  posts: PostType[];
+};
+
+export default function Home({ title, description, projects, posts }: HomeProps) {
   const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
 
   return (
@@ -75,7 +82,7 @@ export default function Home({ title, description, projects, posts }) {
               <div className="about__languages my-2 mx-2">
                 {skillsList.map((s) => (
                   <Link key={s} href={`/projects?${s}`}>
-                    <a hover={s}>
+                    <a data-hover={s}>
                       <Tech name={s} />
                     </a>
                   </Link>
@@ -120,13 +127,6 @@ export default function Home({ title, description, projects, posts }) {
     </Layout>
   );
 }
-
-Home.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  projects: PropTypes.array,
-  posts: PropTypes.array,
-};
 
 export async function getStaticProps() {
   const projects = require('@data/projects');

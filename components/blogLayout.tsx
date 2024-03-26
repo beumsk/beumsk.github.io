@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-scss.min.js';
 import 'prismjs/components/prism-json.min.js';
@@ -9,13 +8,13 @@ import 'prismjs/components/prism-bash.min.js';
 import 'prismjs/themes/prism.css';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import posts from '@data/posts';
-import Layout from '@components/layout';
 import Grid from '@components/grid';
+import Layout from '@components/layout';
 
 const convertDate = (d) =>
   d === '' ? 'No date' : `${new Date(d).getDate()}.${new Date(d).getMonth() + 1}.${new Date(d).getFullYear()}`;
 
-export default function BlogLayout({ children }) {
+export default function BlogLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   useEffect(() => {
     Prism.highlightAll();
@@ -93,7 +92,3 @@ export default function BlogLayout({ children }) {
     </>
   );
 }
-
-BlogLayout.propTypes = {
-  children: PropTypes.node,
-};

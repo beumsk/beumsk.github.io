@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 import posts from '@data/posts';
-import Layout from '@components/layout';
 import Grid from '@components/grid';
+import Layout from '@components/layout';
 
-export default function Blog({ title, description, url }) {
+type BlogProps = {
+  title: string;
+  description: string;
+  url: string;
+};
+
+export default function Blog({ title, description, url }: BlogProps) {
   const router = useRouter();
   // the regex replace removes all characters before '?' to get only the query parameters
   const query = router.asPath.replace(/.*\?/g, '') === '/blog' ? '' : router.asPath.replace(/.*\?/g, '');
@@ -57,17 +62,6 @@ export default function Blog({ title, description, url }) {
     </Layout>
   );
 }
-
-Blog.defaultProps = {
-  title: 'Blog | Rémy Beumier',
-};
-
-Blog.propTypes = {
-  posts: PropTypes.array,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  url: PropTypes.string,
-};
 
 export async function getStaticProps() {
   return {

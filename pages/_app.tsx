@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import AOS from 'aos';
 
 import 'public/styles/font-import.css';
@@ -13,8 +13,8 @@ export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.goatcounter) {
-      window.goatcounter.count({
+    if (typeof window !== 'undefined' && window['goatcounter']) {
+      window['goatcounter'].count({
         path: router.asPath,
         // path: location.pathname + location.search + location.hash
       });
