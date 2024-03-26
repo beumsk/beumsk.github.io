@@ -136,75 +136,75 @@ section {
       &:focus {
         transform: scale(1.2);
 
-        &[hover='html'] {
+        &[data-hover='html'] {
           color: #e44d26;
         }
 
-        &[hover='css'] {
+        &[data-hover='css'] {
           color: #1572b6;
         }
 
-        &[hover='javascript'] {
+        &[data-hover='javascript'] {
           color: #f0db4f;
         }
 
-        &[hover='react'] {
+        &[data-hover='react'] {
           color: #61dbfb;
         }
 
-        &[hover='jquery'] {
+        &[data-hover='jquery'] {
           color: #0868ac;
         }
 
-        &[hover='bootstrap'] {
+        &[data-hover='bootstrap'] {
           color: #5b4282;
         }
 
-        &[hover='sass'] {
+        &[data-hover='sass'] {
           color: #cf649a;
         }
 
-        &[hover='angular'] {
+        &[data-hover='angular'] {
           color: #a6120d;
         }
 
-        &[hover='typescript'] {
+        &[data-hover='typescript'] {
           color: #007acc;
         }
 
-        &[hover='redux'] {
+        &[data-hover='redux'] {
           color: #764abc;
         }
 
-        &[hover='material-ui'] {
+        &[data-hover='material-ui'] {
           color: #007fff;
         }
 
-        &[hover='chakra-ui'] {
+        &[data-hover='chakra-ui'] {
           color: #3cc7bd;
         }
 
-        &[hover='styled-components'] {
+        &[data-hover='styled-components'] {
           color: #db7093;
         }
 
-        &[hover='node.js'] {
+        &[data-hover='node.js'] {
           color: #689f63;
         }
 
-        &[hover='firebase'] {
+        &[data-hover='firebase'] {
           color: #ffa50e;
         }
 
-        &[hover='mongo-db'] {
+        &[data-hover='mongo-db'] {
           color: #00684a;
         }
 
-        &[hover='c#'] {
+        &[data-hover='c#'] {
           color: #390092;
         }
 
-        &[hover='umbraco'] {
+        &[data-hover='umbraco'] {
           color: #3544b1;
         }
       }
