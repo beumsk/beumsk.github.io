@@ -68,16 +68,20 @@ export default function Resume({ title, description, url }: ResumeProps) {
               Front-end developer at VOO in service experience team. Different web and mobile projects, from scratch or
               to improve, using React, React Native, TypeScript, Node.js and Firebase.
             </p>
-
-            <h4>Wall-e: web app in React and Node.js</h4>
+            <h4>BistrO: Web app for technicians management, evaluation and reporting</h4>
+            <ul>
+              <li>Development from scratch using React, TS and Firebase</li>
+              <li>Fully manageable data via advanced tables and forms</li>
+              <li>CRON functions for reports, calculation, emails and backups</li>
+            </ul>
+            <h4>Wall-e: Web app for automation, asset and ticket management</h4>
             <ul>
               <li>Type safety with TypeScript</li>
               <li>Automation scripts with Testcafe</li>
               <li>Front-end development in React, TS, CSS-in-JS</li>
               <li>Back-end improvements in Node.js, MySQL and Firebase</li>
             </ul>
-
-            <h4>Voices: mobile app in React Native and Firebase</h4>
+            <h4>Voices: Mobile app for advanced communication with testers</h4>
             <ul>
               <li>React Native development with Expo for iOS and Android</li>
               <li>Real time database with Firebase</li>

@@ -33,7 +33,6 @@ This will trigger Github Action and deploy the changes to gh-pages.
 ## TODO
 
 - shorten cv old web experience? + add senior dev? + new skills to filter?
-- switch to TS: => remove proptypes + add types + fix TS errors
 - optimize images with script
 - add new projects (tripser, kineval, todolist?)
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
