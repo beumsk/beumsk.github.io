@@ -33,7 +33,7 @@ export default function Projects({ title, description, url, projects }: Projects
       <div className="container projects-shape">
         <h1>Projects</h1>
 
-        <p className="ch-80 mb-8">
+        <p className="ch-80 ml-0 mb-8">
           This project list is a collection of work I have been able to build over the years. You can find here the
           codes I am most proud of, whether they are professional or personal.
         </p>

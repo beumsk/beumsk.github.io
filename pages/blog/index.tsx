@@ -32,7 +32,7 @@ export default function Blog({ title, description, url }: BlogProps) {
       <div className="container blog-shape">
         <h1>Blog</h1>
 
-        <p className="ch-80 mb-8">
+        <p className="ch-80 ml-0 mb-8">
           I write blog articles I wish I could have come across while building and enhancing this website. They aim to
           cover topics like React and Next.js, but are not limited to those.
         </p>
