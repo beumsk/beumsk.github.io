@@ -11,13 +11,16 @@ import {
   SiCsharp,
   SiUmbraco,
   SiRedux,
-  SiMaterialui,
+  SiMui,
   SiChakraui,
   SiStyledcomponents,
   SiNodedotjs,
   SiFirebase,
   SiMongodb,
   SiJest,
+  SiMdx,
+  SiI18Next,
+  SiNextdotjs,
 } from 'react-icons/si';
 
 type TechProps = {
@@ -45,9 +48,12 @@ export default function Tech({ name, color }: TechProps) {
         <SiAngular color={color ? '#A6120D' : ''} title="Angular" aria-labelledby="Angular" />
       ) : null}
       {name === 'react' ? <SiReact color={color ? '#61DBFB' : ''} title="React" aria-labelledby="React" /> : null}
+      {name === 'next.js' ? (
+        <SiNextdotjs color={color ? '#000000' : ''} title="Next.js" aria-labelledby="Next.js" />
+      ) : null}
       {name === 'redux' ? <SiRedux color={color ? '#764ABC' : ''} title="Redux" aria-labelledby="Redux" /> : null}
       {name === 'material-ui' ? (
-        <SiMaterialui color={color ? '#007fff' : ''} title="Material UI" aria-labelledby="Material UI" />
+        <SiMui color={color ? '#007fff' : ''} title="Material UI" aria-labelledby="Material UI" />
       ) : null}
       {name === 'chakra-ui' ? (
         <SiChakraui color={color ? '#3cc7bd' : ''} title="Chakra UI" aria-labelledby="Chakra UI" />
@@ -56,6 +62,8 @@ export default function Tech({ name, color }: TechProps) {
         <SiStyledcomponents title="Styled components" aria-labelledby="Styled components" />
       ) : null}
       {name === 'jest' ? <SiJest color={color ? '#99415B' : ''} title="Jest" aria-labelledby="Jest" /> : null}
+      {name === 'mdx' ? <SiMdx color={color ? '#1b1f24' : ''} title="MDX" aria-labelledby="MDX" /> : null}
+      {name === 'i18n' ? <SiI18Next color={color ? '#009788' : ''} title="I18N" aria-labelledby="I18N" /> : null}
       {name === 'node.js' ? (
         <SiNodedotjs color={color ? '#689F63' : ''} title="Node.js" aria-labelledby="Node.js" />
       ) : null}

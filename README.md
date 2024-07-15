@@ -32,9 +32,9 @@ This will trigger Github Action and deploy the changes to gh-pages.
 
 ## TODO
 
+- add new projects (kineval, todolist?)
 - shorten cv old web experience? + add senior dev? + new skills to filter?
 - optimize images with script
-- add new projects (tripser, kineval, todolist?)
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
 - review design: https://anthonyhobday.com/sideprojects/saferules/
 
@@ -46,6 +46,8 @@ X.X
 - add more images of features/pages?
 
 Blog posts
+- firebase series: rules, cloud fx, diff env., backup
+- react advanced?
 - use prism in your nextjs markdown (+scss)
 - css posts: dropdown, input with label animation
 - use mdx with nextjs
