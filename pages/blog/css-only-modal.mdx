@@ -1,0 +1,143 @@
+---
+title: 'CSS only modal'
+intro: 'How to design a CSS only and accessible modal'
+published: '2024-12-16'
+modified: '2024-12-16'
+categories: 'css, tutorial'
+---
+
+import BlogLayout from '@components/blogLayout';
+import Codepen from '@components/codepen';
+
+Modals are really useful on websites and applications to give feedback to users or to ask for confirmation. They are often used to display additional content or to request user input. In this tutorial, we will be building a modal component using only CSS. Let's dive into it with accessibility in mind and ensuring correct cross-browser compatibility.
+
+We will avoid any JavaScript by relying on anchor links and the `:target` pseudo-class. This will allow us to create a modal that can be opened and closed by clicking on a link. The modal will be displayed in the center of the screen and will have a close button to dismiss it.
+
+This article piece is in line with the following articles: [a Navbar that works without any JS](/blog/css-only-responsive-navbar), [a switch toggle button with no script](/blog/css-only-toggle-switch-button) and [a simple CSS accordion](/blog/css-only-accordion).
+
+## Start from the anchor link and the target pseudo-class
+
+The HTML structure of the modal component is rather simple. The `<a>` link must point to an `id` that will be used as the `:target` pseudo-class. The modal itself will be a `<div>` element that will be displayed when the `:target` pseudo-class is active.
+
+Let's dive into the code right now.
+
+```html
+<a class="btn" href="#open-modal">Open Modal</a>
+
+<div id="open-modal" class="modal-window">
+  <a href="#" class="modal-backdrop"></a>
+  <div class="modal">
+    <a href="#" title="Close" class="modal-close">✖</a>
+    <p>Modal Window</p>
+    <p>
+      <a href="https://remybeumier.be/blog/css-only-modal" target="_blank">Read the related article</a>
+    </p>
+  </div>
+</div>
+```
+
+The `a` element points to whatever you set your modal id to (here it's `open-modal`). All the modal div need is the same name as id. We added a close button and closing backdrop to make it more user-friendly.
+
+By leveraging the native functionality of the anchor link elements, we already have an accessible and working modal. But let's design it!
+
+## Modify the link style
+
+Let's style our link first, giving it a button look. You could drop a few lines if you don't want to style it as a button.
+
+```scss
+.btn {
+  appearance: none;
+  display: inline-block;
+  font-size: inherit;
+  color: inherit;
+  background: #f5f5f5;
+  text-decoration: none;
+  border: solid 1px #f5f5f5;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  min-width: 5rem;
+  max-width: 10rem;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: rgba(256, 256, 256, 0.5);
+  }
+}
+```
+
+## Style the modal window
+
+The modal itself is more complex in terms of CSS. The key point is the use of the `:target` pseudo-class to show or hide the modal. We will also use the `visibility` and `opacity` properties to create a smooth transition effect.
+
+```scss
+.modal-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal {
+    width: 20rem;
+    padding: 2em;
+    background: white;
+    position: relative;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+  }
+  .modal-close {
+    color: #aaa;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+  }
+}
+```
+
+## About the backdrop style
+
+The backdrop is the overlay that appears behind the modal. It's a simple `a` element that will cover the whole screen. It's a good practice to add a backdrop to make the modal more user-friendly.
+
+```scss
+.modal-backdrop {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+}
+```
+
+> If Sass is not your friend, copy-paste and transpile it into CSS on <a href="https://www.sassmeister.com/" target="_blank">https://www.sassmeister.com/</a> or <a href="https://sass.js.org/" target="_blank">https://sass.js.org/</a>.
+
+## Completed modal look
+
+We did it! A fully accessible, well-designed and smooth modal. You probably observed the use of `rem`, meaning our component will follow the `html` element `font-size`.
+
+**TLDR**: See the finalised code for this <a href="https://codepen.io/beumsk/pen/EaYNBJV" target="_blank">CSS only modal on Codepen</a>. You can take any level of inspiration from this and use it in your future developments.
+
+<Codepen pen="EaYNBJV" title="CSS only modal on Codepen" />
+
+Enjoy coding with CSS!
+
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

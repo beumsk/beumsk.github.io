@@ -1,5 +1,16 @@
 const posts = [
   {
+    slug: 'css-only-modal',
+    title: 'CSS only modal',
+    intro: 'How to design a CSS only and accessible modal',
+    img: '/images/posts/css-only-modal.jpg',
+    published: '2024-12-29',
+    modified: '2024-12-29',
+    categories: 'css, tutorial',
+    link: '/blog/css-only-modal',
+    url: 'https://remybeumier.be/blog/css-only-modal',
+  },
+  {
     slug: 'set-up-sass-in-the-best-way',
     title: 'Set up Sass in the best way',
     intro: 'How to set up Sass with the best compiling settings and start developing with it',
