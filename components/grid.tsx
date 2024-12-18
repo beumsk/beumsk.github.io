@@ -46,7 +46,7 @@ function GridItem({ item }: GridItemProps) {
               </a>
             ) : null}
             <a
-              href={'https://github.com/beumsk/' + item.title}
+              href={'https://github.com/beumsk/' + item.title.replace(/ /g, '-')}
               target="_blank"
               rel="noopener noreferrer"
               title="Github repository"

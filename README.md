@@ -23,16 +23,15 @@ needs node v14
 
 ## DEPLOY
 
-Also make sure your linter is error-free with `npm run lint` or `yarn lint`
+Make sure your linter is error-free with `npm run lint` or `yarn lint`
 
-Deployment should be managed by the pipeline (`npm run deploy` or `yarn deploy`)
+Deployment to gh-page should be managed by Github Action (`npm run deploy` or `yarn deploy`)
 
-Commit and Push your changes to master.
-This will trigger Github Action and deploy the changes to gh-pages.
+Trigger it with Commit and Push to master.
 
 ## TODO
 
-- add new projects (kineval, blackjack, todolist?)
+- add new projects (kineval, tarava?, todolist?)
 - shorten cv old web experience? + add senior dev? + new skills to filter?
 - optimize images with script
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
@@ -102,7 +101,9 @@ Blog posts => ads ?
   },
   ```
 - Create an optimized miniature image and upload in /public/images/projects
+  - Dimensions of 1366x768px reduced to 683x384px in .jpg
 - Create an optimized full size screenshot of live version and upload in /public/images/projects
+  - Full dimension? in .jpg
 
 ### PERSO
 
@@ -127,6 +128,7 @@ Blog posts => ads ?
   }
   ```
 - Create an optimized miniature image and upload in /public/images/projects
+  - Dimensions of 1366x768px reduced to 683x384px in .jpg
 
 ## ANALYTICS
 

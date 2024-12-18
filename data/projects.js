@@ -197,6 +197,23 @@ const projects = [
     type: 'perso',
   },
   {
+    slug: 'black-jack',
+    title: 'Black Jack',
+    link: '/projects/black-jack',
+    img: '/images/projects/black-jack.jpg',
+    pen: 'abRagpO',
+    modified: '2024-12-18',
+    intro: 'Beat the bank in Black Jack!',
+    tech: ['react', 'typescript', 'sass'],
+    chall: [
+      'While loop to ensure unique card draws',
+      'Local storage to save the player score',
+      'Complex logic to handle win-lose logic',
+    ],
+    homepage: false,
+    type: 'perso',
+  },
+  {
     slug: 'movies',
     title: 'Movies',
     link: '/projects/movies',

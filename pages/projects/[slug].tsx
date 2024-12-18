@@ -81,7 +81,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }: Dyna
 
             {!isPro ? (
               <a
-                href={`https://github.com/beumsk/${project.title}`}
+                href={`https://github.com/beumsk/${project.title.replace(/ /g, '-')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn mb-4 mr-4"
