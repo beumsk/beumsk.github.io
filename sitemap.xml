@@ -103,6 +103,13 @@
   </url>
 
   <url>
+    <loc>https://remybeumier.be/projects/black-jack</loc>
+    <lastmod>2024-12-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://remybeumier.be/projects/movies</loc>
     <lastmod>2022-03-11</lastmod>
     <changefreq>yearly</changefreq>
