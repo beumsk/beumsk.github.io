@@ -14,8 +14,9 @@
     "deploy": "npm run blog && npm run build && npm run export",
     "sitemap": "node ./generate-sitemap.mjs",
     "blog": "node ./generate-blog-list.mjs",
-    "screen": "node ./generate-projects-screens.js https://remybeumier.be/Memory memory.jpg",
-    "optimize": "node ./optimize-image.js"
+    "screen:pm": "node ./screen-project-mini.js",
+    "screen:pf": "node ./screen-project-full.js",
+    "screen:bm": "node ./screen-blog-mini.js"
   },
   "author": "Rémy Beumier",
   "license": "ISC",

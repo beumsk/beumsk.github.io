@@ -1,15 +1,19 @@
 const fs = require('fs');
 const sharp = require('sharp');
 
-const sharpit = async (path, quality, noverwrite) => {
-  const output = `${path}_optimized.jpg`;
+const sharpit = async (path, resize, quality, overwrite) => {
+  // path = "example.jpg"
+  // resize = { w: 600, h: 315 }
+  // quality = 80
+  // overwrite = true
+  const output = `${path.replace('.jpg', '')}_optimized.jpg`;
   try {
     await sharp(path)
-      .resize(600, 315)
+      .resize(resize.w || null, resize.h || null)
       .jpeg({ quality: quality || 100 })
       .toFile(output);
     // overwrite image file
-    if (noverwrite) await fs.renameSync(output, path.replace('.png', '.jpg'));
+    if (overwrite) await fs.renameSync(output, path);
     console.log('Image optimized successfully!');
   } catch {
     (err) => {
@@ -17,8 +21,5 @@ const sharpit = async (path, quality, noverwrite) => {
     };
   }
 };
-
-const [path] = process.argv.slice(2);
-sharpit(path || 'default.jpg');
 
 module.exports = sharpit;

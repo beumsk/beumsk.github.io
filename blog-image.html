@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- FROM https://codepen.io/beumsk/full/wvjYygY -->
+    <title>Blog post vignette RB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+      }
+
+      body {
+        padding: 20px;
+        min-width: 1240px;
+        font-family: 'Share Tech Mono';
+      }
+
+      .back {
+        width: 1200px;
+        height: 630px;
+        background: linear-gradient(105deg, #ffffff 0%, #b2dfdb 130%);
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+      .back:hover .rect {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      .title {
+        font-family: 'Share Tech Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 68px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #333333;
+        text-shadow: 4px 2px 0px rgba(51, 51, 51, 0.25);
+      }
+
+      .rect {
+        border: solid 1px #333;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+      .rect::before {
+        content: '';
+        background: #009688;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        position: absolute;
+      }
+
+      .rect1 {
+        top: 50px;
+        left: 50px;
+        transform: rotate(-30deg);
+      }
+
+      .rect2 {
+        width: 60px;
+        height: 60px;
+        top: 150px;
+        right: 200px;
+        transform: rotate(-100deg);
+      }
+
+      .rect3 {
+        width: 40px;
+        height: 40px;
+        left: 600px;
+        bottom: 140px;
+        transform: rotate(-65deg);
+      }
+
+      #logo-gradient {
+        position: absolute;
+        right: 24px;
+        bottom: 40px;
+      }
+
+      .input {
+        margin: 40px auto;
+        display: block;
+        width: 620px;
+        padding: 16px;
+        font-size: 24px;
+        border: solid 2px #009688;
+      }
+
+      .action {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 40px auto;
+      }
+      .btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: solid 2px transparent;
+        background: #009688;
+        color: white;
+        padding: 16px 32px;
+        width: 300px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+      }
+      .btn:hover {
+        background: white;
+        color: #009688;
+        border-color: #009688;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .result {
+        display: block;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="back">
+      <h1 class="title">Blog post title</h1>
+
+      <div class="rect rect1"></div>
+      <div class="rect rect2"></div>
+      <div class="rect rect3"></div>
+
+      <img
+        id="logo-gradient"
+        src="https://raw.githubusercontent.com/beumsk/portfolio-2021/master/img/logo.png"
+        alt="logo"
+        width="100px"
+      />
+    </div>
+
+    <input class="input" type="text" placeholder="Change post title" />
+
+    <div class="action">
+      <button class="pos btn">Move shapes</button>
+    </div>
+
+    <div class="result"></div>
+    <!-- partial -->
+
+    <script>
+      var htmlImage = document.querySelector('.back');
+      var title = document.querySelector('.title');
+      var input = document.querySelector('.input');
+      var pos = document.querySelector('.pos');
+
+      // TODO: define manually image sizes
+
+      var rect1 = document.querySelector('.rect1');
+      var rect1from = { side: 50, top: 50, left: 50, transform: -30 };
+      var rect1to = { side2: 70, top2: 120, left2: 400, transform2: 210 };
+
+      var rect2 = document.querySelector('.rect2');
+      var rect2from = { side: 60, top: 150, right: 200, transform: -100 };
+      var rect2to = { side2: 50, top2: 320, right2: 100, transform2: 60 };
+
+      var rect3 = document.querySelector('.rect3');
+      var rect3from = { side: 40, left: 600, bottom: 140, transform: -30 };
+      var rect3to = { side2: 60, left2: 300, bottom: 60, transform2: 210 };
+
+      input.addEventListener('input', (e) => {
+        title.innerText = e.target.value || 'Blog post title';
+      });
+
+      pos.addEventListener('click', () => {
+        randomShapes(rect1, rect1from, rect1to);
+        randomShapes(rect2, rect2from, rect2to);
+        randomShapes(rect3, rect3from, rect3to);
+      });
+
+      function randomShapes(shape, from, to) {
+        var { side, top, left, right, bottom, transform } = from;
+        var { side2, top2, left2, right2, bottom2, transform2 } = to;
+        if (side) {
+          var s = randomDiff(side, side2);
+          shape.style.width = s + 'px';
+          shape.style.height = s + 'px';
+        }
+        if (top) {
+          shape.style.top = randomDiff(top, top2) + 'px';
+        }
+        if (left) {
+          shape.style.left = randomDiff(left, left2) + 'px';
+        }
+        if (right) {
+          shape.style.right = randomDiff(right, right2) + 'px';
+        }
+        if (bottom) {
+          shape.style.bottom = randomDiff(bottom, bottom2) + 'px';
+        }
+        if (transform) {
+          shape.style.transform = 'rotate(' + randomDiff(transform, transform2) + 'deg)';
+        }
+      }
+
+      function randomDiff(from, to) {
+        return from > to ? to + rand(from - to) : from + rand(to - from);
+      }
+
+      function rand(val) {
+        return Math.floor(Math.random() * val);
+      }
+    </script>
+  </body>
+</html>

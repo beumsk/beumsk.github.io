@@ -73,7 +73,11 @@ Blog posts => ads ?
   ```
 - Write the post with keywords, speaking with we, code examples and a final result on codepen or codesandbox
 - Review spell on https://languagetool.org/
-- Create blog post image: https://codepen.io/beumsk/full/wvjYygY and upload in /public/images/posts
+- Create blog post image and upload in /public/images/posts 
+  - `yarn screen:bm <file-name.extension>` (eg. `yarn screen:bm article.jpg`)
+  - OR https://codepen.io/beumsk/full/wvjYygY
+- Create blog content image and upload in /public/images/content
+  - TODO: create script to optimize blog content images
 
 ## PROJECTS
 
@@ -101,9 +105,11 @@ Blog posts => ads ?
   },
   ```
 - Create an optimized miniature image and upload in /public/images/projects
-  - Dimensions of 1366x768px reduced to 683x384px in .jpg
+  - Dimensions of 1366x768px reduced to 683x384px in .jpg (or 1200x630px & 600x315px)
+  - `yarn screen:pm <project-url> <file-name.extension>` (eg. `yarn screen:pm https://remybeumier.be rb.jpg`)
 - Create an optimized full size screenshot of live version and upload in /public/images/projects
-  - Full dimension? in .jpg
+  - Dimensions of 1920x100% (reduced?) in .jpg
+  - `yarn screen:pf <project-url> <file-name-screen.extension>` (eg. `yarn screen:pf https://remybeumier.be rb-screen.jpg`)
 
 ### PERSO
 
@@ -128,7 +134,8 @@ Blog posts => ads ?
   }
   ```
 - Create an optimized miniature image and upload in /public/images/projects
-  - Dimensions of 1366x768px reduced to 683x384px in .jpg
+  - Dimensions of 1366x768px reduced to 683x384px in .jpg (or 1200x630px & 600x315px)
+  - `yarn screen:pm <project-url> <file-name.extension>` (eg. `yarn screen:pm https://remybeumier.be rb.jpg`)
 
 ## ANALYTICS
 
