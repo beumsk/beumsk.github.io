@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { MdLaptop, MdOutlineArticle, MdOutlineSettings, MdWorkOutline } from 'react-icons/md';
+import Linkk from '@components/linkk';
 
 type ResumeProps = {
   title: string;
@@ -31,25 +32,18 @@ export default function Resume({ title, description, url }: ResumeProps) {
 
         <section className="resume__contact">
           <p>
-            <a href="mailto:remybeumier@gmail.com" target="_blank" rel="noreferrer">
+            <a href="mailto:remybeumier@gmail.com" target="_blank" rel="noopener noreferrer">
               remybeumier@gmail.com
             </a>
           </p>
           <p>
-            {/* eslint-disable-next-line react/jsx-no-target-blank */}
-            <a href="https://remybeumier.be" target="_blank">
-              remybeumier.be
-            </a>
+            <Linkk href="https://remybeumier.be">remybeumier.be</Linkk>
           </p>
           <p>
-            <a href="https://linkedin.com/in/remybeumier/" target="_blank" rel="noopener noreferrer">
-              linkedin.com
-            </a>
+            <Linkk href="https://linkedin.com/in/remybeumier/">linkedin.com</Linkk>
           </p>
           <p>
-            <a href="https://github.com/beumsk" target="_blank" rel="noopener noreferrer">
-              github.com
-            </a>
+            <Linkk href="https://github.com/beumsk">github.com</Linkk>
           </p>
         </section>
 
@@ -217,9 +211,7 @@ export default function Resume({ title, description, url }: ResumeProps) {
             <p className="detail">remybeumier.be // version 2022</p>
             <p className="intro">Collection of professional and personal projects presented in a Next.js website.</p>
             <p>
-              <a href="https://remybeumier.be/projects" target="_blank" rel="noopener noreferrer">
-                See portfolio website
-              </a>
+              <Linkk href="https://remybeumier.be/projects">See portfolio website</Linkk>
               <span className="print-only"> (https://remybeumier.be/projects)</span>
             </p>
           </div>
@@ -297,15 +289,11 @@ export default function Resume({ title, description, url }: ResumeProps) {
           </h2>
           <ul className="list-no">
             <li>
-              <a href="https://remybeumier.be/blog" target="_blank" rel="noopener noreferrer">
-                React, Next.js, JS and CSS articles on remybeumier.be
-              </a>
+              <Linkk href="https://remybeumier.be/blog">React, Next.js, JS and CSS articles on remybeumier.be</Linkk>
               <span className="print-only"> (https://remybeumier.be/blog)</span>
             </li>
             <li>
-              <a href="https://dev.to/beumsk" target="_blank" rel="noopener noreferrer">
-                JavaScript, CSS and HTML articles on Dev.to
-              </a>
+              <Linkk href="https://dev.to/beumsk">JavaScript, CSS and HTML articles on Dev.to</Linkk>
               <span className="print-only"> (https://dev.to/beumsk)</span>
             </li>
           </ul>

@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-scss.min.js';
@@ -10,6 +9,7 @@ import { AiFillCaretLeft } from 'react-icons/ai';
 import posts from '@data/posts';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
+import Linkk from './linkk';
 
 const convertDate = (d) =>
   d === '' ? 'No date' : `${new Date(d).getDate()}.${new Date(d).getMonth() + 1}.${new Date(d).getFullYear()}`;
@@ -41,11 +41,9 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
               <div className="space-between-x mb-10">
                 <div className="post__categories">
                   {categoriesList?.map((c) => (
-                    <Link key={c} href={`/blog?cat=${c}`}>
-                      <a>
-                        <span itemProp="articleSection">{c.charAt(0).toUpperCase() + c.slice(1)}</span>
-                      </a>
-                    </Link>
+                    <Linkk key={c} href={`/blog?cat=${c}`}>
+                      <span itemProp="articleSection">{c.charAt(0).toUpperCase() + c.slice(1)}</span>
+                    </Linkk>
                   ))}
                 </div>
                 <div>
@@ -73,12 +71,10 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
               </div>
 
               <div className="mb-15">
-                <Link href="/blog">
-                  <a className="btn">
-                    <AiFillCaretLeft className="mr-1" />
-                    Back to blog listing
-                  </a>
-                </Link>
+                <Linkk href="/blog" className="btn">
+                  <AiFillCaretLeft className="mr-1" />
+                  Back to blog listing
+                </Linkk>
               </div>
 
               <div>

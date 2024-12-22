@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { FaAlignJustify, FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiCodesandbox } from 'react-icons/si';
+import Linkk from './linkk';
 
 const footerLinks = [
   {
@@ -38,18 +38,16 @@ export default function Footer() {
         <div className="mb-10">
           {footerLinks.map((f) => {
             const Icon = f.icon;
-            return f.link.startsWith('http') ? (
-              <a key={f.link} href={f.link} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
+            return (
+              <Linkk
+                key={f.link}
+                href={f.link}
+                target={f.link.startsWith('http') || f.text === 'Resume' ? '_blank' : '_self'}
+                className="btn mb-4 mr-4"
+              >
                 <Icon title={f.text} aria-labelledby={f.text} />
                 <span className="ml-1">{f.text}</span>
-              </a>
-            ) : (
-              <Link href={f.link} key={f.text}>
-                <a target={f.text === 'Resume' ? '_blank' : '_self'} className="btn mb-4 mr-4">
-                  <Icon title={f.text} aria-labelledby={f.text} />
-                  <span className="ml-1">{f.text}</span>
-                </a>
-              </Link>
+              </Linkk>
             );
           })}
         </div>

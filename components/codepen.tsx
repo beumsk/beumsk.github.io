@@ -1,3 +1,5 @@
+import Linkk from './linkk';
+
 type CodepenProps = {
   className?: string;
   pen: string;
@@ -15,13 +17,9 @@ export default function Codepen({ className, pen, title }: CodepenProps) {
           loading="lazy"
           src={'https://codepen.io/beumsk/embed/' + pen + '?default-tab=result'}
         >
-          <a href={'https://codepen.io/beumsk/pen/' + pen} target="_blank" rel="noopener noreferrer">
-            See the Pen
-          </a>
+          <Linkk href={'https://codepen.io/beumsk/pen/' + pen}>See the Pen</Linkk>
           by
-          <a href="https://codepen.io/beumsk" target="_blank" rel="noopener noreferrer">
-            Rémy Beumier
-          </a>
+          <Linkk href="https://codepen.io/beumsk">Rémy Beumier</Linkk>
         </iframe>
       </div>
     </>

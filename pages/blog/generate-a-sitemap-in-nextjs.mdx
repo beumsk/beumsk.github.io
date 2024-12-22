@@ -7,6 +7,7 @@ categories: 'next.js, tutorial'
 ---
 
 import BlogLayout from '@components/blogLayout';
+import Linkk from '@components/Linkk';
 import Codesandbox from '@components/codesandbox';
 
 Sitemaps are important for web crawlers such as google bots, and therefore we need one to improve our site's SEO.
@@ -54,7 +55,7 @@ async function generate() {
 generate();
 ```
 
-If you don't know much about the topic, <a href="https://sitemaps.org/protocol.html" target="_blank">read more about the sitemap protocol</a>.
+If you don't know much about the topic, <Linkk href="https://sitemaps.org/protocol.html">read more about the sitemap protocol</Linkk>.
 
 ## Focus on the files you want in the sitemap
 
@@ -190,9 +191,9 @@ function convertDate(inputFormat) {
 ```
 
 We have built a complete sitemap with specific URL, last modification date, change frequency and priority.
-Check out <a href="https://github.com/sindresorhus/globby" target="_blank">the globby documentation for more possibilities</a>.
+Check out <Linkk href="https://github.com/sindresorhus/globby">the globby documentation for more possibilities</Linkk>.
 
-**TLDR**: <a href="https://codesandbox.io/s/custom-sitemap-i3jvko" target="_blank">Codesandbox: Custom sitemap in Next.js</a>.
+**TLDR**: <Linkk href="https://codesandbox.io/s/custom-sitemap-i3jvko">Codesandbox: Custom sitemap in Next.js</Linkk>.
 
 <Codesandbox sandbox="custom-sitemap-i3jvko" title="Custom sitemap in Next.js" />
 

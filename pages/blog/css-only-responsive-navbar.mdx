@@ -7,6 +7,7 @@ categories: 'css, tutorial'
 ---
 
 import BlogLayout from '@components/blogLayout';
+import Linkk from '@components/Linkk';
 import Codepen from '@components/codepen';
 
 I do more and more JavaScript because of the usual requirements in projects, but I will always love a useful, adaptable and cross-browser working CSS trick.
@@ -117,7 +118,7 @@ Following a mobile first mindset, we will start with the SCSS from the tiniest s
 }
 ```
 
-> Should you need to transpile it into CSS, don't hesitate to copy and paste it over <a href="https://www.sassmeister.com/" target="_blank">https://www.sassmeister.com/</a> or <a href="https://sass.js.org/" target="_blank">https://sass.js.org/</a>.
+> Should you need to transpile it into CSS, don't hesitate to copy and paste it over <Linkk href="https://www.sassmeister.com/">https://www.sassmeister.com/</Linkk> or <Linkk href="https://sass.js.org/">https://sass.js.org/</Linkk>.
 
 Regarding the code, I don't think it contains anything fancy. We use `position: sticky` because it is so easy for top nav, a bit of `flex` layout and transitions but that's it for this part.
 
@@ -166,7 +167,7 @@ Here is the gold of the article. We will see that we handle the toggle with the 
 
 The first comment about this snippet will be about the design of the checkbox. As you can see, we removed its default with `appearance: none` and we applied a gradient as background to mimic a burger menu. I could have avoided the `::after`, but I liked the idea to have a bigger click area. Of course, we could change this to an icon font, or a label pointing to the checkbox giving us a lot more possibilities.
 
-And secondly, we handle the show/hide logic. We are looking for the checkbox to be `:checked` <a href="https://caniuse.com/mdn-css_selectors_checked" target="_blank">Browser compatibility on caniuse</a>, and we select the `.header__links` among its sibling with the `~` selector. As of now, we can nicely toggle the menu on or off without JavaScript.
+And secondly, we handle the show/hide logic. We are looking for the checkbox to be `:checked` <Linkk href="https://caniuse.com/mdn-css_selectors_checked">Browser compatibility on caniuse</Linkk>, and we select the `.header__links` among its sibling with the `~` selector. As of now, we can nicely toggle the menu on or off without JavaScript.
 
 > Some could argue a burger menu is not so user-friendly. I think given how widely it's used, a user will understand directly what it is and how to use it.
 
@@ -237,7 +238,7 @@ There isn't much magic in those lines. We are hiding the burger checkbox and are
 
 ## Final navigation result
 
-**TLDR**: Find the complete solution for this <a href="https://codepen.io/beumsk/pen/bGKbZoV" target="_blank">Responsive CSS only navigation bar using a burger menu on Codepen</a>. Feel free to take inspiration from it and adapt it to your exact need.
+**TLDR**: Find the complete solution for this <Linkk href="https://codepen.io/beumsk/pen/bGKbZoV">Responsive CSS only navigation bar using a burger menu on Codepen</Linkk>. Feel free to take inspiration from it and adapt it to your exact need.
 
 <Codepen pen="bGKbZoV" title="Responsive CSS only navigation bar using a burger menu on Codepen" />
 

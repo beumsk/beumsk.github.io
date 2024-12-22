@@ -1,13 +1,13 @@
-import Link from 'next/link';
 import { nav } from '@data/nav';
+import Linkk from './linkk';
 
 export default function MobileNav() {
   return (
     <nav className="mobile-nav">
       {nav.map((n) => (
-        <Link href={n.link} key={n.text}>
+        <Linkk href={n.link} key={n.text}>
           {n.text}
-        </Link>
+        </Linkk>
       ))}
     </nav>
   );

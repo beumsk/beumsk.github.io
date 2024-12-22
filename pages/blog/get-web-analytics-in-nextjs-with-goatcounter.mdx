@@ -7,6 +7,7 @@ categories: 'next.js, tutorial, analytics'
 ---
 
 import BlogLayout from '@components/blogLayout';
+import Linkk from '@components/Linkk';
 
 Next.js is more and more complete with the years and it adds features every other month. One feature that we want for our websites is analytics. Vercel, the company behind Next.js provides an analytics tool that seems very complete as long as we decide to host our site on their platform. But what are the options for those of us not willing to host on that site?
 
@@ -20,7 +21,7 @@ Let's see how we can implement this tool with our SSG Next.js website! 🚀
 
 ## Create a GoatCounter account
 
-The first step is to create an account at <a href="https://goatcounter.com/signup" target="_blank">GoatCounter</a>.
+The first step is to create an account at <Linkk href="https://goatcounter.com/signup">GoatCounter</Linkk>.
 The design is not the sexiest, but it is very functional and easy to understand.
 
 We can reach our account at: _https://[my-code].goatcounter.com_. Make sure to replace `[my-code]` with your actual account code.
@@ -38,7 +39,7 @@ In order to get the data into our dashboard, we need to link GoatCounter to our 
 
 ### 1. Download GoatCounter file
 
-We will download a version of the <a href="https://gc.zgo.at/count.js" target="_blank">GoatCounter code</a>.
+We will download a version of the <Linkk href="https://gc.zgo.at/count.js">GoatCounter code</Linkk>.
 We can add it under the `public/script` folder in our solution.
 
 ### 2. Connect the app to GoatCounter.com
@@ -77,7 +78,7 @@ You could experiment with Next.js Script component, but I somehow couldn't make 
 
 ### 3. Add the GoatCounter logic
 
-Inside `_app.js`, we need to use the `useEffect` trick seen in another tutorial to [use the window object with Next](/blog/fix-the-window-is-not-defined-error). That way we can inform GoatCounter about every route change it can count in its analytics.
+Inside `_app.js`, we need to use the `useEffect` trick seen in another tutorial to <Linkk href="/blog/fix-the-window-is-not-defined-error">use the window object with Next</Linkk>. That way we can inform GoatCounter about every route change it can count in its analytics.
 
 ```js
 import { useEffect } from 'react';

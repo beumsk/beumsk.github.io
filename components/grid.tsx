@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import { FaCodepen, FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
 import { SiCodesandbox } from 'react-icons/si';
 import { PostType, ProjectType } from '@types';
+import Linkk from './linkk';
 
 type Item = Partial<ProjectType> & Partial<PostType>;
 type GridItemProps = {
@@ -18,65 +18,46 @@ function GridItem({ item }: GridItemProps) {
   return (
     <div className="card">
       <div className="card__behind">
-        <Link href={item.link || ''}>
-          <a className="card__title" title={item.title}>
-            <h2 className="t-ellipsis">{item.title}</h2>
-          </a>
-        </Link>
+        <Linkk href={item.link || ''} className="card__title" title={item.title}>
+          <h2 className="t-ellipsis">{item.title}</h2>
+        </Linkk>
         {item.type === 'perso' ? (
           <div className="card__links">
             {item.pen ? (
-              <a
-                href={'https://codepen.io/beumsk/pen/' + item.pen}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Codepen link"
-              >
+              <Linkk href={'https://codepen.io/beumsk/pen/' + item.pen} title="Codepen link">
                 <FaCodepen title="Codepen" aria-labelledby="Codepen" />
-              </a>
+              </Linkk>
             ) : null}
             {item.sandbox ? (
-              <a
-                href={'https://codesandbox.io/s/' + item.sandbox}
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Codesandbox link"
-              >
+              <Linkk href={'https://codesandbox.io/s/' + item.sandbox} title="Codesandbox link">
                 <SiCodesandbox title="Codesandbox" aria-labelledby="Codesandbox" />
-              </a>
+              </Linkk>
             ) : null}
-            <a
-              href={'https://github.com/beumsk/' + item.title.replace(/ /g, '-')}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Github repository"
-            >
+            <Linkk href={'https://github.com/beumsk/' + item.title.replace(/ /g, '-')} title="Github repository">
               <FaGithub title="Github" aria-labelledby="Github" />
-            </a>
+            </Linkk>
           </div>
         ) : null}
         {item.type === 'pro' ? (
           <div className="card__links">
             {item.current ? (
-              <a href={item.current} target="_blank" rel="noopener noreferrer" title="Live website">
+              <Linkk href={item.current} title="Live website">
                 <MdPublic title="Live website" aria-labelledby="Live website" />
-              </a>
+              </Linkk>
             ) : null}
             {item.past ? (
-              <a href={item.past} target="_blank" rel="noopener noreferrer" title="Site as I left it">
+              <Linkk href={item.past} title="Site as I left it">
                 <MdSettingsBackupRestore title="Site as I left it" aria-labelledby="Site as I left it" />
-              </a>
+              </Linkk>
             ) : null}
           </div>
         ) : null}
       </div>
-      <Link href={item.link || ''}>
-        <a title={item.title} tabIndex={-1}>
-          <div className="card__img">
-            <img src={item.img} alt={item.title} width="260" height="146" loading="lazy" />
-          </div>
-        </a>
-      </Link>
+      <Linkk href={item.link || ''} title={item.title} tabIndex={-1}>
+        <div className="card__img">
+          <img src={item.img} alt={item.title} width="260" height="146" loading="lazy" />
+        </div>
+      </Linkk>
     </div>
   );
 }

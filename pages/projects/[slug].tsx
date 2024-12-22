@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
 import { MdPublic, MdSettingsBackupRestore } from 'react-icons/md';
@@ -6,6 +5,7 @@ import Codepen from '@components/codepen';
 import Codesandbox from '@components/codesandbox';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
+import Linkk from '@components/linkk';
 import Tech from '@components/tech';
 import { ProjectType } from '@types';
 
@@ -31,12 +31,10 @@ export default function DynamicProject({ project, relatedLinks, img, url }: Dyna
               <ul className="mb-6 project__tech-list">
                 {project.tech.map((t) => (
                   <li key={t}>
-                    <Link href={`/projects?tech=${t}`}>
-                      <a className="btn">
-                        <Tech name={t} color />
-                        <span>{t.replace('-', ' ')}</span>
-                      </a>
-                    </Link>
+                    <Linkk href={`/projects?tech=${t}`} className="btn">
+                      <Tech name={t} color />
+                      <span>{t.replace('-', ' ')}</span>
+                    </Linkk>
                   </li>
                 ))}
               </ul>
@@ -72,41 +70,34 @@ export default function DynamicProject({ project, relatedLinks, img, url }: Dyna
           ) : null}
 
           <div className="mb-15">
-            <Link href="/projects">
-              <a className="btn mb-4 mr-4" style={{ verticalAlign: 'bottom' }}>
-                <AiFillCaretLeft className="mr-1" />
-                Back to projects
-              </a>
-            </Link>
+            <Linkk href="/projects" className="btn mb-4 mr-4" style={{ verticalAlign: 'bottom' }}>
+              <AiFillCaretLeft className="mr-1" />
+              Back to projects
+            </Linkk>
 
             {!isPro ? (
-              <a
-                href={`https://github.com/beumsk/${project.title.replace(/ /g, '-')}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn mb-4 mr-4"
-              >
+              <Linkk href={`https://github.com/beumsk/${project.title.replace(/ /g, '-')}`} className="btn mb-4 mr-4">
                 Github repository
                 <FaGithub title="Github" aria-labelledby="Github" className="ml-1" />
-              </a>
+              </Linkk>
             ) : null}
 
             {isPro && project.current ? (
-              <a href={project.current} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
+              <Linkk href={project.current} className="btn mb-4 mr-4">
                 Live website
                 <MdPublic title="Live website" aria-labelledby="Live website" className="ml-1" />
-              </a>
+              </Linkk>
             ) : null}
 
             {isPro && project.past ? (
-              <a href={project.past} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
+              <Linkk href={project.past} className="btn mb-4 mr-4">
                 Site as I left it
                 <MdSettingsBackupRestore
                   title="Site as I left it"
                   aria-labelledby="Site as I left it"
                   className="ml-1"
                 />
-              </a>
+              </Linkk>
             ) : null}
           </div>
 

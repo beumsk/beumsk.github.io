@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react';
-import Link from 'next/link';
 import { AiFillCaretRight } from 'react-icons/ai';
 import { MdCommit, MdFileDownload, MdFolderOpen, MdOutlineDateRange } from 'react-icons/md';
 import ChartBars from '@components/chartBars';
 import Grid from '@components/grid';
 import GrowingNumber from '@components/growingNumber';
 import Layout from '@components/layout';
+import Linkk from '@components/linkk';
 import Logo from '@components/logo';
 import Tech from '@components/tech';
 import { CommitType, PostType, ProjectType, SkillsType } from '@types';
@@ -113,12 +113,10 @@ export default function Home({ title, description, projects, posts, _commits }: 
                 <strong>cloud-based services</strong>, advanced <strong>styling</strong> techniques, and a small but
                 expanding focus on <strong>back-end</strong> development.
               </p>
-              <Link href="/resume-remy-beumier">
-                <a className="btn mb-4 mr-4" target="_blank">
-                  Check out my resume
-                  <AiFillCaretRight className="ml-1" />
-                </a>
-              </Link>
+              <Linkk href="/resume-remy-beumier" target="_blank" className="btn mb-4 mr-4">
+                Check out my resume
+                <AiFillCaretRight className="ml-1" />
+              </Linkk>
               <a className="btn mb-4" href="remy-beumier-resume.pdf" target="_blank" download>
                 Download my resume
                 <MdFileDownload className="ml-1" />
@@ -136,11 +134,9 @@ export default function Home({ title, description, projects, posts, _commits }: 
               />
               <div className="about__languages my-2 mx-2">
                 {skillsList.map((s) => (
-                  <Link key={s} href={`/projects?tech=${s}`}>
-                    <a data-hover={s}>
-                      <Tech name={s} color />
-                    </a>
-                  </Link>
+                  <Linkk key={s} href={`/projects?tech=${s}`}>
+                    <Tech name={s} color />
+                  </Linkk>
                 ))}
               </div>
             </div>
@@ -154,12 +150,10 @@ export default function Home({ title, description, projects, posts, _commits }: 
           <p>I create projects both professionally and for fun. Here are some of my favourites.</p>
           <Grid data={projects.filter((x) => x.homepage).slice(0, 3)} className="mt-10 mb-10" />
           <div className="btn-wrapper-right">
-            <Link href="/projects">
-              <a className="btn">
-                Check all projects
-                <AiFillCaretRight className="ml-1" />
-              </a>
-            </Link>
+            <Linkk href="/projects" className="btn">
+              Check all projects
+              <AiFillCaretRight className="ml-1" />
+            </Linkk>
           </div>
         </div>
       </section>
@@ -170,12 +164,10 @@ export default function Home({ title, description, projects, posts, _commits }: 
           <p>I occasionally write articles about coding and the web. Here are my latest posts.</p>
           <Grid data={posts.slice(0, 3)} className="mt-10 mb-10" />
           <div className="btn-wrapper-right">
-            <Link href="/blog">
-              <a className="btn">
-                Check all posts
-                <AiFillCaretRight className="ml-1" />
-              </a>
-            </Link>
+            <Linkk href="/blog" className="btn">
+              Check all posts
+              <AiFillCaretRight className="ml-1" />
+            </Linkk>
           </div>
         </div>
       </section>

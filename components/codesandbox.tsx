@@ -1,3 +1,5 @@
+import Linkk from './linkk';
+
 type CodesandboxProps = {
   className?: string;
   sandbox: string;
@@ -16,9 +18,7 @@ export default function Codesandbox({ className, sandbox, title }: CodesandboxPr
           src={'https://codesandbox.io/embed/' + sandbox + '?fontsize=14&theme=dark'}
           sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
         >
-          <a href={'https://codesandbox.io/s/' + sandbox} target="_blank" rel="noopener noreferrer">
-            See the Sandbox by Rémy Beumier
-          </a>
+          <Linkk href={'https://codesandbox.io/s/' + sandbox}>See the Sandbox by Rémy Beumier</Linkk>
         </iframe>
       </div>
     </>

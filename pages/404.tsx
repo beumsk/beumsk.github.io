@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
+import Linkk from '@components/linkk';
 import { PostType, ProjectType } from '@types';
 // import Image from 'next/image';
 
@@ -42,9 +42,9 @@ export default function Custom404({ title, pro, perso, posts }: Custom404Props) 
             <Grid data={random} className="mt-10 mb-10" />
           </div>
           <div>
-            <Link href="/">
-              <a className="btn mb-20">Go back Home</a>
-            </Link>
+            <Linkk href="/" className="btn mb-20">
+              Go back Home
+            </Linkk>
           </div>
           {/* <div style={{ position: 'relative', aspectRatio: '1200/630' }}>
           <Image src="/images/posts/generate-a-sitemap-in-nextjs.jpg" alt="img" layout="fill" />

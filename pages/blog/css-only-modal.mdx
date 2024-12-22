@@ -7,13 +7,14 @@ categories: 'css, tutorial'
 ---
 
 import BlogLayout from '@components/blogLayout';
+import Linkk from '@components/Linkk';
 import Codepen from '@components/codepen';
 
 Modals are really useful on websites and applications to give feedback to users or to ask for confirmation. They are often used to display additional content or to request user input. In this tutorial, we will be building a modal component using only CSS. Let's dive into it with accessibility in mind and ensuring correct cross-browser compatibility.
 
 We will avoid any JavaScript by relying on anchor links and the `:target` pseudo-class. This will allow us to create a modal that can be opened and closed by clicking on a link. The modal will be displayed in the center of the screen and will have a close button to dismiss it.
 
-This article piece is in line with the following articles: [a Navbar that works without any JS](/blog/css-only-responsive-navbar), [a switch toggle button with no script](/blog/css-only-toggle-switch-button) and [a simple CSS accordion](/blog/css-only-accordion).
+This article piece is in line with the following articles: <Linkk href="/blog/css-only-responsive-navbar">a Navbar that works without any JS</Linkk>, <Linkk href="/blog/css-only-toggle-switch-button">a switch toggle button with no script</Linkk> and <Linkk href="/blog/css-only-accordion">a simple CSS accordion</Linkk>.
 
 ## Start from the anchor link and the target pseudo-class
 
@@ -128,13 +129,13 @@ The backdrop is the overlay that appears behind the modal. It's a simple `a` ele
 }
 ```
 
-> If Sass is not your friend, copy-paste and transpile it into CSS on <a href="https://www.sassmeister.com/" target="_blank">https://www.sassmeister.com/</a> or <a href="https://sass.js.org/" target="_blank">https://sass.js.org/</a>.
+> If Sass is not your friend, copy-paste and transpile it into CSS on <Linkk href="https://www.sassmeister.com/">https://www.sassmeister.com/</Linkk> or <Linkk href="https://sass.js.org/">https://sass.js.org/</Linkk>.
 
 ## Completed modal look
 
 We did it! A fully accessible, well-designed and smooth modal. You probably observed the use of `rem`, meaning our component will follow the `html` element `font-size`.
 
-**TLDR**: See the finalised code for this <a href="https://codepen.io/beumsk/pen/EaYNBJV" target="_blank">CSS only modal on Codepen</a>. You can take any level of inspiration from this and use it in your future developments.
+**TLDR**: See the finalised code for this <Linkk href="https://codepen.io/beumsk/pen/EaYNBJV">CSS only modal on Codepen</Linkk>. You can take any level of inspiration from this and use it in your future developments.
 
 <Codepen pen="EaYNBJV" title="CSS only modal on Codepen" />
 

@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 import { nav } from '@data/nav';
 import { ThemeType } from '@types';
+import Linkk from './linkk';
 
 type HeaderProps = {
   onClick: () => void;
@@ -13,15 +13,14 @@ export default function Header({ onClick, theme }: HeaderProps) {
     <header className="header">
       <div className="container">
         {nav.map((n, i) => (
-          <Link href={n.link} key={n.text}>
-            {!i ? (
-              <a className="logo">
-                <img src="/images/logo.svg" alt="Rémy Beumier logo" title={n.text} width="30" height="30" />
-              </a>
-            ) : (
-              <a target={n.text === 'Resume' ? '_blank' : '_self'}>{n.text}</a>
-            )}
-          </Link>
+          <Linkk
+            key={n.text}
+            href={n.link}
+            className={!i ? 'logo' : ''}
+            target={n.text === 'Resume' ? '_blank' : '_self'}
+          >
+            {!i ? <img src="/images/logo.svg" alt="Rémy Beumier logo" title={n.text} width="30" height="30" /> : n.text}
+          </Linkk>
         ))}
         <button
           onClick={onClick}
