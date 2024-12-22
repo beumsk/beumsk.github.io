@@ -13,12 +13,14 @@
   list-style-type: none;
 
   >li,
-  >a {
+  >.btn {
     font-size: 0.75rem;
     text-transform: uppercase;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
+    vertical-align: middle;
     display: inline-flex;
+    line-height: 1rem;
 
     svg {
       width: 1rem;
@@ -34,7 +36,7 @@
 
 .project__screen {
   background: var(--text10);
-  border: solid 1px var(--light-grey);
+  border: solid 1px var(--primary);
   box-shadow: var(--shadows6);
   margin-bottom: calc(2.5rem + 12px);
 }

@@ -12,7 +12,7 @@ export const nav = [
     link: '/blog',
   },
   {
-    text: 'Contact',
-    link: '/#contact',
+    text: 'Resume',
+    link: '/resume-remy-beumier',
   },
 ];

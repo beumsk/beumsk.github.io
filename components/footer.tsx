@@ -1,26 +1,32 @@
-import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaAlignJustify, FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiCodesandbox } from 'react-icons/si';
 
 const footerLinks = [
   {
     link: 'https://github.com/beumsk',
-    title: 'Github',
+    text: 'Github',
     icon: FaGithub,
   },
   {
     link: 'https://codepen.io/beumsk/',
-    title: 'Codepen',
+    text: 'Codepen',
     icon: FaCodepen,
   },
   {
     link: 'https://codesandbox.io/u/beumsk',
-    title: 'Codesandbox',
+    text: 'Codesandbox',
     icon: SiCodesandbox,
   },
   {
     link: 'https://www.linkedin.com/in/remybeumier/',
-    title: 'LinkedIn',
+    text: 'LinkedIn',
     icon: FaLinkedin,
+  },
+  {
+    link: '/resume-remy-beumier',
+    text: 'Resume',
+    icon: FaAlignJustify,
   },
 ];
 
@@ -32,11 +38,18 @@ export default function Footer() {
         <div className="mb-10">
           {footerLinks.map((f) => {
             const Icon = f.icon;
-            return (
+            return f.link.startsWith('http') ? (
               <a key={f.link} href={f.link} target="_blank" rel="noopener noreferrer" className="btn mb-4 mr-4">
-                <Icon title={f.title} aria-labelledby={f.title} />
-                <span className="ml-1">{f.title}</span>
+                <Icon title={f.text} aria-labelledby={f.text} />
+                <span className="ml-1">{f.text}</span>
               </a>
+            ) : (
+              <Link href={f.link} key={f.text}>
+                <a target={f.text === 'Resume' ? '_blank' : '_self'} className="btn mb-4 mr-4">
+                  <Icon title={f.text} aria-labelledby={f.text} />
+                  <span className="ml-1">{f.text}</span>
+                </a>
+              </Link>
             );
           })}
         </div>

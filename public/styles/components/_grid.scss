@@ -29,6 +29,7 @@
     height: 100%;
     top: 1.25rem;
     left: 1.25rem;
+    border: solid 1px var(--primary-light);
     box-shadow: var(--shadows4);
 
     @media screen and (min-width: 768px) {
@@ -37,7 +38,7 @@
     }
 
     position: absolute;
-    background: var(--bg2);
+    background: var(--bg);
     transition: all var(--transition);
 
     a:focus {

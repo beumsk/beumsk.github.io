@@ -1,21 +1,75 @@
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { AiFillCaretRight } from 'react-icons/ai';
-import { MdFileDownload } from 'react-icons/md';
+import { MdCommit, MdFileDownload, MdFolderOpen, MdOutlineDateRange } from 'react-icons/md';
+import ChartBars from '@components/chartBars';
 import Grid from '@components/grid';
+import GrowingNumber from '@components/growingNumber';
 import Layout from '@components/layout';
 import Logo from '@components/logo';
 import Tech from '@components/tech';
-import { PostType, ProjectType } from '@types';
+import { CommitType, PostType, ProjectType, SkillsType } from '@types';
+import useIntersection from 'hooks/useIntersection';
+
+const convertDate = (d: string) =>
+  `${new Date(d).getDate()}.${new Date(d).getMonth() + 1}.${new Date(d).getFullYear()}`;
 
 type HomeProps = {
   title: string;
   description: string;
   projects: ProjectType[];
   posts: PostType[];
+  _commits: CommitType[];
 };
 
-export default function Home({ title, description, projects, posts }: HomeProps) {
-  const skillsList = ['html', 'css', 'javascript', 'react', 'jquery', 'sass', 'angular'];
+export default function Home({ title, description, projects, posts, _commits }: HomeProps) {
+  const { isVisible, refs } = useIntersection();
+  const [year, setYear] = useState<number | null>(null);
+
+  const years = new Set(_commits.map((c) => new Date(c.date).getFullYear()));
+
+  const sortedCommits: CommitType[] = useMemo(
+    () => _commits.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()),
+    [_commits]
+  );
+
+  const commits = useMemo(
+    () => sortedCommits.filter((c) => (year ? new Date(c.date).getFullYear() === year : true)),
+    [sortedCommits, year]
+  );
+
+  const firstCommitDate = convertDate(commits[0]?.date);
+  const latestCommitDate = convertDate(commits[commits.length - 1]?.date);
+
+  const commitsCount = commits.length;
+
+  const allReposCount = new Set(commits.map((commit) => commit.repo)).size;
+
+  const data = useMemo(
+    () =>
+      commits.reduce((acc: { name: string; commits: number }[], commit) => {
+        const month = new Date(commit.date).toLocaleString('default', { month: 'short' });
+        const existingMonth = acc.find((item) => item.name === month);
+        if (existingMonth) {
+          existingMonth.commits += 1;
+        } else {
+          acc.push({ name: month, commits: 1 });
+        }
+        return acc;
+      }, []),
+    [commits]
+  );
+
+  const tableData = useMemo(
+    () =>
+      data.sort((a, b) => {
+        const monthOrder = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return monthOrder.indexOf(a.name) - monthOrder.indexOf(b.name);
+      }),
+    [commits]
+  );
+
+  const skillsList = ['react', 'typescript', 'firebase', 'node.js', 'javascript', 'css'] as SkillsType[];
 
   return (
     <Layout title={title} description={description}>
@@ -36,27 +90,28 @@ export default function Home({ title, description, projects, posts }: HomeProps)
         <div className="container" data-aos="fade-right">
           <div className="cols cols-lg">
             <div className="col">
-              <h2>I'm Rémy, I'm a Web Lover based in Brussels and I specialise in Front-end Development.</h2>
+              <h2>I'm Rémy, a Web Lover based in Brussels, specialising in Web & Software Development.</h2>
+
               <p>
-                Ever since my young years, I have always enjoyed building things. I started developing my passion for{' '}
-                <strong>creation</strong> with Lego, continued with Minecraft and ultimately discovered{' '}
-                <strong>Web development</strong>.
+                From a young age, I’ve always loved building things. My passion for <strong>creation</strong> began with
+                Lego, grew with Minecraft, and ultimately led me to discover <strong>web development</strong>.
               </p>
+
               <p>
-                It was a relief to find out what I really wanted to do for a living. I took full advantage of that
-                motivation to start a long, difficult, but passionate journey of self-learning{' '}
-                <strong>front-end</strong> technologies.
+                Over the years, my journey has been about mastering foundational <strong>web technologies</strong> and
+                continuously evolving in technical, communicational, and organisational skills.
               </p>
+
               <p>
-                I began coding everyday for a living and as a hobby with <strong>HTML</strong>, <strong>CSS</strong> and{' '}
-                <strong>JavaScript</strong>. I could improve my skills step by step by working as a team player, using{' '}
-                <strong>Git</strong>, <strong>Agile</strong> methodologies, <strong>NPM</strong> and{' '}
-                <strong>Figma</strong>, among others.
+                I’ve thrived in team-driven environments, leveraging industry-standard tools for{' '}
+                <strong>front-end</strong> development, <strong>version control</strong>, workflow optimisation, design,
+                and <strong>project collaboration</strong>.
               </p>
+
               <p className="mb-5">
-                <strong>React</strong> is now an essential part of my daily coding routine, combined with{' '}
-                <strong>Redux</strong>, <strong>Ant Design</strong>, <strong>Sass</strong>, <strong>CSS-in-JS</strong>{' '}
-                and many more.
+                React is at the core of my development work, complemented by modern front-end libraries,{' '}
+                <strong>cloud-based services</strong>, advanced <strong>styling</strong> techniques, and a small but
+                expanding focus on <strong>back-end</strong> development.
               </p>
               <Link href="/resume-remy-beumier">
                 <a className="btn mb-4 mr-4" target="_blank">
@@ -81,9 +136,9 @@ export default function Home({ title, description, projects, posts }: HomeProps)
               />
               <div className="about__languages my-2 mx-2">
                 {skillsList.map((s) => (
-                  <Link key={s} href={`/projects?${s}`}>
+                  <Link key={s} href={`/projects?tech=${s}`}>
                     <a data-hover={s}>
-                      <Tech name={s} />
+                      <Tech name={s} color />
                     </a>
                   </Link>
                 ))}
@@ -96,7 +151,7 @@ export default function Home({ title, description, projects, posts }: HomeProps)
       <section id="projects" className="pattern">
         <div className="container" data-aos="fade-left">
           <h2>Projects</h2>
-          <p>I build projects as a living and as a hobby. Here is a list of my favorites.</p>
+          <p>I create projects both professionally and for fun. Here are some of my favourites.</p>
           <Grid data={projects.filter((x) => x.homepage).slice(0, 3)} className="mt-10 mb-10" />
           <div className="btn-wrapper-right">
             <Link href="/projects">
@@ -109,10 +164,10 @@ export default function Home({ title, description, projects, posts }: HomeProps)
         </div>
       </section>
 
-      <section id="blog" className="">
+      <section id="blog" className="alt">
         <div className="container" data-aos="fade-right">
           <h2>Blog</h2>
-          <p>I write some stuff about coding and the web in general. Here are the latest posts.</p>
+          <p>I occasionally write articles about coding and the web. Here are my latest posts.</p>
           <Grid data={posts.slice(0, 3)} className="mt-10 mb-10" />
           <div className="btn-wrapper-right">
             <Link href="/blog">
@@ -124,6 +179,77 @@ export default function Home({ title, description, projects, posts }: HomeProps)
           </div>
         </div>
       </section>
+
+      <section id="data" className="data" ref={(el) => (refs.current.data = el)}>
+        <div className="container" data-aos="fade-left">
+          <h2>Data</h2>
+          <p>Here is a detailed overview of my coding activity, made of various commit statistics on Github.</p>
+          {/* https://github.com/sallar/github-contributions-chart */}
+          {/* Show trend: most active days of week, hours of day */}
+
+          <div className="data__body mt-10">
+            <div className="centered my-5">
+              <select onChange={(e) => setYear(parseInt(e.target.value))}>
+                <option value={0}>All</option>
+                {Array.from(years).map((y) => (
+                  <option key={y} value={y}>
+                    {y}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="data__numbers my-10">
+              <div className="data__numbers__item">
+                <MdCommit />
+                {isVisible.data ? <GrowingNumber number={commitsCount} /> : 0}
+                <span>Total commit</span>
+              </div>
+
+              <div className="data__numbers__item">
+                <MdOutlineDateRange />
+                <div className="centered">
+                  {isVisible.data ? <GrowingNumber number={parseInt(firstCommitDate.split('.')[0])} /> : 0}
+                  <span className="growing-number">.</span>
+                  {isVisible.data ? <GrowingNumber number={parseInt(firstCommitDate.split('.')[1])} /> : 0}
+                  <span className="growing-number">.</span>
+                  {isVisible.data ? <GrowingNumber number={parseInt(firstCommitDate.split('.')[2])} /> : 0}
+                </div>
+                <span>First commit</span>
+              </div>
+
+              <div className="data__numbers__item">
+                <MdOutlineDateRange />
+                <div className="centered">
+                  {isVisible.data ? <GrowingNumber number={parseInt(latestCommitDate.split('.')[0])} /> : 0}
+                  <span className="growing-number">.</span>
+                  {isVisible.data ? <GrowingNumber number={parseInt(latestCommitDate.split('.')[1])} /> : 0}
+                  <span className="growing-number">.</span>
+                  {isVisible.data ? <GrowingNumber number={parseInt(latestCommitDate.split('.')[2])} /> : 0}
+                </div>
+                <span>Latest commit</span>
+              </div>
+
+              <div className="data__numbers__item">
+                <MdFolderOpen />
+                {isVisible.data ? <GrowingNumber number={allReposCount} /> : 0}
+                <span>Total Repositories</span>
+              </div>
+            </div>
+
+            {tableData?.length && isVisible.data ? <ChartBars data={tableData} /> : 'Loading...'}
+
+            <p className="t-center mt-5">
+              <i>
+                Note the results are limited because most of my professional work is not recorded under my Github
+                profile.
+              </i>
+              <br />
+              <i>Results are updated monthly.</i>
+            </p>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }
@@ -131,6 +257,7 @@ export default function Home({ title, description, projects, posts }: HomeProps)
 export async function getStaticProps() {
   const projects = require('@data/projects');
   const posts = require('@data/posts');
+  const _commits = require('@data/commits');
 
   return {
     props: {
@@ -139,6 +266,7 @@ export async function getStaticProps() {
         "Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.",
       projects: projects,
       posts: posts,
+      _commits: _commits,
     },
   };
 }

@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 
-// eslint-disable-next-line react/prop-types
 function Error({ statusCode }) {
   const router = useRouter();
 

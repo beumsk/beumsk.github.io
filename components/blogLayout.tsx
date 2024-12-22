@@ -41,7 +41,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
               <div className="space-between-x mb-10">
                 <div className="post__categories">
                   {categoriesList?.map((c) => (
-                    <Link key={c} href={`/blog?${c}`}>
+                    <Link key={c} href={`/blog?cat=${c}`}>
                       <a>
                         <span itemProp="articleSection">{c.charAt(0).toUpperCase() + c.slice(1)}</span>
                       </a>

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { MdRefresh } from 'react-icons/md';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
 import Tech from '@components/tech';
-import { ProjectType } from '@types';
+import { ProjectType, SkillsType } from '@types';
 
 type ProjectsProps = {
   title: string;
@@ -15,18 +15,52 @@ type ProjectsProps = {
 
 export default function Projects({ title, description, url, projects }: ProjectsProps) {
   const router = useRouter();
-  // the regex replace removes all characters before '?' to get only the query parameters
-  const query = router.asPath.replace(/.*\?/g, '') === '/projects' ? '' : router.asPath.replace(/.*\?/g, '');
-  const [filter, setFilter] = useState(query);
+  const [typ, setTyp] = useState<'pro' | 'perso' | ''>('');
+  const [tec, setTec] = useState<SkillsType[]>([]);
+
+  const skillsList = ['react', 'typescript', 'firebase', 'node.js', 'javascript', 'css'] as SkillsType[];
+  // const skillsList = [...new Set(projects.map((p) => p.tech).flat())];
+
+  const updateRouter = (obj) =>
+    router.push(
+      {
+        pathname: router.pathname,
+        query: obj,
+      },
+      undefined,
+      { scroll: false }
+    );
 
   useEffect(() => {
-    if (!query) {
-      setFilter('');
-    }
-  }, [router, query]);
+    setTyp(router.query.type as 'pro' | 'perso');
+    setTec(((router.query.tech as string)?.split(',') || []) as SkillsType[]);
+  }, [router.query.type, router.query.tech]);
 
-  const skillsList = ['react', 'javascript', 'html', 'css', 'sass', 'jquery', 'angular'];
-  // const skillsList = [...new Set(projects.map((p) => p.tech).flat())];
+  const updateType = (_type: 'pro' | 'perso') => {
+    setTyp(typ === _type ? '' : _type);
+    const rQuery = { ...router.query };
+    delete rQuery.type;
+    updateRouter(typ === _type ? { ...rQuery } : { ...rQuery, type: _type });
+  };
+
+  const updateTech = (_tech: SkillsType) => {
+    let newTech = [...tec];
+    if (newTech.includes(_tech)) {
+      newTech = newTech.filter((t) => t !== _tech);
+    } else {
+      newTech.push(_tech);
+    }
+    setTec(newTech);
+    const rQuery = { ...router.query };
+    delete rQuery.tech;
+    updateRouter(newTech?.length === 0 ? { ...rQuery } : { ...rQuery, tech: newTech.join(',') });
+  };
+
+  const filteredProjects = projects.filter((project) => {
+    const matchesType = typ ? project.type === typ : true;
+    const matchesTech = tec.length > 0 ? tec.every((t) => project.tech.includes(t)) : true;
+    return matchesType && matchesTech;
+  });
 
   return (
     <Layout title={title} description={description} url={url}>
@@ -39,42 +73,26 @@ export default function Projects({ title, description, url, projects }: Projects
         </p>
 
         <div className="project__tech-list mb-4">
-          <Link href={'?professional'} scroll={false}>
-            <a onClick={() => setFilter('professional')} className={`btn ${filter === 'professional' ? 'active' : ''}`}>
-              Professional projects
-            </a>
-          </Link>
-          <Link href={'?personal'} scroll={false}>
-            <a onClick={() => setFilter('personal')} className={`btn ${filter === 'personal' ? 'active' : ''}`}>
-              Personal projects
-            </a>
-          </Link>
-        </div>
+          <button onClick={() => updateType('pro')} className={`btn ${typ === 'pro' ? 'active' : ''}`}>
+            Professional projects
+          </button>
+          <button onClick={() => updateType('perso')} className={`btn mr-4 ${typ === 'perso' ? 'active' : ''}`}>
+            Personal projects
+          </button>
 
-        <div className="project__tech-list">
           {skillsList.map((s) => (
-            <Link key={s} href={`?${s}`} scroll={false}>
-              <a onClick={() => setFilter(s)} className={`btn ${filter === s ? 'active' : ''}`}>
-                <Tech name={s} />
-                <span>{s.replace('-', ' ')}</span>
-              </a>
-            </Link>
+            <button key={s} onClick={() => updateTech(s)} className={`btn ${tec.includes(s) ? 'active' : ''}`}>
+              <Tech name={s} />
+              <span>{s.replace('-', ' ')}</span>
+            </button>
           ))}
+          <button className="btn ml-2" onClick={() => updateRouter({})} title="Reset filters">
+            <MdRefresh className="m-0" />
+          </button>
         </div>
 
         <div data-aos="fade-up">
-          {filter === '' ? <Grid data={projects} className="mt-5 mb-20" /> : null}
-          {filter === 'personal' || filter === 'professional' ? (
-            <Grid
-              data={projects.filter((x) => (filter === 'professional' ? x.type === 'pro' : x.type === 'perso'))}
-              className="mt-5 mb-20"
-            />
-          ) : (
-            <Grid
-              data={projects.filter((x) => x.tech[x.tech.findIndex((t) => t.toLowerCase() === filter)] === filter)}
-              className="mt-5 mb-20"
-            />
-          )}
+          <Grid data={filteredProjects} className="mt-5 mb-20" />
         </div>
       </div>
     </Layout>
@@ -83,6 +101,7 @@ export default function Projects({ title, description, url, projects }: Projects
 
 export async function getStaticProps() {
   const projects = require('@data/projects');
+
   return {
     props: {
       title: 'Projects | Rémy Beumier',

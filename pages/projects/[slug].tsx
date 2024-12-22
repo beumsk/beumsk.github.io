@@ -31,7 +31,7 @@ export default function DynamicProject({ project, relatedLinks, img, url }: Dyna
               <ul className="mb-6 project__tech-list">
                 {project.tech.map((t) => (
                   <li key={t}>
-                    <Link href={`/projects?${t}`}>
+                    <Link href={`/projects?tech=${t}`}>
                       <a className="btn">
                         <Tech name={t} color />
                         <span>{t.replace('-', ' ')}</span>

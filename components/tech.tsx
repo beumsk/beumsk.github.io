@@ -22,9 +22,10 @@ import {
   SiI18Next,
   SiNextdotjs,
 } from 'react-icons/si';
+import { SkillsType } from '@types';
 
 type TechProps = {
-  name: string;
+  name: SkillsType;
   color?: boolean;
 };
 

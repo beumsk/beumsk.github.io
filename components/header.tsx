@@ -19,7 +19,7 @@ export default function Header({ onClick, theme }: HeaderProps) {
                 <img src="/images/logo.svg" alt="Rémy Beumier logo" title={n.text} width="30" height="30" />
               </a>
             ) : (
-              <a>{n.text}</a>
+              <a target={n.text === 'Resume' ? '_blank' : '_self'}>{n.text}</a>
             )}
           </Link>
         ))}

@@ -33,15 +33,12 @@ Trigger it with Commit and Push to master.
 
 - add new projects (kineval, tarava?, todolist?)
 - shorten cv old web experience? + add senior dev? + new skills to filter?
-- optimize images with script
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
 - review design: https://anthonyhobday.com/sideprojects/saferules/
 
-1.5
-- metrics animation? Number of projects/sites/hours/languages/experience/soft-skills
-- back to top button
-
 X.X
+- back to top button
+- site search ??
 - add more images of features/pages?
 
 Blog posts => ads ?

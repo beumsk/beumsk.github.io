@@ -1,17 +1,21 @@
 import { writeFileSync } from 'fs';
 import prettier from 'prettier';
-import projects from './data/projects.js';
 import posts from './data/posts.js';
+import projects from './data/projects.js';
 
 async function generate() {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js');
   const baseUrl = 'https://remybeumier.be';
+  const today = `${new Date().getFullYear()}-${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${new Date()
+    .getDate()
+    .toString()
+    .padStart(2, '0')}`;
   const pages = [
-    { link: '', modified: '2023-05-29', freq: 'yearly', prio: '1.0' },
-    { link: '/resume-remy-beumier', modified: '2023-04-27', freq: 'monthly', prio: '0.8' },
-    { link: '/remy-beumier-resume.pdf', modified: '2023-04-27', freq: 'monthly', prio: '0.8' },
-    { link: '/projects', modified: '2023-05-29', freq: 'monthly', prio: '0.8' },
-    { link: '/blog', modified: '2023-05-29', freq: 'monthly', prio: '0.8' },
+    { link: '', modified: today, freq: 'weekly', prio: '1.0' },
+    { link: '/resume-remy-beumier', modified: today, freq: 'weekly', prio: '0.8' },
+    { link: '/remy-beumier-resume.pdf', modified: today, freq: 'weekly', prio: '0.8' },
+    { link: '/projects', modified: today, freq: 'weekly', prio: '0.8' },
+    { link: '/blog', modified: today, freq: 'weekly', prio: '0.8' },
   ];
 
   const sitemap = `

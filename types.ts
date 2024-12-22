@@ -8,7 +8,7 @@ export type ProjectType = {
   screen: string;
   modified: string; // YYYY-MM-DD
   intro: string;
-  tech: string[];
+  tech: SkillsType[];
   chall: string[];
   homepage: boolean;
   type: 'pro' | 'perso';
@@ -28,4 +28,40 @@ export type PostType = {
   url: string;
 };
 
+export type CommitType = {
+  sha: string;
+  message: string;
+  date: string;
+  url: string;
+  repo: string;
+  owner: string;
+  // linesAdded: number;
+  // linesDeleted: number;
+  // fileExtensions: string[];
+};
+
 export type ThemeType = 'light' | 'dark' | '';
+
+export type SkillsType =
+  | 'html'
+  | 'css'
+  | 'javascript'
+  | 'typescript'
+  | 'jquery'
+  | 'bootstrap'
+  | 'sass'
+  | 'angular'
+  | 'react'
+  | 'redux'
+  | 'material-ui'
+  | 'chakra-ui'
+  | 'styled-components'
+  | 'jest'
+  | 'mdx'
+  | 'i18n'
+  | 'node.js'
+  | 'firebase'
+  | 'mongo-db'
+  | 'c#'
+  | 'umbraco'
+  | 'next.js';
