@@ -1,9 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { MdCommit, MdFolderOpen, MdOutlineDateRange } from 'react-icons/md';
 import commits from '@data/commits';
 import ChartBars from '@components/chartBars';
 import GrowingNumber from '@components/growingNumber';
-import { CommitType, YearCommitType } from '@types';
+import { YearCommitType } from '@types';
 
 // https://github.com/sallar/github-contributions-chart
 // Show trend: most active days of week, hours of day

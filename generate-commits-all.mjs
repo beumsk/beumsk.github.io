@@ -69,7 +69,8 @@ async function generate() {
       repo: commit.repository.name,
       owner: commit.repository.owner.login,
     }));
-    const allCommits = commitsAll?.length > 0 ? [...newCommits, ...commitsAll] : [...newCommits];
+    const _allCommits = commitsAll?.length > 0 ? [...newCommits, ...commitsAll] : [...newCommits];
+    const allCommits = _allCommits.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     const formattedData = prettier.format(
       `const commits = ${JSON.stringify(allCommits, null, 2)}; module.exports = commits;`,
