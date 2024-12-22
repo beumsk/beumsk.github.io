@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import useJavaScriptEnabled from '@hooks/useJavaScript';
 
 export default function GrowingNumber({ number }: { number: number }) {
+  const isJavaScriptEnabled = useJavaScriptEnabled();
   const [animatedNumber, setAnimatedNumber] = useState(0);
 
   useEffect(() => {
@@ -21,5 +23,5 @@ export default function GrowingNumber({ number }: { number: number }) {
     animate();
   }, [number]);
 
-  return <span className="growing-number">{animatedNumber}</span>;
+  return <span className="growing-number">{isJavaScriptEnabled ? animatedNumber : number}</span>;
 }

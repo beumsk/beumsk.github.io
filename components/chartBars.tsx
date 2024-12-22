@@ -1,7 +1,10 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import useJavaScriptEnabled from '@hooks/useJavaScript';
 
 export default function ChartBars({ data }: { data: any }) {
-  return (
+  const isJavaScriptEnabled = useJavaScriptEnabled();
+
+  return isJavaScriptEnabled ? (
     <ResponsiveContainer minWidth={280} height="80%" minHeight={300}>
       <BarChart
         data={data}
@@ -20,5 +23,9 @@ export default function ChartBars({ data }: { data: any }) {
         <Bar dataKey="commits" fill="#4db6ac" />
       </BarChart>
     </ResponsiveContainer>
+  ) : (
+    <p>
+      <i>JavaScript is needed for graph to show</i>
+    </p>
   );
 }

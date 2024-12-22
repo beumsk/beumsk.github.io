@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
 import Linkk from '@components/linkk';
+import useJavaScriptEnabled from '@hooks/useJavaScript';
 import { PostType, ProjectType } from '@types';
-// import Image from 'next/image';
 
 type Custom404Props = {
   title: string;
@@ -14,7 +14,9 @@ type Custom404Props = {
 };
 
 export default function Custom404({ title, pro, perso, posts }: Custom404Props) {
+  const isJavaScriptEnabled = useJavaScriptEnabled();
   const router = useRouter();
+  const [random, setRandom] = useState([]);
 
   // fix for trailling slash URL error from Github pages
   useEffect(() => {
@@ -23,15 +25,14 @@ export default function Custom404({ title, pro, perso, posts }: Custom404Props) 
     }
   }, [router]);
 
-  const [random, setRandom] = useState([]);
-
   useEffect(() => {
     const randomPro = pro[Math.floor(Math.random() * pro.length)];
     const randomPerso = perso[Math.floor(Math.random() * perso.length)];
     const randomPost = posts[Math.floor(Math.random() * posts.length)];
     setRandom([randomPro, randomPerso, randomPost]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const randomsk = [pro[0], perso[0], posts[0]];
 
   if (!router.asPath.endsWith('/')) {
     return (
@@ -39,16 +40,13 @@ export default function Custom404({ title, pro, perso, posts }: Custom404Props) 
         <div className="container error-shape">
           <h1>404 - Page Not Found</h1>
           <div data-aos="fade-up">
-            <Grid data={random} className="mt-10 mb-10" />
+            <Grid data={isJavaScriptEnabled ? random : randomsk} className="mt-10 mb-10" />
           </div>
           <div>
             <Linkk href="/" className="btn mb-20">
               Go back Home
             </Linkk>
           </div>
-          {/* <div style={{ position: 'relative', aspectRatio: '1200/630' }}>
-          <Image src="/images/posts/generate-a-sitemap-in-nextjs.jpg" alt="img" layout="fill" />
-        </div> */}
         </div>
       </Layout>
     );

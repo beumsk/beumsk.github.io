@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@data/*": ["data/*"],
       "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@hooks/*": ["hooks/*"],
       "@types": ["types"]
     },
     "target": "ES6",

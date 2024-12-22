@@ -6,8 +6,8 @@ import Layout from '@components/layout';
 import Linkk from '@components/linkk';
 import Logo from '@components/logo';
 import Tech from '@components/tech';
+import useIntersection from '@hooks/useIntersection';
 import { PostType, ProjectType, SkillsType } from '@types';
-import useIntersection from 'hooks/useIntersection';
 
 type HomeProps = {
   title: string;

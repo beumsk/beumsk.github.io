@@ -4,6 +4,7 @@ import { MdRefresh } from 'react-icons/md';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
 import Tech from '@components/tech';
+import useJavaScriptEnabled from '@hooks/useJavaScript';
 import { ProjectType, SkillsType } from '@types';
 
 type ProjectsProps = {
@@ -14,6 +15,7 @@ type ProjectsProps = {
 };
 
 export default function Projects({ title, description, url, projects }: ProjectsProps) {
+  const isJavaScriptEnabled = useJavaScriptEnabled();
   const router = useRouter();
   const [typ, setTyp] = useState<'pro' | 'perso' | ''>('');
   const [tec, setTec] = useState<SkillsType[]>([]);
@@ -72,24 +74,30 @@ export default function Projects({ title, description, url, projects }: Projects
           codes I am most proud of, whether they are professional or personal.
         </p>
 
-        <div className="project__tech-list mb-4">
-          <button onClick={() => updateType('pro')} className={`btn ${typ === 'pro' ? 'active' : ''}`}>
-            Professional projects
-          </button>
-          <button onClick={() => updateType('perso')} className={`btn mr-4 ${typ === 'perso' ? 'active' : ''}`}>
-            Personal projects
-          </button>
-
-          {skillsList.map((s) => (
-            <button key={s} onClick={() => updateTech(s)} className={`btn ${tec.includes(s) ? 'active' : ''}`}>
-              <Tech name={s} />
-              <span>{s.replace('-', ' ')}</span>
+        {isJavaScriptEnabled ? (
+          <div className="project__tech-list mb-4">
+            <button onClick={() => updateType('pro')} className={`btn ${typ === 'pro' ? 'active' : ''}`}>
+              Professional projects
             </button>
-          ))}
-          <button className="btn ml-2" onClick={() => updateRouter({})} title="Reset filters">
-            <MdRefresh className="m-0" />
-          </button>
-        </div>
+            <button onClick={() => updateType('perso')} className={`btn mr-4 ${typ === 'perso' ? 'active' : ''}`}>
+              Personal projects
+            </button>
+
+            {skillsList.map((s) => (
+              <button key={s} onClick={() => updateTech(s)} className={`btn ${tec.includes(s) ? 'active' : ''}`}>
+                <Tech name={s} />
+                <span>{s.replace('-', ' ')}</span>
+              </button>
+            ))}
+            <button className="btn ml-2" onClick={() => updateRouter({})} title="Reset filters">
+              <MdRefresh className="m-0" />
+            </button>
+          </div>
+        ) : (
+          <p>
+            <i>JavaScript is needed for filters to show</i>
+          </p>
+        )}
 
         <div data-aos="fade-up">
           <Grid data={filteredProjects} className="mt-5 mb-20" />

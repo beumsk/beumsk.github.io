@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { MdRefresh } from 'react-icons/md';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
+import useJavaScriptEnabled from '@hooks/useJavaScript';
 import { PostType } from '@types';
 
 type BlogProps = {
@@ -13,6 +14,7 @@ type BlogProps = {
 };
 
 export default function Blog({ title, description, url, posts }: BlogProps) {
+  const isJavaScriptEnabled = useJavaScriptEnabled();
   const router = useRouter();
   const [catt, setCatt] = useState<string[]>([]);
 
@@ -62,16 +64,22 @@ export default function Blog({ title, description, url, posts }: BlogProps) {
           cover topics like React and Next.js, but are not limited to those.
         </p>
 
-        <div className="blog__categories mb-4">
-          {categories.map((c) => (
-            <button key={c} onClick={() => updateCat(c)} className={`btn ${catt.includes(c) ? 'active' : ''}`}>
-              <span>{c.replace('-', ' ')}</span>
+        {isJavaScriptEnabled ? (
+          <div className="blog__categories mb-4">
+            {categories.map((c) => (
+              <button key={c} onClick={() => updateCat(c)} className={`btn ${catt.includes(c) ? 'active' : ''}`}>
+                <span>{c.replace('-', ' ')}</span>
+              </button>
+            ))}
+            <button className="btn ml-2" onClick={() => updateRouter({})} title="Reset filters">
+              <MdRefresh className="m-0" />
             </button>
-          ))}
-          <button className="btn ml-2" onClick={() => updateRouter({})} title="Reset filters">
-            <MdRefresh className="m-0" />
-          </button>
-        </div>
+          </div>
+        ) : (
+          <p>
+            <i>JavaScript is needed for filters to show</i>
+          </p>
+        )}
 
         <div data-aos="fade-up">
           <Grid data={filteredPosts} className="mt-6 mb-20" />
