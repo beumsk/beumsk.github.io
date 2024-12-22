@@ -28,16 +28,21 @@ export type PostType = {
   url: string;
 };
 
+export type MonthCommitType = {
+  name: string;
+  commits: number;
+};
+
+export type YearCommitType = {
+  first: string;
+  latest: string;
+  commits: number;
+  repos: number;
+  months: MonthCommitType[];
+};
+
 export type CommitType = {
-  sha: string;
-  message: string;
-  date: string;
-  url: string;
-  repo: string;
-  owner: string;
-  // linesAdded: number;
-  // linesDeleted: number;
-  // fileExtensions: string[];
+  [year: number]: YearCommitType;
 };
 
 export type ThemeType = 'light' | 'dark' | '';

@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
 import { MdCommit, MdFolderOpen, MdOutlineDateRange } from 'react-icons/md';
-import _commits from '@data/commits';
+import commits from '@data/commits';
 import ChartBars from '@components/chartBars';
 import GrowingNumber from '@components/growingNumber';
-import { CommitType } from '@types';
+import { CommitType, YearCommitType } from '@types';
 
 // https://github.com/sallar/github-contributions-chart
 // Show trend: most active days of week, hours of day
@@ -16,55 +16,26 @@ type HomeDataType = { isVisible: { [key: string]: boolean } };
 export default function HomeData({ isVisible }: HomeDataType) {
   const [year, setYear] = useState<number | null>(new Date().getFullYear());
 
-  const years = new Set(_commits.map((c) => new Date(c.date).getFullYear()));
+  const years = Object.keys(commits)
+    .map((c) => parseInt(c))
+    .filter((c) => !isNaN(c))
+    .sort((a, b) => b - a);
 
-  const sortedCommits: CommitType[] = useMemo(
-    () => _commits.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()),
-    [_commits]
-  );
+  const yearCommits = commits[year || 'all'] as YearCommitType;
+  const firstCommitDate = convertDate(yearCommits?.first);
+  const latestCommitDate = convertDate(yearCommits?.latest);
 
-  const commits = useMemo(
-    () => sortedCommits.filter((c) => (year ? new Date(c.date).getFullYear() === year : true)),
-    [sortedCommits, year]
-  );
+  const commitsCount = yearCommits?.commits;
 
-  const firstCommitDate = convertDate(commits[0]?.date);
-  const latestCommitDate = convertDate(commits[commits.length - 1]?.date);
-
-  const commitsCount = commits.length;
-
-  const allReposCount = new Set(commits.map((commit) => commit.repo)).size;
-
-  const data = useMemo(
-    () =>
-      commits.reduce((acc: { name: string; commits: number }[], commit) => {
-        const month = new Date(commit.date).toLocaleString('default', { month: 'short' });
-        const existingMonth = acc.find((item) => item.name === month);
-        if (existingMonth) {
-          existingMonth.commits += 1;
-        } else {
-          acc.push({ name: month, commits: 1 });
-        }
-        return acc;
-      }, []),
-    [commits]
-  );
-
-  const tableData = useMemo(
-    () =>
-      data.sort((a, b) => {
-        const monthOrder = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        return monthOrder.indexOf(a.name) - monthOrder.indexOf(b.name);
-      }),
-    [commits]
-  );
+  const allReposCount = yearCommits?.repos;
+  const tableData = yearCommits?.months;
 
   return (
     <div className="data__body mt-10">
       <div className="centered my-5">
         <select onChange={(e) => setYear(parseInt(e.target.value))} value={year}>
           <option value={0}>All</option>
-          {Array.from(years).map((y) => (
+          {years?.map((y) => (
             <option key={y} value={y}>
               {y}
             </option>

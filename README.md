@@ -134,6 +134,12 @@ Blog posts => ads ?
   - Dimensions of 1366x768px reduced to 683x384px in .jpg (or 1200x630px & 600x315px)
   - `yarn screen:pm <project-url> <file-name.extension>` (eg. `yarn screen:pm https://remybeumier.be rb.jpg`)
 
+## DATA (COMMITS)
+
+- `yarn commits:a` to fetch all of my commits
+<!-- - `yarn commits:d` to fetch more info details about all commits -->
+- `yarn commits` to rework the commits data to keep only useful information
+
 ## ANALYTICS
 
 Easy web analytics without tracking of personal data at https://beumsk.goatcounter.com/
