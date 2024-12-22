@@ -128,85 +128,48 @@ section {
       margin-top: 0;
     }
 
+    @keyframes coloring {
+      20% {
+        transform: scale(1.2);
+        filter: grayscale(0%);
+      }
+    }
+
     a {
       padding: 0.25rem;
       transition: all var(--transition);
+      filter: grayscale(100%);
+      animation: coloring 10s forwards infinite;
+
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 1s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: 1.5s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: 2s;
+      }
+
+      &:nth-child(6) {
+        animation-delay: 2.5s;
+      }
 
       &:hover,
       &:focus {
         transform: scale(1.2);
-
-        &[data-hover='html'] {
-          color: #e44d26;
-        }
-
-        &[data-hover='css'] {
-          color: #1572b6;
-        }
-
-        &[data-hover='javascript'] {
-          color: #f0db4f;
-        }
-
-        &[data-hover='react'] {
-          color: #61dbfb;
-        }
-
-        &[data-hover='jquery'] {
-          color: #0868ac;
-        }
-
-        &[data-hover='bootstrap'] {
-          color: #5b4282;
-        }
-
-        &[data-hover='sass'] {
-          color: #cf649a;
-        }
-
-        &[data-hover='angular'] {
-          color: #a6120d;
-        }
-
-        &[data-hover='typescript'] {
-          color: #007acc;
-        }
-
-        &[data-hover='redux'] {
-          color: #764abc;
-        }
-
-        &[data-hover='material-ui'] {
-          color: #007fff;
-        }
-
-        &[data-hover='chakra-ui'] {
-          color: #3cc7bd;
-        }
-
-        &[data-hover='styled-components'] {
-          color: #db7093;
-        }
-
-        &[data-hover='node.js'] {
-          color: #689f63;
-        }
-
-        &[data-hover='firebase'] {
-          color: #ffa50e;
-        }
-
-        &[data-hover='mongo-db'] {
-          color: #00684a;
-        }
-
-        &[data-hover='c#'] {
-          color: #390092;
-        }
-
-        &[data-hover='umbraco'] {
-          color: #3544b1;
-        }
+        filter: grayscale(0%);
       }
 
       svg {
@@ -223,6 +186,47 @@ section {
       }
     }
   }
+}
+
+.data {
+  .data__body {
+    padding: 1rem;
+    border: solid 1px var(--primary);
+    box-shadow: var(--shadows6);
+  }
+
+  .data__numbers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.5rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .data__numbers__item {
+      text-align: center;
+
+      svg {
+        font-size: 1.5rem;
+        display: block;
+        margin: 0 auto 0.5rem;
+      }
+
+      span {}
+
+      span.growing-number {
+        display: block;
+        // font-size: 1.5rem;
+        color: var(--primary);
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.alt {
+  background: var(--bg2);
 }
 
 .pattern {
