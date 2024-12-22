@@ -1,73 +1,23 @@
-import { useMemo, useState } from 'react';
 import { AiFillCaretRight } from 'react-icons/ai';
-import { MdCommit, MdFileDownload, MdFolderOpen, MdOutlineDateRange } from 'react-icons/md';
-import ChartBars from '@components/chartBars';
+import { MdFileDownload } from 'react-icons/md';
 import Grid from '@components/grid';
-import GrowingNumber from '@components/growingNumber';
+import HomeData from '@components/homeData';
 import Layout from '@components/layout';
 import Linkk from '@components/linkk';
 import Logo from '@components/logo';
 import Tech from '@components/tech';
-import { CommitType, PostType, ProjectType, SkillsType } from '@types';
+import { PostType, ProjectType, SkillsType } from '@types';
 import useIntersection from 'hooks/useIntersection';
-
-const convertDate = (d: string) =>
-  `${new Date(d).getDate()}.${new Date(d).getMonth() + 1}.${new Date(d).getFullYear()}`;
 
 type HomeProps = {
   title: string;
   description: string;
   projects: ProjectType[];
   posts: PostType[];
-  _commits: CommitType[];
 };
 
-export default function Home({ title, description, projects, posts, _commits }: HomeProps) {
+export default function Home({ title, description, projects, posts }: HomeProps) {
   const { isVisible, refs } = useIntersection();
-  const [year, setYear] = useState<number | null>(null);
-
-  const years = new Set(_commits.map((c) => new Date(c.date).getFullYear()));
-
-  const sortedCommits: CommitType[] = useMemo(
-    () => _commits.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()),
-    [_commits]
-  );
-
-  const commits = useMemo(
-    () => sortedCommits.filter((c) => (year ? new Date(c.date).getFullYear() === year : true)),
-    [sortedCommits, year]
-  );
-
-  const firstCommitDate = convertDate(commits[0]?.date);
-  const latestCommitDate = convertDate(commits[commits.length - 1]?.date);
-
-  const commitsCount = commits.length;
-
-  const allReposCount = new Set(commits.map((commit) => commit.repo)).size;
-
-  const data = useMemo(
-    () =>
-      commits.reduce((acc: { name: string; commits: number }[], commit) => {
-        const month = new Date(commit.date).toLocaleString('default', { month: 'short' });
-        const existingMonth = acc.find((item) => item.name === month);
-        if (existingMonth) {
-          existingMonth.commits += 1;
-        } else {
-          acc.push({ name: month, commits: 1 });
-        }
-        return acc;
-      }, []),
-    [commits]
-  );
-
-  const tableData = useMemo(
-    () =>
-      data.sort((a, b) => {
-        const monthOrder = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        return monthOrder.indexOf(a.name) - monthOrder.indexOf(b.name);
-      }),
-    [commits]
-  );
 
   const skillsList = ['react', 'typescript', 'firebase', 'node.js', 'javascript', 'css'] as SkillsType[];
 
@@ -176,70 +126,7 @@ export default function Home({ title, description, projects, posts, _commits }: 
         <div className="container" data-aos="fade-left">
           <h2>Data</h2>
           <p>Here is a detailed overview of my coding activity, made of various commit statistics on Github.</p>
-          {/* https://github.com/sallar/github-contributions-chart */}
-          {/* Show trend: most active days of week, hours of day */}
-
-          <div className="data__body mt-10">
-            <div className="centered my-5">
-              <select onChange={(e) => setYear(parseInt(e.target.value))}>
-                <option value={0}>All</option>
-                {Array.from(years).map((y) => (
-                  <option key={y} value={y}>
-                    {y}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="data__numbers my-10">
-              <div className="data__numbers__item">
-                <MdCommit />
-                {isVisible.data ? <GrowingNumber number={commitsCount} /> : 0}
-                <span>Total commit</span>
-              </div>
-
-              <div className="data__numbers__item">
-                <MdOutlineDateRange />
-                <div className="centered">
-                  {isVisible.data ? <GrowingNumber number={parseInt(firstCommitDate.split('.')[0])} /> : 0}
-                  <span className="growing-number">.</span>
-                  {isVisible.data ? <GrowingNumber number={parseInt(firstCommitDate.split('.')[1])} /> : 0}
-                  <span className="growing-number">.</span>
-                  {isVisible.data ? <GrowingNumber number={parseInt(firstCommitDate.split('.')[2])} /> : 0}
-                </div>
-                <span>First commit</span>
-              </div>
-
-              <div className="data__numbers__item">
-                <MdOutlineDateRange />
-                <div className="centered">
-                  {isVisible.data ? <GrowingNumber number={parseInt(latestCommitDate.split('.')[0])} /> : 0}
-                  <span className="growing-number">.</span>
-                  {isVisible.data ? <GrowingNumber number={parseInt(latestCommitDate.split('.')[1])} /> : 0}
-                  <span className="growing-number">.</span>
-                  {isVisible.data ? <GrowingNumber number={parseInt(latestCommitDate.split('.')[2])} /> : 0}
-                </div>
-                <span>Latest commit</span>
-              </div>
-
-              <div className="data__numbers__item">
-                <MdFolderOpen />
-                {isVisible.data ? <GrowingNumber number={allReposCount} /> : 0}
-                <span>Total Repositories</span>
-              </div>
-            </div>
-
-            {tableData?.length && isVisible.data ? <ChartBars data={tableData} /> : 'Loading...'}
-
-            <p className="t-center mt-5">
-              <i>
-                Note the results are limited because most of my professional work is not recorded under my Github
-                profile.
-              </i>
-              <br />
-              <i>Results are updated monthly.</i>
-            </p>
-          </div>
+          <HomeData isVisible={isVisible} />
         </div>
       </section>
     </Layout>
@@ -249,7 +136,6 @@ export default function Home({ title, description, projects, posts, _commits }: 
 export async function getStaticProps() {
   const projects = require('@data/projects');
   const posts = require('@data/posts');
-  const _commits = require('@data/commits');
 
   return {
     props: {
@@ -258,7 +144,6 @@ export async function getStaticProps() {
         "Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.",
       projects: projects,
       posts: posts,
-      _commits: _commits,
     },
   };
 }
