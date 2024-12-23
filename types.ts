@@ -5,7 +5,7 @@ export type ProjectType = {
   current: string;
   past: string;
   img: string;
-  screen: string;
+  screens: string[];
   modified: string; // YYYY-MM-DD
   intro: string;
   tech: SkillsType[];

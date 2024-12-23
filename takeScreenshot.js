@@ -14,9 +14,9 @@ async function takeScreenshot(url, outputPath, viewport, fullPage, locator) {
   await page.goto(url);
 
   // Hide scrollbar
-  if (!fullPage) {
-    await page.addStyleTag({ content: 'body::-webkit-scrollbar { display: none; }' });
-  }
+  // if (!fullPage) {
+  await page.addStyleTag({ content: 'body::-webkit-scrollbar { display: none; }' });
+  // }
 
   console.log('Waiting for Ctrl+S key press...');
   await page.evaluate(() => {

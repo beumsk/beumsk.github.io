@@ -31,28 +31,24 @@ Trigger it with Commit and Push to master.
 
 ## TODO
 
+- add more images of pro project: features/pages !!
 - add new projects (kineval, tarava?, todolist?)
 - shorten cv old web experience? + add senior dev? + new skills to filter?
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
 - review design: https://anthonyhobday.com/sideprojects/saferules/
 
 X.X
+- advertisements in blog posts ?
 - back to top button
 - site search ??
-- add more images of features/pages?
 
-Blog posts => ads ?
-- series of posts: links inside the posts
+Blog posts
 - firebase series: rules, cloud fx, diff env., backup
-- react advanced?
 - use prism in your nextjs markdown (+scss)
 - css posts: dropdown, input with label animation
 - use mdx with nextjs
-- local ssg site with python
-- props to parent/child
 - md to html
 - SSG vs SSR
-- dev.to
 
 ## BLOG POSTS
 
@@ -71,6 +67,7 @@ Blog posts => ads ?
 - Write the post with keywords, speaking with we, code examples and a final result on codepen or codesandbox
 - Review spell on https://languagetool.org/
 - Create blog post image and upload in /public/images/posts 
+  - Dimensions of 1200x630px reduced to 600x315px in .jpg
   - `yarn screen:bm <file-name.extension>` (eg. `yarn screen:bm article.jpg`)
   - OR https://codepen.io/beumsk/full/wvjYygY
 - Create blog content image and upload in /public/images/content
@@ -103,10 +100,11 @@ Blog posts => ads ?
   ```
 - Create an optimized miniature image and upload in /public/images/projects
   - Dimensions of 1366x768px reduced to 683x384px in .jpg (or 1200x630px & 600x315px)
-  - `yarn screen:pm <project-url> <file-name.extension>` (eg. `yarn screen:pm https://remybeumier.be rb.jpg`)
-- Create an optimized full size screenshot of live version and upload in /public/images/projects
-  - Dimensions of 1920x100% (reduced?) in .jpg
-  - `yarn screen:pf <project-url> <file-name-screen.extension>` (eg. `yarn screen:pf https://remybeumier.be rb-screen.jpg`)
+  - `yarn screen:pm <project-url> <project-name.extension>` (eg. `yarn screen:pm https://remybeumier.be remybeumier.jpg`)
+- Create one or more optimized full size screenshots of live version and upload in /public/images/projects
+  - Dimensions of 1200x100% (reduced?) in .jpg
+  - `yarn screen:pf <project-url> <project-name-screen.extension>` (eg. `yarn screen:pf https://remybeumier.be remybeumier-screen.jpg`)
+  - `yarn screen:pf <project-url> <project-name-screen-index.extension>` (eg. `yarn screen:pf https://remybeumier.be remybeumier-screen-1.jpg`)
 
 ### PERSO
 
@@ -132,7 +130,7 @@ Blog posts => ads ?
   ```
 - Create an optimized miniature image and upload in /public/images/projects
   - Dimensions of 1366x768px reduced to 683x384px in .jpg (or 1200x630px & 600x315px)
-  - `yarn screen:pm <project-url> <file-name.extension>` (eg. `yarn screen:pm https://remybeumier.be rb.jpg`)
+  - `yarn screen:pm <project-url> <project-name.extension>` (eg. `yarn screen:pm https://remybeumier.be rb.jpg`)
 
 ## DATA (COMMITS)
 

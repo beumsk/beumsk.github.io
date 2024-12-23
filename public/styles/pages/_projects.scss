@@ -39,4 +39,47 @@
   border: solid 1px var(--primary);
   box-shadow: var(--shadows6);
   margin-bottom: calc(2.5rem + 12px);
+  position: relative;
+
+  figure.scrollable {
+    max-height: 80vh;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .left,
+  .right {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    background: var(--bg);
+    z-index: 1;
+    transition: all var(--transition);
+    cursor: pointer;
+    --gradient-color: var(--text40);
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  .left {
+    left: 0;
+    background: linear-gradient(to right, var(--gradient-color), transparent);
+  }
+
+  .right {
+    right: 0;
+    background: linear-gradient(to left, var(--gradient-color), transparent);
+  }
 }

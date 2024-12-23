@@ -6,6 +6,7 @@ import Codesandbox from '@components/codesandbox';
 import Grid from '@components/grid';
 import Layout from '@components/layout';
 import Linkk from '@components/linkk';
+import Screens from '@components/screens';
 import Tech from '@components/tech';
 import { ProjectType } from '@types';
 
@@ -52,21 +53,25 @@ export default function DynamicProject({ project, relatedLinks, img, url }: Dyna
             </>
           ) : null}
 
-          {!isPro && project.pen ? <Codepen pen={project.pen} title={project.title} /> : null}
+          {!isPro && project.pen ? (
+            <>
+              <h2>Demo</h2>
+              <Codepen pen={project.pen} title={project.title} />
+            </>
+          ) : null}
 
-          {!isPro && project.sandbox ? <Codesandbox sandbox={project.sandbox} title={project.title} /> : null}
+          {!isPro && project.sandbox ? (
+            <>
+              <h2>Demo</h2>
+              <Codesandbox sandbox={project.sandbox} title={project.title} />
+            </>
+          ) : null}
 
-          {isPro && project.screen ? (
-            <figure className="project__screen">
-              <img
-                src={project.screen}
-                alt={`Screenshot of ${project.current}`}
-                width="300"
-                height="400"
-                loading="lazy"
-              />
-              <figcaption className="sr-only">{`Full size screenshot of ${project.title} website homepage`}</figcaption>
-            </figure>
+          {isPro && project.screens.length ? (
+            <>
+              <h2>Visual{project.screens.length > 1 ? 's' : ''}</h2>
+              <Screens project={project} className="project__screen" />
+            </>
           ) : null}
 
           <div className="mb-15">
