@@ -160,10 +160,17 @@ figure {
   margin: 0;
 }
 
+input,
+optgroup,
+select,
+textarea {
+  color: var(--text);
+  background: var(--bg);
+}
+
 select {
   padding: 0.25rem 0.5rem;
   cursor: pointer;
-  background: var(--bg);
 }
 
 button {
