@@ -14,7 +14,7 @@ const convertDate = (d: string) =>
 type HomeDataType = { isVisible: { [key: string]: boolean } };
 
 export default function HomeData({ isVisible }: HomeDataType) {
-  const [year, setYear] = useState<number | null>(new Date().getFullYear());
+  const [year, setYear] = useState<number | null>(new Date().getFullYear() - 1);
 
   const years = Object.keys(commits)
     .map((c) => parseInt(c))

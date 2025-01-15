@@ -31,7 +31,7 @@ Trigger it with Commit and Push to master.
 
 ## TODO
 
-- add more images of pro project: features/pages !!
+- add new commits for 2025 !
 - add new projects (kineval, tarava?, todolist?)
 - shorten cv old web experience? + add senior dev? + new skills to filter?
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
@@ -43,6 +43,7 @@ X.X
 - site search ??
 
 Blog posts
+- husky pre-commit hooks !!
 - firebase series: rules, cloud fx, diff env., backup
 - use prism in your nextjs markdown (+scss)
 - css posts: dropdown, input with label animation
