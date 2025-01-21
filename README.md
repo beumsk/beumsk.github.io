@@ -44,6 +44,7 @@ X.X
 
 Blog posts
 - husky pre-commit hooks !!
+- github actions cicd
 - firebase series: rules, cloud fx, diff env., backup
 - use prism in your nextjs markdown (+scss)
 - css posts: dropdown, input with label animation

@@ -1,0 +1,127 @@
+---
+title: 'Set up TypeScript into Next.js'
+intro: 'How to set up the TypeScript into a Next.js project'
+published: '2025-01-21'
+modified: '2025-01-22'
+categories: 'next.js, typescript, tutorial'
+---
+
+import BlogLayout from '@components/blogLayout';
+import Linkk from '@components/linkk';
+import Codesandbox from '@components/codesandbox';
+
+I have been against TypeScript for a long time, because I thought I knew better and typing was a waste of time, only meant for distracted developers. I remember reading somewhere "TypeScript, once you go, you never go back". I guess it's obvious by now that it was all true. I am now a TypeScript advocate and we will see how to set it up in a Next.js project.
+
+<blockquote>**TypeScript, once you go, you never go back**</blockquote>
+
+Setting up TypeScript in a Next.js project is straightforward and can be done in a few simple steps. This guide will first walk us through setting up TypeScript in a new Next.js project, which is a breeze. Secondly, we will see how adding TypeScript to an existing project works.
+
+## Setting Up TypeScript in a New Next.js Project
+
+1. Create a new Next.js project:
+
+   Run the following command to create a new Next.js project:
+
+   `npx create-next-app@latest my-nextjs-app --typescript`
+
+   This command will create a new Next.js project with TypeScript already configured.
+
+2. Navigate to our project directory:
+
+   `cd my-nextjs-app`
+
+3. Start the development server:
+
+   `npm run dev` or `yarn dev`
+
+4. Adapt TypeScript configuration:
+
+   Next.js will automatically create a tsconfig.json file for us when we run the development server. This file will be generated in our project root.
+
+   Check out an example of a tsconfig.json file in the next section.
+
+Our new Next.js project with TypeScript is now up and running!
+
+## Adding TypeScript to an Existing Next.js Project
+
+1. Install TypeScript and necessary types: In our existing Next.js project, run the following command to install TypeScript and the necessary type definitions:
+
+   `npm install --save-dev typescript @types/react @types/node`
+
+2. Create a tsconfig.json file: Next.js will automatically create a tsconfig.json file for us when we run the development server. Run the following command:
+
+   `npm run dev`
+
+   This will generate a tsconfig.json file in our project root.
+
+3. Rename our files to TypeScript: Rename our JavaScript files (.js and .jsx) to TypeScript files (.ts and .tsx). For example:
+
+   - pages/index.js -> index.tsx
+   - components/MyComponent.js -> components/MyComponent.tsx
+
+4. Fix any TypeScript errors: As we rename our files, we may encounter TypeScript errors. Address these errors by adding type annotations and fixing any issues that TypeScript identifies.
+
+5. Update our tsconfig.json: We may want to customize our tsconfig.json file to suit our project's needs. Here is an example configuration:
+
+   ```json
+   {
+     "compilerOptions": {
+       "target": "ES6",
+       "lib": ["dom", "dom.iterable", "esnext"],
+       "allowJs": true,
+       "skipLibCheck": true,
+       "strict": false,
+       "forceConsistentCasingInFileNames": true,
+       "noEmit": true,
+       "incremental": true,
+       "esModuleInterop": true,
+       "module": "esnext",
+       "moduleResolution": "node",
+       "resolveJsonModule": true,
+       "isolatedModules": true,
+       "jsx": "preserve"
+     },
+     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+     "exclude": ["node_modules"]
+   }
+   ```
+
+6. Optionnally, we can add paths to our tsconfig.json to make our imports cleaner:
+
+   ```json
+   {
+     "compilerOptions": {
+       // ...
+       "paths": {
+         "@components/*": ["components/*"],
+         "@hooks/*": ["hooks/*"],
+         "@utils/*": ["utils/*"],
+         "@types/*": ["types/*"]
+       }
+     }
+   }
+   ```
+
+   Here is an example import line using the paths:
+
+   `import { Header } from '@components/header';`
+
+7. Run the development server: Finally, we start our development server to ensure everything is working correctly:
+
+   `npm run dev`
+
+8. Additionnally, a good practice is to ensure build is not throwing any errors:
+
+   `npm run build`
+
+{/* TODO: add TLDR ? */}
+
+We are all set to code efficiently with the help of TypeScript. Should we want more automation power, we should consider <Linkk href="/blog/set-up-eslint-into-nextjs">adding ESLint and Prettier to our project</Linkk>.
+
+**TLDR**: <Linkk href="https://codesandbox.io/p/devbox/setup-nextjs-typescript-mn8cd3">Codesandbox: Set up Next.js with TypeScript</Linkk>.
+
+Since Next.js is moving fast, we should keep an eye on the <Linkk href="https://nextjs.org/docs/pages/api-reference/config/typescript">official Next.js TS documentation</Linkk> for TypeScript updates.
+
+Enjoy coding with Next.js!
+
+export default ({ children }) => <BlogLayout>{children}</BlogLayout>;

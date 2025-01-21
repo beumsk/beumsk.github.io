@@ -59,6 +59,11 @@
     margin-bottom: 1rem;
   }
 
+  ol>li+li {
+    margin-top: 0.5rem;
+
+  }
+
   img {
     margin-top: 1rem;
     margin-bottom: 1rem;

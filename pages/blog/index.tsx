@@ -19,7 +19,15 @@ export default function Blog({ title, description, url, posts }: BlogProps) {
   const [catt, setCatt] = useState<string[]>([]);
 
   const categoriesAllRaw = posts.map((x) => x.categories.split(', '));
-  const categoriesAll = [].concat(...categoriesAllRaw).filter((x) => x);
+  const customOrder = ['next.js', 'typescript', 'javascript', 'sass', 'css'];
+  const categoriesAll = []
+    .concat(...categoriesAllRaw)
+    .filter((x) => x)
+    .sort((a, b) => {
+      const indexA = customOrder.indexOf(a);
+      const indexB = customOrder.indexOf(b);
+      return (indexA === -1 ? Infinity : indexA) - (indexB === -1 ? Infinity : indexB);
+    });
   const categories = [...new Set(categoriesAll)];
 
   const updateRouter = (obj) =>

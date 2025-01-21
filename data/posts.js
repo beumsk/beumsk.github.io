@@ -1,5 +1,16 @@
 const posts = [
   {
+    slug: 'set-up-typescript-into-nextjs',
+    title: 'Set up TypeScript into Next.js',
+    intro: 'How to set up the TypeScript into a Next.js project',
+    img: '/images/posts/set-up-typescript-into-nextjs.jpg',
+    published: '2025-01-21',
+    modified: '2025-01-22',
+    categories: 'next.js, typescript, tutorial',
+    link: '/blog/set-up-typescript-into-nextjs',
+    url: 'https://remybeumier.be/blog/set-up-typescript-into-nextjs',
+  },
+  {
     slug: 'css-only-modal',
     title: 'CSS only modal',
     intro: 'How to design a CSS only and accessible modal',
@@ -94,7 +105,7 @@ const posts = [
     img: '/images/posts/set-up-eslint-into-nextjs.jpg',
     published: '2022-02-11',
     modified: '2022-11-08',
-    categories: 'next.js, tutorial',
+    categories: 'next.js, eslint, tutorial',
     link: '/blog/set-up-eslint-into-nextjs',
     url: 'https://remybeumier.be/blog/set-up-eslint-into-nextjs',
   },
