@@ -6,35 +6,35 @@
 >
   <url>
     <loc>https://remybeumier.be</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/resume-remy-beumier</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/remy-beumier-resume.pdf</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/projects</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://remybeumier.be/blog</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -287,6 +287,13 @@
   <url>
     <loc>https://remybeumier.be/projects/timer</loc>
     <lastmod>2021-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://remybeumier.be/blog/set-up-typescript-into-nextjs</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
