@@ -27,6 +27,11 @@ export default function MyApp({ Component, pageProps }) {
     });
   }, [router]);
 
+  const title = 'Rémy Beumier | Senior Front-end Developer';
+  const desc =
+    "Rémy Beumier's portfolio website as a Senior Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.";
+  const url = 'https://remybeumier.be';
+
   return (
     <>
       <Head>
@@ -34,32 +39,20 @@ export default function MyApp({ Component, pageProps }) {
         <meta property="og:locale" content="en_GB" key="og:locale" />
         <meta property="og:type" content="website" key="og:type" />
 
-        <title key="title">Rémy Beumier | Front-end Developer</title>
-        <meta
-          name="description"
-          content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
-          key="description"
-        />
+        <title key="title">{title}</title>
+        <meta name="description" content={desc} key="description" />
         <meta name="author" content="Rémy Beumier" key="author" />
 
-        <meta property="og:title" content="Rémy Beumier | Front-end Developer" key="og:title" />
-        <meta
-          property="og:description"
-          content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
-          key="og:description"
-        />
-        <meta property="og:url" content="https://remybeumier.be" key="og:url" />
-        <meta property="og:image" content="https://remybeumier.be/images/rb.jpg" key="og:image" />
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={desc} key="og:description" />
+        <meta property="og:url" content={url} key="og:url" />
+        <meta property="og:image" content={`${url}/images/rb.jpg`} key="og:image" />
 
         <meta property="twitter:card" content="summary_large_image" key="twitter:card" />
-        <meta property="twitter:title" content="Rémy Beumier | Front-end Developer" key="twitter:title" />
-        <meta
-          property="twitter:description"
-          content="Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me."
-          key="twitter:description"
-        />
-        <meta property="twitter:url" content="https://remybeumier.be" key="twitter:url" />
-        <meta property="twitter:image" content="https://remybeumier.be/images/rb.jpg" key="twitter:image" />
+        <meta property="twitter:title" content={title} key="twitter:title" />
+        <meta property="twitter:description" content={desc} key="twitter:description" />
+        <meta property="twitter:url" content={url} key="twitter:url" />
+        <meta property="twitter:image" content={`${url}/images/rb.jpg`} key="twitter:image" />
 
         <meta name="theme-color" content="#009688" key="theme-color" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

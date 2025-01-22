@@ -27,7 +27,7 @@ export default function Resume({ title, description, url }: ResumeProps) {
       <article className="resume">
         <section className="resume__name">
           <h1>Rémy Beumier</h1>
-          <p className="subtitle">Front-end Developer</p>
+          <p className="subtitle">Senior Front-end Developer</p>
         </section>
 
         <section className="resume__contact">
@@ -56,11 +56,11 @@ export default function Resume({ title, description, url }: ResumeProps) {
           </h2>
 
           <div className="item">
-            <h3>Front-end Developer @VOO</h3>
+            <h3>Senior Front-end Developer @VOO</h3>
             <p className="detail">VOO // June 2023 - Now</p>
             <p className="intro">
-              Front-end developer at VOO in service experience team. Different web and mobile projects, from scratch or
-              to improve, using React, React Native, TypeScript, Node.js and Firebase.
+              Senior front-end developer at VOO in service experience team. Different web and mobile projects, from
+              scratch or to improve, using React, TypeScript, Node.js and Firebase.
             </p>
             <h4>BistrO: Web app for technicians management, evaluation and reporting</h4>
             <ul>

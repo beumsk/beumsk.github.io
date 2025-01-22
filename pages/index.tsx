@@ -28,7 +28,7 @@ export default function Home({ title, description, projects, posts }: HomeProps)
           <div className="container" data-aos="fade-up">
             <div className="t-center">
               <h1>Rémy Beumier</h1>
-              <p>Front-end Dev</p>
+              <p>Senior Front-end Dev</p>
               <Logo />
             </div>
           </div>
@@ -139,9 +139,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: 'Rémy Beumier | Front-end Developer',
+      title: 'Rémy Beumier | Senior Front-end Developer',
       description:
-        "Rémy Beumier's portfolio website as a Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.",
+        "Rémy Beumier's portfolio website as a Senior Front-end Developer in Brussels. Discover a bit about myself, my projects, my posts and how to contact me.",
       projects: projects,
       posts: posts,
     },
