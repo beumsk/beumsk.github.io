@@ -31,9 +31,9 @@ Trigger it with Commit and Push to master.
 
 ## TODO
 
-- add new commits for 2025 !
+- add new commits every month
 - add new projects (kineval, tarava?, todolist?)
-- shorten cv old web experience? + add senior dev? + new skills to filter?
+- shorten cv old web experience? + add companion app
 - review images (avoid bg-img, use different resolutions: https://dev.to/builderio/optimal-images-in-html-5bg9)
 - review design: https://anthonyhobday.com/sideprojects/saferules/
 
