@@ -453,33 +453,41 @@ const commits = {
   },
   2025: {
     first: "2025-01-02T14:57:13.000+01:00",
-    latest: "2025-01-24T16:16:05.000+01:00",
-    commits: 34,
+    latest: "2025-03-12T12:14:50.000+01:00",
+    commits: 103,
     repos: 5,
     months: [
       {
         name: "Jan",
-        commits: 34,
+        commits: 40,
+      },
+      {
+        name: "Feb",
+        commits: 61,
+      },
+      {
+        name: "Mar",
+        commits: 2,
       },
     ],
   },
   all: {
     first: "2016-12-06T17:05:37.000+01:00",
-    latest: "2025-01-24T16:16:05.000+01:00",
-    commits: 3133,
+    latest: "2025-03-12T12:14:50.000+01:00",
+    commits: 3202,
     repos: 147,
     months: [
       {
         name: "Jan",
-        commits: 301,
+        commits: 307,
       },
       {
         name: "Feb",
-        commits: 283,
+        commits: 344,
       },
       {
         name: "Mar",
-        commits: 549,
+        commits: 551,
       },
       {
         name: "Apr",
