@@ -453,8 +453,8 @@ const commits = {
   },
   2025: {
     first: "2025-01-02T14:57:13.000+01:00",
-    latest: "2025-05-16T09:44:55.000+02:00",
-    commits: 234,
+    latest: "2025-11-23T17:03:50.000+01:00",
+    commits: 345,
     repos: 9,
     months: [
       {
@@ -475,14 +475,38 @@ const commits = {
       },
       {
         name: "May",
-        commits: 29,
+        commits: 33,
+      },
+      {
+        name: "Jun",
+        commits: 15,
+      },
+      {
+        name: "Jul",
+        commits: 14,
+      },
+      {
+        name: "Aug",
+        commits: 26,
+      },
+      {
+        name: "Sep",
+        commits: 10,
+      },
+      {
+        name: "Oct",
+        commits: 12,
+      },
+      {
+        name: "Nov",
+        commits: 30,
       },
     ],
   },
   all: {
     first: "2016-12-06T17:05:37.000+01:00",
-    latest: "2025-05-16T09:44:55.000+02:00",
-    commits: 3334,
+    latest: "2025-11-23T17:03:50.000+01:00",
+    commits: 3445,
     repos: 149,
     months: [
       {
@@ -503,31 +527,31 @@ const commits = {
       },
       {
         name: "May",
-        commits: 183,
+        commits: 187,
       },
       {
         name: "Jun",
-        commits: 136,
+        commits: 151,
       },
       {
         name: "Jul",
-        commits: 190,
+        commits: 204,
       },
       {
         name: "Aug",
-        commits: 192,
+        commits: 218,
       },
       {
         name: "Sep",
-        commits: 184,
+        commits: 194,
       },
       {
         name: "Oct",
-        commits: 365,
+        commits: 377,
       },
       {
         name: "Nov",
-        commits: 249,
+        commits: 279,
       },
       {
         name: "Dec",

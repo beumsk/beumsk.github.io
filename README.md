@@ -137,9 +137,10 @@ Blog posts
 ## DATA (COMMITS)
 
 1. Generate github token with repo access (private too) https://github.com/settings/tokens
-2. `yarn commits:a` to fetch all of my commits (generate-commits.mjs)
+2. update TOKEN var in generate-commits-all.mjs
+3. `yarn commits:a` to fetch all of my commits (generate-commits.mjs)
 <!-- - `yarn commits:d` to fetch more info details about all commits -->
-3. `yarn commits` to rework the commits data to keep only useful information (generate-commits-all.mjs)
+4. `yarn commits` to rework the commits data to keep only useful information (generate-commits-all.mjs)
 
 ## ANALYTICS
 
