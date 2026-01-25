@@ -19,7 +19,7 @@ export default function HomeData({ isVisible }: HomeDataType) {
     .filter((c) => !isNaN(c))
     .sort((a, b) => b - a);
 
-  const [year, setYear] = useState<number | null>(years[0]);
+  const [year, setYear] = useState<number | null>(0);
 
   const yearCommits = commits[year || 'all'] as YearCommitType;
   const firstCommitDate = convertDate(yearCommits?.first);

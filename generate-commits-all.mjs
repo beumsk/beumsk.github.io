@@ -4,11 +4,11 @@ import prettier from 'prettier';
 import commitsAll from './data/commits-all.js';
 
 const yearStart = 2016;
-const yearEnd = 2025;
+const yearEnd = 2026;
 const update = true;
 const GITHUB_USERNAME = 'beumsk';
 const OUTPUT_FILE = yearStart === yearEnd ? `data/c${year}.js` : `data/commits-all.js`;
-// https://github.com/settings/tokens with repo access !!
+// https://github.com/settings/tokens (classic) with repo access !!
 const TOKEN = ''; // PUSH EMPTY!!
 
 const header = TOKEN
