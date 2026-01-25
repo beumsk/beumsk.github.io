@@ -14,12 +14,12 @@ const convertDate = (d: string) =>
 type HomeDataType = { isVisible: { [key: string]: boolean } };
 
 export default function HomeData({ isVisible }: HomeDataType) {
-  const [year, setYear] = useState<number | null>(new Date().getFullYear());
-
   const years = Object.keys(commits)
     .map((c) => parseInt(c))
     .filter((c) => !isNaN(c))
     .sort((a, b) => b - a);
+
+  const [year, setYear] = useState<number | null>(years[0]);
 
   const yearCommits = commits[year || 'all'] as YearCommitType;
   const firstCommitDate = convertDate(yearCommits?.first);
