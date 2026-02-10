@@ -33,7 +33,7 @@ section {
     box-shadow: none;
     text-shadow: 3px 3px rgba(0, 150, 136, 0.4), 6px 6px rgba(0, 150, 136, 0.2);
     color: var(--primary);
-    background-image: -webkit-linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+    background-image: -webkit-linear-gradient(135deg, var(--primary-darkest), var(--primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: none;
@@ -222,6 +222,22 @@ section {
         font-weight: 700;
       }
     }
+  }
+}
+
+main.dark {
+  .recharts-wrapper .recharts-tooltip-label {
+    color: var(--bg);
+  }
+}
+
+main.light {
+  .data .data__numbers span.growing-number {
+    color: var(--primary-dark);
+  }
+
+  .recharts-wrapper .recharts-legend-item-text {
+    color: var(--primary-dark) !important;
   }
 }
 

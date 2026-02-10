@@ -33,7 +33,7 @@ export default function HomeData({ isVisible }: HomeDataType) {
   return (
     <div className="data__body mt-10">
       <div className="centered my-5">
-        <select onChange={(e) => setYear(parseInt(e.target.value))} value={year}>
+        <select onChange={(e) => setYear(parseInt(e.target.value))} value={year} title="Filter data per year">
           <option value={0}>All</option>
           {years?.map((y) => (
             <option key={y} value={y}>
