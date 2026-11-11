@@ -509,8 +509,8 @@ const commits = {
   },
   2026: {
     first: "2026-01-10T18:09:56.000+01:00",
-    latest: "2026-10-04T09:46:29.000+02:00",
-    commits: 58,
+    latest: "2026-11-11T22:56:16.000+01:00",
+    commits: 60,
     repos: 7,
     months: [
       {
@@ -543,14 +543,18 @@ const commits = {
       },
       {
         name: "Oct",
+        commits: 2,
+      },
+      {
+        name: "Nov",
         commits: 1,
       },
     ],
   },
   all: {
     first: "2016-12-06T17:05:37.000+01:00",
-    latest: "2026-10-04T09:46:29.000+02:00",
-    commits: 3516,
+    latest: "2026-11-11T22:56:16.000+01:00",
+    commits: 3518,
     repos: 150,
     months: [
       {
@@ -591,11 +595,11 @@ const commits = {
       },
       {
         name: "Oct",
-        commits: 378,
+        commits: 379,
       },
       {
         name: "Nov",
-        commits: 280,
+        commits: 281,
       },
       {
         name: "Dec",

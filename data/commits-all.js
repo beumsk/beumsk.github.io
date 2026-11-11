@@ -28226,5 +28226,21 @@ const commits = [
     repo: "kine",
     owner: "beumsk",
   },
+  {
+    sha: "6772d960e778fcdeff8ada26dc5447d9a37215ed",
+    message: "fix calendar showing local tz instead of brussels",
+    date: "2026-10-04T09:46:29.000+02:00",
+    url: "https://github.com/beumsk/kine/commit/6772d960e778fcdeff8ada26dc5447d9a37215ed",
+    repo: "kine",
+    owner: "beumsk",
+  },
+  {
+    sha: "6cdb4ccc8694bd64d08d2d142f49acda051d4ba2",
+    message: "new commits",
+    date: "2026-11-11T22:56:16.000+01:00",
+    url: "https://github.com/beumsk/beumsk.github.io/commit/6cdb4ccc8694bd64d08d2d142f49acda051d4ba2",
+    repo: "beumsk.github.io",
+    owner: "beumsk",
+  },
 ];
 module.exports = commits;
