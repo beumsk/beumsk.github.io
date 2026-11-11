@@ -509,29 +509,57 @@ const commits = {
   },
   2026: {
     first: "2026-01-10T18:09:56.000+01:00",
-    latest: "2026-01-25T16:08:16.000+01:00",
-    commits: 4,
-    repos: 3,
+    latest: "2026-10-04T09:46:29.000+02:00",
+    commits: 58,
+    repos: 7,
     months: [
       {
         name: "Jan",
-        commits: 4,
+        commits: 7,
+      },
+      {
+        name: "Feb",
+        commits: 8,
+      },
+      {
+        name: "Apr",
+        commits: 9,
+      },
+      {
+        name: "May",
+        commits: 11,
+      },
+      {
+        name: "Jul",
+        commits: 3,
+      },
+      {
+        name: "Aug",
+        commits: 18,
+      },
+      {
+        name: "Sep",
+        commits: 1,
+      },
+      {
+        name: "Oct",
+        commits: 1,
       },
     ],
   },
   all: {
     first: "2016-12-06T17:05:37.000+01:00",
-    latest: "2026-01-25T16:08:16.000+01:00",
-    commits: 3462,
-    repos: 149,
+    latest: "2026-10-04T09:46:29.000+02:00",
+    commits: 3516,
+    repos: 150,
     months: [
       {
         name: "Jan",
-        commits: 311,
+        commits: 314,
       },
       {
         name: "Feb",
-        commits: 344,
+        commits: 352,
       },
       {
         name: "Mar",
@@ -539,11 +567,11 @@ const commits = {
       },
       {
         name: "Apr",
-        commits: 346,
+        commits: 355,
       },
       {
         name: "May",
-        commits: 187,
+        commits: 198,
       },
       {
         name: "Jun",
@@ -551,19 +579,19 @@ const commits = {
       },
       {
         name: "Jul",
-        commits: 204,
+        commits: 207,
       },
       {
         name: "Aug",
-        commits: 218,
+        commits: 236,
       },
       {
         name: "Sep",
-        commits: 194,
+        commits: 195,
       },
       {
         name: "Oct",
-        commits: 377,
+        commits: 378,
       },
       {
         name: "Nov",
