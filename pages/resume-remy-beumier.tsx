@@ -56,11 +56,35 @@ export default function Resume({ title, description, url }: ResumeProps) {
           </h2>
 
           <div className="item">
-            <h3>Senior Front-end Developer @VOO</h3>
-            <p className="detail">VOO // June 2023 - Now</p>
+            <h3>Senior Front-end Developer @Yuzzu</h3>
+            <p className="detail">Yuzzu // August 2025 - Now</p>
             <p className="intro">
-              Senior front-end developer at VOO in service experience team. Different web and mobile projects, from
-              scratch or to improve, using React, TypeScript, Node.js and Firebase.
+              Senior Front-End Developer (Odyssey team) driving platform modernization, feature development, and
+              performance for Yuzzu's customer-facing insurance web application.
+            </p>
+            <h4>Yuzzu Website: Direct Insurance Platform</h4>
+            <ul>
+              <li>
+                Customer-facing pages and interactive quote/contract flows using Next.js, Redux, and Prismic, with
+                full-stack contributions in .NET/C# and PostgreSQL.
+              </li>
+              <li>
+                Codebase replatforming, introduced style guides and test suites, and elevated web accessibility,
+                SEO/GEO, and front-end performance.
+              </li>
+              {/* <li>
+                Hardened platform security by implementing bot mitigation strategies against DDoS traffic and automated
+                pricing scrapers.
+              </li> */}
+            </ul>
+          </div>
+
+          <div className="item">
+            <h3>Senior Front-end Developer @Orange-VOO</h3>
+            <p className="detail">Orange-VOO // June 2023 - August 2025</p>
+            <p className="intro">
+              Senior front-end developer at Orange-VOO in service experience team. Different web and mobile projects,
+              from scratch or to improve, using React, TypeScript, Node.js and Firebase.
             </p>
             <h4>BistrO: Web app for technicians management, evaluation and reporting</h4>
             <ul>
@@ -81,11 +105,17 @@ export default function Resume({ title, description, url }: ResumeProps) {
               <li>Real time database with Firebase</li>
               <li>Real time data, chat and notifications</li>
             </ul>
+            <h4>Companion: Desktop app for Wi-Fi analytics and interactive data</h4>
+            <ul>
+              <li>Development from scratch using Electron, Node.js, React, TS and Firebase</li>
+              <li>Windows-specific APIs: low-level system and Wi-Fi performance data</li>
+              <li>Responsive, fast and handy dashboard screens for instant field evaluation by on-site technicians</li>
+            </ul>
           </div>
 
           <div className="item">
             <h3>Front-end Developer & Integrator @PTC</h3>
-            <p className="detail">Positive Thinking Company // November 2020 - Now</p>
+            <p className="detail">Positive Thinking Company // November 2020 - August 2025</p>
             <p className="intro">
               Front-end developer and integrator in the PTC Delivery Center, I worked on different projects, mostly in
               React, using industry standards such as Scrum agile, Git, Npm, Confluence, Jira and Figma.
@@ -227,7 +257,6 @@ export default function Resume({ title, description, url }: ResumeProps) {
           <h4>Development skills</h4>
           <ul>
             <li>React</li>
-            <li>React Native</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>Redux</li>
